@@ -20,11 +20,14 @@ To compile the server, read the [readme.txt](https://github.com/LAX1DUDE/eaglerc
 
 **To run the desktop java runtime**, create a new java project in an IDE. Link `src/main/java` and `src/lwjgl/java` as source folders, and add all jars in the `lwjgl-rundir` folder to your build path. Create a run configuration and set the main class to `net.lax1dude.eaglercraft.MinecraftMain`, and then set the working directory to `lwjgl-rundir`. The client should then launch with no errors, if not then re-read the previous two sentances and try again.
 
-## Whats New
+## Whats New?
+
+A Recreation of Alphaver in Eaglercraft Beta
 
 Features in this branch include:
 
 - New textures
+- Alphaver Music
 
 ## Project Contributors
 Saiyan Gonzalez (Creator)
