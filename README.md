@@ -1,4 +1,4 @@
-# ![minecraft_title (7)](https://github.com/user-attachments/assets/083c9ccb-23ff-4b6c-b923-a55b82d00ffc)
+# ![minecraft_title (7)](https://github.com/user-attachments/assets/ff38267b-d390-4dcc-abbf-3b1808156bfd)
 
 A remake of my first project, Minecraft Old-School, now on Eaglercraft Beta 1.7.3!
 
@@ -26,7 +26,7 @@ Once compiled, move the new resources.mc to the /web folder.
 
 ### Play a Demo!
 
-You heard right! You can actually PLAY the project now unlike the original Old-School. Updated Textures arent there because its a demo, you don't get the full thing unless you do it yourself! (or you could just download the resources folder and just put it in the texture-pack menu) Play here: https://saiyangonzalez01.github.io/Minecraft-Old-School-ReDefault/web/
+You heard right! You can actually PLAY the project now unlike the original Old-School. Updated Textures arent there because its a demo, you don't get the full thing unless you do it yourself! (or you could just download the resources folder and just put it in the texture-pack menu) Play here: 
 
 ### Contributers
 
