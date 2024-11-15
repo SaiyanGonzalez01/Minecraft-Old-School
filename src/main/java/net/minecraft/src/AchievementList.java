@@ -25,7 +25,7 @@ public class AchievementList {
 	public static Achievement killEnemy = (new Achievement(13, "killEnemy", 8, -1, Item.bone, buildSword)).registerAchievement();
 	public static Achievement killCow = (new Achievement(14, "killCow", 7, -3, Item.leather, buildSword)).registerAchievement();
 	public static Achievement flyPig = (new Achievement(15, "flyPig", 8, -4, Item.saddle, killCow)).setSpecial().registerAchievement();
-	public static Achievement killsheep = (new Achievement(16, "killsheep", 8, -2, Block.wool, killCow)).setSpecial().registerAchievement();
+	public static Achievement killsheep = (new Achievement(16, "killsheep", 8, -2, Item.book, killCow)).setSpecial().registerAchievement();
 
 	public static void func_27374_a() {
 	}
