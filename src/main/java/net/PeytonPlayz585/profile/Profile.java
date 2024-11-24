@@ -198,7 +198,8 @@ public class Profile {
 			new TextureLocation("/skins/15.zombie.png"),
 			new TextureLocation("/skins/16.pig.png"),
 			new TextureLocation("/skins/17.squid.png"),
-			new TextureLocation("/skins/18.mooshroom.png")
+			new TextureLocation("/skins/18.mooshroom.png"),
+			new TextureLocation("/skins/19.C418.png")
 	};
 
 }
