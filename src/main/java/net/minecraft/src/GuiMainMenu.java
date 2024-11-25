@@ -19,7 +19,7 @@ public class GuiMainMenu extends GuiScreen {
 	private String splashText = "missingno";
 	private GuiButton multiplayerButton;
 	
-	byte[] splash = new byte[] {79, 108, 100, 45, 83, 99, 104, 111, 111, 108, 32, 67, 111, 111, 108, 33};
+	byte[] splash = new byte[] {87, 111, 114, 108, 100, 32, 111, 102, 32, 82, 117, 98, 121, 100, 117, 110, 103, 33};
 
 	public GuiMainMenu() {
 		splashText = new String(splash);
