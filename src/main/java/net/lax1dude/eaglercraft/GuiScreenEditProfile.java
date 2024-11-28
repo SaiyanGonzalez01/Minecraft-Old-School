@@ -7,6 +7,7 @@ import net.PeytonPlayz585.profile.Profile;
 import net.PeytonPlayz585.textures.TextureLocation;
 import net.minecraft.client.Minecraft;
 import net.minecraft.src.GuiButton;
+import net.minecraft.src.GuiTextField;
 import net.minecraft.src.GuiScreen;
 import net.minecraft.src.ModelBiped;
 import net.minecraft.src.RenderHelper;
@@ -25,6 +26,7 @@ public class GuiScreenEditProfile extends GuiScreen {
 	private boolean dragging = false;
 	private int mousex = 0;
 	private int mousey = 0;
+	private GuiTextField username;
 	
 	private static final TextureLocation gui = new TextureLocation("/gui/gui.png");
 	
@@ -84,7 +86,13 @@ public class GuiScreenEditProfile extends GuiScreen {
 		Keyboard.enableRepeatEvents(true);
 		StringTranslate var1 = StringTranslate.getInstance();
 		selectedSlot = (Profile.presetSkinId + Profile.skins.size());
+		String var3 = Profile.getName();
+		this.username = new GuiTextField(this, this.fontRenderer, this.width / 2 - 100, this.height / 4 - 10 + 25 + 18, 200, 20, var3);
+		this.username.isFocused = true;
+		this.username.setMaxStringLength(16);
 		this.controlList.add(new GuiButton(200, this.width / 2 - 100, this.height / 6 + 168, var1.translateKey("gui.done")));
+
+		((GuiButton)this.controlList.get(200)).enabled = this.username.getText().length() > 0;
 	}
 	
 	private static ModelBiped playerModel = null;
@@ -238,6 +246,7 @@ public class GuiScreenEditProfile extends GuiScreen {
 	}
 	
 	public void updateScreen() {
+		this.username.updateCursorCounter();
 		if(dropDownOpen) {
 			if(Mouse.isButtonDown(0)) {
 				int skinX = this.width / 2 - 20;
