@@ -102,10 +102,6 @@ public class GuiScreenEditProfile extends GuiScreen {
 		this.drawDefaultBackground();
 		this.drawCenteredString(this.fontRenderer, this.screenTitle, this.width / 2, 15, 16777215);
 		this.drawString(this.fontRenderer, var1.translateKey("Select Skin"), this.width / 2 - 20, this.height / 6 + 40, 10526880);
-//		String var3 = Profile.getName();
-//		this.username = new GuiTextField(this, this.fontRenderer, this.width / 2 - 20, this.height / 6 + 10, 200, 20, var3); // another dumb little hotfix
-//		this.username.isFocused = true;
-//		this.username.setMaxStringLength(16);
 		this.username.drawTextBox(); // dumb little hotfix
 
 		mousex = mx;
@@ -237,6 +233,9 @@ public class GuiScreenEditProfile extends GuiScreen {
 	}
 	
 	private void save() {
+		String username1 = this.username.getText().trim();
+		Profile.setName(username1);
+		Profile.save();
 		Profile.presetSkinId = selectedSlot - Profile.skins.size();
 		Profile.saveSkin();
 	}
@@ -248,10 +247,6 @@ public class GuiScreenEditProfile extends GuiScreen {
 				this.mc.displayGuiScreen((GuiScreen) parent);
 			}
 		}
-
-		String username1 = this.username.getText().trim();
-		Profile.setName(username1);
-		Profile.save();
 	}
 	
 	public void updateScreen() {
@@ -335,7 +330,8 @@ public class GuiScreenEditProfile extends GuiScreen {
 		}
 	}
 
-    private boolean containsOnlyAZ09(String input) {
-        return input.matches("[a-z0-9]+") || input.matches("[A-Z0-9]+") || input.equals(" ");
-    }
+	private boolean containsOnlyAZ09(String input) {
+        	return input.matches("[a-z0-9]+") || input.matches("[A-Z0-9]+") || input.equals(" ");
+    	}
+}
 }
