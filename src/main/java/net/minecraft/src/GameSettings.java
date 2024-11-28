@@ -279,6 +279,10 @@ public class GameSettings {
 						this.doPrints = var3[1].equals("true");
 					}
 
+					//if(var3[0].equals("smoothcamera")) {
+					//	this.smoothCamera = var3[1].equals("true");
+					//}
+
 					for(int var4 = 0; var4 < this.keyBindings.length; ++var4) {
 						if(var3[0].equals("key_" + this.keyBindings[var4].keyDescription)) {
 							this.keyBindings[var4].keyCode = Integer.parseInt(var3[1]);
@@ -319,8 +323,8 @@ public class GameSettings {
 			var1.println("skin:" + this.skin);
 			var1.println("lastServer:" + this.lastServer);
 			var1.println("particles:" + this.particles);
-			var1.println("smoothcamera:" + this.smoothCamera);
 			var1.println("doPrints:" + this.doPrints);
+			//var1.println("smoothcamera:" + this.smoothCamera);
 
 			for(int var2 = 0; var2 < this.keyBindings.length; ++var2) {
 				var1.println("key_" + this.keyBindings[var2].keyDescription + ":" + this.keyBindings[var2].keyCode);
