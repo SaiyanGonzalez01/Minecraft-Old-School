@@ -14,7 +14,8 @@ public enum EnumOptions {
 	GRAPHICS("options.graphics", false, false),
 	AMBIENT_OCCLUSION("options.ao", false, true),
 	GUI_SCALE("options.guiScale", false, false),
-	PARTICLES("Particles", false, true);
+	PARTICLES("Particles", false, true),
+	DO_PRINTS("Prints", false, true);
 
 	private final boolean enumFloat;
 	private final boolean enumBoolean;
