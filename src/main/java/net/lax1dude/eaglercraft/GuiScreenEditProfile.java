@@ -334,4 +334,3 @@ public class GuiScreenEditProfile extends GuiScreen {
         	return input.matches("[a-z0-9]+") || input.matches("[A-Z0-9]+") || input.equals(" ");
     	}
 }
-}
