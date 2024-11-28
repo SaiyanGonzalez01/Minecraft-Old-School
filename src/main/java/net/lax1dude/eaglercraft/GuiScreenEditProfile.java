@@ -92,7 +92,7 @@ public class GuiScreenEditProfile extends GuiScreen {
 		this.username.setMaxStringLength(16);
 		this.controlList.add(new GuiButton(200, this.width / 2 - 100, this.height / 6 + 168, var1.translateKey("gui.done")));
 
-		((GuiButton)this.controlList.get(200)).enabled = this.username.getText().length() > 0;
+		//((GuiButton)this.controlList.get(200)).enabled = this.username.getText().length() > 0;
 	}
 	
 	private static ModelBiped playerModel = null;
