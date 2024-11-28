@@ -972,6 +972,12 @@ public class Minecraft implements Runnable {
 
 	public void usePortal() {
 		System.out.println("Toggling dimension!!");
+
+		if(this.thePlayer == null) {
+			System.out.println("NO PLAYER FOUND");
+			return;
+		}
+		
 		if(this.thePlayer.dimension == -1) {
 			this.thePlayer.dimension = 0;
 		} else {
