@@ -80,11 +80,15 @@ public class EntityPlayerSP extends EntityPlayer {
 			this.ySize = 0.2F;
 		}
 
+		this.pushOut();
+		super.onLivingUpdate();
+	}
+
+	public void pushOut() {
 		this.pushOutOfBlocks(this.posX - (double)this.width * 0.35D, this.boundingBox.minY + 0.5D, this.posZ + (double)this.width * 0.35D);
 		this.pushOutOfBlocks(this.posX - (double)this.width * 0.35D, this.boundingBox.minY + 0.5D, this.posZ - (double)this.width * 0.35D);
 		this.pushOutOfBlocks(this.posX + (double)this.width * 0.35D, this.boundingBox.minY + 0.5D, this.posZ - (double)this.width * 0.35D);
 		this.pushOutOfBlocks(this.posX + (double)this.width * 0.35D, this.boundingBox.minY + 0.5D, this.posZ + (double)this.width * 0.35D);
-		super.onLivingUpdate();
 	}
 
 	public void resetPlayerKeyState() {
@@ -139,7 +143,7 @@ public class EntityPlayerSP extends EntityPlayer {
 	}
 
 	public void sendChatMessage(String var1) {
-		this.mc.ingameGUI.addChatMessageTranslate("[Player] " + var1);
+		this.mc.ingameGUI.addChatMessageTranslate("[" + this.username + "] " + var1);
 	}
 
 	public boolean isSneaking() {
