@@ -87,7 +87,7 @@ public class GuiScreenEditProfile extends GuiScreen {
 		StringTranslate var1 = StringTranslate.getInstance();
 		selectedSlot = (Profile.presetSkinId + Profile.skins.size());
 		String var3 = Profile.getName();
-		this.username = new GuiTextField(this, this.fontRenderer, this.width / 2 - 100, this.height / 4 - 10 + 25 + 18, 200, 20, var3);
+		this.username = new GuiTextField(this, this.fontRenderer, this.width / 2 - 20, this.height / 6 + 10, 200, 20, var3); // another dumb little hotfix
 		this.username.isFocused = true;
 		this.username.setMaxStringLength(16);
 		this.controlList.add(new GuiButton(200, this.width / 2 - 100, this.height / 6 + 168, var1.translateKey("gui.done")));
@@ -102,7 +102,12 @@ public class GuiScreenEditProfile extends GuiScreen {
 		this.drawDefaultBackground();
 		this.drawCenteredString(this.fontRenderer, this.screenTitle, this.width / 2, 15, 16777215);
 		this.drawString(this.fontRenderer, var1.translateKey("Select Skin"), this.width / 2 - 20, this.height / 6 + 40, 10526880);
-		
+//		String var3 = Profile.getName();
+//		this.username = new GuiTextField(this, this.fontRenderer, this.width / 2 - 20, this.height / 6 + 10, 200, 20, var3); // another dumb little hotfix
+//		this.username.isFocused = true;
+//		this.username.setMaxStringLength(16);
+		this.username.drawTextBox(); // dumb little hotfix
+
 		mousex = mx;
 		mousey = my;
 		
@@ -243,6 +248,10 @@ public class GuiScreenEditProfile extends GuiScreen {
 				this.mc.displayGuiScreen((GuiScreen) parent);
 			}
 		}
+
+		String username1 = this.username.getText().trim();
+		Profile.setName(username1);
+		Profile.save();
 	}
 	
 	public void updateScreen() {
@@ -273,6 +282,7 @@ public class GuiScreenEditProfile extends GuiScreen {
 	
 	
 	protected void keyTyped(char par1, int par2) {
+		this.username.textboxKeyTyped(par1, par2);
 		if(par2 == 200 && selectedSlot > 0) {
 			--selectedSlot;
 			scrollPos = selectedSlot - 2;
@@ -285,6 +295,8 @@ public class GuiScreenEditProfile extends GuiScreen {
 	
 	protected void mouseClicked(int par1, int par2, int par3) {
 		super.mouseClicked(par1, par2, par3);
+
+		this.username.mouseClicked(par1, par2, par3);
 		
 		if (par3 == 0) {
 			int skinX = this.width / 2 + 140 - 40;
@@ -322,7 +334,8 @@ public class GuiScreenEditProfile extends GuiScreen {
 			
 		}
 	}
-	
-	
-	
+
+    private boolean containsOnlyAZ09(String input) {
+        return input.matches("[a-z0-9]+") || input.matches("[A-Z0-9]+") || input.equals(" ");
+    }
 }
