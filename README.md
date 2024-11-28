@@ -32,3 +32,4 @@ You heard right! You can actually PLAY the project now unlike the original Old-S
 
 - SaiyanGonzalez01 ~ Owner
 - chicken-nugget1104 ~ Pull Request Helper (https://github.com/chicken-nugget1104)
+- PeytonPlayz595 ~ Original Beta 1.7.3 Creator

@@ -39,7 +39,7 @@ public class EntityZombie extends EntityMob {
 
 		int var2;
 		for(var2 = 0; var2 < var1; ++var2) {
-			this.dropItem(Item.apple.shiftedIndex, 1);
+			this.dropItem(Item.appleRed.shiftedIndex, 1);
 		}
 
 		var1 = this.rand.nextInt(3);
