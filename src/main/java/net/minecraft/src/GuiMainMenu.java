@@ -7,6 +7,9 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 
+//the random i prefer, and used for the splashtexts -chicken-nugget
+import java.util.Random;
+
 import net.PeytonPlayz585.opengl.GL11;
 import net.PeytonPlayz585.textures.TextureLocation;
 
@@ -16,17 +19,38 @@ public class GuiMainMenu extends GuiScreen {
 	
 	private static final Random rand = new Random();
 	private float updateCounter = 0.0F;
-	private String splashText = "missingno";
+	public String splashText = "erm this is a placeholder";
+
+	String[] splashTexts = { //most of these are placeholder's for you, replace them with what you wish!
+        	"Wowie kazowie!",
+        	"Built on sticks and stones!",
+        	"TeaVM is so epic.",
+       		"As a child i yearned for the mines.",
+        	"At least 6% bug free!",
+		"As seen on TV!",
+		"Coming soon!",
+		"This text is hard to read if you play the game at the default resolution, but at 1080p it's fine!",
+		"Try the Nether!",
+		"Minecraft? More like minceraft!",
+		"Google anlyticsed!",
+		"Now supports åäö!",
+		"Give us Gordon!",
+		"Tip your waiter!",
+		"Very fun!",
+		"12345 is a bad password!",
+		"byte[] splash = new byte[] {72, 101, 108, 108, 111, 44, 32, 119, 111, 114, 108, 100, 33};" //this is a play on how the old splash text worked, and is just hello world in bytes
+    	};
+	
 	private GuiButton multiplayerButton;
 	
-	byte[] splash = new byte[] {87, 111, 114, 108, 100, 32, 111, 102, 32, 82, 117, 98, 121, 100, 117, 110, 103, 33};
+//	byte[] splash = new byte[] {87, 111, 114, 108, 100, 32, 111, 102, 32, 82, 117, 98, 121, 100, 117, 110, 103, 33};
 
 	public GuiMainMenu() {
-		splashText = new String(splash);
+		splashText = splashTexts[rand.nextInt(splashTexts.length)];
 	}
 
 	public void updateScreen() {
-		++this.updateCounter;
+		this.updateCounter++;
 	}
 
 	protected void keyTyped(char var1, int var2) {
