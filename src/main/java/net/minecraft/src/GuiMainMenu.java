@@ -21,23 +21,23 @@ public class GuiMainMenu extends GuiScreen {
 	private float updateCounter = 0.0F;
 	public String splashText = "erm this is a placeholder";
 
-	String[] splashTexts = { //most of these are placeholder's for you, replace them with what you wish!
-        	"Wowie kazowie!",
+	String[] splashTexts = {
+        	"Old-School!",
         	"Built on sticks and stones!",
-        	"TeaVM is so epic.",
-       		"As a child i yearned for the mines.",
+        	"TeaVM is so epic!",
+       		"As a child i yearned for the mines...",
         	"At least 6% bug free!",
-		"As seen on TV!",
-		"Coming soon!",
-		"This text is hard to read if you play the game at the default resolution, but at 1080p it's fine!",
-		"Try the Nether!",
-		"Minecraft? More like minceraft!",
-		"Google anlyticsed!",
-		"Now supports åäö!",
-		"Give us Gordon!",
-		"Tip your waiter!",
-		"Very fun!",
-		"12345 is a bad password!",
+		"World of Rubydung!",
+		"Nuggets are nice!",
+		"Saiyan's Golden Child!",
+		"Try Ctrl + Shift + Q + Q!",
+		"Minecraft? More like Eaglercraft!",
+		"Browser Supported!",
+		"100% less laxatives for 1 dude!",
+		"Better than S-SP!",
+		"1 star, deal with it Saiyan!",
+		"Try Terraria Stamped!",
+		"Honey, the erasers are moving!",
 		"byte[] splash = new byte[] {72, 101, 108, 108, 111, 44, 32, 119, 111, 114, 108, 100, 33};" //this is a play on how the old splash text worked, and is just hello world in bytes
     	};
 	
