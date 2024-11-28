@@ -47,4 +47,5 @@ public class EntityZombie extends EntityMob {
 		for(var2 = 0; var2 < var1; ++var2) {
 			this.dropItem(Item.bone.shiftedIndex, 1);
 		}
+	}
 }
