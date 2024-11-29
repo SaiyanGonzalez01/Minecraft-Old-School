@@ -69,6 +69,10 @@ public class GuiMainMenu extends GuiScreen {
 			this.splashText = "Happy new year!";
 		}
 
+		if(this.mc.doPrints) {
+			System.out.println(this.splashText);
+		}
+
 		StringTranslate var2 = StringTranslate.getInstance();
 		int var4 = this.height / 4 + 48;
 		this.controlList.add(new GuiButton(1, this.width / 2 - 100, var4, var2.translateKey("menu.singleplayer")));

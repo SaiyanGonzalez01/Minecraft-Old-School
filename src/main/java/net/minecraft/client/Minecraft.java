@@ -390,11 +390,8 @@ public class Minecraft implements Runnable {
 						this.gameSettings.thirdPersonView = false;
 					}
 
-					if(!this.skipRenderWorld) {
-						if(this.playerController != null) {
-							this.playerController.setPartialTime(this.timer.renderPartialTicks);
-						}
-
+					if(!this.skipRenderWorld && this.playerController != null && this.entityRenderer != null) {
+						this.playerController.setPartialTime(this.timer.renderPartialTicks);
 						this.entityRenderer.updateCameraAndRender(this.timer.renderPartialTicks);
 					}
 
@@ -704,7 +701,6 @@ public class Minecraft implements Runnable {
 			}
 
 			if(this.thePlayer == null) {
-				
 				System.out.println("NO PLAYER FOUND");
 				return;
 			}
@@ -719,10 +715,6 @@ public class Minecraft implements Runnable {
 	}
 
 	public void runTick() {
-		if(this.ticksRan == 6000) {
-			this.func_28001_B();
-		}
-
 		this.statFileWriter.func_27178_d();
 		this.ingameGUI.updateTick();
 		this.entityRenderer.getMouseOver(1.0F);
@@ -995,7 +987,9 @@ public class Minecraft implements Runnable {
 		}
 
 		if(this.thePlayer == null) {
-			System.out.println("NO PLAYER FOUND");
+			if(doPrints) {
+				System.out.println("NO PLAYER FOUND");
+			}
 			return;
 		}
 
