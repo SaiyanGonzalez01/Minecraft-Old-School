@@ -2,18 +2,23 @@ package net.minecraft.src;
 
 public class Random {
 	
-	private long seed = 69;
+	private long seed = 70; //wait so why is it 69? uh
 
 	private static final long multiplier = 0x5DEECE66DL;
 	private static final long addend = 0xBL;
 	private static final long mask = (1L << 48) - 1;
 
+	private static final double magicnumber = 9007199254740991.0;
+
+	public boolean DOWEDOFUNNYCOMPLEX = false;
+
     public Random() {
-		this((long)(Math.random() * 9007199254740991.0));
+		this((long)(Math.random() * magicnumber));
 	}
 
 	public Random(long seed) {
 		setSeed(seed);
+		//System.out.println("seed is " + seed);
 	}
 	
 	private static long initialScramble(long seed) {
@@ -31,13 +36,25 @@ public class Random {
 	}
 
 	public void nextBytes(byte[] bytes) {
-		for (int i = 0, len = bytes.length; i < len;)
-			for (int rnd = nextInt(), n = Math.min(len - i, Integer.SIZE / Byte.SIZE); n-- > 0; rnd >>= Byte.SIZE)
-				bytes[i++] = (byte) rnd;
+		int rnd = 0, bitsLeft = 0;
+		for (int i = 0; i < bytes.length; i++) {
+   			if (bitsLeft == 0) {
+        		rnd = nextInt();
+        		bitsLeft = Integer.SIZE;
+    		}
+    		bytes[i] = (byte) rnd;
+    		rnd >>= Byte.SIZE;
+    		bitsLeft -= Byte.SIZE;
+		}
 	}
 
 	public int nextInt() {
-		return next(32);
+		if(!DOWEDOFUNNYCOMPLEX)
+		{
+			return next(32);
+		} else {
+			return (int) ((seed = (seed * multiplier + addend) & mask) >>> (48 - 32));
+		}
 	}
 
 	public int nextInt(int n) {
