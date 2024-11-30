@@ -135,7 +135,7 @@ public class EntityCreeper extends EntityMob {
 
 		int var2;
 		for(var2 = 0; var2 < var1; ++var2) {
-			this.dropItem(Block.TNT.shiftedIndex, 1);
+			this.dropItem(Item.coal.shiftedIndex, 1);
 		}
 
 		var1 = this.rand.nextInt(1);
