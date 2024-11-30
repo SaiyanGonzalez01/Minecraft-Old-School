@@ -127,6 +127,22 @@ public class EntityCreeper extends EntityMob {
 
 	protected int getDropItemId() {
 		return Item.gunpowder.shiftedIndex;
+
+	}
+	
+	protected void dropFewItems() {
+		int var1 = this.rand.nextInt(1);
+
+		int var2;
+		for(var2 = 0; var2 < var1; ++var2) {
+			this.dropItem(Block.TNT.shiftedIndex, 1);
+		}
+
+		var1 = this.rand.nextInt(1);
+
+		for(var2 = 0; var2 < var1; ++var2) {
+			this.dropItem(Item.coal.shiftedIndex, 1);
+		}
 	}
 
 	private int getCreeperState() {
