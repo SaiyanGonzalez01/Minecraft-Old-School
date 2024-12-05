@@ -131,7 +131,7 @@ public class Minecraft implements Runnable {
 	private int joinPlayerCounter = 0;
 	
 	public static int debugFPS;
-	
+
 	public boolean hasRefreshed = false;
 	public boolean doPrints;
 	
@@ -317,7 +317,9 @@ public class Minecraft implements Runnable {
 			this.statFileWriter.func_27175_b();
 			this.statFileWriter.syncStats();
 
-			System.out.println("Stopping!");
+			if(doPrints) {
+				System.out.println("Stopping!");
+			}
 
 			try {
 				this.changeWorld1((World)null);
@@ -388,11 +390,8 @@ public class Minecraft implements Runnable {
 						this.gameSettings.thirdPersonView = false;
 					}
 
-					if(!this.skipRenderWorld) {
-						if(this.playerController != null) {
-							this.playerController.setPartialTime(this.timer.renderPartialTicks);
-						}
-
+					if(!this.skipRenderWorld && this.playerController != null && this.entityRenderer != null) {
+						this.playerController.setPartialTime(this.timer.renderPartialTicks);
 						this.entityRenderer.updateCameraAndRender(this.timer.renderPartialTicks);
 					}
 
@@ -423,7 +422,7 @@ public class Minecraft implements Runnable {
 					++var3;
 
 					for(this.isGamePaused = !this.isMultiplayerWorld() && this.currentScreen != null && this.currentScreen.doesGuiPauseGame(); System.currentTimeMillis() >= var1 + 1000L; var3 = 0) {
-						this.debug = var3 + " fps, " + WorldRenderer.chunksUpdated + " chunk updates";
+						this.debug = var3 + " FPS, " + WorldRenderer.chunksUpdated + " CU";
 						WorldRenderer.chunksUpdated = 0;
 						debugFPS = var3;
 						var3 = 0;
@@ -604,6 +603,13 @@ public class Minecraft implements Runnable {
 	}
 
 	private void clickMouse(int var1) {
+		if(this.thePlayer == null) {
+			if(doPrints) {
+				System.out.println("NO PLAYER FOUND, MOUSE FUNCTIONALITY WILL NOT WORK");
+			}
+			return;
+		}
+
 		if(var1 != 0 || this.leftClickCounter <= 0) {
 			if(var1 == 0) {
 				this.thePlayer.swingItem();
@@ -694,6 +700,11 @@ public class Minecraft implements Runnable {
 				var1 = Block.stone.blockID;
 			}
 
+			if(this.thePlayer == null) {
+				System.out.println("NO PLAYER FOUND");
+				return;
+			}
+
 			this.thePlayer.inventory.setCurrentItem(var1, this.playerController instanceof PlayerControllerTest);
 		}
 
@@ -704,10 +715,6 @@ public class Minecraft implements Runnable {
 	}
 
 	public void runTick() {
-		if(this.ticksRan == 6000) {
-			this.func_28001_B();
-		}
-
 		this.statFileWriter.func_27178_d();
 		this.ingameGUI.updateTick();
 		this.entityRenderer.getMouseOver(1.0F);
@@ -727,7 +734,7 @@ public class Minecraft implements Runnable {
 		}
 
 		terrainTexture.bindTexture();
-		if(!this.isGamePaused) {
+		if(!this.isGamePaused && this.renderEngine != null) {
 			this.renderEngine.updateDynamicTextures();
 		}
 
@@ -980,10 +987,12 @@ public class Minecraft implements Runnable {
 		}
 
 		if(this.thePlayer == null) {
-			System.out.println("NO PLAYER FOUND");
+			if(doPrints) {
+				System.out.println("NO PLAYER FOUND");
+			}
 			return;
 		}
-		
+
 		if(this.thePlayer.dimension == -1) {
 			this.thePlayer.dimension = 0;
 		} else {
@@ -1244,7 +1253,7 @@ public class Minecraft implements Runnable {
 
 	public boolean lineIsCommand(String var1) {
 		if(var1.startsWith("/")) {
-			//return true;
+			return true;
 		}
 
 		return false;
