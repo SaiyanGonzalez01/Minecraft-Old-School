@@ -132,6 +132,9 @@ public class Minecraft implements Runnable {
 	
 	public static int debugFPS;
 	
+	public boolean hasRefreshed = false;
+	public boolean doPrints;
+	
 	private static final TextureLocation terrainTexture = new TextureLocation("/terrain.png");
 
 	public Minecraft() {
@@ -156,6 +159,7 @@ public class Minecraft implements Runnable {
 	public void startGame() {
 		this.saveLoader = new EaglerSaveFormat(minecraftDir + "/" + "saves");
 		this.gameSettings = new GameSettings(this, minecraftDir);
+		this.doPrints = this.gameSettings.doPrints;
 		this.texturePackList = new TexturePackList(this, this.minecraftDir);
 		this.renderEngine = new RenderEngine(this.texturePackList, this.gameSettings);
 		this.fontRenderer = new FontRenderer(this.gameSettings, "/font/default.png", this.renderEngine);
@@ -727,6 +731,11 @@ public class Minecraft implements Runnable {
 			this.renderEngine.updateDynamicTextures();
 		}
 
+		if(!this.hasRefreshed && this.renderEngine != null) {
+			this.renderEngine.refreshTextures();
+			this.hasRefreshed = true;
+		}
+
 		if(this.currentScreen == null && this.thePlayer != null) {
 			if(this.thePlayer.health <= 0) {
 				this.displayGuiScreen((GuiScreen)null);
@@ -932,7 +941,9 @@ public class Minecraft implements Runnable {
 	}
 
 	private void forceReload() {
-		System.out.println("FORCING RELOAD!");
+		if(doPrints) {
+			System.out.println("FORCING RELOAD!");
+		}
 		this.sndManager = new SoundManager();
 		this.sndManager.loadSoundSettings(this.gameSettings);
 	}
@@ -964,7 +975,15 @@ public class Minecraft implements Runnable {
 	}
 
 	public void usePortal() {
-		System.out.println("Toggling dimension!!");
+		if(doPrints) {
+			System.out.println("Toggling dimension!!");
+		}
+
+		if(this.thePlayer == null) {
+			System.out.println("NO PLAYER FOUND");
+			return;
+		}
+		
 		if(this.thePlayer.dimension == -1) {
 			this.thePlayer.dimension = 0;
 		} else {
@@ -1119,9 +1138,6 @@ public class Minecraft implements Runnable {
 			for(int var8 = -var2; var8 <= var2; var8 += 16) {
 				this.loadingScreen.setLoadingProgress(var3++ * 100 / var4);
 				this.theWorld.getBlockId(var6.x + var10, 64, var6.z + var8);
-
-				while(this.theWorld.updatingLighting()) {
-				}
 			}
 		}
 
@@ -1228,6 +1244,7 @@ public class Minecraft implements Runnable {
 
 	public boolean lineIsCommand(String var1) {
 		if(var1.startsWith("/")) {
+			//return true;
 		}
 
 		return false;
