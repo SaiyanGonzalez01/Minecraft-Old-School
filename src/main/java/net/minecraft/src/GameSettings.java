@@ -23,12 +23,13 @@ public class GameSettings {
 	public int renderDistance = 3;
 	public boolean viewBobbing = false;
 	public boolean anaglyph = false;
-	public boolean advancedOpengl = false;
+	public boolean advancedOpengl = true; //so i lag less with this ON so (tested on chromebook)
 	public int limitFramerate = 1;
 	public boolean fancyGraphics = false;
 	public boolean ambientOcclusion = false;
 	public boolean particles = true;
 	public boolean doPrints = true;
+	public boolean clouds = true;
 	public String skin = "Default";
 	public KeyBinding keyBindForward = new KeyBinding("key.forward", 17);
 	public KeyBinding keyBindLeft = new KeyBinding("key.left", 30);
@@ -149,6 +150,10 @@ public class GameSettings {
 			this.doPrints = !this.doPrints;
 		}
 
+		if(var1 == EnumOptions.CLOUDS) {
+			this.clouds = !this.clouds;
+		}
+
 		this.saveOptions();
 	}
 
@@ -172,6 +177,8 @@ public class GameSettings {
 			return this.particles;
 		case 7:
 			return this.doPrints;
+		case 8:
+			return this.clouds;
 		default:
 			return false;
 		}
@@ -279,9 +286,9 @@ public class GameSettings {
 						this.doPrints = var3[1].equals("true");
 					}
 
-					//if(var3[0].equals("smoothcamera")) {
-					//	this.smoothCamera = var3[1].equals("true");
-					//}
+					if(var3[0].equals("clouds")) {
+						this.clouds = var3[1].equals("true");
+					}
 
 					for(int var4 = 0; var4 < this.keyBindings.length; ++var4) {
 						if(var3[0].equals("key_" + this.keyBindings[var4].keyDescription)) {
@@ -324,6 +331,7 @@ public class GameSettings {
 			var1.println("lastServer:" + this.lastServer);
 			var1.println("particles:" + this.particles);
 			var1.println("doPrints:" + this.doPrints);
+			var1.println("clouds:" + this.clouds);
 			//var1.println("smoothcamera:" + this.smoothCamera);
 
 			for(int var2 = 0; var2 < this.keyBindings.length; ++var2) {
@@ -335,12 +343,14 @@ public class GameSettings {
 			File.writeFile(this.optionsFile, data);
 
 			if(doPrints) {
-				System.out.println(var1);
+				System.out.println(data);
 			}
 
 			var1.close();
 		} catch (Exception var3) {
-			System.out.println("Failed to save options");
+			if(doPrints) {
+				System.out.println("Failed to save options");
+			}
 			var3.printStackTrace();
 		}
 
