@@ -39,5 +39,10 @@ class EnumOptionsMappingHelper {
 		} catch (NoSuchFieldError var1) {
 		}
 
+		try {
+			enumOptionsMappingHelperArray[EnumOptions.CLOUDS.ordinal()] = 8;
+		} catch (NoSuchFieldError var1) {
+		}
+
 	}
 }
