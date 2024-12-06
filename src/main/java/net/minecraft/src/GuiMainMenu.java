@@ -38,6 +38,8 @@ public class GuiMainMenu extends GuiScreen {
 		"1 star, deal with it Saiyan!",
 		"Try Terraria Stamped!",
 		"Honey, the erasers are moving!",
+		"BYAAALT!",
+		"Peyton = Awesome!"
 		"byte[] splash = new byte[] {72, 101, 108, 108, 111, 44, 32, 119, 111, 114, 108, 100, 33};" //this is a play on how the old splash text worked, and is just hello world in bytes
     	};
 	
@@ -67,10 +69,6 @@ public class GuiMainMenu extends GuiScreen {
 			this.splashText = "Merry X-mas!";
 		} else if(var1.get(2) + 1 == 1 && var1.get(5) == 1) {
 			this.splashText = "Happy new year!";
-		}
-
-		if(this.mc.doPrints) {
-			System.out.println(this.splashText);
 		}
 
 		StringTranslate var2 = StringTranslate.getInstance();
