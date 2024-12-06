@@ -167,7 +167,7 @@ public class GuiIngame extends Gui {
 		String var23;
 		if(this.mc.gameSettings.showDebugInfo) {
 			GL11.glPushMatrix();
-			var8.drawStringWithShadow("Minecraft Beta 1.7.3 (" + this.mc.debug + ")", 2, 2, 16777215);
+			var8.drawStringWithShadow("Minecraft Beta 1.7.3 OSRD (" + this.mc.debug + ")", 2, 2, 16777215);
 			var8.drawStringWithShadow(this.mc.func_6241_m(), 2, 12, 16777215);
 			var8.drawStringWithShadow(this.mc.func_6262_n(), 2, 22, 16777215);
 			var8.drawStringWithShadow(this.mc.func_6245_o(), 2, 32, 16777215);
@@ -180,10 +180,10 @@ public class GuiIngame extends Gui {
 			this.drawString(var8, var23, var6 - var8.getStringWidth(var23) - 2, 2, 14737632);
 			var23 = "Allocated memory: " + var29 * 100L / var24 + "% (" + var29 / 1024L / 1024L + "MB)";
 			this.drawString(var8, var23, var6 - var8.getStringWidth(var23) - 2, 12, 14737632);
-			this.drawString(var8, "x: " + this.mc.thePlayer.posX, 2, 64, 14737632);
-			this.drawString(var8, "y: " + this.mc.thePlayer.posY, 2, 72, 14737632);
-			this.drawString(var8, "z: " + this.mc.thePlayer.posZ, 2, 80, 14737632);
-			this.drawString(var8, "f: " + (MathHelper.floor_double((double)(this.mc.thePlayer.rotationYaw * 4.0F / 360.0F) + 0.5D) & 3), 2, 88, 14737632);
+			this.drawString(var8, "X: " + this.mc.thePlayer.posX, 2, 64, 14737632);
+			this.drawString(var8, "Y: " + this.mc.thePlayer.posY, 2, 72, 14737632);
+			this.drawString(var8, "Z: " + this.mc.thePlayer.posZ, 2, 80, 14737632);
+			this.drawString(var8, "Facing: " + (MathHelper.floor_double((double)(this.mc.thePlayer.rotationYaw * 4.0F / 360.0F) + 0.5D) & 3), 2, 88, 14737632);
 			GL11.glPopMatrix();
 		}
 
