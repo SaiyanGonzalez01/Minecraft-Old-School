@@ -577,3 +577,7 @@ item.leaves.name=Leaves
 item.leaves.desc=
 item.shears.name=Shears
 item.shears.desc=
+item.helmetstone.name=Plate Helmet
+item.helmetstone.desc=
+item.chestplatestone.name=Plate Chestplate
+item.chestplatestone.desc=

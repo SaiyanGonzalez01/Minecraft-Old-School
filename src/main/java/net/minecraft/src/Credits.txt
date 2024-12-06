@@ -1,0 +1,5 @@
+Project Contributors
+
+- Saiyan Gonzalez: Project Creator
+- PeytonPlayz: Original Beta 1.7.3 Creator
+- Chicken Nugget1104: Pull Request Helper
