@@ -20,6 +20,7 @@ public class GuiIngame extends Gui {
 	private int recordPlayingUpFor = 0;
 	private boolean field_22065_l = false;
 	public float damageGuiPartialTime;
+	public String lastChatMessage = "";
 	float prevVignetteBrightness = 1.0F;
 	
 	private static final TextureLocation guiTexture = new TextureLocation("/gui/gui.png");
@@ -184,6 +185,10 @@ public class GuiIngame extends Gui {
 			this.drawString(var8, "Y: " + this.mc.thePlayer.posY, 2, 72, 14737632);
 			this.drawString(var8, "Z: " + this.mc.thePlayer.posZ, 2, 80, 14737632);
 			this.drawString(var8, "Facing: " + (MathHelper.floor_double((double)(this.mc.thePlayer.rotationYaw * 4.0F / 360.0F) + 0.5D) & 3), 2, 88, 14737632);
+			this.drawString(var8, "Prints: " + this.mc.doPrints, 2, 96, 14737632);
+			// unsure if below code works
+			//int lightLevel = this.mc.theWorld.getBlockLightValue((int) this.mc.thePlayer.posX, (int) this.mc.thePlayer.posY, (int) this.mc.thePlayer.posZ);
+			//this.drawString(var8, "Light Level: " + lightLevel, 2, 104, 14737632);
 			GL11.glPopMatrix();
 		}
 
@@ -369,7 +374,6 @@ public class GuiIngame extends Gui {
 		for(int var1 = 0; var1 < this.chatMessageList.size(); ++var1) {
 			++((ChatLine)this.chatMessageList.get(var1)).updateCounter;
 		}
-
 	}
 
 	public void clearChatMessages() {
@@ -377,21 +381,24 @@ public class GuiIngame extends Gui {
 	}
 
 	public void addChatMessage(String var1) {
-		while(this.mc.fontRenderer.getStringWidth(var1) > 320) {
-			int var2;
-			for(var2 = 1; var2 < var1.length() && this.mc.fontRenderer.getStringWidth(var1.substring(0, var2 + 1)) <= 320; ++var2) {
+		lastChatMessage = var1;
+
+		//added spam prevention here
+		//also should i add an option to change max message list size? from 5-50? should i? comment on the pr or smthn
+		if(var1 != lastChatMessage) {
+			while(this.mc.fontRenderer.getStringWidth(var1) > 320) {
+				int var2;
+
+				this.addChatMessage(var1.substring(0, var2));
+				var1 = var1.substring(var2);
 			}
 
-			this.addChatMessage(var1.substring(0, var2));
-			var1 = var1.substring(var2);
+			this.chatMessageList.add(0, new ChatLine(var1));
+
+			while(this.chatMessageList.size() > 50) {
+				this.chatMessageList.remove(this.chatMessageList.size() - 1);
+			}
 		}
-
-		this.chatMessageList.add(0, new ChatLine(var1));
-
-		while(this.chatMessageList.size() > 50) {
-			this.chatMessageList.remove(this.chatMessageList.size() - 1);
-		}
-
 	}
 
 	public void setRecordPlayingMessage(String var1) {
