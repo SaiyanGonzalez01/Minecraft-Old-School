@@ -133,7 +133,7 @@ public class Minecraft implements Runnable {
 	public static int debugFPS;
 
 	public boolean hasRefreshed = false;
-	public boolean doPrints;
+	public boolean doPrints = true;
 	
 	private static final TextureLocation terrainTexture = new TextureLocation("/terrain.png");
 
