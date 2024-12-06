@@ -129,8 +129,7 @@ public class GuiMainMenu extends GuiScreen {
 		this.drawString(this.fontRenderer, var9, this.width - this.fontRenderer.getStringWidth(var9) - 2, this.height - 10, 16777215);
 		super.drawScreen(var1, var2, var3);
 	}
-
-
+}
 
  
 
