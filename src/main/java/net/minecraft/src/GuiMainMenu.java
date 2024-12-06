@@ -38,8 +38,6 @@ public class GuiMainMenu extends GuiScreen {
 		"1 star, deal with it Saiyan!",
 		"Try Terraria Stamped!",
 		"Honey, the erasers are moving!",
-		"BYAAALT!",
-		"Peyton = Awesome!"
 		"byte[] splash = new byte[] {72, 101, 108, 108, 111, 44, 32, 119, 111, 114, 108, 100, 33};" //this is a play on how the old splash text worked, and is just hello world in bytes
     	};
 	
@@ -131,4 +129,9 @@ public class GuiMainMenu extends GuiScreen {
 		this.drawString(this.fontRenderer, var9, this.width - this.fontRenderer.getStringWidth(var9) - 2, this.height - 10, 16777215);
 		super.drawScreen(var1, var2, var3);
 	}
-}
+
+
+
+ 
+
+
