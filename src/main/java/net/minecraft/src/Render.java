@@ -87,12 +87,9 @@ public abstract class Render {
 
 	private void renderShadow(Entity var1, double var2, double var4, double var6, float var8, float var9) {
 		GL11.glEnable(GL11.GL_BLEND);
-		GL11.glDisable(GL11.GL_ALPHA_TEST);
 		GL11.glBlendFunc(GL11.GL_SRC_ALPHA, GL11.GL_ONE_MINUS_SRC_ALPHA);
 		RenderEngine var10 = this.renderManager.renderEngine;
 		shadowTexture.bindTexture();
-		GL11.glTexParameteri(GL11.GL_TEXTURE_2D, GL11.GL_TEXTURE_WRAP_S, GL11.GL_CLAMP);
-		GL11.glTexParameteri(GL11.GL_TEXTURE_2D, GL11.GL_TEXTURE_WRAP_T, GL11.GL_CLAMP);
 		World var11 = this.getWorldFromRenderManager();
 		GL11.glDepthMask(false);
 		float var12 = this.shadowSize;
@@ -125,7 +122,6 @@ public abstract class Render {
 		var31.draw();
 		GL11.glColor4f(1.0F, 1.0F, 1.0F, 1.0F);
 		GL11.glDisable(GL11.GL_BLEND);
-		GL11.glEnable(GL11.GL_ALPHA_TEST);
 		GL11.glDepthMask(true);
 	}
 

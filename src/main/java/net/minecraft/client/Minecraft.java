@@ -844,10 +844,6 @@ public class Minecraft implements Runnable {
 											if(Keyboard.getEventKey() == this.gameSettings.keyBindChat.keyCode) {
 												this.displayGuiScreen(new GuiChat());
 											}
-
-											if(Keyboard.getEventKey() == this.gameSettings.keyBindToggleFog.keyCode) {
-												this.gameSettings.setOptionValue(EnumOptions.RENDER_DISTANCE, !Keyboard.isKeyDown(42) && !Keyboard.isKeyDown(54) ? 1 : -1);
-											}
 										}
 
 										for(int var6 = 0; var6 < 9; ++var6) {
