@@ -8,13 +8,13 @@ Unless you put your video settings on low and fast, then it would chrombook-frie
 
 ### Compiling
 
-Ok, finally figured out how to compile it. Here are the steps:
+Ok, finally figured out how to compile it. And now as of commit [1c96970](https://github.com/SaiyanGonzalez01/Minecraft-Old-School-ReDefault/commit/1c9697069fce6a5390d4a87685912464bd98d7e7) compileEPK.bat now also compiles the javascript! Here are the steps:
 
-For app.js:
+For app.js (only do this if you are on any device that can not run .bat's):
 - Create Codespace or import project as a gradle project
 - Do 'gradle generatejavascript'
-- Wait for it to load the new app.js file
-- Download it and change it out in the /js folder
+- If you opened it in command prompt then wait for it to close, and see if the file date changed, if not or if you saw any errors, fix them and try again.
+- On powershell, you will be able to see error's better. Powershell recommended.
 
 For resources.mc:
 
@@ -26,7 +26,7 @@ Once compiled, move the new resources.mc to the /web folder.
 
 ### Play a Demo!
 
-You heard right! You can actually PLAY the project now unlike the original Old-School. Play here: https://saiyangonzalez01.github.io/Minecraft-Old-School-ReDefault/web
+You heard right! You can actually PLAY the project now unlike the original Old-School. Play by clicking/tapping (HERE)[https://saiyangonzalez01.github.io/Minecraft-Old-School-ReDefault/web] ...or just press this big giant link: https://saiyangonzalez01.github.io/Minecraft-Old-School-ReDefault/web
 
 ### Contributers
 
