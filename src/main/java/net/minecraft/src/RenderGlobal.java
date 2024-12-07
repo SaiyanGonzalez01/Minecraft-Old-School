@@ -480,7 +480,12 @@ public class RenderGlobal implements IWorldAccess {
 	}
 
 	public void updateClouds() {
-		++this.cloudOffsetX;
+		if(!this.mc.gameSettings.clouds) {
+			this.mc.gameSettings.clouds = false; //fix?
+			return;
+		}
+
+		this.cloudOffsetX++;
 	}
 
 	public void renderSky(float var1) {
@@ -606,6 +611,10 @@ public class RenderGlobal implements IWorldAccess {
 	}
 
 	public void renderClouds(float var1) {
+		if(!this.mc.gameSettings.clouds) {
+			return;
+		}
+
 		if(!this.mc.theWorld.worldProvider.isNether) {
 			if(this.mc.gameSettings.fancyGraphics) {
 				this.renderCloudsFancy(var1);
@@ -667,6 +676,10 @@ public class RenderGlobal implements IWorldAccess {
 	}
 
 	public void renderCloudsFancy(float var1) {
+		if(!this.mc.gameSettings.clouds) {
+			return;
+		}
+
 		GL11.glDisable(GL11.GL_CULL_FACE);
 		float var2 = (float)(this.mc.renderViewEntity.lastTickPosY + (this.mc.renderViewEntity.posY - this.mc.renderViewEntity.lastTickPosY) * (double)var1);
 		Tessellator var3 = Tessellator.instance;

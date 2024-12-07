@@ -143,7 +143,7 @@ public class EntityPlayerSP extends EntityPlayer {
 	}
 
 	public void sendChatMessage(String var1) {
-		this.mc.ingameGUI.addChatMessageTranslate("[" + this.username + "] " + var1);
+		this.mc.ingameGUI.addChatMessageTranslate("<" + this.username + "> " + var1);
 	}
 
 	public boolean isSneaking() {
