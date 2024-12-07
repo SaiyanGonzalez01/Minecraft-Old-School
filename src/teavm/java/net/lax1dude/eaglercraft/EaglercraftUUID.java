@@ -1,6 +1,7 @@
 package net.lax1dude.eaglercraft;
 
 import net.lax1dude.eaglercraft.crypto.MD5Digest;
+import net.lax1dude.eaglercraft.HashKey;
 import net.minecraft.src.Random;
 
 /**
