@@ -34,6 +34,7 @@ public class GuiMainMenu extends GuiScreen {
 		"Try Ctrl + Shift + Q + Q!",
 		"Minecraft? More like Eaglercraft!",
 		"Browser Supported!",
+		"We will never have 404's!",
 		"100% less laxatives for 1 dude!",
 		"Better than S-SP!",
 		"'Credit peyton' They cry! And so we did!",
