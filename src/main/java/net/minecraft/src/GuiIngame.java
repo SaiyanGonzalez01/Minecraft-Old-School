@@ -383,6 +383,8 @@ public class GuiIngame extends Gui {
 	public void clearChatMessages() {
 		this.chatMessageList.clear();
 		lastmsg = "";
+		lastmsg2 = "";
+		lastmsgcount = 0;
 	}
 
 	public void addChatMessage(String var1) {
@@ -407,8 +409,11 @@ public class GuiIngame extends Gui {
 				var1 = var1.substring(var2);
 			}
 
-			if (lastmsgcount < 2 && lastmsg2.equals(lastmsg)) {
+			if (lastmsgcount > 2 && lastmsg2.equals(lastmsg)) {
   			 	//we just wont send it... actually wait you can just bypass this by adding spaces??? erm uh yeah nah im not checking fo that
+				if(lastmsgcount < 5) {
+					lastmsgcount = 0;
+				}
 			} else {
   			 	this.chatMessageList.add(0, new ChatLine(var1));
 			}
