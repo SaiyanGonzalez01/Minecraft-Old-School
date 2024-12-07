@@ -12,7 +12,7 @@ import net.minecraft.client.Minecraft;
 public class GuiIngame extends Gui {
 	private static RenderItem itemRenderer = new RenderItem();
 	private List chatMessageList = new ArrayList();
-	private Random rand = new Random();
+	private final Random rand = new Random();
 	private Minecraft mc;
 	public String field_933_a = null;
 	private int updateCounter = 0;
@@ -20,8 +20,11 @@ public class GuiIngame extends Gui {
 	private int recordPlayingUpFor = 0;
 	private boolean field_22065_l = false;
 	public float damageGuiPartialTime;
-	public String lastChatMessage = "";
 	float prevVignetteBrightness = 1.0F;
+
+	private String lastmsg = "";
+	private String lastmsg2 = "";
+	private int lastmsgcount = 0;
 	
 	private static final TextureLocation guiTexture = new TextureLocation("/gui/gui.png");
 	private static final TextureLocation iconsTexture = new TextureLocation("/gui/icons.png");
@@ -168,7 +171,6 @@ public class GuiIngame extends Gui {
 		String var23;
 		if(this.mc.gameSettings.showDebugInfo) {
 			GL11.glPushMatrix();
-			var8.drawStringWithShadow("Minecraft Beta 1.7.3 OSRD (" + this.mc.debug + ")", 2, 2, 16777215);
 			var8.drawStringWithShadow(this.mc.func_6241_m(), 2, 12, 16777215);
 			var8.drawStringWithShadow(this.mc.func_6262_n(), 2, 22, 16777215);
 			var8.drawStringWithShadow(this.mc.func_6245_o(), 2, 32, 16777215);
@@ -186,9 +188,6 @@ public class GuiIngame extends Gui {
 			this.drawString(var8, "Z: " + this.mc.thePlayer.posZ, 2, 80, 14737632);
 			this.drawString(var8, "Facing: " + (MathHelper.floor_double((double)(this.mc.thePlayer.rotationYaw * 4.0F / 360.0F) + 0.5D) & 3), 2, 88, 14737632);
 			this.drawString(var8, "Prints: " + this.mc.doPrints, 2, 96, 14737632);
-			// unsure if below code works
-			//int lightLevel = this.mc.theWorld.getBlockLightValue((int) this.mc.thePlayer.posX, (int) this.mc.thePlayer.posY, (int) this.mc.thePlayer.posZ);
-			//this.drawString(var8, "Light Level: " + lightLevel, 2, 104, 14737632);
 			GL11.glPopMatrix();
 		}
 
@@ -221,6 +220,10 @@ public class GuiIngame extends Gui {
 			var26 = 20;
 			var31 = true;
 		}
+
+		GL11.glPushMatrix();
+		var8.drawStringWithShadow("Minecraft Beta 1.7.3 OSRD (" + this.mc.debug + ")", 2, 2, 16777215);
+		GL11.glPopMatrix();
 
 		GL11.glEnable(GL11.GL_BLEND);
 		GL11.glBlendFunc(GL11.GL_SRC_ALPHA, GL11.GL_ONE_MINUS_SRC_ALPHA);
@@ -374,31 +377,50 @@ public class GuiIngame extends Gui {
 		for(int var1 = 0; var1 < this.chatMessageList.size(); ++var1) {
 			++((ChatLine)this.chatMessageList.get(var1)).updateCounter;
 		}
+
 	}
 
 	public void clearChatMessages() {
 		this.chatMessageList.clear();
+		lastmsg = "";
 	}
 
 	public void addChatMessage(String var1) {
-		lastChatMessage = var1;
+		lastmsg = var1;
+		lastmsgcount++;
+		int var2;
 
-		//added spam prevention here
-		//also should i add an option to change max message list size? from 5-50? should i? comment on the pr or smthn
-		if(var1 != lastChatMessage) {
+		if(lastmsgcount == 0) {
+			lastmsg2 = var1;
+		}
+
+		if(lastmsgcount == 2) {
+			lastmsgcount = 0;
+		}
+		//if(lastmsgcount == 1) {
+		//
+		//}
+
+		//if(lastmsgcount != 2) {
 			while(this.mc.fontRenderer.getStringWidth(var1) > 320) {
-				int var2;
+				for(var2 = 1; var2 < var1.length() && this.mc.fontRenderer.getStringWidth(var1.substring(0, var2 + 1)) <= 320; ++var2) {
+            	}
 
-		this.chatMessageList.add(0, new ChatLine(var1));
-				
+				this.addChatMessage(var1.substring(0, var2));
+				var1 = var1.substring(var2);
 			}
 
-			this.chatMessageList.add(0, new ChatLine(var1));
+			if (lastmsgcount == 2 && lastmsg2.equals(lastmsg)) {
+		    	lastmsgcount = 0;
+			} else {
+  			 	this.chatMessageList.add(0, new ChatLine(var1));
+			}
+			//this.chatMessageList.add(0, new ChatLine(var1));
 
 			while(this.chatMessageList.size() > 50) {
 				this.chatMessageList.remove(this.chatMessageList.size() - 1);
 			}
-		}
+		//}
 	}
 
 	public void setRecordPlayingMessage(String var1) {
