@@ -14,6 +14,8 @@ public abstract class Render {
 	protected float shadowSize = 0.0F;
 	protected float field_194_c = 1.0F;
 
+	public boolean doShadows = true;
+
 	public abstract void doRender(Entity var1, double var2, double var4, double var6, float var8, float var9);
 
 	@Deprecated
@@ -86,6 +88,9 @@ public abstract class Render {
 	}
 
 	private void renderShadow(Entity var1, double var2, double var4, double var6, float var8, float var9) {
+		if(!doShadows) {
+			return;
+		}
 		GL11.glEnable(GL11.GL_BLEND);
 		GL11.glBlendFunc(GL11.GL_SRC_ALPHA, GL11.GL_ONE_MINUS_SRC_ALPHA);
 		RenderEngine var10 = this.renderManager.renderEngine;

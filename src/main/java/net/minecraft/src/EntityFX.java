@@ -15,8 +15,13 @@ public class EntityFX extends Entity {
 	public static double interpPosY;
 	public static double interpPosZ;
 
+	public boolean dofx = true;
+
 	public EntityFX(World var1, double var2, double var4, double var6, double var8, double var10, double var12) {
 		super(var1);
+		if(!var1.isfxENABLED) {
+			this.dofx = false;
+		}
 		this.setSize(0.2F, 0.2F);
 		this.yOffset = this.height / 2.0F;
 		this.setPosition(var2, var4, var6);
@@ -77,6 +82,8 @@ public class EntityFX extends Entity {
 	}
 
 	public void renderParticle(Tessellator var1, float var2, float var3, float var4, float var5, float var6, float var7) {
+		if(!dofx) { return; }
+
 		float var8 = (float)(this.particleTextureIndex % 16) / 16.0F;
 		float var9 = var8 + 0.999F / 16.0F;
 		float var10 = (float)(this.particleTextureIndex / 16) / 16.0F;

@@ -30,6 +30,11 @@ public class GameSettings {
 	public boolean particles = true;
 	public boolean doPrints = true;
 	public boolean clouds = true;
+	public boolean entityshadows = true;
+	public boolean autojump = false;
+	public boolean rain = false;
+	public boolean lightningflash = true;
+	public boolean rdgb = false;
 	public String skin = "Default";
 	public KeyBinding keyBindForward = new KeyBinding("key.forward", 17);
 	public KeyBinding keyBindLeft = new KeyBinding("key.left", 30);
@@ -154,6 +159,26 @@ public class GameSettings {
 			this.clouds = !this.clouds;
 		}
 
+		if(var1 == EnumOptions.ENTITYSHADOWS) {
+			this.entityshadows = !this.entityshadows;
+		}
+		
+		if(var1 == EnumOptions.AUTOJUMP) {
+			this.autojump = !this.autojump;
+		}
+		
+		if(var1 == EnumOptions.RAIN) {
+			this.rain = !this.rain;
+		}
+		
+		if(var1 == EnumOptions.LIGHTNINGFLASH) {
+			this.lightningflash = !this.lightningflash;
+		}
+		
+		if(var1 == EnumOptions.RDBG) {
+			this.rdgb = !this.rdgb;
+		}
+		
 		this.saveOptions();
 	}
 
@@ -179,6 +204,16 @@ public class GameSettings {
 			return this.doPrints;
 		case 8:
 			return this.clouds;
+		case 9:
+			return this.entityshadows;
+		case 10:
+			return this.autojump;
+		case 11:
+			return this.rain;
+		case 12:
+			return this.lightningflash;
+		case 13:
+			return this.rdgb;
 		default:
 			return false;
 		}
@@ -290,6 +325,26 @@ public class GameSettings {
 						this.clouds = var3[1].equals("true");
 					}
 
+					if(var3[0].equals("entityshadows")) {
+						this.entityshadows = var3[1].equals("true");
+					}
+
+					if(var3[0].equals("autojump")) {
+						this.autojump = var3[1].equals("true");
+					}
+
+					if(var3[0].equals("rain")) {
+						this.rain = var3[1].equals("true");
+					}
+
+					if(var3[0].equals("lightningflash")) {
+						this.lightningflash = var3[1].equals("true");
+					}
+
+					if(var3[0].equals("rdgb")) {
+						this.rdgb = var3[1].equals("true");
+					}
+
 					for(int var4 = 0; var4 < this.keyBindings.length; ++var4) {
 						if(var3[0].equals("key_" + this.keyBindings[var4].keyDescription)) {
 							this.keyBindings[var4].keyCode = Integer.parseInt(var3[1]);
@@ -332,6 +387,11 @@ public class GameSettings {
 			var1.println("particles:" + this.particles);
 			var1.println("doPrints:" + this.doPrints);
 			var1.println("clouds:" + this.clouds);
+			var1.println("entityshadows:" + this.entityshadows);
+			var1.println("autojump:" + this.autojump);
+			var1.println("rain:" + this.rain);
+			var1.println("lightningflash:" + this.lightningflash);
+			var1.println("rdgb:" + this.rdgb);
 			//var1.println("smoothcamera:" + this.smoothCamera);
 
 			for(int var2 = 0; var2 < this.keyBindings.length; ++var2) {
