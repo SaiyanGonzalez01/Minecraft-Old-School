@@ -45,7 +45,7 @@ public class Client {
 				System.out.println(" -------- starting minecraft -------- ");
 				canvas.focus();
 				Minecraft mc = new Minecraft();
-				mc.session = new Session("Player094", "mcpass");
+				mc.session = new Session("Player", "mcpass");
 				mc.run();
 			//} catch(Exception e) {
 				//rip
@@ -144,11 +144,11 @@ public class Client {
 
 				StringBuilder str = new StringBuilder();
 				str.append("Minecraft has crashed!").append('\n');
-				str.append("If this has happened more than once then please copy the text on this screen and publish it in the issues feed of this fork's GitHub repository.\n\nThe URL to this fork's GitHub repository is: " + "https://github.com/PeytonPlayz595/Beta-1.7.3" + "\n\n");
+				str.append("If this has happened more than once then please copy the text on this screen and publish it in the issues feed of this fork's GitHub repository.\n\nThe URL to this fork's GitHub repository is: " + "https://github.com/SaiyanGonzalez01/Minecraft-Old-School-ReDefault" + "\n\n");
 				str.append(t);
 				str.append('\n').append('\n');
 				str.append("minecraft.version = \"Beta 1.7.3\"\n");
-				str.append("minecraft.author = \"PeytonPlayz585\"\n");
+				str.append("minecraft.author = \"saiyangonzalez01\"\n");
 				str.append("minecraft.brand = \"eaglercraft\"\n");
 				str.append('\n');
 				str.append(addWebGLToCrash());
