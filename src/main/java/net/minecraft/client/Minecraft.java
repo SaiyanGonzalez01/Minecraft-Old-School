@@ -133,7 +133,14 @@ public class Minecraft implements Runnable {
 	public static int debugFPS;
 
 	public boolean hasRefreshed = false;
-	public boolean doPrints = true;
+	public boolean doPrints;
+
+	//control
+	public static final int KEY_F2 = 60;
+	public static final int KEY_F4 = 62;
+	public static final int KEY_F6 = 64; 
+	public static final int KEY_F9 = 67;
+
 	
 	private static final TextureLocation terrainTexture = new TextureLocation("/terrain.png");
 
@@ -148,7 +155,6 @@ public class Minecraft implements Runnable {
 
 	public void onMinecraftCrash(UnexpectedThrowable var1) {
 		this.hasCrashed = true;
-		//this.displayUnexpectedThrowable(var1);
 	}
 
 	public void setServer(String var1, int var2) {
@@ -390,8 +396,11 @@ public class Minecraft implements Runnable {
 						this.gameSettings.thirdPersonView = false;
 					}
 
-					if(!this.skipRenderWorld && this.playerController != null && this.entityRenderer != null) {
-						this.playerController.setPartialTime(this.timer.renderPartialTicks);
+					if(!this.skipRenderWorld) {
+						if(this.playerController != null) {
+							this.playerController.setPartialTime(this.timer.renderPartialTicks);
+						}
+
 						this.entityRenderer.updateCameraAndRender(this.timer.renderPartialTicks);
 					}
 
@@ -419,7 +428,7 @@ public class Minecraft implements Runnable {
 
 					this.checkGLError("Post render");
 					GL11.optimize();
-					++var3;
+					var3++;
 
 					for(this.isGamePaused = !this.isMultiplayerWorld() && this.currentScreen != null && this.currentScreen.doesGuiPauseGame(); System.currentTimeMillis() >= var1 + 1000L; var3 = 0) {
 						this.debug = var3 + " FPS, " + WorldRenderer.chunksUpdated + " CU";
@@ -439,14 +448,7 @@ public class Minecraft implements Runnable {
 				}
 			}
 		} catch (MinecraftError var20) {
-		} /*catch (Throwable var21) {
-			this.func_28002_e();
-			var21.printStackTrace();
-			this.onMinecraftCrash(new UnexpectedThrowable("Unexpected error", var21));
-		} finally {
-			this.shutdownMinecraftApplet();
-		}*/
-
+		}
 	}
 
 	public void func_28002_e() {
@@ -553,15 +555,13 @@ public class Minecraft implements Runnable {
 	}
 
 	public void setIngameFocus() {
-		//if(GL11.isFocused()) {
-			if(!this.inGameHasFocus) {
-				this.inGameHasFocus = true;
-				this.mouseHelper.grabMouseCursor();
-				this.displayGuiScreen((GuiScreen)null);
-				this.leftClickCounter = 10000;
-				this.mouseTicksRan = this.ticksRan + 10000;
-			}
-		//}
+		if(!this.inGameHasFocus) {
+			this.inGameHasFocus = true;
+			this.mouseHelper.grabMouseCursor();
+			this.displayGuiScreen((GuiScreen)null);
+			this.leftClickCounter = 10000;
+			this.mouseTicksRan = this.ticksRan + 10000;
+		}
 	}
 
 	public void setIngameNotInFocus() {
@@ -701,6 +701,7 @@ public class Minecraft implements Runnable {
 			}
 
 			if(this.thePlayer == null) {
+				
 				System.out.println("NO PLAYER FOUND");
 				return;
 			}
@@ -715,6 +716,10 @@ public class Minecraft implements Runnable {
 	}
 
 	public void runTick() {
+		if(this.ticksRan == 6000) {
+			this.func_28001_B();
+		}
+
 		this.statFileWriter.func_27178_d();
 		this.ingameGUI.updateTick();
 		this.entityRenderer.getMouseOver(1.0F);
@@ -836,8 +841,12 @@ public class Minecraft implements Runnable {
 												this.thePlayer.dropCurrentItem();
 											}
 
-											if(Keyboard.getEventKey() == this.gameSettings.keyBindChat.keyCode) {
+											if(Keyboard.getEventKey() == this.gameSettings.keyBindChat.keyCode || Keyboard.getEventKey() == this.gameSettings.keyBindChat2.keyCode) {
 												this.displayGuiScreen(new GuiChat());
+											}
+
+											if(Keyboard.getEventKey() == this.gameSettings.keyBindToggleFog.keyCode) {
+												this.gameSettings.setOptionValue(EnumOptions.RENDER_DISTANCE, !Keyboard.isKeyDown(42) && !Keyboard.isKeyDown(54) ? 1 : -1);
 											}
 										}
 
@@ -922,7 +931,7 @@ public class Minecraft implements Runnable {
 				this.renderGlobal.updateClouds();
 			}
 
-			if(!this.isGamePaused) {
+			if(!this.isGamePaused && this.theWorld != null) {
 				if(this.theWorld.field_27172_i > 0) {
 					--this.theWorld.field_27172_i;
 				}
@@ -939,12 +948,14 @@ public class Minecraft implements Runnable {
 				this.theWorld.randomDisplayUpdates(MathHelper.floor_double(this.thePlayer.posX), MathHelper.floor_double(this.thePlayer.posY), MathHelper.floor_double(this.thePlayer.posZ));
 			}
 
-			if(!this.isGamePaused) {
+			if(!this.isGamePaused && this.effectRenderer != null) {
 				this.effectRenderer.updateEffects();
 			}
 		}
 
+		//if(this.systemTime) {
 		this.systemTime = System.currentTimeMillis();
+		//}
 	}
 
 	private void forceReload() {
@@ -987,9 +998,7 @@ public class Minecraft implements Runnable {
 		}
 
 		if(this.thePlayer == null) {
-			if(doPrints) {
-				System.out.println("NO PLAYER FOUND");
-			}
+			System.out.println("NO PLAYER FOUND");
 			return;
 		}
 
@@ -1052,7 +1061,9 @@ public class Minecraft implements Runnable {
 		this.renderViewEntity = null;
 		this.loadingScreen.printText(var2);
 		this.loadingScreen.displayLoadingString("");
-		this.sndManager.playStreaming((String)null, 0.0F, 0.0F, 0.0F, 0.0F, 0.0F);
+		if(this.sndManager != null) {
+			this.sndManager.playStreaming((String)null, 0.0F, 0.0F, 0.0F, 0.0F, 0.0F);
+		}
 		if(this.theWorld != null) {
 			this.theWorld.saveWorldIndirectly(this.loadingScreen);
 		}
@@ -1119,7 +1130,7 @@ public class Minecraft implements Runnable {
 
 	private void convertMapFormat(String var1, String var2) {
 		this.loadingScreen.printText("Converting World to " + this.saveLoader.func_22178_a());
-		this.loadingScreen.displayLoadingString("This may take a while :)");
+		this.loadingScreen.displayLoadingString("This may take a while :3");
 		this.saveLoader.convertMapFormat(var1, this.loadingScreen);
 		this.startWorld(var1, var2, 0L);
 	}
