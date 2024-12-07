@@ -4,7 +4,8 @@ A remake of my first project, Minecraft Old-School, now on Eaglercraft Beta 1.7.
 
 ### Warning! This project is not Chromebook-friendly!
 
-Unless you put your video settings on low and fast, then it would chrombook-friendly. What I mean by that is that Peyton's Eaglercraft Beta 1.7.3 is really laggy on chromebooks. This is because its single-threaded, and not like newer versions which use web workers to load chunks and more. I recommend using medium to high end computers to play.
+Unless you put your video settings on low and fast and disable particles printing and clouds, then it would be chrombook-friendly. What I mean by that is that Peyton's Eaglercraft Beta 1.7.3 is really laggy on chromebooks. This is because its single-threaded, and not like newer versions which use web workers to load chunks and more. I recommend using medium to high end computers to play.
+However day by day it is slowly becoming more Chromebook-friendly!
 
 ### Compiling
 
@@ -19,8 +20,9 @@ For app.js (only do this if you are on any device that can not run .bat's):
 For resources.mc:
 
 - In Windows, double click the file called CompileEPK.bat, which will generate the new file.
+- It will also build the javascript.
  ### OR
-- In Linux or Mac, open up terminal and type chmod +x CompileEPK.sh, and then ./CompileEPK.sh to run it. This will generate the new file.
+- In Linux or Mac, open up terminal and type chmod +x CompileEPK.sh, and then ./CompileEPK.sh to run it. This will generate the new file. But will NOT build the javascript.
 
 Once compiled, move the new resources.mc to the /web folder.
 
