@@ -187,7 +187,7 @@ public class GuiIngame extends Gui {
 			this.drawString(var8, "Y: " + this.mc.thePlayer.posY, 2, 72, 14737632);
 			this.drawString(var8, "Z: " + this.mc.thePlayer.posZ, 2, 80, 14737632);
 			this.drawString(var8, "Facing: " + (MathHelper.floor_double((double)(this.mc.thePlayer.rotationYaw * 4.0F / 360.0F) + 0.5D) & 3), 2, 88, 14737632);
-			this.drawString(var8, "Prints: " + this.mc.doPrints, 2, 96, 14737632);
+			//this.drawString(var8, "Prints: " + this.mc.doPrints, 2, 96, 14737632);
 			GL11.glPopMatrix();
 		}
 
@@ -390,16 +390,13 @@ public class GuiIngame extends Gui {
 		lastmsgcount++;
 		int var2;
 
-		if(lastmsgcount == 0) {
+		if(lastmsgcount == 1) {
 			lastmsg2 = var1;
 		}
 
-		if(lastmsgcount == 2) {
+		if(lastmsgcount == 256) {
 			lastmsgcount = 0;
 		}
-		//if(lastmsgcount == 1) {
-		//
-		//}
 
 		//if(lastmsgcount != 2) {
 			while(this.mc.fontRenderer.getStringWidth(var1) > 320) {
@@ -410,12 +407,11 @@ public class GuiIngame extends Gui {
 				var1 = var1.substring(var2);
 			}
 
-			if (lastmsgcount == 1 && lastmsg2.equals(lastmsg)) {
-		    		lastmsgcount = 0;
+			if (lastmsgcount < 2 && lastmsg2.equals(lastmsg)) {
+  			 	//we just wont send it... actually wait you can just bypass this by adding spaces??? erm uh yeah nah im not checking fo that
 			} else {
   			 	this.chatMessageList.add(0, new ChatLine(var1));
 			}
-			//this.chatMessageList.add(0, new ChatLine(var1));
 
 			while(this.chatMessageList.size() > 50) {
 				this.chatMessageList.remove(this.chatMessageList.size() - 1);
