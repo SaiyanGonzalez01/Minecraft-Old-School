@@ -332,6 +332,8 @@ tile.pistonBase.name=Piston
 tile.pistonBase.desc=
 tile.pistonStickyBase.name=Sticky Piston
 tile.pistonStickyBase.desc=
+tile.oreRuby.name=Ruby Ore
+tile.oreRuby.desc=
 
 item.shovelIron.name=Iron Shovel
 item.shovelIron.desc=
@@ -585,3 +587,5 @@ item.quiver.name=Quiver
 item.quiver.desc=
 item.flesh.name=Rotten Flesh
 item.flesh.desc=
+item.ruby.name=Ruby
+item.ruby.desc=
