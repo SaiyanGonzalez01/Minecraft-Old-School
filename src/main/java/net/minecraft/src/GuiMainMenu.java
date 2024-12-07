@@ -38,7 +38,7 @@ public class GuiMainMenu extends GuiScreen {
 		"Better than S-SP!",
 		"'Credit peyton' They cry! And so we did!",
 		"1 star, deal with it Saiyan!",
-		"Now with rubys!",
+		"Now with rubies!",
 		"Try Terraria Stamped!",
 		"Honey, the erasers are moving!",
 		"byte[] splash = new byte[] {72, 101, 108, 108, 111, 44, 32, 119, 111, 114, 108, 100, 33};" //this is a play on how the old splash text worked, and is just hello world in bytes
