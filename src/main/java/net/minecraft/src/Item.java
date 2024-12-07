@@ -109,11 +109,14 @@ public class Item {
 	public static ItemShears shears = (ItemShears)(new ItemShears(103)).setIconCoord(13, 5).setItemName("shears");
 	public static Item helmetstone = (new ItemArmor(104, 2, 2, 0)).setIconCoord(2, 0).setItemName("helmetstone");
 	public static Item platestone = (new ItemArmor(105, 2, 2, 1)).setIconCoord(2, 1).setItemName("chestplatestone");
+	public static Item quiver = (new Item(106)).setIconCoord(6, 2).setItemName("quiver");
+	public static Item flesh = (new ItemFlesh(107, -1, false, 64)).setIconCoord(11, 5).setItemName("flesh");
 	public static Item record13 = (new ItemRecord(2000, "13")).setIconCoord(0, 15).setItemName("record");
 	public static Item recordCat = (new ItemRecord(2001, "cat")).setIconCoord(1, 15).setItemName("record");
 	public final int shiftedIndex;
 	protected int maxStackSize = 64;
 	private int maxDamage = 0;
+	private int magicnumberreal = 16;
 	protected int iconIndex;
 	protected boolean bFull3D = false;
 	protected boolean hasSubtypes = false;
@@ -139,8 +142,8 @@ public class Item {
 		return this;
 	}
 
-	public Item setIconCoord(int var1, int var2) {
-		this.iconIndex = var1 + var2 * 16;
+	public Item setIconCoord(int x, int y) {
+		this.iconIndex = x + y * magicnumberreal;
 		return this;
 	}
 

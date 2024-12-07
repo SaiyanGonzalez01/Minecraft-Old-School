@@ -38,9 +38,7 @@ multiplayer.connect=Connect
 multiplayer.info1=Minecraft Multiplayer is currently not finished, but there
 multiplayer.info2=is some buggy early testing going on.
 multiplayer.ipinfo=Enter the IP of a server to connect to it:
-
 multiplayer.downloadingTerrain=Downloading terrain
-
 multiplayer.stopSleeping=Leave Bed
 
 demo.day.1=This demo will last five game days, do your best!
@@ -581,3 +579,7 @@ item.helmetstone.name=Plate Helmet
 item.helmetstone.desc=
 item.chestplatestone.name=Plate Chestplate
 item.chestplatestone.desc=
+item.quiver.name=Quiver
+item.quiver.desc=
+item.flesh.name=Rotten Flesh
+item.flesh.desc=

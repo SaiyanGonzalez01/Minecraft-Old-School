@@ -1,7 +1,7 @@
 package net.minecraft.src;
 
 public class ItemFood extends Item {
-	private int healAmount;
+	public int healAmount;
 	private boolean isWolfsFavoriteMeat;
 
 	public ItemFood(int var1, int var2, boolean var3) {

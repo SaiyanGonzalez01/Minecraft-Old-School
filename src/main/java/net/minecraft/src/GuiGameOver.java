@@ -17,9 +17,6 @@ public class GuiGameOver extends GuiScreen {
 	}
 
 	protected void actionPerformed(GuiButton var1) {
-		if(var1.id == 0) {
-		}
-
 		if(var1.id == 1) {
 			this.mc.thePlayer.respawnPlayer();
 			this.mc.displayGuiScreen((GuiScreen)null);
@@ -44,7 +41,8 @@ public class GuiGameOver extends GuiScreen {
 		GL11.glScalef(2.0F, 2.0F, 2.0F);
 		this.drawCenteredString(this.fontRenderer, "Game over!", this.width / 2 / 2, 30, 16777215);
 		GL11.glPopMatrix();
-		this.drawCenteredString(this.fontRenderer, "Score: " + this.mc.thePlayer.getScore(), this.width / 2, 100, 16777215);
+		//doing score is kinda laggy?
+		//this.drawCenteredString(this.fontRenderer, "Score: " + this.mc.thePlayer.getScore(), this.width / 2, 100, 16777215);
 		super.drawScreen(var1, var2, var3);
 	}
 
