@@ -44,30 +44,5 @@ class EnumOptionsMappingHelper {
 		} catch (NoSuchFieldError var1) {
 		}
 
-		try {
-			enumOptionsMappingHelperArray[EnumOptions.ENTITYSHADOWS.ordinal()] = 9;
-		} catch (NoSuchFieldError var1) {
-		}
-
-		try {
-			enumOptionsMappingHelperArray[EnumOptions.AUTOJUMP.ordinal()] = 10;
-		} catch (NoSuchFieldError var1) {
-		}
-		
-		try {
-			enumOptionsMappingHelperArray[EnumOptions.RAIN.ordinal()] = 11;
-		} catch (NoSuchFieldError var1) {
-		}
-		
-		try {
-			enumOptionsMappingHelperArray[EnumOptions.LIGHTNINGFLASH.ordinal()] = 12;
-		} catch (NoSuchFieldError var1) {
-		}
-		
-		try {
-			enumOptionsMappingHelperArray[EnumOptions.RDBG.ordinal()] = 13;
-		} catch (NoSuchFieldError var1) {
-		}
-
 	}
 }

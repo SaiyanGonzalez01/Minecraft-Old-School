@@ -9,7 +9,6 @@ import java.util.Set;
 import java.util.TreeSet;
 
 public class World implements IBlockAccess {
-	public boolean isfxENABLED = true;
 	public boolean scheduledUpdatesAreImmediate;
 	private List lightingToUpdate;
 	public List loadedEntityList;

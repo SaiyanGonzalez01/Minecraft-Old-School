@@ -81,7 +81,7 @@ import net.minecraft.src.WorldRenderer;
 public class Minecraft implements Runnable {
 	public static byte[] field_28006_b = new byte[10485760];
 	private static Minecraft theMinecraft;
-	public PlayerController playerController; 
+	public PlayerController playerController;
 	private boolean hasCrashed = false;
 	public int displayWidth;
 	public int displayHeight;
@@ -175,7 +175,6 @@ public class Minecraft implements Runnable {
 		this.entityRenderer = new EntityRenderer(this);
 		RenderManager.instance.itemRenderer = new ItemRenderer(this);
 		this.statFileWriter = new StatFileWriter(this.session, minecraftDir + "/misc");
-		this.theWorld.isfxENABLED = this.gameSettings.rain;
 		AchievementList.openInventory.setStatStringFormatter(new StatStringFormatKeyInv(this));
 		this.loadScreen();
 		this.mouseHelper = new MouseHelper();

@@ -16,12 +16,7 @@ public enum EnumOptions {
 	GUI_SCALE("options.guiScale", false, false),
 	PARTICLES("Particles", false, true),
 	DO_PRINTS("Prints", false, true),
-	CLOUDS("Clouds", false, true),
-	ENTITYSHADOWS("Entity Shadows", false, true),
-	AUTOJUMP("Auto-Jump", false, true),
-	RAIN("Rain/Snow", false, true),
-	LIGHTNINGFLASH("Lightning Flashes", false, true),
-	RDBG("Reduced Debug Info", false, true);
+	CLOUDS("Clouds", false, true);
 
 	private final boolean enumFloat;
 	private final boolean enumBoolean;
