@@ -24,7 +24,7 @@ For resources.mc:
  ### OR
 - In Linux or Mac, open up terminal and type chmod +x CompileEPK.sh, and then ./CompileEPK.sh to run it. This will generate the new file. But will NOT build the javascript.
 
-Once compiled, move the new resources.mc to the /web folder.
+Once compiled, move the new resources.mc to the /web folder. (This step is quite useless as it will already be in the /web folder.)
 
 ### Play a Demo!
 
