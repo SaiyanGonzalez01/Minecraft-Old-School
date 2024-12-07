@@ -841,7 +841,7 @@ public class Minecraft implements Runnable {
 												this.thePlayer.dropCurrentItem();
 											}
 
-											if(Keyboard.getEventKey() == this.gameSettings.keyBindChat.keyCode || Keyboard.getEventKey() == this.gameSettings.keyBindChat2.keyCode) {
+											if(Keyboard.getEventKey() == this.gameSettings.keyBindChat.keyCode) {
 												this.displayGuiScreen(new GuiChat());
 											}
 
