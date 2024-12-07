@@ -410,8 +410,8 @@ public class GuiIngame extends Gui {
 				var1 = var1.substring(var2);
 			}
 
-			if (lastmsgcount == 2 && lastmsg2.equals(lastmsg)) {
-		    	lastmsgcount = 0;
+			if (lastmsgcount == 1 && lastmsg2.equals(lastmsg)) {
+		    		lastmsgcount = 0;
 			} else {
   			 	this.chatMessageList.add(0, new ChatLine(var1));
 			}
