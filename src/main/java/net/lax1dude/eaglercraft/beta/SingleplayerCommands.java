@@ -23,6 +23,7 @@ public class SingleplayerCommands {
 		singleplayerCommands.put("give", new CommandGiveItem());
 		singleplayerCommands.put("summon", new CommandSummon());
 		singleplayerCommands.put("time", new CommandTime());
+		singleplayerCommands.put("seed", new CommandSeed());
 	}
 	
 	public static interface Command {
@@ -176,6 +177,20 @@ public class SingleplayerCommands {
 		@Override
 		public String getDescription() {
 			return "set world time in <ticks>";
+		}
+		
+	}
+
+	public static class CommandSeed implements Command {
+
+		@Override
+		public void processCommand(Minecraft mc, String[] args) {
+			mc.displayChat(FontRenderer.formatChar + "asorry this doesnt work rn");
+		}
+
+		@Override
+		public String getDescription() {
+			return "displays a world's seed";
 		}
 		
 	}
