@@ -56,6 +56,7 @@ public class ModelWolf extends ModelBase {
 	public void render(float var1, float var2, float var3, float var4, float var5, float var6) {
 		super.render(var1, var2, var3, var4, var5, var6);
 		this.setRotationAngles(var1, var2, var3, var4, var5, var6);
+
 		this.wolfHeadMain.renderWithRotation(var6);
 		this.wolfBody.render(var6);
 		this.wolfLeg1.render(var6);
@@ -71,6 +72,7 @@ public class ModelWolf extends ModelBase {
 
 	public void setLivingAnimations(EntityLiving var1, float var2, float var3, float var4) {
 		EntityWolf var5 = (EntityWolf)var1;
+		
 		if(var5.isWolfAngry()) {
 			this.wolfTail.rotateAngleY = 0.0F;
 		} else {
