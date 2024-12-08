@@ -24,9 +24,6 @@ public class GuiTextField extends Gui {
 	}
 
 	public void setText(String var1) {
-		if(this.text.equals(var1)) {
-			return;
-		}
 		this.text = var1;
 	}
 

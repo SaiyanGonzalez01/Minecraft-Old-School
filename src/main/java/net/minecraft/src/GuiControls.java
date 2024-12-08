@@ -5,7 +5,6 @@ public class GuiControls extends GuiScreen {
 	protected String screenTitle = "Controls";
 	private GameSettings options;
 	private int buttonId = -1;
-	private static EnumOptions[] cooloptions = new EnumOptions[]{EnumOptions.INVERT_MOUSE, EnumOptions.SENSITIVITY};
 
 	public GuiControls(GuiScreen var1, GameSettings var2) {
 		this.parentScreen = var1;
@@ -19,14 +18,9 @@ public class GuiControls extends GuiScreen {
 	public void initGui() {
 		StringTranslate var1 = StringTranslate.getInstance();
 		int var2 = this.func_20080_j();
-		//int var2 = 0;
-		EnumOptions[] var35 = cooloptions;
-		int var4 = var35.length;
 
 		for(int var3 = 0; var3 < this.options.keyBindings.length; ++var3) {
 			this.controlList.add(new GuiSmallButton(var3, var2 + var3 % 2 * 160, this.height / 6 + 24 * (var3 >> 1), 70, 20, this.options.getOptionDisplayString(var3)));
-			EnumOptions var6 = var35[var3];
-			this.controlList.add(new GuiSmallButton(var6.returnEnumOrdinal(), this.width / 2 - 155 + var3 % 2 * 160, this.height / 6 + 24 * (var3 >> 1), var6, this.options.getKeyBinding(var6)));
 		}
 
 		this.controlList.add(new GuiButton(200, this.width / 2 - 100, this.height / 6 + 168, var1.translateKey("gui.done")));
