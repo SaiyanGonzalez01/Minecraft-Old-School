@@ -12,23 +12,22 @@ public class Random {
 
 	public boolean DOWEDOFUNNYCOMPLEX = false;
 
-    public Random() {
+   	public Random() {
 		this((long)(Math.random() * magicnumber));
 	}
 
 	public Random(long seed) {
 		setSeed(seed);
-		//System.out.println("seed is " + seed);
 	}
 	
 	private static long initialScramble(long seed) {
-        return (seed ^ multiplier) & mask;
-    }
+        	return (seed ^ multiplier) & mask;
+    	}
 	
 	public void setSeed(long seed) {
 		this.seed = initialScramble(seed);
 		haveNextNextGaussian = true;
-    }
+    	}
 
 	protected int next(int bits) {
 		seed = (seed * multiplier + addend) & mask;
@@ -94,7 +93,7 @@ public class Random {
 	private boolean haveNextNextGaussian = false;
 
 	public double nextGaussian() {
-		// See Knuth, ACP, Section 3.4.1 Algorithm C.
+	// See Knuth, ACP, Section 3.4.1 Algorithm C.
         if (haveNextNextGaussian) {
             haveNextNextGaussian = false;
             return nextNextGaussian;
