@@ -84,7 +84,7 @@ public class GuiMainMenu extends GuiScreen {
 		} else if(var1.get(2) + 1 == 1 && var1.get(5) == 5) {
 			this.splashText = "Happy Birthday, Saiyan!";
 		} else if(var1.get(2) + 1 == 10 && var1.get(5) == 31) {
-			this.splashText = "Happy Holloween!";
+			this.splashText = "Happy Halloween!";
 		}
 
 		StringTranslate var2 = StringTranslate.getInstance();
