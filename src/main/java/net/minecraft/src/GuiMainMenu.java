@@ -42,6 +42,16 @@ public class GuiMainMenu extends GuiScreen {
 		"Now with rubies!",
 		"Try Terraria Stamped!",
 		"Honey, the erasers are moving!",
+		"Come back when your a little...mmm Richer!",
+		"Dig Dug got nothing on me!",
+		"And Knuckles!",
+		"X Space Invaders!",
+		"Cthulhu is MAD and missing an- oh wait wrong splash.",
+		"The Legend of Steve!",
+		"Farfig is still crying!",
+		"1.12 got nothin on Beta, right?",
+		"Check out my new shoes!",
+		"Delay, Deny, Depose!",
 		"byte[] splash = new byte[] {72, 101, 108, 108, 111, 44, 32, 119, 111, 114, 108, 100, 33};" //this is a play on how the old splash text worked, and is just hello world in bytes
     	};
 	
@@ -71,6 +81,10 @@ public class GuiMainMenu extends GuiScreen {
 			this.splashText = "Merry X-mas!";
 		} else if(var1.get(2) + 1 == 1 && var1.get(5) == 1) {
 			this.splashText = "Happy new year!";
+		} else if(var1.get(2) + 1 == 1 && var1.get(5) == 5) {
+			this.splashText = "Happy Birthday, Saiyan!";
+		} else if(var1.get(2) + 1 == 10 && var1.get(5) == 31) {
+			this.splashText = "Happy Holloween!";
 		}
 
 		StringTranslate var2 = StringTranslate.getInstance();
