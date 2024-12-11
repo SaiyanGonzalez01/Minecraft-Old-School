@@ -1,4 +1,4 @@
-package util;
+package net.minecraft.src;
 
 public class Mth {
 	private static final int BIG_ENOUGH_INT = 1024;
