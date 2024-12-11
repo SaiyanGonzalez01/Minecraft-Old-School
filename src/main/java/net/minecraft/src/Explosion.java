@@ -4,10 +4,11 @@ import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
+import net.minecraft.src.Random;
 
 public class Explosion {
 	public boolean isFlaming = false;
-	private Random ExplosionRNG = new Random();
+	private final Random ExplosionRNG = new Random();
 	private World worldObj;
 	public double explosionX;
 	public double explosionY;
