@@ -23,6 +23,10 @@ public class TexturePackList {
 	public TexturePackList(Minecraft var1, String var2) {
 		this.mc = var1;
 		this.texturePackDir = var2 + "/texturepacks";
+		
+		//if(!this.texturePackDir.exists()) {
+			//this.texturePackDir.mkdirs();
+		//}
 
 		this.currentTexturePack = var1.gameSettings.skin;
 		this.updateAvaliableTexturePacks();

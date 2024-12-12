@@ -13,8 +13,4 @@ public class ColorizerWater {
 		int var5 = (int)((1.0D - var2) * 255.0D);
 		return waterBuffer[var5 << 8 | var4];
 	}
-
-	public static int getWaterColorSwamp() {
-		return 12618910;
-	}
 }
