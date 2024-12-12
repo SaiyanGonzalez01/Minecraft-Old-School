@@ -167,6 +167,14 @@ void main(){
 
 #endif
 
+#ifdef CC_swap_rb
+	color *= texColor.rgba;
+#else
+	color *= texColor.bgra;
+#endif
+
+#endif
+
 #ifdef CC_alphatest
 	if(color.a < alphaTestF){
 		discard;
