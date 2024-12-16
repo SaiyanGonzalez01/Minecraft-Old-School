@@ -27,6 +27,7 @@ public class EntityMob extends EntityCreature implements IMob {
 
 	protected Entity findPlayerToAttack() {
 		EntityPlayer var1 = this.worldObj.getClosestPlayerToEntity(this, 16.0D);
+		return var1 != null && this.canEntityBeSeen(var1) ? var1 : null;
 	}
 
 	public boolean attackEntityFrom(Entity var1, int var2) {
