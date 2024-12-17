@@ -28,7 +28,7 @@ Once compiled, move the new resources.mc to the /web folder. (This step is quite
 
 ### Play a Demo!
 
-You heard right! You can actually PLAY the project now unlike the original Old-School. Play by clicking/tapping [HERE](https://saiyangonzalez01.github.io/Minecraft-Old-School-ReDefault/web) ...or just press this big giant link: https://saiyangonzalez01.github.io/Minecraft-Old-School-ReDefault/web
+You heard right! You can actually PLAY the project now unlike the original Old-School. Play by clicking/tapping [Here](https://saiyangonzalez01.github.io/Minecraft-Old-School-ReDefault/web)
 
 ### Contributers
 
