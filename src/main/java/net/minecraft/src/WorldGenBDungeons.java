@@ -1,6 +1,6 @@
 package net.minecraft.src;
 
-public class WorldGenDungeons extends WorldGenerator {
+public class WorldGenBDungeons extends WorldGenerator {
 	public boolean generate(World var1, Random var2, int var3, int var4, int var5) {
 		byte var6 = 3;
 		int var7 = var2.nextInt(2) + 2;
