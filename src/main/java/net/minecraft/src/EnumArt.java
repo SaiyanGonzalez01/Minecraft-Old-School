@@ -23,7 +23,7 @@ public enum EnumArt {
 	Void("Void", 32, 32, 96, 128),
 	SkullAndRoses("SkullAndRoses", 32, 32, 128, 128),
 	Fighters("Fighters", 64, 32, 0, 96),
-	Lowmist("Lowmist",64, 32, 16, 96),
+	Lowmist("Lowmist",64, 32, 64, 96),
 	Pointer("Pointer", 64, 64, 0, 192),
 	Pigscene("Pigscene", 64, 64, 64, 192),
 	BurningSkull("BurningSkull", 64, 64, 128, 192),
