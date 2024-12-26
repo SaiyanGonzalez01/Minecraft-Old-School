@@ -334,6 +334,9 @@ tile.pistonStickyBase.name=Sticky Piston
 tile.pistonStickyBase.desc=
 tile.oreRuby.name=Ruby Ore
 tile.oreRuby.desc=
+tile.blockRuby.name=Block of Ruby
+tile.blockRuby.desc=
+
 
 item.shovelIron.name=Iron Shovel
 item.shovelIron.desc=
