@@ -341,6 +341,13 @@ public class ChunkProviderGenerate implements IChunkProvider {
 			var16 = var5 + this.rand.nextInt(16) + 8;
 			(new WorldGenDungeons()).generate(this.worldObj, this.rand, var14, var15, var16);
 		}
+		
+		for(var13 = 0; var13 < 8; ++var13) {
+			var14 = var4 + this.rand.nextInt(16) + 8;
+			var15 = this.rand.nextInt(128);
+			var16 = var5 + this.rand.nextInt(16) + 8;
+			(new WorldGenBDungeons()).generate(this.worldObj, this.rand, var14, var15, var16);
+		}
 
 		for(var13 = 0; var13 < 10; ++var13) {
 			var14 = var4 + this.rand.nextInt(16);
