@@ -491,7 +491,7 @@ public class ChunkProviderGenerate implements IChunkProvider {
 
 		byte var28 = 0;
 		if(var6 == BiomeGenBase.forest) {
-			var28 = 2;
+			var28 = 10;
 		}
 
 		if(var6 == BiomeGenBase.rainforest) {
@@ -507,7 +507,7 @@ public class ChunkProviderGenerate implements IChunkProvider {
 		}
 
 		if(var6 == BiomeGenBase.plains) {
-			var28 = 10;
+			var28 = 30;
 		}
 
 		int var20;
@@ -530,9 +530,9 @@ public class ChunkProviderGenerate implements IChunkProvider {
 		}
 
 		for(var17 = 0; var17 < var28; ++var17) {
-			var25 = var4 + this.rand.nextInt(16) + 8;
+			var25 = var4 + this.rand.nextInt(24) + 8;
 			var19 = this.rand.nextInt(128);
-			var20 = var5 + this.rand.nextInt(16) + 8;
+			var20 = var5 + this.rand.nextInt(24) + 8;
 			(new WorldGenDeadBush(Block.deadBush.blockID)).generate(this.worldObj, this.rand, var25, var19, var20);
 		}
 
