@@ -413,10 +413,10 @@ public class ChunkProviderGenerate implements IChunkProvider {
 		}
 
 		for (var13 = 0; var13 < 1; ++var13) {
-    		var14 = var4 + this.rand.nextInt(16);
-    		var15 = this.rand.nextInt(11);
+    			var14 = var4 + this.rand.nextInt(16);
+    			var15 = this.rand.nextInt(11);
    			var16 = var5 + this.rand.nextInt(16);
-    		(new WorldGenMinable(Block.oreRuby.blockID, 5)).generate(this.worldObj, this.rand, var14, var15, var16);
+    			(new WorldGenMinable(Block.oreRuby.blockID, 5)).generate(this.worldObj, this.rand, var14, var15, var16);
 		}
 
 		var11 = 0.5D;
