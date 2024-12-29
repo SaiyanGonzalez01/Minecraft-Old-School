@@ -34,18 +34,4 @@ public class EntityZombie extends EntityMob {
 		return Item.flesh.shiftedIndex;
 	}
 	
-	protected void dropFewItems() {
-		int var1 = this.rand.nextInt(3);
-
-		int var2;
-		for(var2 = 0; var2 < var1; ++var2) {
-			this.dropItem(Item.appleRed.shiftedIndex, 1);
-		}
-
-		var1 = this.rand.nextInt(3);
-
-		for(var2 = 0; var2 < var1; ++var2) {
-			this.dropItem(Item.bone.shiftedIndex, 1);
-		}
-	}
 }
