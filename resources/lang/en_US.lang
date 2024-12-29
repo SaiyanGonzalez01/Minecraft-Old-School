@@ -336,6 +336,10 @@ tile.oreRuby.name=Ruby Ore
 tile.oreRuby.desc=
 tile.blockRuby.name=Block of Ruby
 tile.blockRuby.desc=
+tile.granite.name=Granite
+tile.granite.desc=
+tile.brickGranite.name=Granite Brick
+tile.brickGranite.desc=
 
 
 item.shovelIron.name=Iron Shovel
