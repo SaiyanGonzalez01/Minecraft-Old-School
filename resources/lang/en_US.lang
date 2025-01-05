@@ -171,10 +171,10 @@ tile.flower.name=Mariagold
 tile.flower.desc=
 tile.rose.name=Rose
 tile.rose.desc=
-tile.mushroomRed.name=Amanita Muscaria
-tile.mushroom.desc=
-tile.mushroomBrown.name=Boletus Edulis
-tile.mushroom.desc=
+tile.mushroomRed.name=Red Mushroom
+tile.mushroomRed.desc=
+tile.mushroomBrown.name=Brown Mushroom
+tile.mushroomBrown.desc=
 tile.blockGold.name=Block of Gold
 tile.blockGold.desc=
 tile.blockIron.name=Block of Iron
@@ -342,6 +342,8 @@ tile.granite.name=Granite
 tile.granite.desc=
 tile.brickGranite.name=Granite Brick
 tile.brickGranite.desc=
+tile.mushroomwhite.name=Giant Puffball
+tile.mushroomwhite.desc=
 
 
 item.shovelIron.name=Iron Shovel
