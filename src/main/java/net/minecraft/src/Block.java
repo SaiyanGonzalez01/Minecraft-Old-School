@@ -120,6 +120,7 @@ public class Block {
 	public static final Block blockRuby = (new BlockOreStorage(98, 148)).setHardness(5.0F).setResistance(10.0F).setStepSound(soundMetalFootstep).setBlockName("blockRuby");
 	public static final Block granite = (new BlockGranite(99, 30)).setHardness(1.5F).setResistance(10.0F).setStepSound(soundStoneFootstep).setBlockName("granite");
 	public static final Block brickGranite = (new Block(100, 76, Material.rock)).setHardness(2.0F).setResistance(10.0F).setStepSound(soundStoneFootstep).setBlockName("brickGranite");
+	public static final BlockFlower mushroomwhite = (BlockFlower)(new BlockMushroom(101, 77)).setHardness(0.0F).setStepSound(soundGrassFootstep).setBlockName("mushroomwhite");
 	public int blockIndexInTexture;
 	public final int blockID;
 	protected float blockHardness;
