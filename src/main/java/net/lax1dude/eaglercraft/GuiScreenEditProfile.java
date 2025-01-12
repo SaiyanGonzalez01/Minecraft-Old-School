@@ -41,7 +41,7 @@ public class GuiScreenEditProfile extends GuiScreen {
 			"Scottish Steve",
 			"Developer Steve",
 			"Herobrine",
-			"Slime",
+			"Mossy Steve",
 			"C418",
 			"Notch",
 			"Creeper",
