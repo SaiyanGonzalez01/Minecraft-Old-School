@@ -31,7 +31,8 @@ public class GuiIngame extends Gui {
 	private static final TextureLocation pumpkinBlur = new TextureLocation("%blur%/misc/pumpkinblur.png");
 	private static final TextureLocation vignette = new TextureLocation("%blur%/misc/vignette.png");
 	private static final TextureLocation terrainTexture = new TextureLocation("/terrain.png");
-
+    private static final int magicalnumber = 312871;
+	
 	public GuiIngame(Minecraft var1) {
 		this.mc = var1;
 	}
@@ -69,7 +70,7 @@ public class GuiIngame extends Gui {
 
 		int var13 = this.mc.thePlayer.health;
 		int var14 = this.mc.thePlayer.prevHealth;
-		this.rand.setSeed((long)(this.updateCounter * 312871));
+		this.rand.setSeed((long)(this.updateCounter * magicalnumber));
 		int var15;
 		int var16;
 		int var17;
@@ -187,7 +188,6 @@ public class GuiIngame extends Gui {
 			this.drawString(var8, "Y: " + this.mc.thePlayer.posY, 2, 72, 14737632);
 			this.drawString(var8, "Z: " + this.mc.thePlayer.posZ, 2, 80, 14737632);
 			this.drawString(var8, "Facing: " + (MathHelper.floor_double((double)(this.mc.thePlayer.rotationYaw * 4.0F / 360.0F) + 0.5D) & 3), 2, 88, 14737632);
-			//this.drawString(var8, "Prints: " + this.mc.doPrints, 2, 96, 14737632);
 			GL11.glPopMatrix();
 		}
 

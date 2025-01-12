@@ -2,16 +2,18 @@ package net.minecraft.src;
 
 import java.util.ArrayList;
 import java.util.List;
+import net.minecraft.src.SessionID;
 
 public class Session {
 	public static List registeredBlocksList = new ArrayList();
 	public String username;
 	public String sessionId;
 	public String mpPassParameter;
+	public SessionID sID;
 
 	public Session(String var1, String var2) {
 		this.username = var1;
-		this.sessionId = var2;
+		this.sessionId = sID.generateSessionID();
 	}
 
 	static {
