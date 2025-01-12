@@ -71,26 +71,27 @@ public class GuiCreateWorld extends GuiScreen {
 				}
 
 				this.createClicked = true;
-				long var2 = (new Random()).nextLong();
-				String var4 = this.textboxSeed.getText();
-				if(!MathHelper.stringNullOrLengthZero(var4)) {
-					try {
-						long var5 = Long.parseLong(var4);
-						if(var5 != 0L) {
-							var2 = var5;
-						}
-					} catch (NumberFormatException var7) {
-						var2 = (long)var4.hashCode();
-					}
-				}
+				long var2 = getSeedFromText(textboxSeed.getText());
 
 				this.mc.playerController = new PlayerControllerSP(this.mc);
 				this.mc.startWorld(this.folderName, this.textboxWorldName.getText(), var2);
 				this.mc.displayGuiScreen((GuiScreen)null);
 			}
-
 		}
 	}
+
+	private long getSeedFromText(String seedText) {
+        if (MathHelper.stringNullOrLengthZero(seedText)) {
+            return new Random().nextLong();
+        }
+
+        try {
+            long parsedSeed = Long.parseLong(seedText);
+            return (parsedSeed != 0L) ? parsedSeed : new Random().nextLong();
+        } catch (NumberFormatException e) {
+            return (long) seedText.hashCode();
+        }
+    }
 
 	protected void keyTyped(char var1, int var2) {
 		if(this.textboxWorldName.isFocused) {
