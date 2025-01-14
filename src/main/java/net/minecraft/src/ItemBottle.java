@@ -1,3 +1,4 @@
+package net.minecraft.src;
 
 public class ItemBottle extends Item {
 	private int isFull;
