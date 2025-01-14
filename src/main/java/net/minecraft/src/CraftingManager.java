@@ -80,6 +80,7 @@ public class CraftingManager {
 		this.addRecipe(new ItemStack(Item.bed, 1), new Object[]{"###", "XXX", Character.valueOf('#'), Block.cloth, Character.valueOf('X'), Block.planks});
 		this.addRecipe(new ItemStack(Block.brickGranite, 1), new Object[]{"##", "##", Character.valueOf('#'), Block.granite});
 		this.addRecipe(new ItemStack(Item.bottle, 3), new Object[]{"# #", " # ", Character.valueOf('#'), Block.glass});
+		this.addRecipe(new ItemStack(Item.bottleWater, 3), new Object[]{" # ", "#X#", Character.valueOf('#'), Item.bottle, Character.valueOf('X'), Item.bucketWater});
 		Collections.sort(this.recipes, new RecipeSorter(this));
 		System.out.println(this.recipes.size() + " recipes");
 	}
