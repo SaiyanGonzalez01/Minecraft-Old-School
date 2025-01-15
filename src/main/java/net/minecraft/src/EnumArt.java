@@ -28,9 +28,9 @@ public enum EnumArt {
 	Pigscene("Pigscene", 64, 64, 64, 192),
 	BurningSkull("BurningSkull", 64, 64, 128, 192),
 	Skeleton("Skeleton", 64, 48, 192, 64),
-	DonkeyKong("DonkeyKong", 64, 48, 192, 112);
+	DonkeyKong("DonkeyKong", 64, 48, 192, 112),
 	Fern("Fern", 48, 48, 48, 64),
-	Tides("Tides", 48, 48, 64, 64),
+	Tides("Tides", 48, 48, 64, 64);
 
 	public static final int maxArtTitleLength = "SkullAndRoses".length();
 	public final String title;
