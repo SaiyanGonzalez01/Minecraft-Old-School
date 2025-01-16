@@ -30,7 +30,7 @@ public enum EnumArt {
 	Skeleton("Skeleton", 64, 48, 192, 64),
 	DonkeyKong("DonkeyKong", 64, 48, 192, 112),
 	Fern("Fern", 48, 48, 64, 64),
-	Tides("Tides", 48, 48, 80, 64);
+	Tides("Tides", 48, 48, 80, 48);
 
 	public static final int maxArtTitleLength = "SkullAndRoses".length();
 	public final String title;
