@@ -8,7 +8,7 @@ public class Item {
 	public static Item axeSteel = (new ItemAxe(2, EnumToolMaterial.IRON)).setIconCoord(2, 7).setItemName("hatchetIron");
 	public static Item flintAndSteel = (new ItemFlintAndSteel(3)).setIconCoord(5, 0).setItemName("flintAndSteel");
 	public static Item appleRed = (new ItemFood(4, 4, false)).setIconCoord(10, 0).setItemName("apple");
-	public static Item bow = (new ItemBow(5)).setIconCoord(5, 1).setItemName("bow").setFull3D();
+	public static Item bow = (new ItemBow(5, EnumToolMaterial.STONE)).setIconCoord(5, 1).setItemName("bow").setFull3D();
 	public static Item arrow = (new Item(6)).setIconCoord(5, 2).setItemName("arrow");
 	public static Item coal = (new ItemCoal(7)).setIconCoord(7, 0).setItemName("coal");
 	public static Item diamond = (new Item(8)).setIconCoord(7, 3).setItemName("emerald");
