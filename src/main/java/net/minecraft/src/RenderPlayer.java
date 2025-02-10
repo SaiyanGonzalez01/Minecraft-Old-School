@@ -9,7 +9,7 @@ public class RenderPlayer extends RenderLiving {
 	private ModelBiped modelBipedMain = (ModelBiped)this.mainModel;
 	private ModelBiped modelArmorChestplate = new ModelBiped(1.0F);
 	private ModelBiped modelArmor = new ModelBiped(0.5F);
-	private static final String[] armorFilenamePrefix = new String[]{"cloth", "chain", "iron", "diamond", "gold"};
+	private static final String[] armorFilenamePrefix = new String[]{"cloth", "chain", "iron", "diamond", "gold", "plate"};
 	private static final TextureLocation[][] armorTextures = new TextureLocation[armorFilenamePrefix.length][2];
 
 	static {
