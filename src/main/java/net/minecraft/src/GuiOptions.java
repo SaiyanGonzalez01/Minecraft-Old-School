@@ -29,7 +29,6 @@ public class GuiOptions extends GuiScreen {
 			++var2;
 		}
 
-		this.controlList.add(new GuiButton(300, this.width / 2 - 100, this.height / 6 + 96 + 12, var1.translateKey("options.credits")));
 		this.controlList.add(new GuiButton(101, this.width / 2 - 100, this.height / 6 + 96 + 12, var1.translateKey("options.video")));
 		this.controlList.add(new GuiButton(100, this.width / 2 - 100, this.height / 6 + 120 + 12, var1.translateKey("options.controls")));
 		this.controlList.add(new GuiButton(200, this.width / 2 - 100, this.height / 6 + 168, var1.translateKey("gui.done")));
@@ -56,10 +55,6 @@ public class GuiOptions extends GuiScreen {
 				this.mc.gameSettings.saveOptions();
 				this.mc.displayGuiScreen(this.parentScreen);
 			}
-
-			if(var1.id == 300) {
-				this.mc.gameSettings.saveOptions();
-				this.mc.displayGuiScreen(new GuiCreditsScreen(this, this.options));
 
 		}
 	}
