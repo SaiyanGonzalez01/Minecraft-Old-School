@@ -191,6 +191,7 @@ public class SoundManager {
 	
 	//Uhm...
 	public void playStreaming(String string, float f, float g, float h, float i, float j) {
+		playSound("music.record." + string, f, g, h, i, j);
 		// TODO Auto-generated method stub
 		
 	}
