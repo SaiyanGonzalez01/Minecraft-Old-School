@@ -607,3 +607,7 @@ item.bottleWater.name=Water Bottle
 item.bottleWater.desc=
 item.bottleMilk.name=Milk Bottle
 item.bottleMilk.desc=
+item.sawdust.name=Sawdust
+item.sawdust.desc=
+item.bark.name=Tree Bark
+item.bark.desc=
