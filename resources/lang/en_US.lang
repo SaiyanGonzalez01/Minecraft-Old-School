@@ -345,6 +345,8 @@ tile.brickGranite.name=Granite Bricks
 tile.brickGranite.desc=
 tile.mushroomwhite.name=Giant Puffball
 tile.mushroomwhite.desc=
+tile.sawdustBlock.name=Sawdust Block
+tile.sawdustBlock.desc=
 
 
 item.shovelIron.name=Iron Shovel
