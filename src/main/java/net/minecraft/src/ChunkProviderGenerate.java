@@ -362,13 +362,22 @@ public class ChunkProviderGenerate implements IChunkProvider {
 			var16 = var5 + this.rand.nextInt(16);
 			(new WorldGenMinable(Block.dirt.blockID, 32)).generate(this.worldObj, this.rand, var14, var15, var16);
 		}
+		
 		for(var13 = 0; var13 < 20; ++var13) {
 			var14 = var4 + this.rand.nextInt(16);
 			var15 = this.rand.nextInt(128);
 			var16 = var5 + this.rand.nextInt(16);
 			(new WorldGenMinable(Block.granite.blockID, 32)).generate(this.worldObj, this.rand, var14, var15, var16);
 		}
+		
+		for(var13 = 0; var13 < 10; ++var13) {
+			var14 = var4 + this.rand.nextInt(16);
+			var15 = this.rand.nextInt(25);
+			var16 = var5 + this.rand.nextInt(16);
+			(new WorldGenMinable(Block.salt.blockID, 16)).generate(this.worldObj, this.rand, var14, var15, var16);
 
+		}
+		
 		for(var13 = 0; var13 < 10; ++var13) {
 			var14 = var4 + this.rand.nextInt(16);
 			var15 = this.rand.nextInt(128);
@@ -420,7 +429,7 @@ public class ChunkProviderGenerate implements IChunkProvider {
 
 		for (var13 = 0; var13 < 1; ++var13) {
     			var14 = var4 + this.rand.nextInt(16);
-    			var15 = this.rand.nextInt(11);
+    			var15 = this.rand.nextInt(16);
    			var16 = var5 + this.rand.nextInt(16);
     			(new WorldGenMinable(Block.oreRuby.blockID, 5)).generate(this.worldObj, this.rand, var14, var15, var16);
 		}
