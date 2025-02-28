@@ -347,7 +347,8 @@ tile.mushroomwhite.name=Giant Puffball
 tile.mushroomwhite.desc=
 tile.sawdustBlock.name=Sawdust Block
 tile.sawdustBlock.desc=
-
+tile.salt.name=Salt
+tile.salt.desc=
 
 item.shovelIron.name=Iron Shovel
 item.shovelIron.desc=
@@ -613,3 +614,5 @@ item.sawdust.name=Sawdust
 item.sawdust.desc=
 item.bark.name=Tree Bark
 item.bark.desc=
+item.saltI.name=Raw Salt
+item.saltI.desc=
