@@ -616,3 +616,7 @@ item.bark.name=Tree Bark
 item.bark.desc=
 item.saltI.name=Raw Salt
 item.saltI.desc=
+item.porkchopSalted.name=Salted Cooked Porkchop
+item.porkchopSalted.desc=
+item.fishSalted.name=Salted Cooked Cod
+item.fishSalted.desc=
