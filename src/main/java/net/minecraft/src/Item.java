@@ -119,7 +119,8 @@ public class Item {
 	public static Item sawdust = (new Item(115)).setIconCoord(13, 3).setItemName("sawdust");
 	public static Item bark = (new Item(116)).setIconCoord(14, 3).setItemName("bark");
 	public static Item saltI = (new Item(117)).setIconCoord(12, 6).setItemName("saltI");
-	public static Item porkSalted = (new ItemFood(118, 10, true)).setIconCoord(11, 6).setItemName("porkchopSalted");
+	public static Item porkSalted = (new ItemFood(118, 19, true)).setIconCoord(11, 6).setItemName("porkchopSalted");
+	public static Item fishSalted = (new ItemFood(119, 8, true)).setIconCoord(11, 6).setItemName("fishSalted");
 	public static Item record13 = (new ItemRecord(2000, "13")).setIconCoord(0, 15).setItemName("record");
 	public static Item recordCat = (new ItemRecord(2001, "cat")).setIconCoord(1, 15).setItemName("record");
 	public final int shiftedIndex;
