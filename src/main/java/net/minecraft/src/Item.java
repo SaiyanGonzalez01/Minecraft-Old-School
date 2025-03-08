@@ -124,6 +124,8 @@ public class Item {
 	public static Item porkstuffer = (new ItemFood(120, 9, true)).setIconCoord(12, 8).setItemName("porkstuffer");
 	public static Item fishstuffer = (new ItemFood(121, 7, true)).setIconCoord(12, 9).setItemName("fishstuffer");
 	public static Item fleshstuffer = (new ItemFood(122, 6, true)).setIconCoord(11, 9).setItemName("fleshstuffer");
+	public static Item cookiePlain = (new ItemCookie(123, 1, false, 8)).setIconCoord(10, 9).setItemName("cookiePlain");
+	public static Item cookieSugar = (new ItemCookie(124, 1, false, 8)).setIconCoord(9, 9).setItemName("cookieSugar");
 	public static Item record13 = (new ItemRecord(2000, "13")).setIconCoord(0, 15).setItemName("record");
 	public static Item recordCat = (new ItemRecord(2001, "cat")).setIconCoord(1, 15).setItemName("record");
 	public final int shiftedIndex;
