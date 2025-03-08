@@ -8,8 +8,4 @@ public class BiomeGenTaiga extends BiomeGenBase {
 	public WorldGenerator getRandomWorldGenForTrees(Random var1) {
 		return (WorldGenerator)(var1.nextInt(3) == 0 ? new WorldGenTaiga1() : new WorldGenTaiga2());
 	}
-		
-	public int getSkyColorByTemp(float var1) {
-		return 5762041;
-	}
 }
