@@ -87,6 +87,9 @@ public class CraftingManager {
 		this.addRecipe(new ItemStack(Item.porkstuffer, 1), new Object[]{" # ", "#X#", " # ", Character.valueOf('#'), Item.wheat, Character.valueOf('X'), Item.porkCooked});
 		this.addRecipe(new ItemStack(Item.fishstuffer, 1), new Object[]{" # ", "#X#", " # ", Character.valueOf('#'), Item.wheat, Character.valueOf('X'), Item.fishCooked});
 		this.addRecipe(new ItemStack(Item.fleshstuffer, 1), new Object[]{" # ", "#X#", " # ", Character.valueOf('#'), Item.wheat, Character.valueOf('X'), Item.flesh});
+		this.addRecipe(new ItemStack(Item.cookiePlain, 8), new Object[]{"##", Character.valueOf('#'), Item.wheat});
+		this.addRecipe(new ItemStack(Item.cookieSugar, 8), new Object[]{"#X#", Character.valueOf('#'), Item.wheat, Character.valueOf('X'), Item.sugar});
+		
 		Collections.sort(this.recipes, new RecipeSorter(this));
 		System.out.println(this.recipes.size() + " recipes");
 	}
