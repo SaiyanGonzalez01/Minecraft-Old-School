@@ -10,6 +10,6 @@ public class BiomeGenTaiga extends BiomeGenBase {
 	}
 		
 	public int getSkyColorByTemp(float var1) {
-		return 1120580;
+		return 5762041;
 	}
 }
