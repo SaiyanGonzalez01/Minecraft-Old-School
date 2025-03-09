@@ -74,7 +74,7 @@ public class GuiScreenEditProfile extends GuiScreen {
 			
 	};
 	
-	protected String screenTitle = "Edit Profile";
+	protected String screenTitle = "Welcome Back, username1";
 	
 	public GuiScreenEditProfile(GuiScreen parent) {
 		this.parent = parent;
