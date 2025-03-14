@@ -21,5 +21,6 @@ public class RecipesDyes {
 		var1.addShapelessRecipe(new ItemStack(Item.dyePowder, 2, 13), new Object[]{new ItemStack(Item.dyePowder, 1, 5), new ItemStack(Item.dyePowder, 1, 9)});
 		var1.addShapelessRecipe(new ItemStack(Item.dyePowder, 3, 13), new Object[]{new ItemStack(Item.dyePowder, 1, 4), new ItemStack(Item.dyePowder, 1, 1), new ItemStack(Item.dyePowder, 1, 9)});
 		var1.addShapelessRecipe(new ItemStack(Item.dyePowder, 4, 13), new Object[]{new ItemStack(Item.dyePowder, 1, 4), new ItemStack(Item.dyePowder, 1, 1), new ItemStack(Item.dyePowder, 1, 1), new ItemStack(Item.dyePowder, 1, 15)});
+		var1.addShapelessRecipe(new ItemStack(Item.dyePowder, 2, 16), new Object[]{new ItemStack(Item.dyePowder, 1, 1), new ItemStack(Item.dyePowder, 1, 9)});
 	}
 }
