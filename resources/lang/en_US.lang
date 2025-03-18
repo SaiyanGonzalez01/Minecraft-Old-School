@@ -349,6 +349,8 @@ tile.sawdustBlock.name=Sawdust Block
 tile.sawdustBlock.desc=
 tile.salt.name=Salt
 tile.salt.desc=
+tile.roseCyan.name=Cyan Rose
+tile.roseCyan.desc=
 
 item.shovelIron.name=Iron Shovel
 item.shovelIron.desc=
