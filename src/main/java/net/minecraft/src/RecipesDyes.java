@@ -16,6 +16,7 @@ public class RecipesDyes {
 		var1.addShapelessRecipe(new ItemStack(Item.dyePowder, 2, 7), new Object[]{new ItemStack(Item.dyePowder, 1, 8), new ItemStack(Item.dyePowder, 1, 15)});
 		var1.addShapelessRecipe(new ItemStack(Item.dyePowder, 3, 7), new Object[]{new ItemStack(Item.dyePowder, 1, 0), new ItemStack(Item.dyePowder, 1, 15), new ItemStack(Item.dyePowder, 1, 15)});
 		var1.addShapelessRecipe(new ItemStack(Item.dyePowder, 2, 12), new Object[]{new ItemStack(Item.dyePowder, 1, 4), new ItemStack(Item.dyePowder, 1, 15)});
+		var1.addShapelessRecipe(new ItemStack(Item.dyePowder, 2, 6), new Object[]{new ItemStack(Item.dyePowder, 1, 4), new ItemStack(Item.dyePowder, 1, 2)});
 		var1.addShapelessRecipe(new ItemStack(Item.dyePowder, 2, 6), new Object[]{Block.plantCyan});
 		var1.addShapelessRecipe(new ItemStack(Item.dyePowder, 2, 5), new Object[]{new ItemStack(Item.dyePowder, 1, 4), new ItemStack(Item.dyePowder, 1, 1)});
 		var1.addShapelessRecipe(new ItemStack(Item.dyePowder, 2, 13), new Object[]{new ItemStack(Item.dyePowder, 1, 5), new ItemStack(Item.dyePowder, 1, 9)});
