@@ -351,6 +351,10 @@ tile.salt.name=Salt
 tile.salt.desc=
 tile.roseCyan.name=Cyan Rose
 tile.roseCyan.desc=
+tile.brickStone.name=Stone Bricks
+tile.brickStone.desc=
+tile.pillarStone.name=Stone Pillar
+tile.pillarStone.desc=
 
 item.shovelIron.name=Iron Shovel
 item.shovelIron.desc=
