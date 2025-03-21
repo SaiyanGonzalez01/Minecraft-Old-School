@@ -112,7 +112,7 @@ public class Item {
 	public static Item ruby = (new Item(108)).setIconCoord(10, 10).setItemName("ruby");
 	public static Item puffcooked = (new ItemPuffCooked(109, 4, false, 1)).setIconCoord(8, 7).setItemName("puffCooked");
 	public static Item swordObsidian = (new ItemSword(110, EnumToolMaterial.OBSIDIAN)).setIconCoord(0, 9).setItemName("swordObsidian");
-	public static Item bottle = (new ItemBottle(111)).setIconCoord(9, 8).setItemName("bottle");
+	public static Item bottle = (new Item(111)).setIconCoord(9, 8).setItemName("bottle");
 	public static Item hammerSteel = (new ItemPickaxe(112, EnumToolMaterial.IRON)).setIconCoord(2, 10).setItemName("hammerIron");
 	public static Item helmetStone = (new ItemArmor(113, 2, 2, 0)).setIconCoord(0, 14).setItemName("helmetStone");
 	public static Item plateStone = (new ItemArmor(114, 2, 2, 1)).setIconCoord(0, 14).setItemName("chestplateStone");
@@ -126,6 +126,7 @@ public class Item {
 	public static Item fleshstuffer = (new ItemFood(122, 6, true)).setIconCoord(11, 9).setItemName("fleshstuffer");
 	public static Item cookiePlain = (new ItemCookie(123, 1, false, 8)).setIconCoord(10, 9).setItemName("cookiePlain");
 	public static Item cookieSugar = (new ItemCookie(124, 1, false, 8)).setIconCoord(9, 9).setItemName("cookieSugar");
+	public static Item bowReinforced = (new ItemBow(125)).setIconCoord(5, 8).setItemName("bowReinforced").setFull3D();
 	public static Item record13 = (new ItemRecord(2000, "13")).setIconCoord(0, 15).setItemName("record");
 	public static Item recordCat = (new ItemRecord(2001, "cat")).setIconCoord(1, 15).setItemName("record");
 	public final int shiftedIndex;
