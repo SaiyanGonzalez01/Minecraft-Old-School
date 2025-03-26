@@ -1,6 +1,5 @@
 
-## ![minecraft_title (5)](https://github.com/user-attachments/assets/4f9b5f06-bfd5-44b0-89f5-2fc718663b59)
-
+## ![Minecraft Old-School Official Title](https://github.com/user-attachments/assets/b3616c30-e6d8-444f-95f3-bc31b37a4645)
 
 A remake of my first project, Minecraft Old-School, now on Eaglercraft Beta 1.7.3!
 
