@@ -355,6 +355,8 @@ tile.brickStone.name=Stone Bricks
 tile.brickStone.desc=
 tile.pillarStone.name=Stone Pillar
 tile.pillarStone.desc=
+tile.mud.name=Mud
+tile.mud.desc=
 
 item.shovelIron.name=Iron Shovel
 item.shovelIron.desc=
