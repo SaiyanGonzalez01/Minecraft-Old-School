@@ -154,7 +154,7 @@ public class ChunkProviderGenerate implements IChunkProvider {
 									}
 
 									if(var11) {
-										var16 = (byte)Block.sand.blockID;
+										var16 = (byte)Block.mud.blockID;
 									}
 								}
 
