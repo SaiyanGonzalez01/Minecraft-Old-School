@@ -15,6 +15,7 @@ public enum EnumArt {
 	Sea("Sea", 32, 16, 64, 32),
 	Sunset("Sunset", 32, 16, 96, 32),
 	Creebet("Creebet", 32, 16, 128, 32),
+	Abstract("Abstract", 32, 16, 0, 48),
 	Wanderer("Wanderer", 16, 32, 0, 64),
 	Graham("Graham", 16, 32, 16, 64),
 	Match("Match", 32, 32, 0, 128),
