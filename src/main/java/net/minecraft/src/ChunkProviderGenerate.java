@@ -114,8 +114,7 @@ public class ChunkProviderGenerate implements IChunkProvider {
 		this.sandNoise = this.field_909_n.generateNoiseOctaves(this.sandNoise, (double)(var1 * 16), (double)(var2 * 16), 0.0D, 16, 16, 1, var6, var6, 1.0D);
 		this.gravelNoise = this.field_909_n.generateNoiseOctaves(this.gravelNoise, (double)(var1 * 16), 109.0134D, (double)(var2 * 16), 16, 1, 16, var6, 1.0D, var6);
 		this.stoneNoise = this.field_908_o.generateNoiseOctaves(this.stoneNoise, (double)(var1 * 16), (double)(var2 * 16), 0.0D, 16, 16, 1, var6 * 2.0D, var6 * 2.0D, var6 * 2.0D);
-		this.mudNoise = this.field_909_n.generateNoiseOctaves(this.mudNoise, (double)(var1 * 16), 109.0134D, (double)(var2 * 16), 16, 1, 16, var6, 1.0D, var6);
-
+		
 		for(int var8 = 0; var8 < 16; ++var8) {
 			for(int var9 = 0; var9 < 16; ++var9) {
 				BiomeGenBase var10 = var4[var8 + var9 * 16];
@@ -156,10 +155,7 @@ public class ChunkProviderGenerate implements IChunkProvider {
 
 									if(var11) {
 										var16 = (byte)Block.sand.blockID;
-									}
 									
-									if(var11) {
-										var16 = (byte)Block.mud.blockID;
 									}
 								}
 
