@@ -44,10 +44,10 @@ public class GuiScreenEditProfile extends GuiScreen {
 			"Mossy Steve",
 			"C418",
 			"Notch",
-			"Creeper",
-			"Zombie",
-			"Pig",
-			"Squid",
+			"Classica Steve",
+			"TestVan",
+			"Mezo",
+			"Camo Mezo",
 			"Mooshroom"
 			
 	};
