@@ -638,3 +638,8 @@ item.cookiePlain.name=Plain Cookie
 item.cookiePlain.desc=
 item.cookieSugar.name=Sugar Cookie
 item.cookieSugar.desc=
+item.axeSchematic.name=Battleaxe Schematic
+item.axeSchematic.desc=
+item.swordSchematic.name=Greatsword Schematic
+item.swordSchematic.desc=
+
