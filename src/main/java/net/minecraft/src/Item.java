@@ -123,8 +123,8 @@ public class Item {
 	public static Item fleshstuffer = (new ItemFood(119, 6, true)).setIconCoord(11, 9).setItemName("fleshstuffer");
 	public static Item cookiePlain = (new ItemCookie(120, 1, false, 8)).setIconCoord(10, 9).setItemName("cookiePlain");
 	public static Item cookieSugar = (new ItemCookie(122, 1, false, 8)).setIconCoord(9, 9).setItemName("cookieSugar");
-	public static Item axepaper = (new Item(123)).setIconCoord(10, 3).setItemName("axeSchematic");
-	public static Item swordpaper = (new Item(123)).setIconCoord(10, 3).setItemName("swordSchematic");
+	public static Item axepaper = (new Item(123)).setIconCoord(8, 9).setItemName("axeSchematic");
+	public static Item swordpaper = (new Item(124)).setIconCoord(8, 9).setItemName("swordSchematic");
 	public static Item record13 = (new ItemRecord(2000, "13")).setIconCoord(0, 15).setItemName("record");
 	public static Item recordCat = (new ItemRecord(2001, "cat")).setIconCoord(1, 15).setItemName("record");
 	public final int shiftedIndex;
