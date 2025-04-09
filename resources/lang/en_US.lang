@@ -642,4 +642,10 @@ item.axeSchematic.name=Battleaxe Schematic
 item.axeSchematic.desc=
 item.swordSchematic.name=Greatsword Schematic
 item.swordSchematic.desc=
+item.greatswordIron.name=Iron Greatsword
+item.greatswordIron.desc=
+item.greatswordGold.name=Gold Greatsword
+item.greatswordGold.desc=
+item.greatswordDiamond.name=Diamond Greatsword
+item.greatswordDiamond.desc=
 
