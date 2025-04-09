@@ -21,6 +21,7 @@ public class CraftingManager {
 		(new RecipesCrafting()).addRecipes(this);
 		(new RecipesArmor()).addRecipes(this);
 		(new RecipesDyes()).addRecipes(this);
+		(new RecipesGreatsword()).addRecipes(this);
 		this.addRecipe(new ItemStack(Item.paper, 3), new Object[]{"#X#", Character.valueOf('#'), Item.sawdust, Character.valueOf('X'), Item.bark});
 		this.addRecipe(new ItemStack(Item.book, 1), new Object[]{"#", "#", "#", Character.valueOf('#'), Item.paper});
 		this.addRecipe(new ItemStack(Block.fence, 2), new Object[]{"###", "###", Character.valueOf('#'), Item.stick});
@@ -91,7 +92,6 @@ public class CraftingManager {
 		this.addRecipe(new ItemStack(Item.cookieSugar, 8), new Object[]{"#X#", Character.valueOf('#'), Item.wheat, Character.valueOf('X'), Item.sugar});
 		this.addRecipe(new ItemStack(Block.brickStone, 4), new Object[]{"##", "##", Character.valueOf('#'), Block.stone});
 		this.addRecipe(new ItemStack(Block.pillarStone, 3), new Object[]{"#", "#", "#", Character.valueOf('#'), Block.stone});
-		this.addRecipe(new ItemStack(Item.greatswordIron, 1), new Object[]{"#", "X", "Y", Character.valueOf('#'), Item.swordSteel, Character.valueOf('X'), Item.swordpaper, Character.valueOf('Y'), Item.ruby});
 		
 		Collections.sort(this.recipes, new RecipeSorter(this));
 		System.out.println(this.recipes.size() + " recipes");
