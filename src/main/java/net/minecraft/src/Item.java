@@ -128,7 +128,7 @@ public class Item {
 	public static Item greatswordIron = (new ItemGreatSword(125, EnumToolMaterial.GREATIRON)).setIconCoord(0, 11).setItemName("greatswordIron");
 	public static Item greatswordDiamond = (new ItemGreatSword(126, EnumToolMaterial.GREATEMERALD)).setIconCoord(2, 11).setItemName("greatswordDiamond");
 	public static Item greatswordGold = (new ItemGreatSword(127, EnumToolMaterial.GREATGOLD)).setIconCoord(1, 11).setItemName("greatswordGold");
-	public static Item potato = (new Item(128)).setIconCoord(12, 10).setItemName("potato");
+	public static Item potato = (new ItemSeeds(128, Block.potatoCrops.blockID)).setIconCoord(12, 10).setItemName("potato");
 	public static Item record13 = (new ItemRecord(2000, "13")).setIconCoord(0, 15).setItemName("record");
 	public static Item recordCat = (new ItemRecord(2001, "cat")).setIconCoord(1, 15).setItemName("record");
 	public final int shiftedIndex;
