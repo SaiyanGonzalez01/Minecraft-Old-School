@@ -39,6 +39,15 @@ public class ItemDye extends Item {
 				return true;
 			}
 
+			if(var8 == Block.potatoCrops.blockID) {
+				if(!var3.multiplayerWorld) {
+					((BlockCrops)Block.crops).fertilize(var3, var4, var5, var6);
+					--var1.stackSize;
+				}
+
+				return true;
+			}
+
 			if(var8 == Block.grass.blockID) {
 				if(!var3.multiplayerWorld) {
 					--var1.stackSize;
