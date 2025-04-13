@@ -112,7 +112,7 @@ public class Item {
 	public static Item ruby = (new Item(108)).setIconCoord(10, 10).setItemName("ruby");
 	public static Item puffcooked = (new ItemPuffCooked(109, 4, false, 1)).setIconCoord(8, 7).setItemName("puffCooked");
 	public static Item swordObsidian = (new ItemSword(110, EnumToolMaterial.OBSIDIAN)).setIconCoord(0, 9).setItemName("swordObsidian");
-	public static Item bottle = (new Item(111)).setIconCoord(9, 8).setItemName("bottle");
+	public static ItemBottle bottle = (ItemBottle)(new ItemBottle(111)).setIconCoord(9, 8).setItemName("bottle");
 	public static Item sawdust = (new Item(112)).setIconCoord(13, 3).setItemName("sawdust");
 	public static Item bark = (new Item(113)).setIconCoord(14, 3).setItemName("bark");
 	public static Item saltI = (new Item(114)).setIconCoord(12, 6).setItemName("saltI");
