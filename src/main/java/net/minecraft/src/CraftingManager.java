@@ -80,7 +80,6 @@ public class CraftingManager {
 		this.addRecipe(new ItemStack(Block.pistonStickyBase, 1), new Object[]{"S", "P", Character.valueOf('S'), Item.slimeBall, Character.valueOf('P'), Block.pistonBase});
 		this.addRecipe(new ItemStack(Item.bed, 1), new Object[]{"###", "XXX", Character.valueOf('#'), Block.cloth, Character.valueOf('X'), Block.planks});
 		this.addRecipe(new ItemStack(Block.brickGranite, 1), new Object[]{"##", "##", Character.valueOf('#'), Block.granite});
-		this.addRecipe(new ItemStack(Item.bottle, 3), new Object[]{"# #", " # ", Character.valueOf('#'), Block.glass});
 		this.addRecipe(new ItemStack(Item.bark, 4), new Object[]{" # ", " # ", Character.valueOf('#'), Block.wood});
 		this.addRecipe(new ItemStack(Item.sawdust, 2), new Object[]{"#", Character.valueOf('#'), Item.bark});
 		this.addRecipe(new ItemStack(Block.sawdustBlock, 1), new Object[]{"###", "###", "###", Character.valueOf('#'), Item.sawdust});
