@@ -128,8 +128,8 @@ public class Item {
 	public static Item greatswordDiamond = (new ItemGreatSword(126, EnumToolMaterial.GREATEMERALD)).setIconCoord(2, 11).setItemName("greatswordDiamond");
 	public static Item greatswordGold = (new ItemGreatSword(127, EnumToolMaterial.GREATGOLD)).setIconCoord(1, 11).setItemName("greatswordGold");
 	public static Item potato = (new ItemSeeds(128, Block.potatoCrops.blockID)).setIconCoord(12, 10).setItemName("potato");
-	public static Item ironNugget = (new Item(129)).setIconCoord(6, 6).setItemName("itemNugget");
-	public static Item chainlink = (new Item(130)).setIconCoord(8, 8).setItemName("chainlink");
+	public static Item ironNugget = (new Item(129)).setIconCoord(6, 6).setItemName("ironNugget");
+	public static Item chainlink = (new Item(130)).setIconCoord(7, 7).setItemName("chainlink");
 	public static Item potatoCooked = (new ItemFood(131, 5, true)).setIconCoord(11, 10).setItemName("potatoCooked");
 	public static Item record13 = (new ItemRecord(2000, "13")).setIconCoord(0, 15).setItemName("record");
 	public static Item recordCat = (new ItemRecord(2001, "cat")).setIconCoord(1, 15).setItemName("record");
