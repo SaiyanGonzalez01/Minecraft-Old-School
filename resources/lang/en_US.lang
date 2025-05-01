@@ -648,4 +648,13 @@ item.greatswordGold.name=Gold Greatsword
 item.greatswordGold.desc=
 item.greatswordDiamond.name=Diamond Greatsword
 item.greatswordDiamond.desc=
+item.potato.name=Potato
+item.potato.desc=
+item.potatoCooked.name=Baked Potato
+item.potatoCooked.desc=
+item.ironNugget.name=Iron Nugget
+item.ironNugget.desc=
+item.chainlink.name=Chainlink
+item.chainlink.desc=
+
 
