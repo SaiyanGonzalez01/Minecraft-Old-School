@@ -12,20 +12,34 @@ However day by day it is slowly becoming more Chromebook-friendly!
 
 Ok, finally figured out how to compile it. And now as of commit [1c96970](https://github.com/SaiyanGonzalez01/Minecraft-Old-School-ReDefault/commit/1c9697069fce6a5390d4a87685912464bd98d7e7) compileEPK.bat now also compiles the javascript! Here are the steps:
 
-For app.js (only do this if you are on any device that can not run .bat's):
-- Create Codespace or import project as a gradle project
-- Do 'gradle generatejavascript'
-- If you opened it in command prompt then wait for it to close, and see if the file date changed, if not or if you saw any errors, fix them and try again.
-- On powershell, you will be able to see error's better. Powershell recommended.
+(Either Launch Codespaces or do it on Windows first)
 
-For resources.mc:
+#### For app.js (Codespaces & Similar):
+- Open up terminal and type 'gradle generatejavascript', this will generate the new file in the /web folder.
+
+#### (Windows):
+
+- In Windows, double click the file called CompileEPK.bat, which will generate the new file.
+- It will also build the resources.
+
+#### For resources.mc (Codespaces & Similar):
+
+- Open up terminal and type 'chmod +x CompileEPK.sh', and then ./CompileEPK.sh to run it. This will generate the new file in the /web/js folder. But will NOT build the javascript.
+
+#### (Windows):
 
 - In Windows, double click the file called CompileEPK.bat, which will generate the new file.
 - It will also build the javascript.
- ### OR
-- In Linux or Mac, open up terminal and type chmod +x CompileEPK.sh, and then ./CompileEPK.sh to run it. This will generate the new file. But will NOT build the javascript.
 
-Once compiled, move the new resources.mc to the /web folder. (This step is quite useless as it will already be in the /web folder.)
+#### Notes For Powershell Users:
+
+- If you opened it in command prompt then wait for it to close, and see if the file date changed, if not or if you saw any errors, fix them and try again.
+- On powershell, you will be able to see error's better. Powershell recommended.
+
+### Known Big Bugs
+- Ghasts crashes game if they fire a fireball and it contacts the floor
+- World Importing
+- Renaming Worlds
 
 ### Play The Project!
 
