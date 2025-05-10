@@ -43,7 +43,11 @@ Ok, finally figured out how to compile it. And now as of commit [1c96970](https:
 
 ### Play The Project!
 
-You heard right! You can actually PLAY the project now unlike the original Old-School. Play by clicking/tapping [Here](https://saiyangonzalez01.github.io/Minecraft-Old-School-ReDefault/web)
+You heard right! You can actually PLAY the project now unlike the original Old-School.
+
+Play [Default](https://saiyangonzalez01.github.io/Minecraft-Old-School-ReDefault/web)
+
+Play [Unminified](https://saiyangonzalez01.github.io/Minecraft-Old-School-ReDefault/webminified)
 
 ### Contributers
 
