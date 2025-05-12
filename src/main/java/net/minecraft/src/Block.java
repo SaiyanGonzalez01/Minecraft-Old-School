@@ -130,6 +130,7 @@ public class Block {
 	public static final Block potatoCrops = (new BlockCropsP(108, 136)).setHardness(0.0F).setStepSound(soundGrassFootstep).setBlockName("crops").disableStats().disableNeighborNotifyOnMetadataChange();
 	public static final Block sandBrick = (new Block(109, 154, Material.rock)).setStepSound(soundStoneFootstep).setHardness(0.8F).setBlockName("sandBrick");
 	public static final Block debugBrick = (new Block(110, 197, Material.rock)).setStepSound(soundStoneFootstep).setHardness(0.8F).setBlockName("debugBrick");
+	public static final Block planksWhite = (new Block(111, 154, Material.wood)).setHardness(2.0F).setResistance(5.0F).setStepSound(soundWoodFootstep).setBlockName("wood").disableNeighborNotifyOnMetadataChange();
 	public int blockIndexInTexture;
 	public final int blockID;
 	protected float blockHardness;
