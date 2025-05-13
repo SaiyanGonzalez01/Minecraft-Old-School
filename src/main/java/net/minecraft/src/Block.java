@@ -132,6 +132,7 @@ public class Block {
 	public static final Block debugBrick = (new Block(110, 197, Material.rock)).setStepSound(soundStoneFootstep).setHardness(0.8F).setBlockName("debugBrick");
 	public static final Block planksWhite = (new Block(111, 153, Material.wood)).setHardness(2.0F).setResistance(5.0F).setStepSound(soundWoodFootstep).setBlockName("wood").disableNeighborNotifyOnMetadataChange();
 	public static final Block planksLightGrey = (new Block(112, 154, Material.wood)).setHardness(2.0F).setResistance(5.0F).setStepSound(soundWoodFootstep).setBlockName("wood").disableNeighborNotifyOnMetadataChange();
+	public static final Block planksGrey = (new Block(113, 155, Material.wood)).setHardness(2.0F).setResistance(5.0F).setStepSound(soundWoodFootstep).setBlockName("wood").disableNeighborNotifyOnMetadataChange();
 	public int blockIndexInTexture;
 	public final int blockID;
 	protected float blockHardness;
