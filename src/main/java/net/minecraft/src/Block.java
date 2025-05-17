@@ -138,6 +138,8 @@ public class Block {
 	public static final Block planksRed = (new Block(116, 158, Material.wood)).setHardness(2.0F).setResistance(5.0F).setStepSound(soundWoodFootstep).setBlockName("wood").disableNeighborNotifyOnMetadataChange();
 	public static final Block planksOrange = (new Block(117, 159, Material.wood)).setHardness(2.0F).setResistance(5.0F).setStepSound(soundWoodFootstep).setBlockName("wood").disableNeighborNotifyOnMetadataChange();
 	public static final Block planksYellow = (new Block(118, 169, Material.wood)).setHardness(2.0F).setResistance(5.0F).setStepSound(soundWoodFootstep).setBlockName("wood").disableNeighborNotifyOnMetadataChange();
+	public static final Block planksLime = (new Block(119, 170, Material.wood)).setHardness(2.0F).setResistance(5.0F).setStepSound(soundWoodFootstep).setBlockName("wood").disableNeighborNotifyOnMetadataChange();
+	public static final Block planksGreen = (new Block(120, 171, Material.wood)).setHardness(2.0F).setResistance(5.0F).setStepSound(soundWoodFootstep).setBlockName("wood").disableNeighborNotifyOnMetadataChange();
 	public int blockIndexInTexture;
 	public final int blockID;
 	protected float blockHardness;
