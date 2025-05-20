@@ -10,7 +10,7 @@ public class BlockPlanks extends Block {
 			return this.blockIndexInTexture;
 		} else {
 			var2 = ~(var2 & 15);
-			return 156 + ((var2 & 8) >> 3) + (var2 & 7) * 16;
+			return 154 + ((var2 & 8) >> 3) + (var2 & 7) * 16;
 		}
 	}
 
