@@ -2,7 +2,7 @@ package net.minecraft.src;
 
 public class BlockPlanks extends Block {
 	public BlockPlanks() {
-		super(127, 9, Material.wood);
+		super(127, 10, Material.wood);
 	}
 
 	public int getBlockTextureFromSideAndMetadata(int var1, int var2) {
