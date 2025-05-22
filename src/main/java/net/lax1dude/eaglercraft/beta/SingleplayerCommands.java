@@ -185,7 +185,7 @@ public class SingleplayerCommands {
 
 		@Override
 		public void processCommand(Minecraft mc, String[] args) {
-			mc.displayChat(FontRenderer.formatChar + "asorry this doesnt work rn");
+			mc.displayChat(FontRenderer.formatChar + "aWork In Progress");
 		}
 
 		@Override
