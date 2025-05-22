@@ -131,7 +131,6 @@ public class Block {
 	public static final Block sandBrick = (new Block(109, 154, Material.rock)).setStepSound(soundStoneFootstep).setHardness(0.8F).setBlockName("sandBrick");
 	public static final Block debugBrick = (new Block(110, 197, Material.rock)).setStepSound(soundStoneFootstep).setHardness(0.8F).setBlockName("debugBrick");
 	public static final Block planksColored = (new BlockPlanks()).setHardness(2.0F).setResistance(5.0F).setStepSound(soundWoodFootstep).setBlockName("woodColored").disableNeighborNotifyOnMetadataChange();
-	public static final Block doorGlass = (new BlockDoor(112, 159, Material.glass)).setHardness(2.0F).setStepSound(soundGlassFootstep).setBlockName("doorGlass");
 	public int blockIndexInTexture;
 	public final int blockID;
 	protected float blockHardness;
