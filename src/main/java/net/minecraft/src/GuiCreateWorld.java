@@ -42,7 +42,7 @@ public class GuiCreateWorld extends GuiScreen {
 		}
 
 		if(MathHelper.stringNullOrLengthZero(this.folderName)) {
-			this.folderName = "World";
+			this.folderName = "Rubydung";
 		}
 
 		this.folderName = generateUnusedFolderName(this.mc.getSaveLoader(), this.folderName);
