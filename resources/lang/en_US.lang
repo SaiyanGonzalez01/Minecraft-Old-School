@@ -1,7 +1,7 @@
 
 gui.done=Done
 gui.cancel=Cancel
-gui.toMenu=Back to title screen
+gui.toMenu=Back To Main Menu
 gui.up=Up
 gui.down=Down
 gui.yes=Yes
@@ -80,7 +80,7 @@ options.sound=Sound
 options.invertMouse=Invert Mouse
 options.sensitivity=Sensitivity
 options.sensitivity.min=*Yawn*
-options.sensitivity.max=Meth Eater
+options.sensitivity.max=Adderall
 options.renderDistance=Render Distance
 options.renderDistance.tiny=Tiny
 options.renderDistance.short=Short
@@ -108,7 +108,7 @@ options.credits=Credits
 
 performance.max=Max FPS
 performance.balanced=Balanced
-performance.powersaver=Power saver
+performance.powersaver=Power Saver
 
 controls.title=Controls
 
@@ -126,7 +126,7 @@ key.playerlist=List players
 
 texturePack.openFolder=Open texture pack folder
 texturePack.title=Select Texture Pack
-texturePack.folderInfo=(Place texture pack files here)
+texturePack.folderInfo=(Place Texture Pack .zips here)
 
 tile.stone.name=Stone
 tile.stone.desc=
@@ -686,5 +686,7 @@ item.ironNugget.name=Iron Nugget
 item.ironNugget.desc=
 item.chainlink.name=Chainlink
 item.chainlink.desc=
+item.bleach.name=Bleach Powder
+item.bleach.desc=
 
 
