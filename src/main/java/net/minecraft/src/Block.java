@@ -130,7 +130,8 @@ public class Block {
 	public static final Block potatoCrops = (new BlockCropsP(108, 136)).setHardness(0.0F).setStepSound(soundGrassFootstep).setBlockName("crops").disableStats().disableNeighborNotifyOnMetadataChange();
 	public static final Block planksColored = (new BlockPlanks()).setHardness(2.0F).setResistance(5.0F).setStepSound(soundWoodFootstep).setBlockName("woodColored").disableNeighborNotifyOnMetadataChange();
 	public static final Block netherrackBrick = (new BlockNetherrack(109, 166)).setHardness(1.4F).setStepSound(soundStoneFootstep).setBlockName("hellbrick");
-	public static final BlockNetherRice netherriceBlock = (BlockNetherRice)(new BlockNetherRice(113, 183)).setHardness(0.0F).setStepSound(soundGrassFootstep).setBlockName("netherrice");
+	public static final BlockNetherRice netherriceWild = (BlockNetherRice)(new BlockNetherRice(113, 183)).setHardness(0.0F).setStepSound(soundGrassFootstep).setBlockName("netherriceWild");
+	public static final Block netherriceCrops = (new BlockCropsR(114, 226)).setHardness(0.0F).setStepSound(soundGrassFootstep).setBlockName("crops").disableStats().disableNeighborNotifyOnMetadataChange();
 	public int blockIndexInTexture;
 	public final int blockID;
 	protected float blockHardness;
