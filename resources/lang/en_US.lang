@@ -387,6 +387,8 @@ tile.woodColored.magenta.name=Magenta Stained Wooden Planks
 tile.woodColored.magenta.desc=
 tile.woodColored.orange.name=Orange Stained Wooden Planks
 tile.woodColored.orange.desc=
+tile.netherriceWild.name=Wild Nether Rice
+tile.netherriceWild.desc=
 
 item.shovelIron.name=Iron Shovel
 item.shovelIron.desc=
@@ -688,5 +690,7 @@ item.chainlink.name=Chainlink
 item.chainlink.desc=
 item.bleach.name=Bleach Powder
 item.bleach.desc=
+item.netherrice.name=Raw Nether Rice
+item.netherrice.desc=
 
 
