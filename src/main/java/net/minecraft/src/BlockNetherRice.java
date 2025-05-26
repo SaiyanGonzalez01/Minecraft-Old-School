@@ -8,6 +8,6 @@ public class BlockNetherRice extends BlockFlower {
 	}
 
 	public int idDropped(int var1, Random var2) {
-		return var2.nextInt(8) == 0 ? Item.netherrice.shiftedIndex : 2;
+		return var2.nextInt(4) == 0 ? Item.netherrice.shiftedIndex : -1;
 	}
 }
