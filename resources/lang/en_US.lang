@@ -692,5 +692,7 @@ item.bleach.name=Bleach Powder
 item.bleach.desc=
 item.netherrice.name=Raw Nether Rice
 item.netherrice.desc=
+item.bowlRice.name=Nether Rice Bowl
+item.BowlRice.desc=
 
 
