@@ -132,7 +132,7 @@ public class Item {
 	public static Item chainlink = (new Item(130)).setIconCoord(7, 7).setItemName("chainlink");
 	public static Item potatoCooked = (new ItemFood(131, 5, true)).setIconCoord(11, 10).setItemName("potatoCooked");
 	public static Item bleach = (new Item(132)).setIconCoord(13, 9).setItemName("bleach").setFull3D();
-	public static Item netherrice = (new Item(133, Block.netherriceCrops.blockID)).setIconCoord(9, 10).setItemName("netherrice");
+	public static Item netherrice = (new ItemSeeds(133, Block.netherriceCrops.blockID)).setIconCoord(9, 10).setItemName("netherrice");
 	public static Item record13 = (new ItemRecord(2000, "13")).setIconCoord(0, 15).setItemName("record");
 	public static Item recordCat = (new ItemRecord(2001, "cat")).setIconCoord(1, 15).setItemName("record");
 	public final int shiftedIndex;
