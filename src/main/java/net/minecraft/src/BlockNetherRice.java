@@ -1,6 +1,6 @@
 package net.minecraft.src;
 
-public class BlockNetherRice extends BlockFlower {
+public class BlockNetherRice extends BlockNetherFlower {
 	protected BlockNetherRice(int var1, int var2) {
 		super(var1, var2);
 		float var3 = 0.4F;
