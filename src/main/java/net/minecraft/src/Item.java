@@ -134,7 +134,7 @@ public class Item {
 	public static Item bleach = (new Item(132)).setIconCoord(13, 9).setItemName("bleach").setFull3D();
 	public static Item netherrice = (new ItemSeeds(133, Block.netherriceCrops.blockID)).setIconCoord(9, 10).setItemName("netherrice");
 	public static Item bowlRice = (new ItemSoup(134, 6)).setIconCoord(8, 10).setItemName("riceBowl");
-	public static Item eggCooked = (new ItemFood(108, 4)).setIconCoord(10, 11).setItemName("eggCooked");
+	public static Item eggCooked = (new ItemFood(108, 4, true)).setIconCoord(10, 11).setItemName("eggCooked");
 	public static Item record13 = (new ItemRecord(2000, "13")).setIconCoord(0, 15).setItemName("record");
 	public static Item recordCat = (new ItemRecord(2001, "cat")).setIconCoord(1, 15).setItemName("record");
 	public final int shiftedIndex;
