@@ -12,7 +12,6 @@ public class EntityPigZombie extends EntityZombie {
 		this.moveSpeed = 0.5F;
 		this.attackStrength = 5;
 		this.isImmuneToFire = true;
-		this.texture = "/mob/pigzombie.png";
 	}
 
 	public void onUpdate() {
