@@ -132,7 +132,7 @@ public class Block {
 	public static final Block netherrackBrick = (new BlockNetherrack(109, 166)).setHardness(1.4F).setStepSound(soundStoneFootstep).setBlockName("hellbrick");
 	public static final BlockNetherRice netherriceWild = (BlockNetherRice)(new BlockNetherRice(113, 183)).setHardness(0.0F).setStepSound(soundGrassFootstep).setBlockName("netherriceWild");
 	public static final Block netherriceCrops = (new BlockCropsR(114, 226)).setHardness(0.0F).setStepSound(soundGrassFootstep).setBlockName("crops").disableStats().disableNeighborNotifyOnMetadataChange();
-	public static final Block blackstone = (new BlockBlackstone(115, 182)).setHardness(1.5F).setResistance(10.0F).setStepSound(soundStoneFootstep).setBlockName("blackstone");
+	public static final Block blackstone = (new Block(115, 182)).setHardness(1.5F).setResistance(10.0F).setStepSound(soundStoneFootstep).setBlockName("blackstone");
 	public int blockIndexInTexture;
 	public final int blockID;
 	protected float blockHardness;
