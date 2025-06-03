@@ -6,6 +6,7 @@ gui.up=Up
 gui.down=Down
 gui.yes=Yes
 gui.no=No
+gui.more=....
 
 menu.singleplayer=Singleplayer
 menu.multiplayer=Multiplayer
