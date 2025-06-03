@@ -26,12 +26,6 @@ public class FontRenderer {
 		fontTexture.bindTexture();
 		this.readFontTexture(var2);
 
-		if (mc.gameSettings.font) {
-    			renderEngine.bindTexture("/alternate.png");
-		} else {
-   			 renderEngine.bindTexture("/default.png");
-		}
-
 		for (int var5 = 0; var5 < 32; ++var5) {
 			int var6 = (var5 >> 3 & 1) * 85;
 			int var7 = (var5 >> 2 & 1) * 170 + var6;
