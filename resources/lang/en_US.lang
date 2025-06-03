@@ -106,6 +106,8 @@ options.guiScale.normal=Normal
 options.guiScale.large=Large
 options.advancedOpengl=Advanced OpenGL
 options.credits=Credits
+options.font.alternate=Use Alternate Font
+options.font.default=Use Default Font
 
 performance.max=Max FPS
 performance.balanced=Balanced
