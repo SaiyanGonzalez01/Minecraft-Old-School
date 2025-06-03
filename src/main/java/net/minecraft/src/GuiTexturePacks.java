@@ -19,7 +19,6 @@ public class GuiTexturePacks extends GuiScreen {
 		StringTranslate var1 = StringTranslate.getInstance();
 		this.controlList.add(new GuiSmallButton(5, this.width / 2 - 154, this.height - 48, var1.translateKey("texturePack.openFolder")));
 		this.controlList.add(new GuiSmallButton(6, this.width / 2 + 4, this.height - 48, var1.translateKey("gui.done")));
-		this.controlList.add(new GuiSmallButton(6, this.width / 2 + 200, this.height - 48, var1.translateKey("gui.done")));
 		this.mc.texturePackList.updateAvaliableTexturePacks();
 		this.fileLocation = Minecraft.getMinecraft().getSaveDir() + "/texturepacks";
 		this.guiTexturePackSlot = new GuiTexturePackSlot(this);
