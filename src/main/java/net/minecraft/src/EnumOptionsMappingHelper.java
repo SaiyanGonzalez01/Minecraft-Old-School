@@ -44,5 +44,10 @@ class EnumOptionsMappingHelper {
 		} catch (NoSuchFieldError var1) {
 		}
 
+		try {
+			enumOptionsMappingHelperArray[EnumOptions.FONT.ordinal()] = 9;
+		} catch (NoSuchFieldError var1) {
+		}
+
 	}
 }
