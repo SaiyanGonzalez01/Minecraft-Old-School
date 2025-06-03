@@ -17,6 +17,7 @@ public enum EnumOptions {
 	PARTICLES("Particles", false, true),
 	DO_PRINTS("Prints", false, true),
 	CLOUDS("Clouds", false, true);
+	FONT("options.font", false, true);
 
 	private final boolean enumFloat;
 	private final boolean enumBoolean;
