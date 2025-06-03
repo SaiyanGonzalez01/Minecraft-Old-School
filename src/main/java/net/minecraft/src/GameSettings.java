@@ -30,6 +30,7 @@ public class GameSettings {
 	public boolean particles = true;
 	public boolean doPrints = true;
 	public boolean clouds = true;
+	public boolean font = false;
 	public String skin = "Default";
 	public KeyBinding keyBindForward = new KeyBinding("key.forward", 17);
 	public KeyBinding keyBindLeft = new KeyBinding("key.left", 30);
@@ -154,6 +155,11 @@ public class GameSettings {
 			this.clouds = !this.clouds;
 		}
 
+		if(var1 == EnumOptions.FONT) {
+			this.font = !this.font;
+    		this.mc.fontRenderer.reloadFont(this, this.mc.renderEngine);
+		}
+
 		this.saveOptions();
 	}
 
@@ -179,6 +185,8 @@ public class GameSettings {
 			return this.doPrints;
 		case 8:
 			return this.clouds;
+		case 9:
+			return this.font;
 		default:
 			return false;
 		}
@@ -290,6 +298,10 @@ public class GameSettings {
 						this.clouds = var3[1].equals("true");
 					}
 
+					if(var3[0].equals("font")) {
+						this.font = var3[1].equals("true");
+					}
+
 					for(int var4 = 0; var4 < this.keyBindings.length; ++var4) {
 						if(var3[0].equals("key_" + this.keyBindings[var4].keyDescription)) {
 							this.keyBindings[var4].keyCode = Integer.parseInt(var3[1]);
@@ -332,6 +344,7 @@ public class GameSettings {
 			var1.println("particles:" + this.particles);
 			var1.println("doPrints:" + this.doPrints);
 			var1.println("clouds:" + this.clouds);
+			var1.println("font:" + this.font);
 			//var1.println("smoothcamera:" + this.smoothCamera);
 
 			for(int var2 = 0; var2 < this.keyBindings.length; ++var2) {

@@ -11,7 +11,7 @@ public class FontRenderer {
 	public static final char formatChar = '\247';
 	private int[] charWidth = new int[256];
 	private int[] colorCode = new int[32];
-	private final TextureLocation fontTexture;
+	private TextureLocation fontTexture;
 	private float posX;
 	private float posY;
 	
@@ -53,6 +53,17 @@ public class FontRenderer {
 
 			this.colorCode[var5] = (var7 & 255) << 16 | (var8 & 255) << 8 | var9 & 255;
 		}
+	}
+
+	public void loadFontTexture(String path, RenderEngine renderEngine) {
+		this.fontTexture = new TextureLocation(path);
+		fontTexture.bindTexture();
+		this.readFontTexture(path);
+	}
+
+	public void reloadFont(GameSettings settings, RenderEngine renderEngine) {
+		String path = settings.font ? "/font/alternate.png" : "/font/default.png";
+		loadFontTexture(path, renderEngine);
 	}
 	
 	private void readFontTexture(String par1Str) {
