@@ -298,8 +298,8 @@ public class GameSettings {
 						this.clouds = var3[1].equals("true");
 					}
 
-					if(var3[0].equals("font")) {
-						this.font = var3[1].equals("true");
+					else if(var3[0].equals("font")) {
+						this.font = var2[1].equals("true");
 					}
 
 					for(int var4 = 0; var4 < this.keyBindings.length; ++var4) {
@@ -344,7 +344,7 @@ public class GameSettings {
 			var1.println("particles:" + this.particles);
 			var1.println("doPrints:" + this.doPrints);
 			var1.println("clouds:" + this.clouds);
-			var1.println("font:" + this.font);
+			var1.println("font:" + (this.font ? "true" : "false"));
 			//var1.println("smoothcamera:" + this.smoothCamera);
 
 			for(int var2 = 0; var2 < this.keyBindings.length; ++var2) {
