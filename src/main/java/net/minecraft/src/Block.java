@@ -129,7 +129,7 @@ public class Block {
 	public static final Block pillarStone = (new Block(107, 126, Material.rock)).setHardness(1.5F).setResistance(10.0F).setStepSound(soundStoneFootstep).setBlockName("pillarStone");
 	public static final Block potatoCrops = (new BlockCropsP(108, 136)).setHardness(0.0F).setStepSound(soundGrassFootstep).setBlockName("crops").disableStats().disableNeighborNotifyOnMetadataChange();
 	public static final Block planksColored = (new BlockPlanks()).setHardness(2.0F).setResistance(5.0F).setStepSound(soundWoodFootstep).setBlockName("woodColored").disableNeighborNotifyOnMetadataChange();
-	public static final Block netherrackBrick = (new Block(109, 166)).setHardness(1.4F).setStepSound(soundStoneFootstep).setBlockName("hellbrick");
+	public static final Block netherrackBrick = (new Block(109, 166, Material.rock)).setHardness(1.4F).setStepSound(soundStoneFootstep).setBlockName("hellbrick");
 	public static final BlockNetherRice netherriceWild = (BlockNetherRice)(new BlockNetherRice(113, 183)).setHardness(0.0F).setStepSound(soundGrassFootstep).setBlockName("netherriceWild");
 	public static final Block netherriceCrops = (new BlockCropsR(114, 226)).setHardness(0.0F).setStepSound(soundGrassFootstep).setBlockName("crops").disableStats().disableNeighborNotifyOnMetadataChange();
 	public static final Block blackstone = (new Block(115, 182, Material.rock)).setHardness(1.5F).setResistance(10.0F).setStepSound(soundStoneFootstep).setBlockName("blackstone");
