@@ -299,7 +299,7 @@ public class GameSettings {
 					}
 
 					else if(var3[0].equals("font")) {
-						this.font = var2[1].equals("true");
+						this.font = var3[1].equals("true");
 					}
 
 					for(int var4 = 0; var4 < this.keyBindings.length; ++var4) {
