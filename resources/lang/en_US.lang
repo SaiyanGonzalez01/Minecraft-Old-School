@@ -391,8 +391,8 @@ tile.woodColored.orange.name=Orange Stained Wooden Planks
 tile.woodColored.orange.desc=
 tile.netherriceWild.name=Wild Nether Rice
 tile.netherriceWild.desc=
-tile.netherrackBrick.name=Netherack Bricks
-tile.netherrackBrick.desc=
+tile.hellbrick.name=Netherack Bricks
+tile.hellbrick.desc=
 
 item.shovelIron.name=Iron Shovel
 item.shovelIron.desc=
