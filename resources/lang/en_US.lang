@@ -391,6 +391,8 @@ tile.woodColored.orange.name=Orange Stained Wooden Planks
 tile.woodColored.orange.desc=
 tile.netherriceWild.name=Wild Nether Rice
 tile.netherriceWild.desc=
+tile.netherrackBrick.name=Netherack Bricks
+tile.netherrackBrick.desc=
 
 item.shovelIron.name=Iron Shovel
 item.shovelIron.desc=
@@ -700,5 +702,7 @@ item.porkBowl.name=Nether Rice Porkchop Bowl
 item.porkBowl.desc=
 item.eggBowl.name=Nether Rice Egg Bowl
 item.eggBowl.desc=
+item.eggCooked.name=Cooked Egg
+item.eggCooked.desc=
 
 
