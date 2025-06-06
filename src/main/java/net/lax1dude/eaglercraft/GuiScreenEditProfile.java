@@ -48,7 +48,7 @@ public class GuiScreenEditProfile extends GuiScreen {
 			"TestVan",
 			"Mezo",
 			"Glasses Steve",
-			"Mooshroom"
+			"Modern Steve"
 			
 	};
 	
