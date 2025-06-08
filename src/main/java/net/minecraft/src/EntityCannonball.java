@@ -44,7 +44,7 @@ public class EntityCannonball extends Entity {
 		this.setSnowballHeading(this.motionX, this.motionY, this.motionZ, 1.5F, 1.0F);
 	}
 
-	public EntitySnowball(World var1, double var2, double var4, double var6) {
+	public EntityCannonball(World var1, double var2, double var4, double var6) {
 		super(var1);
 		this.ticksInGroundSnowball = 0;
 		this.setSize(0.25F, 0.25F);
