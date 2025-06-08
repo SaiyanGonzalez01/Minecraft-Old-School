@@ -704,5 +704,9 @@ item.eggBowl.name=Nether Rice Egg Bowl
 item.eggBowl.desc=
 item.eggCooked.name=Cooked Egg
 item.eggCooked.desc=
+item.cannon.name=Handcannon
+item.cannon.desc=
+item.cannonball.name=Cannonball
+item.cannonball.desc=
 
 
