@@ -137,6 +137,7 @@ public class Item {
 	public static Item bowlRicePork = (new ItemSoup(135, 7)).setIconCoord(8, 11).setItemName("porkBowl");
 	public static Item eggCooked = (new ItemFood(136, 4, true)).setIconCoord(10, 11).setItemName("eggCooked");
 	public static Item bowlRiceEgg = (new ItemSoup(137, 7)).setIconCoord(9, 11).setItemName("eggBowl");
+	public static Item cannon = (new ItemCannon(138)).setIconCoord(6, 9).setItemName("cannon").setFull3D();
 	public static Item record13 = (new ItemRecord(2000, "13")).setIconCoord(0, 15).setItemName("record");
 	public static Item recordCat = (new ItemRecord(2001, "cat")).setIconCoord(1, 15).setItemName("record");
 	public final int shiftedIndex;
