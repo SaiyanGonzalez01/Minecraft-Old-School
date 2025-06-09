@@ -154,7 +154,7 @@ public class EntityCannonball extends Entity {
 			}
 
 			for(int var16 = 0; var16 < 8; ++var16) {
-				this.worldObj.spawnParticle("cannonballpoof", this.posX, this.posY, this.posZ, 0.0D, 0.0D, 0.0D);
+				this.worldObj.spawnParticle("smoke", this.posX, this.posY, this.posZ, 0.0D, 0.0D, 0.0D);
 			}
 
 			this.setEntityDead();
