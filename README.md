@@ -47,7 +47,7 @@ You heard right! You can actually PLAY the project now unlike the original Old-S
 
 Play [Default](https://saiyangonzalez01.github.io/Minecraft-Old-School-ReDefault/web)
 
-Play [Unminified](https://saiyangonzalez01.github.io/Minecraft-Old-School-ReDefault/webminified)
+Select [Older Versions](https://saiyangonzalez01.github.io/Minecraft-Old-School-ReDefault/archive)
 
 ### Contributers
 
