@@ -1,0 +1,87 @@
+body {
+	
+  font-family: arial;
+  background-image: url("bg.webp");
+  background-repeat: repeat;
+  image-rendering: crisp-edges;
+  background-color: rgba(0, 0, 0, .2);
+  
+  color: white;
+}
+
+.container {
+ display: grid;
+ align-items: center; 
+ grid-template-columns: 1fr 1fr 1fr;
+ column-gap: 5px;
+}
+
+#lg  {
+float: left;    
+ margin: 0 15px 0 0;
+}
+
+.center-txt {
+  align-items: center;
+}
+
+img {
+  max-width: 50%;
+  max-height:50%;
+}
+
+.text {
+  font-size: 20px;
+}
+
+a {
+	color: grey;
+}
+
+.ret {
+	color: white;
+	text-decoration: none;
+}
+
+.linkbar {
+	background-image: url("stone.png");
+	padding-left: 4px;
+	padding-right: 4px;
+	display: inline-block;
+}
+
+.mwidthsection{
+	background-color:rgba(0, 0, 0, .2);
+	width: 100%;
+
+	padding-bottom: 20px;
+}
+
+.uid {
+	display: inline-block;
+	font-style: italic;
+	font-family: "Arial";
+	border: gray solid 1.5px;
+	background: #00000060;
+	border-radius: 4px;
+	padding-left:1px;
+	padding-right:2px;
+	
+	color: #ffffffA0;
+}
+
+.recruitment {
+	font-style: italic;
+	text-decoration: underline;
+	color : #FFFFFFA0;
+	font-family: "Arial";
+}
+
+.content {
+	margin: auto;
+}
+
+#key {
+    font-size: 20pt;
+    font-style: oblique;
+}
