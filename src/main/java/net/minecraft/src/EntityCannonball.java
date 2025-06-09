@@ -150,11 +150,11 @@ public class EntityCannonball extends Entity {
 		}
 
 		if(var3 != null) {
-			if(var3.entityHit != null && var3.entityHit.attackEntityFrom(this.thrower, 0)) {
+			if(var3.entityHit != null && var3.entityHit.attackEntityFrom(this.thrower, 10)) {
 			}
 
 			for(int var16 = 0; var16 < 8; ++var16) {
-				this.worldObj.spawnParticle("snowballpoof", this.posX, this.posY, this.posZ, 0.0D, 0.0D, 0.0D);
+				this.worldObj.spawnParticle("cannonballpoof", this.posX, this.posY, this.posZ, 0.0D, 0.0D, 0.0D);
 			}
 
 			this.setEntityDead();
