@@ -86,7 +86,6 @@ public class EntityList {
 
 	static {
 		addMapping(EntityItem.class, "Item", 1);
-		addMapping(EntityNetherSkeleton.class, "CharredSkeleton", 7);
 		addMapping(EntityCannonball.class, "Cannonball", 8);
 		addMapping(EntityPainting.class, "Painting", 9);
 		addMapping(EntityArrow.class, "Arrow", 10);
@@ -105,6 +104,7 @@ public class EntityList {
 		addMapping(EntitySlime.class, "Slime", 55);
 		addMapping(EntityGhast.class, "Ghast", 56);
 		addMapping(EntityPigZombie.class, "PigZombie", 57);
+		addMapping(EntityNetherSkeleton.class, "CharredSkeleton", 58);
 		addMapping(EntityPig.class, "Pig", 90);
 		addMapping(EntitySheep.class, "Sheep", 91);
 		addMapping(EntityCow.class, "Cow", 92);
