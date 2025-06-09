@@ -3,9 +3,9 @@ package net.minecraft.src;
 public class EntityNetherSkeleton extends EntityMob {
 	private static final ItemStack defaultHeldItem = new ItemStack(Item.swordStone, 1);
 
-	public EntitySkeleton(World var1) {
+	public EntityNetherSkeleton(World var1) {
 		super(var1);
-    this.moveSpeed = 1.0F;
+    		this.moveSpeed = 1.0F;
 		this.attackStrength = 5;
 	}
 
