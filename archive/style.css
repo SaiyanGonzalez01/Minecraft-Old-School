@@ -8,3 +8,14 @@ body {
   
   color: white;
 }
+
+@font-face {
+  font-family: 'Minecraftia';
+  src: url('fonts/Minecraftia.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body, h1, h2, h3, p {
+  font-family: 'Minecraftia', monospace;
+}
