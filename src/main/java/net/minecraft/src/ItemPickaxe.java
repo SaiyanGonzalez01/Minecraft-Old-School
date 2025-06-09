@@ -1,7 +1,7 @@
 package net.minecraft.src;
 
 public class ItemPickaxe extends ItemTool {
-	private static Block[] blocksEffectiveAgainst = new Block[]{Block.cobblestone, Block.stairDouble, Block.stairSingle, Block.stone, Block.sandStone, Block.cobblestoneMossy, Block.oreIron, Block.blockSteel, Block.oreCoal, Block.blockGold, Block.oreGold, Block.oreDiamond, Block.blockDiamond, Block.ice, Block.netherrack, Block.oreLapis, Block.blockLapis, Block.oreRuby, Block.blockRuby, Block.granite, Block.brickGranite, Block.oreRedstone, Block.oreRedstoneGlowing, Block.salt, Block.stoneOvenIdle, Block.stoneOvenActive, Block.brick, Block.brickStone, Block.pillarStone, Block.doorSteel, Block.pressurePlateStone,  Block.pistonStickyBase, Block.pistonBase};
+	private static Block[] blocksEffectiveAgainst = new Block[]{Block.cobblestone, Block.stairDouble, Block.stairSingle, Block.stone, Block.sandStone, Block.cobblestoneMossy, Block.oreIron, Block.blockSteel, Block.oreCoal, Block.blockGold, Block.oreGold, Block.oreDiamond, Block.blockDiamond, Block.ice, Block.netherrack, Block.oreLapis, Block.blockLapis, Block.oreRuby, Block.blockRuby, Block.granite, Block.brickGranite, Block.oreRedstone, Block.oreRedstoneGlowing, Block.salt, Block.stoneOvenIdle, Block.stoneOvenActive, Block.brick, Block.brickStone, Block.pillarStone, Block.doorSteel, Block.pressurePlateStone, Block.pistonStickyBase, Block.pistonBase, Block.netherrackBrick};
 
 	protected ItemPickaxe(int var1, EnumToolMaterial var2) {
 		super(var1, 2, var2, blocksEffectiveAgainst);
