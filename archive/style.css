@@ -1,5 +1,5 @@
 body {
-	
+  font-family: 'Minecraftia';
   background-image: url("PageBackground.png");
   background-repeat: repeat;
   image-rendering: crisp-edges;
@@ -13,8 +13,4 @@ body {
   src: url('fonts/Minecraftia.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
-}
-
-body, h1, h2, h3, p {
-  font-family: 'Minecraftia', monospace;
 }
