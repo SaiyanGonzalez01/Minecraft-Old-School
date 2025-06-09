@@ -99,6 +99,8 @@ public class CraftingManager {
 		this.addRecipe(new ItemStack(Item.bowlRice, 1), new Object[]{" # ", "#X#", " # ", Character.valueOf('#'), Item.netherrice, Character.valueOf('X'), Item.bowlEmpty});
 		this.addRecipe(new ItemStack(Item.bowlRicePork, 1), new Object[]{"#X", Character.valueOf('#'), Item.porkCooked, Character.valueOf('X'), Item.bowlRice});
 		this.addRecipe(new ItemStack(Item.bowlRiceEgg, 1), new Object[]{"#X", Character.valueOf('#'), Item.eggCooked, Character.valueOf('X'), Item.bowlRice});
+		this.addRecipe(new ItemStack(Item.cannonball, 1), new Object[]{"X#X", "#O#", "X#X", Character.valueOf('#'), Item.gunpowder, Character.valueOf('X'), Block.stone, Character.valueOf('O'), Item.redstone});
+		this.addRecipe(new ItemStack(Item.cannon, 1), new Object[]{"XX#", " ZY", Character.valueOf('#'), Block.planks, Character.valueOf('X'), Item.ingotIron, Character.valueOf('Y'), Item.stick, Character.valueOf('Z'), Item.redstone});
 		
 		Collections.sort(this.recipes, new RecipeSorter(this));
 		System.out.println(this.recipes.size() + " recipes");
