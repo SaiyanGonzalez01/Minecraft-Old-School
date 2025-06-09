@@ -85,10 +85,15 @@ public class EntityList {
 	}
 
 	static {
+		addMapping(EntityItem.class, "Item", 1);
+		addMapping(EntityCannonball.class, "Cannonball", 8);
+		addMapping(EntityPainting.class, "Painting", 9);
 		addMapping(EntityArrow.class, "Arrow", 10);
 		addMapping(EntitySnowball.class, "Snowball", 11);
-		addMapping(EntityItem.class, "Item", 1);
-		addMapping(EntityPainting.class, "Painting", 9);
+		addMapping(EntityTNTPrimed.class, "PrimedTnt", 20);
+		addMapping(EntityFallingSand.class, "FallingSand", 21);
+		addMapping(EntityMinecart.class, "Minecart", 40);
+		addMapping(EntityBoat.class, "Boat", 41);
 		addMapping(EntityLiving.class, "Mob", 48);
 		addMapping(EntityMob.class, "Monster", 49);
 		addMapping(EntityCreeper.class, "Creeper", 50);
@@ -105,10 +110,5 @@ public class EntityList {
 		addMapping(EntityChicken.class, "Chicken", 93);
 		addMapping(EntitySquid.class, "Squid", 94);
 		addMapping(EntityWolf.class, "Wolf", 95);
-		addMapping(EntityTNTPrimed.class, "PrimedTnt", 20);
-		addMapping(EntityFallingSand.class, "FallingSand", 21);
-		addMapping(EntityMinecart.class, "Minecart", 40);
-		addMapping(EntityBoat.class, "Boat", 41);
-		addMapping(EntityCannonball.class, "Cannonball", 8);
 	}
 }
