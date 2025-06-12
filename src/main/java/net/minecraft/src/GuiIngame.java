@@ -222,7 +222,6 @@ public class GuiIngame extends Gui {
 		}
 
 		GL11.glPushMatrix();
-		var8.drawStringWithShadow("Minecraft Beta 1.7.3 OSRD (" + this.mc.debug + ")", 2, 2, 16777215);
 		GL11.glPopMatrix();
 
 		GL11.glEnable(GL11.GL_BLEND);
