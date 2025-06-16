@@ -10,6 +10,6 @@ public class BlockNetherGoldOre extends Block {
 	}
 
 	public int idDropped(int var1, Random var2) {
-		return Item.nuggetGold.shiftedIndex;
+		return Item.goldNugget.shiftedIndex;
 	}
 }
