@@ -145,7 +145,7 @@ public class ChunkProviderHell implements IChunkProvider {
 									}
 
 									if(var9) {
-										var14 = (byte)Block.slowSand.blockID;
+										var14 = (byte)Block.oreGoldNether.blockID;
 									}
 								}
 
