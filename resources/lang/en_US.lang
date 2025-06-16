@@ -393,6 +393,8 @@ tile.netherriceWild.name=Wild Nether Rice
 tile.netherriceWild.desc=
 tile.hellbrick.name=Netherack Bricks
 tile.hellbrick.desc=
+tile.netherGold.name=Netherrack Gold Ore
+tile.netherGold.desc=
 
 item.shovelIron.name=Iron Shovel
 item.shovelIron.desc=
@@ -708,5 +710,7 @@ item.cannon.name=Handcannon
 item.cannon.desc=
 item.cannonball.name=Cannonball
 item.cannonball.desc=
+item.goldNugget.name=Gold Nugget
+item.goldNugget.desc=
 
 
