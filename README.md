@@ -3,6 +3,8 @@
 
 A remake of my first project, Minecraft Old-School, now on Eaglercraft Beta 1.7.3!
 
+Minecraft Old-School is an Extension Mod of Eaglercraft 1.7.3 that adds in some new features and bringing back removed ones while keeping the Beta-like feel you know & love.
+
 ### Warning! This project is not Chromebook-friendly!
 
 Unless you put your video settings on low and fast and disable particles printing and clouds, then it would be chrombook-friendly. What I mean by that is that Peyton's Eaglercraft Beta 1.7.3 is really laggy on chromebooks. This is because its single-threaded, and not like newer versions which use web workers to load chunks and more. I recommend using medium to high end computers to play.
