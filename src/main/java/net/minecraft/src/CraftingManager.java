@@ -92,6 +92,7 @@ public class CraftingManager {
 		this.addRecipe(new ItemStack(Block.brickStone, 4), new Object[]{"##", "##", Character.valueOf('#'), Block.stone});
 		this.addRecipe(new ItemStack(Block.pillarStone, 3), new Object[]{"#", "#", "#", Character.valueOf('#'), Block.stone});
 		this.addRecipe(new ItemStack(Item.ironNugget, 9), new Object[]{"#", Character.valueOf('#'), Item.ingotIron});
+		this.addRecipe(new ItemStack(Item.ingotIron, 1), new Object[]{"###", "###", "###", Character.valueOf('#'), Item.ironNugget});
 		this.addRecipe(new ItemStack(Item.chainlink, 33), new Object[]{"# #", " # ", "# #", Character.valueOf('#'), Item.ironNugget});
 		this.addRecipe(new ItemStack(Item.bleach, 2), new Object[]{"#X", Character.valueOf('#'), Item.bone, Character.valueOf('X'), Item.saltI});
 		this.addRecipe(new ItemStack(Block.planksColored, 2), new Object[]{"#X", "X#", Character.valueOf('#'), Block.planks, Character.valueOf('X'), Item.bleach});
@@ -101,6 +102,8 @@ public class CraftingManager {
 		this.addRecipe(new ItemStack(Item.bowlRiceEgg, 1), new Object[]{"#X", Character.valueOf('#'), Item.eggCooked, Character.valueOf('X'), Item.bowlRice});
 		this.addRecipe(new ItemStack(Item.cannonball, 1), new Object[]{"X#X", "#O#", "X#X", Character.valueOf('#'), Item.gunpowder, Character.valueOf('X'), Item.ingotIron, Character.valueOf('O'), Item.redstone});
 		this.addRecipe(new ItemStack(Item.cannon, 1), new Object[]{"XX#", " ZY", Character.valueOf('#'), Block.planks, Character.valueOf('X'), Item.ingotIron, Character.valueOf('Y'), Item.stick, Character.valueOf('Z'), Item.redstone});
+		this.addRecipe(new ItemStack(Item.ingotGold, 1), new Object[]{"###", "###", "###", Character.valueOf('#'), Item.goldNugget});
+		this.addRecipe(new ItemStack(Item.goldNugget, 9), new Object[]{"#", Character.valueOf('#'), Item.ingotGold});
 		
 		Collections.sort(this.recipes, new RecipeSorter(this));
 		System.out.println(this.recipes.size() + " recipes");
