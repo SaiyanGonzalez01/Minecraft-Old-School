@@ -122,8 +122,6 @@ public class Item {
 	public static Item fleshstuffer = (new ItemFood(119, 6, true)).setIconCoord(11, 9).setItemName("fleshstuffer");
 	public static Item cookiePlain = (new ItemCookie(120, 1, false, 8)).setIconCoord(10, 9).setItemName("cookiePlain");
 	public static Item cookieSugar = (new ItemCookie(122, 1, false, 8)).setIconCoord(9, 9).setItemName("cookieSugar");
-	public static Item axepaper = (new Item(123)).setIconCoord(8, 9).setItemName("axeSchematic");
-	public static Item swordpaper = (new Item(124)).setIconCoord(8, 9).setItemName("swordSchematic");
 	public static Item greatswordIron = (new ItemGreatSword(125, EnumToolMaterial.GREATIRON)).setIconCoord(0, 11).setItemName("greatswordIron");
 	public static Item greatswordDiamond = (new ItemGreatSword(126, EnumToolMaterial.GREATEMERALD)).setIconCoord(2, 11).setItemName("greatswordDiamond");
 	public static Item greatswordGold = (new ItemGreatSword(127, EnumToolMaterial.GREATGOLD)).setIconCoord(1, 11).setItemName("greatswordGold");
