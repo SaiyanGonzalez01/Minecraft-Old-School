@@ -395,6 +395,9 @@ tile.hellbrick.name=Netherack Bricks
 tile.hellbrick.desc=
 tile.netherGold.name=Netherrack Gold Ore
 tile.netherGold.desc=
+tile.woodTreated.name=Treated Wooden Planks
+tile.woodTreated.desc=
+
 
 item.shovelIron.name=Iron Shovel
 item.shovelIron.desc=
@@ -652,10 +655,6 @@ item.swordObsidian.name=Ancient Obsidian Sword
 item.swordObsidian.desc=
 item.bottle.name=Glass Bottle
 item.bottle.desc=
-item.bottleWater.name=Water Bottle
-item.bottleWater.desc=
-item.bottleMilk.name=Milk Bottle
-item.bottleMilk.desc=
 item.sawdust.name=Sawdust
 item.sawdust.desc=
 item.bark.name=Tree Bark
