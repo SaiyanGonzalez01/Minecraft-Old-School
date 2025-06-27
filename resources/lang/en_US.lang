@@ -397,6 +397,8 @@ tile.netherGold.name=Netherrack Gold Ore
 tile.netherGold.desc=
 tile.woodTreated.name=Treated Wooden Planks
 tile.woodTreated.desc=
+tile.blackstone.name=Blackstone
+tile.blackstone.desc=
 
 
 item.shovelIron.name=Iron Shovel
