@@ -376,6 +376,10 @@ public final class SpawnerAnimals {
 		if(class0 == EntityNetherSkeleton.class) {
 			return new EntityNetherSkeleton(Minecraft.getMinecraft().theWorld);
 		}
+
+		if(class0 == EntityWraith.class) {
+			return new EntityWraith(Minecraft.getMinecraft().theWorld);
+		}
 		
 		return null;
 	}
