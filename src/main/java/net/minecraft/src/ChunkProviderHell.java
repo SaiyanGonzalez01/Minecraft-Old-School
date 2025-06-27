@@ -337,6 +337,14 @@ public class ChunkProviderHell implements IChunkProvider {
 			var9 = this.hellRNG.nextInt(128);
 			var10 = var5 + this.hellRNG.nextInt(16) + 8;
 			(new WorldGenGlowStone2()).generate(this.worldObj, this.hellRNG, var8, var9, var10);
+
+		}
+
+		for(var7 = 0; var7 < 10; ++var7) {
+			var8 = var4 + this.hellRNG.nextInt(16) + 8;
+			var9 = this.hellRNG.nextInt(110);
+			var10 = var5 + this.hellRNG.nextInt(16) + 8;
+			(new WorldGenBlackstone()).generate(this.worldObj, this.hellRNG, var8, var9, var10);
 		}
 
 		if(this.hellRNG.nextInt(1) == 0) {
@@ -358,13 +366,6 @@ public class ChunkProviderHell implements IChunkProvider {
 			var8 = this.hellRNG.nextInt(128);
 			var9 = var5 + this.hellRNG.nextInt(16) + 8;
 			(new WorldGenFlowers(Block.netherriceWild.blockID)).generate(this.worldObj, this.hellRNG, var7, var8, var9);
-		}
-
-		for(var13 = 0; var13 < 20; ++var13) {
-			var14 = var4 + this.rand.nextInt(16);
-			var15 = this.rand.nextInt(128);
-			var16 = var5 + this.rand.nextInt(16);
-			(new WorldGenMinableNether(Block.blackstone.blockID, 32)).generate(this.worldObj, this.rand, var14, var15, var16);
 		}
 
 		BlockSand.fallInstantly = false;
