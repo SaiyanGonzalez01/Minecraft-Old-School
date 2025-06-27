@@ -35,6 +35,7 @@ public class RenderManager {
 		this.entityRenderMap.put(EntitySkeleton.class, new RenderBiped(new ModelSkeleton(), 0.5F, "/mob/skeleton.png"));
 		this.entityRenderMap.put(EntityNetherSkeleton.class, new RenderBiped(new ModelNetherSkeleton(), 0.5F, "/mob/skeleton_nether.png"));
 		this.entityRenderMap.put(EntityZombie.class, new RenderBiped(new ModelZombie(), 0.5F, "/mob/zombie.png"));
+		this.entityRenderMap.put(EntityWraith.class, new RenderBiped(new ModelWraith(), 0.5F, "/mob/wraith.png"));
 		this.entityRenderMap.put(EntityPigZombie.class, new RenderBiped(new ModelPigZombie(), 0.5F, "/mob/pigzombie.png"));
 		this.entityRenderMap.put(EntitySlime.class, new RenderSlime(new ModelSlime(16), new ModelSlime(0), 0.25F));
 		this.entityRenderMap.put(EntityPlayer.class, new RenderPlayer());
