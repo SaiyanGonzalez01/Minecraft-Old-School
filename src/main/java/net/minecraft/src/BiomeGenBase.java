@@ -42,6 +42,8 @@ public class BiomeGenBase {
 		this.spawnableCreatureList.add(new SpawnListEntry(EntityChicken.class, 10));
 		this.spawnableCreatureList.add(new SpawnListEntry(EntityCow.class, 8));
 		this.spawnableWaterCreatureList.add(new SpawnListEntry(EntitySquid.class, 10));
+		this.spawnableWaterCreatureList.add(new SpawnListEntry(EntityWraith.class, 8));
+		this.spawnableWaterCreatureList.add(new SpawnListEntry(EntityGiant.class, 1));
 	}
 
 	private BiomeGenBase setDisableRain() {
