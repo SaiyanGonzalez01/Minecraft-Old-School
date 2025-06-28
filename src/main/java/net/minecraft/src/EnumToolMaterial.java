@@ -6,12 +6,13 @@ public enum EnumToolMaterial {
 	IRON(2, 250, 6.0F, 2),
 	EMERALD(3, 1562, 8.0F, 3),
 	GOLD(1, 500, 12.0F, 1),
-	UPWOOD(0, 80, 2.0F, 0),
-	UPSTONE(1, 162, 4.0F, 1),
-	UPIRON(2, 300, 6.0F, 2),
-	UPEMERALD(3, 1720, 8.0F, 3),
-	UPGOLD(1, 550, 12.0F, 1),
-	OBSIDIAN(4, 2561, 12.0F, 4);
+	UPWOOD(0, 80, 2.5F, 0),
+	UPSTONE(1, 162, 4.5F, 1),
+	UPIRON(2, 300, 6.5F, 2),
+	UPEMERALD(3, 1720, 8.5F, 3),
+	UPGOLD(1, 550, 12.5F, 1),
+	OBSIDIAN(4, 2562, 13.0F, 4);
+	UPOBSIDIAN(5, 2864, 14.0F, 5);
 	
 	private final int harvestLevel;
 	private final int maxUses;
