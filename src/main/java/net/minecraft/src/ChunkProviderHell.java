@@ -368,6 +368,14 @@ public class ChunkProviderHell implements IChunkProvider {
 			(new WorldGenFlowers(Block.netherriceWild.blockID)).generate(this.worldObj, this.hellRNG, var7, var8, var9);
 		}
 
+		if(this.hellRNG.nextInt(1) == 0) {
+			var7 = var4 + this.hellRNG.nextInt(16) + 8;
+			var8 = this.hellRNG.nextInt(32);
+			var9 = var5 + this.hellRNG.nextInt(16) + 8;
+			(new WorldGenMinableNether(Block.blackstone.blockID)).generate(this.worldObj, this.hellRNG, var7, var8, var9);
+		}
+
+
 		BlockSand.fallInstantly = false;
 	}
 
