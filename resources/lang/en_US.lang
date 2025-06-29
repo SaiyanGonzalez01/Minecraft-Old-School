@@ -713,5 +713,30 @@ item.cannonball.name=Cannonball
 item.cannonball.desc=
 item.goldNugget.name=Gold Nugget
 item.goldNugget.desc=
+item.runeEmpty.name=Empty Rune
+item.runeEmpty.desc=
+item.runeUpgrade.name=Upgrade Rune
+item.runeUpgrade.desc=
+item.swordWoodUpgraded.name=Upgraded Wooden Sword
+item.swordWoodUpgraded.desc=
+item.shovelWoodUpgraded.name=Upgraded Wooden Shovel
+item.shovelWoodUpgraded.desc=
+item.pickaxeWoodUpgraded.name=Upgraded Wooden Pickaxe
+item.pickaxeWoodUpgraded.desc=
+item.hatchetWoodUpgraded.name=Upgraded Wooden Axe
+item.hatchetWoodUpgraded.desc=
+item.hoeWoodUpgraded.name=Upgraded Wooden Hoe
+item.hoeWoodUpgraded.desc=
+item.swordStoneUpgraded.name=Upgraded Stone Sword
+item.swordStoneUpgraded.desc=
+item.shovelStoneUpgraded.name=Upgraded Stone Shovel
+item.shovelStoneUpgraded.desc=
+item.pickaxeStoneUpgraded.name=Upgraded Stone Pickaxe
+item.pickaxeStoneUpgraded.desc=
+item.hatchetStoneUpgraded.name=Upgraded Stone Axe
+item.hatchetStoneUpgraded.desc=
+item.hoeStoneUpgraded.name=Upgraded Stone Hoe
+item.hoeStoneUpgraded.desc=
+
 
 
