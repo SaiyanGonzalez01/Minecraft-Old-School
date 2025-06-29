@@ -138,6 +138,16 @@ public class Item {
 	public static Item runeEmpty = (new Item(141)).setIconCoord(7, 11).setItemName("runeEmpty");
 	public static Item runeUpgrade = (new Item(142)).setIconCoord(6, 11).setItemName("runeUpgrade");
 	public static Item bottle = (new Item(143)).setIconCoord(9, 8).setItemName("bottle");
+	public static Item swordWoodUpgraded = (new ItemSword(144, EnumToolMaterial.UPWOOD)).setIconCoord(0, 4).setItemName("swordWoodUpgraded");
+	public static Item shovelWoodUpgraded = (new ItemSpade(145, EnumToolMaterial.UPWOOD)).setIconCoord(0, 5).setItemName("shovelWoodUpgraded");
+	public static Item pickaxeWoodUpgraded = (new ItemPickaxe(146, EnumToolMaterial.UPWOOD)).setIconCoord(0, 6).setItemName("pickaxeWoodUpgraded");
+	public static Item axeWoodUpgraded = (new ItemAxe(147, EnumToolMaterial.UPWOOD)).setIconCoord(0, 7).setItemName("hatchetWoodUpgraded");
+	public static Item hoeWoodUpgraded = (new ItemHoe(148, EnumToolMaterial.UPWOOD)).setIconCoord(0, 8).setItemName("hoeWoodUpgraded");
+	public static Item swordStoneUpgraded = (new ItemSword(144, EnumToolMaterial.UPSTONE)).setIconCoord(1, 4).setItemName("swordStoneUpgraded");
+	public static Item shovelStoneUpgraded = (new ItemSpade(145, EnumToolMaterial.UPSTONE)).setIconCoord(1, 5).setItemName("shovelStoneUpgraded");
+	public static Item pickaxeStoneUpgraded = (new ItemPickaxe(146, EnumToolMaterial.UPSTONE)).setIconCoord(1, 6).setItemName("pickaxeStoneUpgraded");
+	public static Item axeStoneUpgraded = (new ItemAxe(147, EnumToolMaterial.UPSTONE)).setIconCoord(1, 7).setItemName("hatchetStoneUpgraded");
+	public static Item hoeStoneUpgraded = (new ItemHoe(148, EnumToolMaterial.UPSTONE)).setIconCoord(1, 8).setItemName("hoeStoneUpgraded");
 	public static Item record13 = (new ItemRecord(2000, "13")).setIconCoord(0, 15).setItemName("record");
 	public static Item recordCat = (new ItemRecord(2001, "cat")).setIconCoord(1, 15).setItemName("record");
 	public final int shiftedIndex;
