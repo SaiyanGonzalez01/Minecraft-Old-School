@@ -106,7 +106,31 @@ public class CraftingManager {
 		this.addRecipe(new ItemStack(Item.runeEmpty, 1), new Object[]{"#X#", "XZX", "#X#", Character.valueOf('#'), Item.diamond, Character.valueOf('X'), Item.ironNugget, Character.valueOf('Z'), Block.glowStone});
 		this.addRecipe(new ItemStack(Item.runeUpgrade, 1), new Object[]{"ZXZ", "X#X", "ZXZ", Character.valueOf('#'), Item.runeEmpty, Character.valueOf('X'), Item.ruby, Character.valueOf('Z'), Item.ingotIron});
 		this.addRecipe(new ItemStack(Item.swordWoodUpgraded, 1), new Object[]{"XYZ", Character.valueOf('X'), Item.swordWood, Character.valueOf('Y'), Item.runeUpgrade, Character.valueOf('Z'), Block.cobblestone});
-		
+		this.addRecipe(new ItemStack(Item.pickaxeWoodUpgraded, 1), new Object[]{"XYZ", Character.valueOf('X'), Item.pickaxeWood, Character.valueOf('Y'), Item.runeUpgrade, Character.valueOf('Z'), Block.cobblestone});
+		this.addRecipe(new ItemStack(Item.axeWoodUpgraded, 1), new Object[]{"XYZ", Character.valueOf('X'), Item.axeWood, Character.valueOf('Y'), Item.runeUpgrade, Character.valueOf('Z'), Block.cobblestone});
+		this.addRecipe(new ItemStack(Item.shovelWoodUpgraded, 1), new Object[]{"XYZ", Character.valueOf('X'), Item.shovelWood, Character.valueOf('Y'), Item.runeUpgrade, Character.valueOf('Z'), Block.cobblestone});
+		this.addRecipe(new ItemStack(Item.hoeWoodUpgraded, 1), new Object[]{"XYZ", Character.valueOf('X'), Item.hoeWood, Character.valueOf('Y'), Item.runeUpgrade, Character.valueOf('Z'), Block.cobblestone});
+		this.addRecipe(new ItemStack(Item.swordStoneUpgraded, 1), new Object[]{"XYZ", Character.valueOf('X'), Item.swordStone, Character.valueOf('Y'), Item.runeUpgrade, Character.valueOf('Z'), Item.ingotIron});
+		this.addRecipe(new ItemStack(Item.pickaxeStoneUpgraded, 1), new Object[]{"XYZ", Character.valueOf('X'), Item.pickaxeStone, Character.valueOf('Y'), Item.runeUpgrade, Character.valueOf('Z'), Item.ingotIron});
+		this.addRecipe(new ItemStack(Item.axeStoneUpgraded, 1), new Object[]{"XYZ", Character.valueOf('X'), Item.axeStone, Character.valueOf('Y'), Item.runeUpgrade, Character.valueOf('Z'), Item.ingotIron});
+		this.addRecipe(new ItemStack(Item.shovelStoneUpgraded, 1), new Object[]{"XYZ", Character.valueOf('X'), Item.shovelStone, Character.valueOf('Y'), Item.runeUpgrade, Character.valueOf('Z'), Item.ingotIron});
+		this.addRecipe(new ItemStack(Item.hoeStoneUpgraded, 1), new Object[]{"XYZ", Character.valueOf('X'), Item.hoeStone, Character.valueOf('Y'), Item.runeUpgrade, Character.valueOf('Z'), Item.ingotIron});
+		this.addRecipe(new ItemStack(Item.swordSteelUpgraded, 1), new Object[]{"XYZ", Character.valueOf('X'), Item.swordWood, Character.valueOf('Y'), Item.runeUpgrade, Character.valueOf('Z'), Item.ingotGold});
+		this.addRecipe(new ItemStack(Item.pickaxeSteelUpgraded, 1), new Object[]{"XYZ", Character.valueOf('X'), Item.pickaxeWood, Character.valueOf('Y'), Item.runeUpgrade, Character.valueOf('Z'), Item.ingotGold});
+		this.addRecipe(new ItemStack(Item.axeSteelUpgraded, 1), new Object[]{"XYZ", Character.valueOf('X'), Item.axeWood, Character.valueOf('Y'), Item.runeUpgrade, Character.valueOf('Z'), Item.ingotGold});
+		this.addRecipe(new ItemStack(Item.shovelSteelUpgraded, 1), new Object[]{"XYZ", Character.valueOf('X'), Item.shovelWood, Character.valueOf('Y'), Item.runeUpgrade, Character.valueOf('Z'), Item.ingotGold});
+		this.addRecipe(new ItemStack(Item.hoeSteelUpgraded, 1), new Object[]{"XYZ", Character.valueOf('X'), Item.hoeWood, Character.valueOf('Y'), Item.runeUpgrade, Character.valueOf('Z'), Item.ingotGold});
+		this.addRecipe(new ItemStack(Item.swordGoldUpgraded, 1), new Object[]{"XYZ", Character.valueOf('X'), Item.swordGold, Character.valueOf('Y'), Item.runeUpgrade, Character.valueOf('Z'), Item.redstone});
+		this.addRecipe(new ItemStack(Item.pickaxeGoldUpgraded, 1), new Object[]{"XYZ", Character.valueOf('X'), Item.pickaxeGold, Character.valueOf('Y'), Item.runeUpgrade, Character.valueOf('Z'), Item.redstone});
+		this.addRecipe(new ItemStack(Item.axeGoldUpgraded, 1), new Object[]{"XYZ", Character.valueOf('X'), Item.axeGold, Character.valueOf('Y'), Item.runeUpgrade, Character.valueOf('Z'), Item.redstone});
+		this.addRecipe(new ItemStack(Item.shovelGoldUpgraded, 1), new Object[]{"XYZ", Character.valueOf('X'), Item.shovelGold, Character.valueOf('Y'), Item.runeUpgrade, Character.valueOf('Z'), Item.redstone});
+		this.addRecipe(new ItemStack(Item.hoeGoldUpgraded, 1), new Object[]{"XYZ", Character.valueOf('X'), Item.hoeGold, Character.valueOf('Y'), Item.runeUpgrade, Character.valueOf('Z'), Item.redstone});
+		this.addRecipe(new ItemStack(Item.swordDiamondUpgraded, 1), new Object[]{"XYZ", Character.valueOf('X'), Item.swordDiamond, Character.valueOf('Y'), Item.runeUpgrade, Character.valueOf('Z'), Item.ruby});
+		this.addRecipe(new ItemStack(Item.pickaxeDiamondUpgraded, 1), new Object[]{"XYZ", Character.valueOf('X'), Item.pickaxeDiamond, Character.valueOf('Y'), Item.runeUpgrade, Character.valueOf('Z'), Item.ruby});
+		this.addRecipe(new ItemStack(Item.axeDiamondUpgraded, 1), new Object[]{"XYZ", Character.valueOf('X'), Item.axeDiamond, Character.valueOf('Y'), Item.runeUpgrade, Character.valueOf('Z'), Item.ruby});
+		this.addRecipe(new ItemStack(Item.shovelDiamondUpgraded, 1), new Object[]{"XYZ", Character.valueOf('X'), Item.shovelDiamond, Character.valueOf('Y'), Item.runeUpgrade, Character.valueOf('Z'), Item.ruby});
+		this.addRecipe(new ItemStack(Item.hoeDiamondUpgraded, 1), new Object[]{"XYZ", Character.valueOf('X'), Item.hoeDiamond, Character.valueOf('Y'), Item.runeUpgrade, Character.valueOf('Z'), Item.ruby});
+	
 		Collections.sort(this.recipes, new RecipeSorter(this));
 		System.out.println(this.recipes.size() + " recipes");
 	}
