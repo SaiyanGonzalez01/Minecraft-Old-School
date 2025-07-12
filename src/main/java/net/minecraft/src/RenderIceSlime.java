@@ -30,7 +30,7 @@ public class RenderIceSlime extends RenderLiving {
 		}
 	}
 
-	protected void scaleSlime(EntitySlime var1, float var2) {
+	protected void scaleSlime(EntityIceSlime var1, float var2) {
 		int var3 = var1.getSlimeSize();
 		float var4 = (var1.field_767_b + (var1.field_768_a - var1.field_767_b) * var2) / ((float)var3 * 0.5F + 1.0F);
 		float var5 = 1.0F / (var4 + 1.0F);
@@ -39,11 +39,11 @@ public class RenderIceSlime extends RenderLiving {
 	}
 
 	protected void preRenderCallback(EntityLiving var1, float var2) {
-		this.scaleSlime((EntitySlime)var1, var2);
+		this.scaleSlime((EntityIceSlime)var1, var2);
 	}
 
 	protected boolean shouldRenderPass(EntityLiving var1, int var2, float var3) {
-		return this.renderSlimePassModel((EntitySlime)var1, var2, var3);
+		return this.renderSlimePassModel((EntityIceSlime)var1, var2, var3);
 	}
 	
 	@Override
