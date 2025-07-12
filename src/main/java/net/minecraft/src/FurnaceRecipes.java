@@ -26,7 +26,7 @@ public class FurnaceRecipes {
 		this.addSmelting(Item.flesh.shiftedIndex, new ItemStack(Item.leather));
 		this.addSmelting(Item.potato.shiftedIndex, new ItemStack(Item.potatoCooked));
 		this.addSmelting(Item.egg.shiftedIndex, new ItemStack(Item.eggCooked));
-		this.addSmelting(Item.slimeballFrozen.shiftedIndex, new ItemStack(Item.slimeball));
+		this.addSmelting(Item.slimeballFrozen.shiftedIndex, new ItemStack(Item.slimeBall));
 	}
 
 	public void addSmelting(int var1, ItemStack var2) {
