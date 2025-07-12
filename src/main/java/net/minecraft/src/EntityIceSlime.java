@@ -127,7 +127,7 @@ public class EntityIceSlime extends EntityLiving implements IMob {
 	}
 
 	protected int getDropItemId() {
-		return this.getSlimeSize() == 1 ? Item.slimeBall.shiftedIndex : 0;
+		return this.getSlimeSize() == 1 ? Item.slimeBallFrozen.shiftedIndex : 1;
 	}
 
 	public boolean getCanSpawnHere() {
