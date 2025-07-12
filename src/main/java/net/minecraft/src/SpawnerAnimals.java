@@ -381,6 +381,10 @@ public final class SpawnerAnimals {
 			return new EntityWraith(Minecraft.getMinecraft().theWorld);
 		}
 		
+		if(class0 == EntityIceSlime.class) {
+			return new EntityIceSlime(Minecraft.getMinecraft().theWorld);
+		}
+		
 		return null;
 	}
 }
