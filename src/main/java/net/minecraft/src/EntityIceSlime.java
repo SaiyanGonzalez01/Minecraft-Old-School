@@ -130,11 +130,6 @@ public class EntityIceSlime extends EntityLiving implements IMob {
 		return this.getSlimeSize() == 1 ? Item.slimeballFrozen.shiftedIndex : 0;
 	}
 
-	public boolean getCanSpawnHere() {
-		Chunk var1 = this.worldObj.getChunkFromBlockCoords(MathHelper.floor_double(this.posX), MathHelper.floor_double(this.posZ));
-		return (this.getSlimeSize() == 1 || this.worldObj.difficultySetting > 0) && this.rand.nextInt(10) == 0 && var1.func_997_a(987234911L).nextInt(10) == 0 && this.posY > 60.0D;
-	}
-
 	protected float getSoundVolume() {
 		return 0.6F;
 	}
