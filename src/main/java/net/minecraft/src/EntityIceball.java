@@ -150,7 +150,7 @@ public class EntityIceball extends Entity {
 		}
 
 		if(var3 != null) {
-			if(var3.entityHit != null && var3.entityHit.attackEntityFrom(this.thrower, 0)) {
+			if(var3.entityHit != null && var3.entityHit.attackEntityFrom(this.thrower, 3)) {
 			}
 
 			for(int var16 = 0; var16 < 8; ++var16) {
