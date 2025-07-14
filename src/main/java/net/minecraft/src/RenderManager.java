@@ -58,7 +58,7 @@ public class RenderManager {
 		this.entityRenderMap.put(EntityFish.class, new RenderFish());
 		this.entityRenderMap.put(EntityLightningBolt.class, new RenderLightningBolt());
 		this.entityRenderMap.put(EntityCannonball.class, new RenderCannonball(Item.cannonball.getIconFromDamage(0)));
-		this.entityRenderMap.put(EntityIceball.class, new RenderCannonball(Item.IceBall.getIconFromDamage(0)));
+		this.entityRenderMap.put(EntityIceball.class, new RenderCannonball(Item.iceBall.getIconFromDamage(0)));
 		Iterator var1 = this.entityRenderMap.values().iterator();
 
 		while(var1.hasNext()) {
