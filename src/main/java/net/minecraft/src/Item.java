@@ -164,6 +164,7 @@ public class Item {
 	public static Item axeGoldUpgraded = (new ItemAxe(162, EnumToolMaterial.UPGOLD)).setIconCoord(4, 7).setItemName("hatchetGoldUpgraded");
 	public static Item hoeGoldUpgraded = (new ItemHoe(163, EnumToolMaterial.UPGOLD)).setIconCoord(4, 8).setItemName("hoeGoldUpgraded");
 	public static Item slimeballFrozen = (new Item(164)).setIconCoord(13, 7).setItemName("slimeballFrozen");
+	public static Item iceBall = (new ItemIceball(165)).setIconCoord(13, 6).setItemName("iceball");
 	public static Item record13 = (new ItemRecord(2000, "13")).setIconCoord(0, 15).setItemName("record");
 	public static Item recordCat = (new ItemRecord(2001, "cat")).setIconCoord(1, 15).setItemName("record");
 	public final int shiftedIndex;
