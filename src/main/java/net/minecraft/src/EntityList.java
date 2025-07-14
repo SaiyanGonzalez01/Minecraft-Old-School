@@ -106,6 +106,7 @@ public class EntityList {
 		addMapping(EntityPigZombie.class, "PigZombie", 57);
 		addMapping(EntityNetherSkeleton.class, "CharredSkeleton", 58);
 		addMapping(EntityIceSlime.class, "IceSlime", 59);
+		addMapping(EntityIceSkeleton.class, "IceSkeleton", 60);
 		addMapping(EntityPig.class, "Pig", 90);
 		addMapping(EntitySheep.class, "Sheep", 91);
 		addMapping(EntityCow.class, "Cow", 92);
