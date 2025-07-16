@@ -48,9 +48,9 @@ Ok, finally figured out how to compile it. And now as of commit [1c96970](https:
 
 You heard right! You can actually PLAY the project now unlike the original Old-School.
 
-Play [Official](https://saiyangonzalez01.github.io/Minecraft-Old-School-ReDefault/web) Releases
+Play [Official](https://saiyangonzalez01.github.io/Minecraft-Old-School-ReDefault/web) Release
 
-Play [Experimental](https://saiyangonzalez01.github.io/Minecraft-Old-School-ReDefault/webexp) Releases
+Play [Experimental](https://saiyangonzalez01.github.io/Minecraft-Old-School-ReDefault/webexp) Release
 
 Select [Older Versions](https://saiyangonzalez01.github.io/Minecraft-Old-School-ReDefault/archive)
 
