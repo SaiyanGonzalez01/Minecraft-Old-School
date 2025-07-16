@@ -166,6 +166,11 @@ public class Item {
 	public static Item slimeballFrozen = (new Item(164)).setIconCoord(13, 7).setItemName("slimeballFrozen");
 	public static Item iceBall = (new ItemIceball(165)).setIconCoord(13, 6).setItemName("iceball");
 	public static Item runeEarth = (new Item(166)).setIconCoord(6, 12).setItemName("runeEarth");
+	public static Item swordObsidian = (new ItemSword(167, EnumToolMaterial.OBSIDIAN)).setIconCoord(0, 9).setItemName("swordObsidian");
+	public static Item shoveObsidian = (new ItemSpade(168, EnumToolMaterial.OBSIDIAN)).setIconCoord(0, 10).setItemName("shovelObsidian");
+	public static Item pickaxeObsidian = (new ItemPickaxe(169, EnumToolMaterial.OBSIDIAN)).setIconCoord(0, 11).setItemName("pickaxeObsidian");
+	public static Item axeObsidian = (new ItemAxe(170, EnumToolMaterial.OBSIDIAN)).setIconCoord(0, 12).setItemName("hatchetObsidian");
+	public static Item hoeObsidian = (new ItemHoe(171, EnumToolMaterial.OBSIDIAN)).setIconCoord(0, 13).setItemName("hoeObsidian");
 	public static Item record13 = (new ItemRecord(2000, "13")).setIconCoord(0, 15).setItemName("record");
 	public static Item recordCat = (new ItemRecord(2001, "cat")).setIconCoord(1, 15).setItemName("record");
 	public final int shiftedIndex;
