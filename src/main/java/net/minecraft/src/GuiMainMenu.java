@@ -98,6 +98,7 @@ public class GuiMainMenu extends GuiScreen {
 		this.controlList.add(this.multiplayerButton = new GuiButton(2, this.width / 2 - 100, var4 + 24, var2.translateKey("menu.multiplayer")));
 		this.controlList.add(new GuiButton(3, this.width / 2 - 100, var4 + 48, var2.translateKey("menu.mods")));
 		this.controlList.add(new GuiButton(0, this.width / 2 - 100, var4 + 72, var2.translateKey("menu.options")));
+		this.controlList.add(new GuiSmallerButton(5, this.width / 2 - 100, var4 + 72, var2.translateKey("☻")));
 
 		if(this.mc.session == null) {
 			this.multiplayerButton.enabled = false;
@@ -120,6 +121,10 @@ public class GuiMainMenu extends GuiScreen {
 		
 		if(var1.id == 3) {
 			this.mc.displayGuiScreen(new GuiTexturePacks(this));
+		}
+
+		if(var1.id == 4) {
+			this.mc.displayGuiScreen(new GuiScreenEditProfile(this));
 		}
 
 		if(var1.id == 4) {
