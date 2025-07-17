@@ -50,8 +50,6 @@ You heard right! You can actually PLAY the project now unlike the original Old-S
 
 Play [Official](https://saiyangonzalez01.github.io/Minecraft-Old-School-ReDefault/web) Release
 
-Play [Experimental](https://saiyangonzalez01.github.io/Minecraft-Old-School-ReDefault/webexp) Release
-
 Select [Older Versions](https://saiyangonzalez01.github.io/Minecraft-Old-School-ReDefault/archive)
 
 ### Contributers
