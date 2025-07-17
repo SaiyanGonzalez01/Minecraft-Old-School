@@ -131,6 +131,13 @@ public class CraftingManager {
 		this.addRecipe(new ItemStack(Item.shovelDiamondUpgraded, 1), new Object[]{"XYZ", Character.valueOf('X'), Item.shovelDiamond, Character.valueOf('Y'), Item.runeUpgrade, Character.valueOf('Z'), Item.ruby});
 		this.addRecipe(new ItemStack(Item.hoeDiamondUpgraded, 1), new Object[]{"XYZ", Character.valueOf('X'), Item.hoeDiamond, Character.valueOf('Y'), Item.runeUpgrade, Character.valueOf('Z'), Item.ruby});
 		this.addRecipe(new ItemStack(Item.runeEarth, 1), new Object[]{"ZXZ", "X#X", "ZXZ", Character.valueOf('#'), Item.runeEmpty, Character.valueOf('X'), Block.dirt, Character.valueOf('Z'), Item.ingotIron});
+		this.addRecipe(new ItemStack(Item.swordLesserObsidian, 1), new Object[]{" Y ", "#X#", " # ", Character.valueOf('#'), Block.obsidian, Character.valueOf('X'), Item.swordDiamond, Character.valueOf('Y'), Item.runeUpgrade});
+		this.addRecipe(new ItemStack(Item.pickaxeObsidian, 1), new Object[]{" Y ", "#X#", " # ", Character.valueOf('#'), Block.obsidian, Character.valueOf('X'), Item.pickaxeDiamond, Character.valueOf('Y'), Item.runeUpgrade});
+		this.addRecipe(new ItemStack(Item.axeObsidian, 1), new Object[]{" Y ", "#X#", " # ", Character.valueOf('#'), Block.obsidian, Character.valueOf('X'), Item.axeDiamond, Character.valueOf('Y'), Item.runeUpgrade});
+		this.addRecipe(new ItemStack(Item.shovelObsidian, 1), new Object[]{" Y ", "#X#", " # ", Character.valueOf('#'), Block.obsidian, Character.valueOf('X'), Item.shovelDiamond, Character.valueOf('Y'), Item.runeUpgrade});
+		this.addRecipe(new ItemStack(Item.hoeObsidian, 1), new Object[]{" Y ", "#X#", " # ", Character.valueOf('#'), Block.obsidian, Character.valueOf('X'), Item.hoeDiamond, Character.valueOf('Y'), Item.runeUpgrade});
+	
+
 	
 		Collections.sort(this.recipes, new RecipeSorter(this));
 		System.out.println(this.recipes.size() + " recipes");
