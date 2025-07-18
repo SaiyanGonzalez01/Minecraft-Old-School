@@ -175,6 +175,7 @@ public class Item {
 	public static Item plateObsidian = (new ItemArmor(173, 3, 5, 1)).setIconCoord(1, 10).setItemName("chestplateObsidian");
 	public static Item legsObsidian = (new ItemArmor(174, 3, 5, 2)).setIconCoord(1, 11).setItemName("leggingsObsidian");
 	public static Item bootsObsidian = (new ItemArmor(175, 3, 5, 3)).setIconCoord(1, 12).setItemName("bootsObsidian");
+	public static Item magmaBall = (new Item(176)).setIconCoord(11, 11).setItemName("magmaBall");
 	public static Item record13 = (new ItemRecord(2000, "13")).setIconCoord(0, 15).setItemName("record");
 	public static Item recordCat = (new ItemRecord(2001, "cat")).setIconCoord(1, 15).setItemName("record");
 	public final int shiftedIndex;
