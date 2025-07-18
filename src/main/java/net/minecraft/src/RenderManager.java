@@ -40,6 +40,7 @@ public class RenderManager {
 		this.entityRenderMap.put(EntityPigZombie.class, new RenderBiped(new ModelPigZombie(), 0.5F, "/mob/pigzombie.png"));
 		this.entityRenderMap.put(EntitySlime.class, new RenderSlime(new ModelSlime(16), new ModelSlime(0), 0.25F));
 		this.entityRenderMap.put(EntityIceSlime.class, new RenderIceSlime(new ModelIceSlime(16), new ModelIceSlime(0), 0.25F));
+		this.entityRenderMap.put(EntityMagmaSlime.class, new RenderMagmaSlime(new ModelMagmaSlime(16), new ModelMagmaSlime(0), 0.25F));
 		this.entityRenderMap.put(EntityPlayer.class, new RenderPlayer());
 		this.entityRenderMap.put(EntityGiantZombie.class, new RenderGiantZombie(new ModelZombie(), 0.5F, 6.0F));
 		this.entityRenderMap.put(EntityGhast.class, new RenderGhast());
