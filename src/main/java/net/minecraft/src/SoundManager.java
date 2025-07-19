@@ -15,7 +15,7 @@ public class SoundManager {
 	private static List<Integer> sounds = new ArrayList<Integer>();
 	private static int BgMusic = -1;
 	
-	static String[] music = new String[] {"music.calm1_ogg", "music.calm2_ogg", "music.calm3_ogg", "newMusic.hal1_ogg", "newMusic.hal2_ogg", "newMusic.hal3_ogg", "newMusic.hal4_ogg", "newMusic.nuance1_ogg", "newMusic.nuance2_ogg", "newMusic.piano1_ogg", "newMusic.piano2_ogg", "newMusic.piano3_ogg"};
+	static String[] music = new String[] {"music.calm1_ogg", "music.calm2_ogg", "music.calm3_ogg", "newMusic.hal1_ogg", "newMusic.hal2_ogg", "newMusic.hal3_ogg", "newMusic.hal4_ogg", "newMusic.nuance1_ogg", "newMusic.nuance2_ogg", "newMusic.piano1_ogg", "newMusic.piano2_ogg", "newMusic.piano3_ogg", "newMusic.memoir1_ogg", "newMusic.memoir2_ogg"};
 	
 	public void loadSoundSettings(GameSettings var1) {
 		this.options = var1;
