@@ -6,7 +6,7 @@ import net.PeytonPlayz585.textures.TextureLocation;
 public class RenderMagmaSlime extends RenderLiving {
 	private ModelBase scaleAmount;
 	
-	private static final TextureLocation slimeTexture = new TextureLocation("/mob/slime.png");
+	private static final TextureLocation slimeTexture = new TextureLocation("/mob/slime_magma.png");
 
 	public RenderMagmaSlime(ModelBase var1, ModelBase var2, float var3) {
 		super(var1, var3);
