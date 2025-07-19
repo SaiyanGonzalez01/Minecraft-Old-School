@@ -39,11 +39,11 @@ public class RenderMagmaSlime extends RenderLiving {
 	}
 
 	protected void preRenderCallback(EntityLiving var1, float var2) {
-		this.scaleSlime((EntitySlime)var1, var2);
+		this.scaleSlime((EntityMagmaSlime)var1, var2);
 	}
 
 	protected boolean shouldRenderPass(EntityLiving var1, int var2, float var3) {
-		return this.renderSlimePassModel((EntitySlime)var1, var2, var3);
+		return this.renderSlimePassModel((EntityMagmaSlime)var1, var2, var3);
 	}
 	
 	@Override
