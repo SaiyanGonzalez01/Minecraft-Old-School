@@ -127,7 +127,7 @@ public class EntityMagmaSlime extends EntityLiving implements IMob {
 	}
 
 	protected int getDropItemId() {
-		return this.getSlimeSize() == 1 ? Item.slimeBall.shiftedIndex : 0;
+		return this.getSlimeSize() == 1 ? Item.magmaBall.shiftedIndex : 0;
 	}
 
 	public boolean getCanSpawnHere() {
