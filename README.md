@@ -4,7 +4,7 @@
 
 A remake of my first project, Minecraft Old-School, now on Eaglercraft Beta 1.7.3!
 
-Minecraft Old-School is an Extension Mod of Eaglercraft 1.7.3 that adds in some new features and bringing back removed ones while keeping the Beta-like feel you know & love. It's inspired by mods like Better Than Adventure, Not-So-Seecret Saturday, and more!
+Minecraft Old-School is an Extension Mod of Eaglercraft 1.7.3 that adds in some new features, bringing back removed ones, and porting some from later versions, all while keeping the Beta-like feel you know & love. It's inspired by mods like Better Than Adventure, Not-So-Seecret Saturday, and more!
 
 ### Warning! This project is not Chromebook-friendly!
 
