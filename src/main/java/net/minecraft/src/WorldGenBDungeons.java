@@ -39,7 +39,7 @@ public class WorldGenBDungeons extends WorldGenerator {
 							var1.setBlockWithNotify(var10, var11, var12, 0);
 						} else if(var1.getBlockMaterial(var10, var11, var12).isSolid()) {
 							if(var11 == var4 - 1 && var2.nextInt(4) != 0) {
-								var1.setBlockWithNotify(var10, var11, var12, Block.planks.blockID);
+								var1.setBlockWithNotify(var10, var11, var12, Block.brickMoss.blockID);
 							} else {
 								var1.setBlockWithNotify(var10, var11, var12, Block.brick.blockID);
 							}
