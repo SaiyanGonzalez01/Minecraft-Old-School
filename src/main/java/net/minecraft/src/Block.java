@@ -135,6 +135,7 @@ public class Block {
 	public static final Block blackstone = (new Block(115, 182, Material.rock)).setHardness(1.5F).setResistance(10.0F).setStepSound(soundStoneFootstep).setBlockName("blackstone");
 	public static final Block oreGoldNether = (new BlockNetherGoldOre(116, 153, Material.rock)).setHardness(0.5F).setStepSound(soundStoneFootstep).setBlockName("netherGold");
 	public static final Block planksTreated = (new Block(117, 8, Material.wood)).setHardness(2.0F).setResistance(5.0F).setStepSound(soundWoodFootstep).setBlockName("woodTreated").disableNeighborNotifyOnMetadataChange();
+	public static final Block brickMoss = (new Block(118, 173, Material.rock)).setHardness(2.0F).setResistance(10.0F).setStepSound(soundStoneFootstep).setBlockName("brickMoss");
 	public int blockIndexInTexture;
 	public final int blockID;
 	protected float blockHardness;
