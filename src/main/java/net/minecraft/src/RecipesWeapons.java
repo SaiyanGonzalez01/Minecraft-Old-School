@@ -16,5 +16,6 @@ public class RecipesWeapons {
 
 		var1.addRecipe(new ItemStack(Item.bow, 1), new Object[]{" #X", "# X", " #X", Character.valueOf('X'), Item.silk, Character.valueOf('#'), Item.stick});
 		var1.addRecipe(new ItemStack(Item.arrow, 16), new Object[]{"X", "#", "Y", Character.valueOf('Y'), Item.feather, Character.valueOf('X'), Item.flint, Character.valueOf('#'), Item.stick});
+		var1.addRecipe(new ItemStack(Item.swordLesserObsidian, 1), new Object[]{"X", "#", "Y", Character.valueOf('Y'), Block.obsidian, Character.valueOf('X'), Item.swordDiamond, Character.valueOf('#'), Item.runeUpgrade});
 	}
 }
