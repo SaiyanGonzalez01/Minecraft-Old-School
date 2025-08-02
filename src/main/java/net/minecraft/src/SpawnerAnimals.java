@@ -393,7 +393,7 @@ public final class SpawnerAnimals {
 			return new EntityMagmaSlime(Minecraft.getMinecraft().theWorld);
 		}
 
-		if(class0 == EntityIceBall.class) {
+		if(class0 == EntityIceball.class) {
 			return new EntityIceball(Minecraft.getMinecraft().theWorld);
 		}
 		
