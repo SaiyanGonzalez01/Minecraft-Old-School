@@ -131,11 +131,14 @@ public class CraftingManager {
 		this.addRecipe(new ItemStack(Item.shovelDiamondUpgraded, 1), new Object[]{"XYZ", Character.valueOf('X'), Item.shovelDiamond, Character.valueOf('Y'), Item.runeUpgrade, Character.valueOf('Z'), Item.ruby});
 		this.addRecipe(new ItemStack(Item.hoeDiamondUpgraded, 1), new Object[]{"XYZ", Character.valueOf('X'), Item.hoeDiamond, Character.valueOf('Y'), Item.runeUpgrade, Character.valueOf('Z'), Item.ruby});
 		this.addRecipe(new ItemStack(Item.runeEarth, 1), new Object[]{"ZXZ", "X#X", "ZXZ", Character.valueOf('#'), Item.runeEmpty, Character.valueOf('X'), Block.dirt, Character.valueOf('Z'), Item.ingotIron});
-		this.addRecipe(new ItemStack(Item.swordLesserObsidian, 1), new Object[]{" Y ", "#X#", " # ", Character.valueOf('#'), Block.obsidian, Character.valueOf('X'), Item.swordDiamond, Character.valueOf('Y'), Item.runeUpgrade});
 		this.addRecipe(new ItemStack(Item.pickaxeObsidian, 1), new Object[]{" Y ", "#X#", " # ", Character.valueOf('#'), Block.obsidian, Character.valueOf('X'), Item.pickaxeDiamond, Character.valueOf('Y'), Item.runeUpgrade});
 		this.addRecipe(new ItemStack(Item.axeObsidian, 1), new Object[]{" Y ", "#X#", " # ", Character.valueOf('#'), Block.obsidian, Character.valueOf('X'), Item.axeDiamond, Character.valueOf('Y'), Item.runeUpgrade});
 		this.addRecipe(new ItemStack(Item.shovelObsidian, 1), new Object[]{" Y ", "#X#", " # ", Character.valueOf('#'), Block.obsidian, Character.valueOf('X'), Item.shovelDiamond, Character.valueOf('Y'), Item.runeUpgrade});
 		this.addRecipe(new ItemStack(Item.hoeObsidian, 1), new Object[]{" Y ", "#X#", " # ", Character.valueOf('#'), Block.obsidian, Character.valueOf('X'), Item.hoeDiamond, Character.valueOf('Y'), Item.runeUpgrade});
+		this.addRecipe(new ItemStack(Item.helmetObsidian, 1), new Object[]{" Y ", "#X#", " # ", Character.valueOf('#'), Block.obsidian, Character.valueOf('X'), Item.helmetDiamond, Character.valueOf('Y'), Item.runeUpgrade});
+		this.addRecipe(new ItemStack(Item.plateObsidian, 1), new Object[]{" Y ", "#X#", " # ", Character.valueOf('#'), Block.obsidian, Character.valueOf('X'), Item.plateDiamond, Character.valueOf('Y'), Item.runeUpgrade});
+		this.addRecipe(new ItemStack(Item.legsObsidian, 1), new Object[]{" Y ", "#X#", " # ", Character.valueOf('#'), Block.obsidian, Character.valueOf('X'), Item.legsDiamond, Character.valueOf('Y'), Item.runeUpgrade});
+		this.addRecipe(new ItemStack(Item.bootsObsidian, 1), new Object[]{" Y ", "#X#", " # ", Character.valueOf('#'), Block.obsidian, Character.valueOf('X'), Item.bootsDiamond, Character.valueOf('Y'), Item.runeUpgrade});
 	
 
 	
