@@ -41,7 +41,6 @@ public class EntityIceSkeleton extends EntityMob {
 				float var10 = MathHelper.sqrt_double(var3 * var3 + var5 * var5) * 0.2F;
 				this.worldObj.playSoundAtEntity(this, "random.bow", 0.5F, 0.4F / (this.rand.nextFloat() * 0.4F + 0.8F));
 				this.worldObj.entityJoinedWorld(var7);
-				var7.setArrowHeading(var3, var8 + (double)var10, var5, 0.6F, 12.0F);
 				this.attackTime = 30;
 			}
 
