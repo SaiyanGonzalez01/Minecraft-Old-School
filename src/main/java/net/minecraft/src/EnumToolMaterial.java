@@ -11,8 +11,8 @@ public enum EnumToolMaterial {
 	UPIRON(2, 300, 6.5F, 2),
 	UPEMERALD(3, 1720, 8.5F, 3),
 	UPGOLD(1, 550, 12.5F, 1),
-	OBSIDIAN(4, 2562, 13.0F, 4),
-	UPOBSIDIAN(5, 2864, 14.0F, 5);
+	OBSIDIAN(3, 2562, 8.0F, 4),
+	UPOBSIDIAN(4, 2864, 8.5F, 5);
 	
 	private final int harvestLevel;
 	private final int maxUses;
