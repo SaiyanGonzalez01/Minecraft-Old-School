@@ -35,7 +35,7 @@ public class EntityIceSkeleton extends EntityMob {
 			double var3 = var1.posX - this.posX;
 			double var5 = var1.posZ - this.posZ;
 			if(this.attackTime == 0) {
-				EntityArrow var7 = new EntityIceBall(this.worldObj, this);
+				EntityIceBall var7 = new EntityIceBall(this.worldObj, this);
 				var7.posY += (double)1.4F;
 				double var8 = var1.posY + (double)var1.getEyeHeight() - (double)0.2F - var7.posY;
 				float var10 = MathHelper.sqrt_double(var3 * var3 + var5 * var5) * 0.2F;
