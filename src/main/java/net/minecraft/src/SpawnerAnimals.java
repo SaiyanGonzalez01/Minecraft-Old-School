@@ -394,7 +394,7 @@ public final class SpawnerAnimals {
 		}
 
 		if(class0 == EntityIceBall.class) {
-			return new EntityIceBall(Minecraft.getMinecraft().theWorld);
+			return new EntityIceball(Minecraft.getMinecraft().theWorld);
 		}
 		
 		return null;
