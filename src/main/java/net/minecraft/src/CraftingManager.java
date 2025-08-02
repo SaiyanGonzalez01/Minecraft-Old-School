@@ -139,8 +139,7 @@ public class CraftingManager {
 		this.addRecipe(new ItemStack(Item.plateObsidian, 1), new Object[]{" Y ", "#X#", " # ", Character.valueOf('#'), Block.obsidian, Character.valueOf('X'), Item.plateDiamond, Character.valueOf('Y'), Item.runeUpgrade});
 		this.addRecipe(new ItemStack(Item.legsObsidian, 1), new Object[]{" Y ", "#X#", " # ", Character.valueOf('#'), Block.obsidian, Character.valueOf('X'), Item.legsDiamond, Character.valueOf('Y'), Item.runeUpgrade});
 		this.addRecipe(new ItemStack(Item.bootsObsidian, 1), new Object[]{" Y ", "#X#", " # ", Character.valueOf('#'), Block.obsidian, Character.valueOf('X'), Item.bootsDiamond, Character.valueOf('Y'), Item.runeUpgrade});
-	
-
+		this.addRecipe(new ItemStack(Item.obsidianPlate, 1), new Object[]{"##", Character.valueOf('#'), Block.obsidian});
 	
 		Collections.sort(this.recipes, new RecipeSorter(this));
 		System.out.println(this.recipes.size() + " recipes");
