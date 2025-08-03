@@ -14,5 +14,10 @@ public class RecipesArmor {
 			}
 		}
 
+		var1.addRecipe(new ItemStack(Item.helmetObsidian, 1), new Object[]{" Y ", "#X#", " # ", Character.valueOf('#'), Block.obsidian, Character.valueOf('X'), Item.helmetDiamond, Character.valueOf('Y'), Item.runeUpgrade});
+		var1.addRecipe(new ItemStack(Item.plateObsidian, 1), new Object[]{" Y ", "#X#", " # ", Character.valueOf('#'), Block.obsidian, Character.valueOf('X'), Item.plateDiamond, Character.valueOf('Y'), Item.runeUpgrade});
+		var1.addRecipe(new ItemStack(Item.legsObsidian, 1), new Object[]{" Y ", "#X#", " # ", Character.valueOf('#'), Block.obsidian, Character.valueOf('X'), Item.legsDiamond, Character.valueOf('Y'), Item.runeUpgrade});
+		var1.addRecipe(new ItemStack(Item.bootsObsidian, 1), new Object[]{" Y ", "#X#", " # ", Character.valueOf('#'), Block.obsidian, Character.valueOf('X'), Item.bootsDiamond, Character.valueOf('Y'), Item.runeUpgrade});
+
 	}
 }
