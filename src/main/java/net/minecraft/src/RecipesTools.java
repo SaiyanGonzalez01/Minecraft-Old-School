@@ -15,5 +15,9 @@ public class RecipesTools {
 		}
 
 		var1.addRecipe(new ItemStack(Item.shears), new Object[]{" #", "# ", Character.valueOf('#'), Item.ingotIron});
+		var1.addRecipe(new ItemStack(Item.pickaxeObsidian, 1), new Object[]{" Y ", "#X#", " # ", Character.valueOf('#'), Item.obsidianPlate, Character.valueOf('X'), Item.pickaxeDiamond, Character.valueOf('Y'), Item.runeUpgrade});
+		var1.addRecipe(new ItemStack(Item.axeObsidian, 1), new Object[]{" Y ", "#X#", " # ", Character.valueOf('#'), Item.obsidianPlate, Character.valueOf('X'), Item.axeDiamond, Character.valueOf('Y'), Item.runeUpgrade});
+		var1.addRecipe(new ItemStack(Item.shovelObsidian, 1), new Object[]{" Y ", "#X#", " # ", Character.valueOf('#'), Item.obsidianPlate, Character.valueOf('X'), Item.shovelDiamond, Character.valueOf('Y'), Item.runeUpgrade});
+		var1.addRecipe(new ItemStack(Item.hoeObsidian, 1), new Object[]{" Y ", "#X#", " # ", Character.valueOf('#'), Item.obsidianPlate, Character.valueOf('X'), Item.hoeDiamond, Character.valueOf('Y'), Item.runeUpgrade});
 	}
 }
