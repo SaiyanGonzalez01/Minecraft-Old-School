@@ -323,7 +323,7 @@ tile.bed.desc=
 tile.bed.occupied=This bed is occupied
 tile.bed.noSleep=You can only sleep at night
 tile.bed.notValid=Your home bed was missing or obstructed
-tile.diode.name=REDSTONE REAPETOR
+tile.diode.name=Redstone Repeator
 tile.diode.desc=
 tile.lockedchest.name=Locked chest
 tile.lockedchest.desc=
@@ -349,7 +349,7 @@ tile.mushroomwhite.name=Giant Puffball
 tile.mushroomwhite.desc=
 tile.sawdustBlock.name=Sawdust Block
 tile.sawdustBlock.desc=
-tile.salt.name=Salt
+tile.salt.name=Salt Crystal
 tile.salt.desc=
 tile.cyanRose.name=Cyan Rose
 tile.cyanRose.desc=
@@ -783,6 +783,7 @@ item.magmaBall.name=Magma Cream
 item.magmaBall.desc=
 item.obsidianPlate.name=Obsidian Plating
 item.obsidianPlate.desc=
+
 
 
 
