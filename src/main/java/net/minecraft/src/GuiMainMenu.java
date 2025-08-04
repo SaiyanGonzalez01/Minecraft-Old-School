@@ -211,14 +211,14 @@ public class GuiMainMenu extends GuiScreen {
 	}
 
 	private static final EaglercraftRandom rand = new EaglercraftRandom();
-	/
+
 	String minecraftLogo[] = {
 			" *   * * *   * *** *** *** *** *** ***",
             " ** ** * **  * *   *   * * * * *    * ",
 			" * * * * * * * *   **  **  *** **   * ",
 			" *   * * *  ** *   *   * * * * *    * ",
 			" *   * * *   * *** *** * * * * *    * " };
-	/
+
 	private LogoEffectRandomizer logoEffects[][];
 	private float updateCounter;
 	private String splashText;
