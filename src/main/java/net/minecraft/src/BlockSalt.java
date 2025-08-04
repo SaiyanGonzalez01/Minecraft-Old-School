@@ -1,8 +1,8 @@
 package net.minecraft.src;
 
 public class BlockSalt extends BlockCrystal {
-	public BlockSalt(int var1, int var2, Material var3) {
-		super(var1, var2, var3);
+	protected BlockSalt(int var1, int var2) {
+		super(var1, var2);
 	}
 
 	public int quantityDropped(Random var1) {
