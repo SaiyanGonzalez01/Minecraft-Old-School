@@ -1,6 +1,6 @@
 package net.minecraft.src;
 
-public class BlockSalt extends Block {
+public class BlockSalt extends BlockCrystal {
 	public BlockSalt(int var1, int var2, Material var3) {
 		super(var1, var2, var3);
 	}
