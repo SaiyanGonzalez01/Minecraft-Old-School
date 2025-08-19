@@ -401,6 +401,10 @@ tile.blackstone.name=Blackstone
 tile.blackstone.desc=
 tile.brickMoss.name=Moss Bricks
 tile.brickMoss.desc=
+tile.graniteCobbled.name=Cobbled Granite
+tile.graniteCobbled.desc=
+tile.plankedCobblestone.name=Planked Cobblestone
+tile.plankedCobblestone.desc=
 
 
 item.shovelIron.name=Iron Shovel
@@ -783,6 +787,7 @@ item.magmaBall.name=Magma Cream
 item.magmaBall.desc=
 item.obsidianPlate.name=Obsidian Plating
 item.obsidianPlate.desc=
+
 
 
 
