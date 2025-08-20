@@ -138,6 +138,7 @@ public class Block {
 	public static final Block brickMoss = (new Block(118, 172, Material.rock)).setHardness(2.0F).setResistance(10.0F).setStepSound(soundStoneFootstep).setBlockName("brickMoss");
 	public static final BlockSkyPortal portalSky = (BlockSkyPortal)(new BlockSkyPortal(119, 14)).setHardness(-1.0F).setStepSound(soundGlassFootstep).setLightValue(12.0F / 16.0F).setBlockName("portalSky").disableStats();
 	public static final Block cobbledGranite = (new Block(120, 101, Material.rock)).setHardness(2.0F).setResistance(10.0F).setStepSound(soundStoneFootstep).setBlockName("graniteCobbled");
+	public static final Block plankedCobblestone = (new BlockPlankedStone(121, 173)).setHardness(2.5F).setResistance(9.0F).setStepSound(soundWoodFootstep).setBlockName("plankedCobblestone");
 	public int blockIndexInTexture;
 	public final int blockID;
 	protected float blockHardness;
