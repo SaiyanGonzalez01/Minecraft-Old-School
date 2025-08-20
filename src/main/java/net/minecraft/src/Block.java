@@ -126,7 +126,7 @@ public class Block {
 	public static final BlockCrystal salt = (BlockCrystal)(new BlockSalt(104, 78)).setHardness(1.2F).setResistance(1.0F).setStepSound(soundGlassFootstep).setBlockName("salt");
 	public static final BlockFlower plantCyan = (BlockFlower)(new BlockFlower(105, 111)).setHardness(0.0F).setStepSound(soundGrassFootstep).setBlockName("cyanRose");
 	public static final Block brickStone = (new Block(106, 85, Material.rock)).setHardness(1.5F).setResistance(10.0F).setStepSound(soundStoneFootstep).setBlockName("brickStone");
-	public static final Block pillarStone = (new BlockPillar(107)).setHardness(1.5F).setResistance(10.0F).setStepSound(soundStoneFootstep).setBlockName("pillarStone");
+	public static final Block pillarStone = (new BlockStonePillar(107, 126)).setHardness(1.5F).setResistance(10.0F).setStepSound(soundStoneFootstep).setBlockName("pillarStone");
 	public static final Block potatoCrops = (new BlockCropsP(108, 136)).setHardness(0.0F).setStepSound(soundGrassFootstep).setBlockName("crops").disableStats().disableNeighborNotifyOnMetadataChange();
 	public static final Block planksColored = (new BlockPlanks()).setHardness(2.0F).setResistance(5.0F).setStepSound(soundWoodFootstep).setBlockName("woodColored").disableNeighborNotifyOnMetadataChange();
 	public static final Block netherrackBrick = (new Block(109, 166, Material.rock)).setHardness(1.4F).setStepSound(soundStoneFootstep).setBlockName("hellbrick");
@@ -137,7 +137,7 @@ public class Block {
 	public static final Block planksTreated = (new Block(117, 8, Material.wood)).setHardness(2.0F).setResistance(5.0F).setStepSound(soundWoodFootstep).setBlockName("woodTreated").disableNeighborNotifyOnMetadataChange();
 	public static final Block brickMoss = (new Block(118, 172, Material.rock)).setHardness(2.0F).setResistance(10.0F).setStepSound(soundStoneFootstep).setBlockName("brickMoss");
 	public static final BlockSkyPortal portalSky = (BlockSkyPortal)(new BlockSkyPortal(119, 14)).setHardness(-1.0F).setStepSound(soundGlassFootstep).setLightValue(12.0F / 16.0F).setBlockName("portalSky").disableStats();
-	public static final Block cobbledGranite = (new Block(120, 53)).setHardness(2.0F).setResistance(10.0F).setStepSound(soundStoneFootstep).setBlockName("graniteCobbled");
+	public static final Block cobbledGranite = (new Block(120, 53, Material.rock)).setHardness(2.0F).setResistance(10.0F).setStepSound(soundStoneFootstep).setBlockName("graniteCobbled");
 	public int blockIndexInTexture;
 	public final int blockID;
 	protected float blockHardness;
