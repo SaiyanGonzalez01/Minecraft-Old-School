@@ -1,7 +1,7 @@
 package net.minecraft.src;
 
-public class BlockPillar extends Block {
-	public BlockPillar(int var1, int var2) {
+public class BlockStonePillar extends Block {
+	public BlockStonePillar(int var1, int var2) {
 		super(var1, var2, Material.rock);
     this.blockIndexInTexture = 126;
 	}
