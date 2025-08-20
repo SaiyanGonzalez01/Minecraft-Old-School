@@ -405,7 +405,10 @@ tile.graniteCobbled.name=Cobbled Granite
 tile.graniteCobbled.desc=
 tile.plankedCobblestone.name=Planked Cobblestone
 tile.plankedCobblestone.desc=
-
+tile.plankedGranite.name=Planked Cobbled Granite
+tile.plankedGranite.desc=
+tile.plankedNetherrack.name=Planked Netherrack
+tile.plankedNetherrack.desc=
 
 item.shovelIron.name=Iron Shovel
 item.shovelIron.desc=
@@ -787,6 +790,7 @@ item.magmaBall.name=Magma Cream
 item.magmaBall.desc=
 item.obsidianPlate.name=Obsidian Plating
 item.obsidianPlate.desc=
+
 
 
 
