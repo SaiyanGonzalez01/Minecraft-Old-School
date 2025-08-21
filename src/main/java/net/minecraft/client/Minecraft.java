@@ -1004,12 +1004,6 @@ public class Minecraft implements Runnable {
 			this.thePlayer.dimension = -1;
 		}
 
-		if(this.thePlayer.dimension == 1) {
-			this.thePlayer.dimension = 0;
-		} else {
-			this.thePlayer.dimension = 1;
-		}
-
 		this.theWorld.setEntityDead(this.thePlayer);
 		this.thePlayer.isDead = false;
 		double var1 = this.thePlayer.posX;
@@ -1039,32 +1033,6 @@ public class Minecraft implements Runnable {
 			var7 = new World(this.theWorld, WorldProvider.getProviderForDimension(0));
 			this.changeWorld(var7, "Leaving the Nether", this.thePlayer);
 		}
-
-		if(this.thePlayer.dimension == 1) {
-			var1 /= var5;
-			var3 /= var5;
-			this.thePlayer.setLocationAndAngles(var1, this.thePlayer.posY, var3, this.thePlayer.rotationYaw, this.thePlayer.rotationPitch);
-			if(this.thePlayer.isEntityAlive()) {
-				this.theWorld.updateEntityWithOptionalForce(this.thePlayer, false);
-			}
-
-			var7 = null;
-			var7 = new World(this.theWorld, WorldProvider.getProviderForDimension(1));
-			this.changeWorld(var7, "Entering the Skylands", this.thePlayer);
-
-		} else {
-			var1 *= var5;
-			var3 *= var5;
-			this.thePlayer.setLocationAndAngles(var1, this.thePlayer.posY, var3, this.thePlayer.rotationYaw, this.thePlayer.rotationPitch);
-			if(this.thePlayer.isEntityAlive()) {
-				this.theWorld.updateEntityWithOptionalForce(this.thePlayer, false);
-			}
-
-			var7 = null;
-			var7 = new World(this.theWorld, WorldProvider.getProviderForDimension(0));
-			this.changeWorld(var7, "Leaving the Skylands", this.thePlayer);
-
-			}
 
 		this.thePlayer.worldObj = this.theWorld;
 		if(this.thePlayer.isEntityAlive()) {
