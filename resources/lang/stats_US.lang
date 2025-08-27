@@ -81,6 +81,7 @@ achievement.flyPig=When Pigs Fly
 achievement.flyPig.desc=Fly a pig off a cliff.
 achievement.killsheep=Sheep Slaughter
 achievement.killsheep.desc=Harvest some wool.
-achievement.diamond=Diamonds!
-achievement.diamond.desc=Mine a diamond ore block.
+achievement.diamonds=Diamonds!
+achievement.diamonds.desc=Mine a diamond ore block.
+
 
