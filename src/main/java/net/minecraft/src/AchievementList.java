@@ -27,7 +27,7 @@ public class AchievementList {
 	public static Achievement flyPig = (new Achievement(15, "flyPig", 8, -4, Item.saddle, killCow)).setSpecial().registerAchievement();
 	public static Achievement killsheep = (new Achievement(16, "killsheep", 8, -2, Block.cloth, killCow)).registerAchievement();
 	public static Achievement diamonds = (new Achievement(17, "diamonds", -1, 4, Item.diamond, acquireIron)).registerAchievement();
-	public static Achievement theSword = (new Achievement(18, "theSword", 8, -1, Item.swordObsidian, buildSword)).registerAchievement();
+	public static Achievement theSword = (new Achievement(18, "theSword", 6, -5, Item.swordObsidian, buildSword)).registerAchievement();
 
 	public static void func_27374_a() {
 	}
