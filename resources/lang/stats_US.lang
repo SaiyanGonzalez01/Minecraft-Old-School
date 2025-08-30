@@ -83,12 +83,13 @@ achievement.killsheep=Sheep Slaughter
 achievement.killsheep.desc=Harvest some wool.
 achievement.diamonds=Diamonds!
 achievement.diamonds.desc=Mine a diamond ore block.
-achievement.coolSword=The Sword
-achievement.coolSword.desc=Find the Ancient Obsidian Sword, able to slay mobs with ease.
+achievement.theSword=The Sword
+achievement.theSword.desc=Find the Ancient Obsidian Sword, able to slay mobs with ease.
 achievement.clock=With The Times
 achievement.clock.desc=Make a clock with gold and redstone.
 achievement.diamonds=On My Way!
 achievement.diamonds.desc=Make a compass with iron and redstone.
+
 
 
 
