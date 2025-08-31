@@ -48,12 +48,15 @@ As of commit [1c96970](https://github.com/SaiyanGonzalez01/Minecraft-Old-School-
 
 You heard right! You can actually PLAY the project now unlike the original Old-School.
 
-Play [Official](https://saiyangonzalez01.github.io/Minecraft-Old-School/web) Release
+Play [Recent Build](https://saiyangonzalez01.github.io/Minecraft-Old-School/web)
 
-Select [Older Versions](https://saiyangonzalez01.github.io/Minecraft-Old-School/archive)
+Select [Older Builds](https://saiyangonzalez01.github.io/Minecraft-Old-School/archive)
 
 ### Contributers
 
 - SaiyanGonzalez01 ~ Owner & Creator Of Old-School
-- chicken-nugget1104 ~ Project Contributor
-- PeytonPlayz595 ~ Original Beta 1.7.3 Creator (https://github.com/PeytonPlayz595)
+- [chicken-nugget1104](https://github.com/chicken-nugget1104) ~ Project Contributor
+- [PeytonPlayz595](https://github.com/PeytonPlayz595) ~ Original Beta 1.7.3 Creator 
+### Special Thanks
+
+- [Kristoffer Zetterstrand](https://zetterstrand.com/works/) ~ Painting Producer 
