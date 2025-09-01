@@ -32,6 +32,11 @@ public enum EnumArt {
 	Stage("Stage", 32, 32, 64, 128),
 	Void("Void", 32, 32, 96, 128),
 	SkullAndRoses("SkullAndRoses", 32, 32, 128, 128),
+	Luteplayer("Luteplayer", 32, 32, 128, 96),
+	SelfPortrait("SelfPortrait", 32, 32, 160, 96),
+	Geology("Geology", 32, 32, 0, 160),
+	Fire("Fire", 32, 32, 32, 160),
+	
 	Fighters("Fighters", 64, 32, 0, 96),
 	Lowmist("Lowmist",64, 32, 64, 96),
 	Pointer("Pointer", 64, 64, 0, 192),
@@ -41,6 +46,7 @@ public enum EnumArt {
 	DonkeyKong("DonkeyKong", 64, 48, 192, 112),
 	Fern("Fern", 48, 48, 32, 48),
 	Tides("Tides", 48, 48, 80, 48);
+	Bones("Bones", 48, 48, 128, 48);
 
 	public static final int maxArtTitleLength = "SkullAndRoses".length();
 	public final String title;
