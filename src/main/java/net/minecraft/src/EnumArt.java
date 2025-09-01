@@ -15,7 +15,6 @@ public enum EnumArt {
 	Militia("Militia", 16, 16, 48, 16),
 	Then("Then", 16, 16, 96, 16),
 	Dust("Dust", 16, 16, 112, 16),
-	
 	Pool("Pool", 32, 16, 0, 32),
 	Courbet("Courbet", 32, 16, 32, 32),
 	Sea("Sea", 32, 16, 64, 32),
@@ -26,26 +25,20 @@ public enum EnumArt {
 	Chateau("Chateau" 32, 16, 64, 16),
 	Italy("Italy" 32, 16, 128, 16),
 	Master("Master" 32, 16, 160, 160),
-	
 	Wanderer("Wanderer", 16, 32, 0, 64),
 	Graham("Graham", 16, 32, 16, 64),
-	
 	Match("Match", 32, 32, 0, 128),
 	Bust("Bust", 32, 32, 32, 128),
 	Stage("Stage", 32, 32, 64, 128),
 	Void("Void", 32, 32, 96, 128),
 	SkullAndRoses("SkullAndRoses", 32, 32, 128, 128),
-	
 	Fighters("Fighters", 64, 32, 0, 96),
 	Lowmist("Lowmist",64, 32, 64, 96),
-	
 	Pointer("Pointer", 64, 64, 0, 192),
 	Pigscene("Pigscene", 64, 64, 64, 192),
 	BurningSkull("BurningSkull", 64, 64, 128, 192),
-	
 	Skeleton("Skeleton", 64, 48, 192, 64),
 	DonkeyKong("DonkeyKong", 64, 48, 192, 112),
-	
 	Fern("Fern", 48, 48, 32, 48),
 	Tides("Tides", 48, 48, 80, 48);
 
