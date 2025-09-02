@@ -28,6 +28,7 @@ public enum EnumArt {
 	Wanderer("Wanderer", 16, 32, 0, 64),
 	Graham("Graham", 16, 32, 16, 64),
 	Bathers("Bathers", 16, 32, 64, 160),
+	Gate("Gate", 16, 32, 160, 160),
 	Match("Match", 32, 32, 0, 128),
 	Bust("Bust", 32, 32, 32, 128),
 	Stage("Stage", 32, 32, 64, 128),
@@ -37,6 +38,7 @@ public enum EnumArt {
 	SelfPortrait("SelfPortrait", 32, 32, 160, 96),
 	Geology("Geology", 32, 32, 0, 160),
 	Fire("Fire", 32, 32, 32, 160),
+	Bull("Bull", 32, 32, 144, 208),
 	Fighters("Fighters", 64, 32, 0, 96),
 	Lowmist("Lowmist", 64, 32, 64, 96),
 	Blanket("Blanket", 64, 32, 80, 160),
@@ -45,6 +47,7 @@ public enum EnumArt {
 	BurningSkull("BurningSkull", 64, 64, 128, 192),
 	Skeleton("Skeleton", 64, 48, 192, 64),
 	DonkeyKong("DonkeyKong", 64, 48, 192, 112),
+	GoldenRuin("GoldenRuin", 64, 48, 192, 160),
 	Fern("Fern", 48, 48, 32, 48),
 	Tides("Tides", 48, 48, 80, 48);
 	Bones("Bones", 48, 48, 128, 48);
