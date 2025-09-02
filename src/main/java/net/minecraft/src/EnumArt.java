@@ -38,7 +38,7 @@ public enum EnumArt {
 	SelfPortrait("SelfPortrait", 32, 32, 160, 96),
 	Geology("Geology", 32, 32, 0, 160),
 	Fire("Fire", 32, 32, 32, 160),
-	Bull("Bull", 32, 32, 144, 208),
+	Bull("Bull", 32, 32, 176, 208),
 	Fighters("Fighters", 64, 32, 0, 96),
 	Lowmist("Lowmist", 64, 32, 64, 96),
 	Blanket("Blanket", 64, 32, 80, 160),
