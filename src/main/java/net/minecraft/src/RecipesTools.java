@@ -44,5 +44,6 @@ public class RecipesTools {
 		var1.addRecipe(new ItemStack(Item.axeDiamondUpgraded, 1), new Object[]{"XYZ", Character.valueOf('X'), Item.axeDiamond, Character.valueOf('Y'), Item.runeUpgrade, Character.valueOf('Z'), Item.ruby});
 		var1.addRecipe(new ItemStack(Item.shovelDiamondUpgraded, 1), new Object[]{"XYZ", Character.valueOf('X'), Item.shovelDiamond, Character.valueOf('Y'), Item.runeUpgrade, Character.valueOf('Z'), Item.ruby});
 		var1.addRecipe(new ItemStack(Item.hoeDiamondUpgraded, 1), new Object[]{"XYZ", Character.valueOf('X'), Item.hoeDiamond, Character.valueOf('Y'), Item.runeUpgrade, Character.valueOf('Z'), Item.ruby});
+		
 	}
 }
