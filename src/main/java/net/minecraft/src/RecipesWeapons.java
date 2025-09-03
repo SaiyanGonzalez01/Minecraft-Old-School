@@ -15,7 +15,11 @@ public class RecipesWeapons {
 		}
 
 		var1.addRecipe(new ItemStack(Item.bow, 1), new Object[]{" #X", "# X", " #X", Character.valueOf('X'), Item.silk, Character.valueOf('#'), Item.stick});
-		var1.addRecipe(new ItemStack(Item.arrow, 16), new Object[]{"X", "#", "Y", Character.valueOf('Y'), Item.feather, Character.valueOf('X'), Item.flint, Character.valueOf('#'), Item.stick});
-		var1.addRecipe(new ItemStack(Item.swordLesserObsidian, 1), new Object[]{" Y ", "#X#", " # ", Character.valueOf('#'), Item.obsidianPlate, Character.valueOf('X'), Item.swordDiamond, Character.valueOf('Y'), Item.runeUpgrade});
+		var1.addRecipe(new ItemStack(Item.bowIron, 1), new Object[]{"X#Y", Character.valueOf('X'), Item.bow, Character.valueOf('#'), Item.runeUpgrade,  Character.valueOf('Y'), Item.ingotIron});
+		var1.addRecipe(new ItemStack(Item.bowGold, 1), new Object[]{"X#Y", Character.valueOf('X'), Item.bowIron, Character.valueOf('#'), Item.runeUpgrade,  Character.valueOf('Y'), Item.ingotGold});
+		var1.addRecipe(new ItemStack(Item.arrow, 4), new Object[]{"X", "#", "Y", Character.valueOf('Y'), Item.feather, Character.valueOf('X'), Item.flint, Character.valueOf('#'), Item.stick});
+		var1.addRecipe(new ItemStack(Item.arrowIron, 4), new Object[]{"X", "#", "Y", Character.valueOf('Y'), Item.feather, Character.valueOf('X'), Item.ingotIron, Character.valueOf('#'), Item.stick});
+		var1.addRecipe(new ItemStack(Item.arrowGold, 4), new Object[]{"X", "#", "Y", Character.valueOf('Y'), Item.feather, Character.valueOf('X'), Item.ingotGold, Character.valueOf('#'), Item.stick});
+		var1.addRecipe(new ItemStack(Item.swordLesserObsidian, 1), new Object[]{"YX#", Character.valueOf('#'), Item.obsidianPlate, Character.valueOf('X'), Item.runeUpgrade, Character.valueOf('Y'), Item.swordDiamond});
 	}
 }
