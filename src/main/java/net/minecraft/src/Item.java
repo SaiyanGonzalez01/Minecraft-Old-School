@@ -179,6 +179,7 @@ public class Item {
 	public static Item obsidianPlate = (new Item(177)).setIconCoord(12, 12).setItemName("obsidianPlate");
 	public static Item arrowIron = (new Item(178)).setIconCoord(5, 10).setItemName("arrowIron");
 	public static Item arrowGold = (new Item(179)).setIconCoord(5, 11).setItemName("arrowGold");
+	public static Item bowIron = (new ItemIronBow(180)).setIconCoord(5, 8).setItemName("bowIron").setFull3D();
 	public static Item record13 = (new ItemRecord(2000, "13")).setIconCoord(0, 15).setItemName("record");
 	public static Item recordCat = (new ItemRecord(2001, "cat")).setIconCoord(1, 15).setItemName("record");
 	public final int shiftedIndex;
