@@ -24,6 +24,7 @@ public enum EnumArt {
 	Sunset2("Sunset2", 32, 16, 0, 16),
 	Chateau("Chateau", 32, 16, 64, 16),
 	Italy("Italy", 32, 16, 128, 16),
+	MakingFire("MakingFire", 32, 16, 192, 240),
 	Master("Master", 32, 16, 160, 176),
 	Wanderer("Wanderer", 16, 32, 0, 64),
 	Graham("Graham", 16, 32, 16, 64),
@@ -50,7 +51,11 @@ public enum EnumArt {
 	GoldenRuin("GoldenRuin", 64, 48, 192, 160),
 	Fern("Fern", 48, 48, 32, 48),
 	Tides("Tides", 48, 48, 80, 48),
-	Bones("Bones", 48, 48, 128, 48);
+	Bones("Bones", 48, 48, 128, 48),
+	BlueDistant("BlueDistant", 32, 48, 160, 0),
+	Route("Route", 32, 48, 144, 128),
+	Tergo("Tergo", 32, 48, 224, 208);
+	
 
 	public static final int maxArtTitleLength = "SkullAndRoses".length();
 	public final String title;
