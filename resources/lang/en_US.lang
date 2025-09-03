@@ -790,9 +790,7 @@ item.magmaBall.name=Magma Cream
 item.magmaBall.desc=
 item.obsidianPlate.name=Obsidian Plating
 item.obsidianPlate.desc=
-
-
-
-
-
-
+item.arrowIron.name=Iron Arrow
+item.arrowIron.desc=
+item.arrowGold.name=Gold Arrow
+item.arrowGold.desc=
