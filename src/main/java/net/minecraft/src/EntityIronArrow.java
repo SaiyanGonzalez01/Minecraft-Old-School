@@ -256,7 +256,7 @@ public class EntityIronArrow extends Entity {
 
 	public void onCollideWithPlayer(EntityPlayer var1) {
 		if(!this.worldObj.multiplayerWorld) {
-			if(this.inGround && this.doesArrowBelongToPlayer && this.arrowShake <= 0 && var1.inventory.addItemStackToInventory(new ItemStack(Item.arrow, 1))) {
+			if(this.inGround && this.doesArrowBelongToPlayer && this.arrowShake <= 0 && var1.inventory.addItemStackToInventory(new ItemStack(Item.arrowIron, 1))) {
 				this.worldObj.playSoundAtEntity(this, "random.pop", 0.2F, ((this.rand.nextFloat() - this.rand.nextFloat()) * 0.7F + 1.0F) * 2.0F);
 				var1.onItemPickup(this, 1);
 				this.setEntityDead();
