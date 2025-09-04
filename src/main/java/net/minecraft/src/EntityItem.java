@@ -123,6 +123,10 @@ public class EntityItem extends Entity {
 					var1.triggerAchievement(AchievementList.killsheep);
 				}
 
+				if(this.item.itemID == Item.swordObsidian.shiftedIndex) {
+					var1.triggerAchievement(AchievementList.theSword);
+				}
+
 				this.worldObj.playSoundAtEntity(this, "random.pop", 0.2F, ((this.rand.nextFloat() - this.rand.nextFloat()) * 0.7F + 1.0F) * 2.0F);
 				var1.onItemPickup(this, var2);
 				if(this.item.stackSize <= 0) {
