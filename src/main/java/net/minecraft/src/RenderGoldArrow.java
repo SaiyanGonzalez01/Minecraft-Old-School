@@ -7,6 +7,7 @@ import net.PeytonPlayz585.textures.TextureLocation;
 public class RenderGoldArrow extends Render {
 	
 	private static final TextureLocation arrowsTexture = new TextureLocation("/item/arrow_gold.png");
+
 	
 	public void renderArrow(EntityGoldArrow var1, double var2, double var4, double var6, float var8, float var9) {
 		if(var1.prevRotationYaw != 0.0F || var1.prevRotationPitch != 0.0F) {
