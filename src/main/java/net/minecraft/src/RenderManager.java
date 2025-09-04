@@ -50,6 +50,7 @@ public class RenderManager {
 		this.entityRenderMap.put(EntityPainting.class, new RenderPainting());
 		this.entityRenderMap.put(EntityArrow.class, new RenderArrow());
 		this.entityRenderMap.put(EntityIronArrow.class, new RenderIronArrow());
+		this.entityRenderMap.put(EntityGoldArrow.class, new RenderIronArrow());
 		this.entityRenderMap.put(EntitySnowball.class, new RenderSnowball(Item.snowball.getIconFromDamage(0)));
 		this.entityRenderMap.put(EntityEgg.class, new RenderSnowball(Item.egg.getIconFromDamage(0)));
 		this.entityRenderMap.put(EntityFireball.class, new RenderFireball());
