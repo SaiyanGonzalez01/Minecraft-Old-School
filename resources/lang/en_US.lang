@@ -796,4 +796,7 @@ item.arrowGold.name=Gold Arrow
 item.arrowGold.desc=
 item.bowIron.name=Iron Bow
 item.bowIron.desc=
+item.bowGold.name=Gold Bow
+item.bowGold.desc=
+
 
