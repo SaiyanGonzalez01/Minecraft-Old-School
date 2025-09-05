@@ -4,6 +4,7 @@ public class ItemBow extends Item {
 	public ItemBow(int var1) {
 		super(var1);
 		this.maxStackSize = 1;
+		this.setMaxDamage(256);
 	}
 
 	public ItemStack onItemRightClick(ItemStack var1, World var2, EntityPlayer var3) {
