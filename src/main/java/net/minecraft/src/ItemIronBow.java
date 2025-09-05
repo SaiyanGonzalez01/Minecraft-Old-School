@@ -4,6 +4,7 @@ public class ItemIronBow extends Item {
 	public ItemIronBow(int var1) {
 		super(var1);
 		this.maxStackSize = 1;
+		this.setMaxDamage(384);
 	}
 
   	public ItemStack onItemRightClick(ItemStack var1, World var2, EntityPlayer var3) {
