@@ -82,12 +82,6 @@ public class CraftingManager {
 		this.addRecipe(new ItemStack(Item.bark, 4), new Object[]{" # ", " # ", Character.valueOf('#'), Block.wood});
 		this.addRecipe(new ItemStack(Item.sawdust, 2), new Object[]{"#", Character.valueOf('#'), Item.bark});
 		this.addRecipe(new ItemStack(Block.sawdustBlock, 1), new Object[]{"###", "###", "###", Character.valueOf('#'), Item.sawdust});
-		this.addRecipe(new ItemStack(Item.porkSalted, 1), new Object[]{"#X", Character.valueOf('#'), Item.saltI, Character.valueOf('X'), Item.porkCooked});
-		this.addRecipe(new ItemStack(Item.porkstuffer, 1), new Object[]{" # ", "#X#", " # ", Character.valueOf('#'), Item.wheat, Character.valueOf('X'), Item.porkCooked});
-		this.addRecipe(new ItemStack(Item.fishstuffer, 1), new Object[]{" # ", "#X#", " # ", Character.valueOf('#'), Item.wheat, Character.valueOf('X'), Item.fishCooked});
-		this.addRecipe(new ItemStack(Item.fleshstuffer, 1), new Object[]{" # ", "#X#", " # ", Character.valueOf('#'), Item.wheat, Character.valueOf('X'), Item.flesh});
-		this.addRecipe(new ItemStack(Item.cookiePlain, 8), new Object[]{"##", Character.valueOf('#'), Item.wheat});
-		this.addRecipe(new ItemStack(Item.cookieSugar, 8), new Object[]{"#X#", Character.valueOf('#'), Item.wheat, Character.valueOf('X'), Item.sugar});
 		this.addRecipe(new ItemStack(Block.brickStone, 4), new Object[]{"##", "##", Character.valueOf('#'), Block.stone});
 		this.addRecipe(new ItemStack(Block.pillarStone, 3), new Object[]{"#", "#", "#", Character.valueOf('#'), Block.stone});
 		this.addRecipe(new ItemStack(Item.ironNugget, 9), new Object[]{"#", Character.valueOf('#'), Item.ingotIron});
@@ -96,9 +90,6 @@ public class CraftingManager {
 		this.addRecipe(new ItemStack(Item.bleach, 2), new Object[]{"#X", Character.valueOf('#'), Item.bone, Character.valueOf('X'), Item.saltI});
 		this.addRecipe(new ItemStack(Block.planksColored, 2), new Object[]{"#X", "X#", Character.valueOf('#'), Block.planks, Character.valueOf('X'), Item.bleach});
 		this.addRecipe(new ItemStack(Block.netherrackBrick, 1), new Object[]{"##", "##", Character.valueOf('#'), Block.netherrack});
-		this.addRecipe(new ItemStack(Item.bowlRice, 1), new Object[]{" # ", "#X#", " # ", Character.valueOf('#'), Item.netherrice, Character.valueOf('X'), Item.bowlEmpty});
-		this.addRecipe(new ItemStack(Item.bowlRicePork, 1), new Object[]{"#X", Character.valueOf('#'), Item.porkCooked, Character.valueOf('X'), Item.bowlRice});
-		this.addRecipe(new ItemStack(Item.bowlRiceEgg, 1), new Object[]{"#X", Character.valueOf('#'), Item.eggCooked, Character.valueOf('X'), Item.bowlRice});
 		this.addRecipe(new ItemStack(Item.cannonball, 1), new Object[]{"X#X", "#O#", "X#X", Character.valueOf('#'), Item.gunpowder, Character.valueOf('X'), Item.ingotIron, Character.valueOf('O'), Item.redstone});
 		this.addRecipe(new ItemStack(Item.cannon, 1), new Object[]{"XX#", " ZY", Character.valueOf('#'), Block.planks, Character.valueOf('X'), Item.ingotIron, Character.valueOf('Y'), Item.stick, Character.valueOf('Z'), Item.redstone});
 		this.addRecipe(new ItemStack(Item.ingotGold, 1), new Object[]{"###", "###", "###", Character.valueOf('#'), Item.goldNugget});
