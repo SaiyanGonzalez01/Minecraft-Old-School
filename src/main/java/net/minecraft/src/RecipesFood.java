@@ -5,5 +5,14 @@ public class RecipesFood {
 		var1.addRecipe(new ItemStack(Item.bowlSoup), new Object[]{"Y", "X", "#", Character.valueOf('X'), Block.mushroomBrown, Character.valueOf('Y'), Block.mushroomRed, Character.valueOf('#'), Item.bowlEmpty});
 		var1.addRecipe(new ItemStack(Item.bowlSoup), new Object[]{"Y", "X", "#", Character.valueOf('X'), Block.mushroomRed, Character.valueOf('Y'), Block.mushroomBrown, Character.valueOf('#'), Item.bowlEmpty});
 		var1.addRecipe(new ItemStack(Item.cookie, 8), new Object[]{"#X#", Character.valueOf('X'), new ItemStack(Item.dyePowder, 1, 3), Character.valueOf('#'), Item.wheat});
+		var1.addRecipe(new ItemStack(Item.bowlRice, 1), new Object[]{" # ", "#X#", " # ", Character.valueOf('#'), Item.netherrice, Character.valueOf('X'), Item.bowlEmpty});
+		var1.addRecipe(new ItemStack(Item.bowlRicePork, 1), new Object[]{"#X", Character.valueOf('#'), Item.porkCooked, Character.valueOf('X'), Item.bowlRice});
+		var1.addRecipe(new ItemStack(Item.bowlRiceEgg, 1), new Object[]{"#X", Character.valueOf('#'), Item.eggCooked, Character.valueOf('X'), Item.bowlRice});
+		var1.addRecipe(new ItemStack(Item.porkSalted, 1), new Object[]{"#X", Character.valueOf('#'), Item.saltI, Character.valueOf('X'), Item.porkCooked});
+		var1.addRecipe(new ItemStack(Item.porkstuffer, 1), new Object[]{" # ", "#X#", " # ", Character.valueOf('#'), Item.wheat, Character.valueOf('X'), Item.porkCooked});
+		var1.addRecipe(new ItemStack(Item.fishstuffer, 1), new Object[]{" # ", "#X#", " # ", Character.valueOf('#'), Item.wheat, Character.valueOf('X'), Item.fishCooked});
+		var1.addRecipe(new ItemStack(Item.fleshstuffer, 1), new Object[]{" # ", "#X#", " # ", Character.valueOf('#'), Item.wheat, Character.valueOf('X'), Item.flesh});
+		var1.addRecipe(new ItemStack(Item.cookiePlain, 8), new Object[]{"##", Character.valueOf('#'), Item.wheat});
+		var1.addRecipe(new ItemStack(Item.cookieSugar, 8), new Object[]{"#X#", Character.valueOf('#'), Item.wheat, Character.valueOf('X'), Item.sugar});
 	}
 }
