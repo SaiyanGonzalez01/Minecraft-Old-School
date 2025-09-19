@@ -14,7 +14,6 @@ public class ItemDrink extends Item {
 		var2.playSoundAtEntity(var3, "random.drink", 1.0F, 1.0F / (itemRand.nextFloat() * 0.4F + 0.8F));
 		var3.heal(this.healAmount);
 		return new ItemStack(Item.bottle);
-		return var1;
 	}
 
 	public int getHealAmount() {
