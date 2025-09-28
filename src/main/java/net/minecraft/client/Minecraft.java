@@ -825,7 +825,7 @@ public class Minecraft implements Runnable {
 												this.gameSettings.showDebugInfo = !this.gameSettings.showDebugInfo;
 											}
 											
-											if(Keyboard.isKeyDown(this.gameSettings.keyBindToggleFog.keyCode) && Keyboard.getEventKey() == 6) {
+											if(Keyboard.getEventKey() == this.gameSettings.keyBindPOV.keyCode) {
 												this.gameSettings.thirdPersonView = !this.gameSettings.thirdPersonView;
 											}
 											
