@@ -137,7 +137,7 @@ public class Item {
 	public static Item goldNugget = (new Item(140)).setIconCoord(6, 7).setItemName("goldNugget");
 	public static Item runeEmpty = (new Item(141)).setIconCoord(7, 11).setItemName("runeEmpty");
 	public static Item runeUpgrade = (new Item(142)).setIconCoord(6, 11).setItemName("runeUpgrade");
-	public static Item bottle = (new Item(143)).setIconCoord(9, 8).setItemName("bottle");
+	public static Item bottle = (new ItemBottle(143)).setIconCoord(9, 8).setItemName("bottle");
 	public static Item swordWoodUpgraded = (new ItemSword(144, EnumToolMaterial.UPWOOD)).setIconCoord(0, 4).setItemName("swordWoodUpgraded");
 	public static Item shovelWoodUpgraded = (new ItemSpade(145, EnumToolMaterial.UPWOOD)).setIconCoord(0, 5).setItemName("shovelWoodUpgraded");
 	public static Item pickaxeWoodUpgraded = (new ItemPickaxe(146, EnumToolMaterial.UPWOOD)).setIconCoord(0, 6).setItemName("pickaxeWoodUpgraded");
