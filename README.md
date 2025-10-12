@@ -48,9 +48,7 @@ As of commit [1c96970](https://github.com/SaiyanGonzalez01/Minecraft-Old-School-
 
 You heard right! You can actually PLAY the project now unlike the original Old-School.
 
-Play [Recent Build](https://saiyangonzalez01.github.io/Minecraft-Old-School/web)
-
-Select [Older Builds](https://saiyangonzalez01.github.io/Minecraft-Old-School/archive)
+Play [Recent Update](https://saiyangonzalez01.github.io/Minecraft-Old-School/web)
 
 ### Contributers
 
