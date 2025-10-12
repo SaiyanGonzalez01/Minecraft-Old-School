@@ -87,7 +87,7 @@ public class GuiScreenEditProfile extends GuiScreen {
 		StringTranslate var1 = StringTranslate.getInstance();
 		selectedSlot = (Profile.presetSkinId + Profile.skins.size());
 		String var3 = Profile.getName();
-		this.username = new GuiTextField(this, this.fontRenderer, this.width / 2 - 20, this.height / 6 + 10, 200, 20, var3); // another dumb little hotfix
+		this.username = new GuiTextField(this, this.fontRenderer, this.width / 2 - 20, this.height / 6 + 10, 100, 20, var3); // another dumb little hotfix
 		this.username.isFocused = true;
 		this.username.setMaxStringLength(16);
 		this.controlList.add(new GuiButton(200, this.width / 2 - 100, this.height / 6 + 168, var1.translateKey("gui.done")));
