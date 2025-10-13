@@ -78,7 +78,7 @@ public class Block {
 	public static final Block oreDiamond = (new BlockOre(56, 50)).setHardness(3.0F).setResistance(5.0F).setStepSound(soundStoneFootstep).setBlockName("oreDiamond");
 	public static final Block blockDiamond = (new BlockOreStorage(57, 24)).setHardness(5.0F).setResistance(10.0F).setStepSound(soundMetalFootstep).setBlockName("blockDiamond");
 	public static final Block workbench = (new BlockWorkbench(58)).setHardness(2.5F).setStepSound(soundWoodFootstep).setBlockName("workbench");
-	public static final Block crops = (new BlockCrops(59, 88)).setHardness(0.0F).setStepSound(soundGrassFootstep).setBlockName("crops").disableStats().disableNeighborNotifyOnMetadataChange();
+	public static final Block crops = (new BlockCrops(59, 88)).setHardness(3.0F).setStepSound(soundGrassFootstep).setBlockName("crops").disableStats().disableNeighborNotifyOnMetadataChange();
 	public static final Block tilledField = (new BlockFarmland(60)).setHardness(0.6F).setStepSound(soundGravelFootstep).setBlockName("farmland");
 	public static final Block stoneOvenIdle = (new BlockFurnace(61, false)).setHardness(3.5F).setStepSound(soundStoneFootstep).setBlockName("furnace").disableNeighborNotifyOnMetadataChange();
 	public static final Block stoneOvenActive = (new BlockFurnace(62, true)).setHardness(3.5F).setStepSound(soundStoneFootstep).setLightValue(14.0F / 16.0F).setBlockName("furnace").disableNeighborNotifyOnMetadataChange();
@@ -127,11 +127,11 @@ public class Block {
 	public static final BlockFlower plantCyan = (BlockFlower)(new BlockFlower(105, 111)).setHardness(0.0F).setStepSound(soundGrassFootstep).setBlockName("cyanRose");
 	public static final Block brickStone = (new Block(106, 85, Material.rock)).setHardness(1.5F).setResistance(10.0F).setStepSound(soundStoneFootstep).setBlockName("brickStone");
 	public static final Block pillarStone = (new BlockStonePillar(107, 126)).setHardness(1.5F).setResistance(10.0F).setStepSound(soundStoneFootstep).setBlockName("pillarStone");
-	public static final Block potatoCrops = (new BlockCropsP(108, 136)).setHardness(0.0F).setStepSound(soundGrassFootstep).setBlockName("crops").disableStats().disableNeighborNotifyOnMetadataChange();
+	public static final Block potatoCrops = (new BlockCropsP(108, 136)).setHardness(3.0F).setStepSound(soundGrassFootstep).setBlockName("crops").disableStats().disableNeighborNotifyOnMetadataChange();
 	public static final Block planksColored = (new BlockPlanks()).setHardness(2.0F).setResistance(5.0F).setStepSound(soundWoodFootstep).setBlockName("woodColored").disableNeighborNotifyOnMetadataChange();
 	public static final Block netherrackBrick = (new Block(109, 166, Material.rock)).setHardness(1.4F).setStepSound(soundStoneFootstep).setBlockName("hellbrick");
-	public static final BlockNetherRice netherriceWild = (BlockNetherRice)(new BlockNetherRice(113, 183)).setHardness(0.0F).setStepSound(soundGrassFootstep).setBlockName("netherriceWild");
-	public static final Block netherriceCrops = (new BlockCropsR(114, 226)).setHardness(0.0F).setStepSound(soundGrassFootstep).setBlockName("crops").disableStats().disableNeighborNotifyOnMetadataChange();
+	public static final BlockNetherRice netherriceWild = (BlockNetherRice)(new BlockNetherRice(113, 183)).setHardness(3.0F).setStepSound(soundGrassFootstep).setBlockName("netherriceWild");
+	public static final Block netherriceCrops = (new BlockCropsR(114, 226)).setHardness(3.0F).setStepSound(soundGrassFootstep).setBlockName("crops").disableStats().disableNeighborNotifyOnMetadataChange();
 	public static final Block blackstone = (new Block(115, 182, Material.rock)).setHardness(1.5F).setResistance(10.0F).setStepSound(soundStoneFootstep).setBlockName("blackstone");
 	public static final Block oreGoldNether = (new BlockNetherGoldOre(116, 153, Material.rock)).setHardness(0.5F).setStepSound(soundStoneFootstep).setBlockName("netherGold");
 	public static final Block planksTreated = (new Block(117, 8, Material.wood)).setHardness(2.0F).setResistance(5.0F).setStepSound(soundWoodFootstep).setBlockName("woodTreated").disableNeighborNotifyOnMetadataChange();
