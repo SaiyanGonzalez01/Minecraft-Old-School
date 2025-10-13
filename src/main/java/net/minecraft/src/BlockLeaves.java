@@ -155,26 +155,21 @@ public class BlockLeaves extends BlockLeavesBase {
 	}
 
 	public void harvestBlock(World var1, EntityPlayer var2, int var3, int var4, int var5, int var6) {
-		if(!var1.multiplayerWorld && var2.getCurrentEquippedItem() != null && var2.getCurrentEquippedItem().itemID == Item.shears.shiftedIndex) {
-			var2.addStat(StatList.mineBlockStatArray[this.blockID], 1);
-			this.dropBlockAsItem_do(var1, var3, var4, var5, new ItemStack(Block.leaves.blockID, 1, var6 & 3));
-		} else if (
-			id == Item.sickleStone.shiftedIndex ||
-            id == Item.sickleSteel.shiftedIndex ||
-            id == Item.sickleGold.shiftedIndex ||
-            id == Item.sickleDiamond.shiftedIndex ||
-            id == Item.sickleObsidian.shiftedIndex
-		) {
-			player.addStat(StatList.mineBlockStatArray[this.blockID], 1);
-			if (world.rand.nextInt(10) == 0) {
-                this.dropBlockAsItem_do(var1, var3, var4, var5, new ItemStack(Item.appleRed, 1, 0));
-		} else {
-			super.harvestBlock(var1, var2, var3, var4, var5, var6);
+			if(!var1.multiplayerWorld && var2.getCurrentEquippedItem() != null && var2.getCurrentEquippedItem().itemID == Item.shears.shiftedIndex) {
+				var2.addStat(StatList.mineBlockStatArray[this.blockID], 1);
+				this.dropBlockAsItem_do(var1, var3, var4, var5, new ItemStack(Block.leaves.blockID, 1, var6 & 3));
+			} else if (
+				!var1.multiplayerWorld && var2.getCurrentEquippedItem() != null && var2.getCurrentEquippedItem().itemID == Item.sickleWood.shiftedIndex
+			) {
+				var2.addStat(StatList.mineBlockStatArray[this.blockID], 1);
+				this.dropBlockAsItem_do(var1, var3, var4, var5, new ItemStack(Item.appleRed, 1, 0));
+			} else {
+				super.harvestBlock(var1, var2, var3, var4, var5, var6);
+			}
+
 		}
 
-	}
-
-	protected int damageDropped(int var1) {
+	public int damageDropped(int var1) {
 		return var1 & 3;
 	}
 
