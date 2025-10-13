@@ -1,8 +1,8 @@
 package net.minecraft.src;
 
 public class RecipesTools {
-	private String[][] recipePatterns = new String[][]{{"XXX", " # ", " # "}, {"X", "#", "#"}, {"XX", "X#", " #"}, {"XX", " #", " #"}};
-	private Object[][] recipeItems = new Object[][]{{Block.planks, Block.cobblestone, Item.ingotIron, Item.diamond, Item.ingotGold}, {Item.pickaxeWood, Item.pickaxeStone, Item.pickaxeSteel, Item.pickaxeDiamond, Item.pickaxeGold}, {Item.shovelWood, Item.shovelStone, Item.shovelSteel, Item.shovelDiamond, Item.shovelGold}, {Item.axeWood, Item.axeStone, Item.axeSteel, Item.axeDiamond, Item.axeGold}, {Item.hoeWood, Item.hoeStone, Item.hoeSteel, Item.hoeDiamond, Item.hoeGold}};
+	private String[][] recipePatterns = new String[][]{{"XXX", " # ", " # "}, {"X", "#", "#"}, {"XX", "X#", " #"}, {"XX", " #", " #"}, {" X ", "  X", " # "}};
+	private Object[][] recipeItems = new Object[][]{{Block.planks, Block.cobblestone, Item.ingotIron, Item.diamond, Item.ingotGold}, {Item.pickaxeWood, Item.pickaxeStone, Item.pickaxeSteel, Item.pickaxeDiamond, Item.pickaxeGold}, {Item.shovelWood, Item.shovelStone, Item.shovelSteel, Item.shovelDiamond, Item.shovelGold}, {Item.axeWood, Item.axeStone, Item.axeSteel, Item.axeDiamond, Item.axeGold}, {Item.hoeWood, Item.hoeStone, Item.hoeSteel, Item.hoeDiamond, Item.hoeGold} {Item.scytheWood, Item.scytheStone, Item.scytheSteel, Item.scytheDiamond, Item.scytheGold}};
 
 	public void addRecipes(CraftingManager var1) {
 		for(int var2 = 0; var2 < this.recipeItems[0].length; ++var2) {
@@ -19,6 +19,7 @@ public class RecipesTools {
 		var1.addRecipe(new ItemStack(Item.axeObsidian, 1), new Object[]{"YX#", Character.valueOf('#'), Item.obsidianPlate, Character.valueOf('X'), Item.runeUpgrade, Character.valueOf('Y'), Item.axeDiamond});
 		var1.addRecipe(new ItemStack(Item.shovelObsidian, 1), new Object[]{"YX#", Character.valueOf('#'), Item.obsidianPlate, Character.valueOf('X'), Item.runeUpgrade, Character.valueOf('Y'), Item.shovelDiamond});
 		var1.addRecipe(new ItemStack(Item.hoeObsidian, 1), new Object[]{"YX#", Character.valueOf('#'), Item.obsidianPlate, Character.valueOf('X'), Item.runeUpgrade, Character.valueOf('Y'), Item.hoeDiamond});
+		var1.addRecipe(new ItemStack(Item.scytheObsidian, 1), new Object[]{"YX#", Character.valueOf('#'), Item.obsidianPlate, Character.valueOf('X'), Item.runeUpgrade, Character.valueOf('Y'), Item.scytheDiamond});
 		var1.addRecipe(new ItemStack(Item.swordWoodUpgraded, 1), new Object[]{"XYZ", Character.valueOf('X'), Item.swordWood, Character.valueOf('Y'), Item.runeUpgrade, Character.valueOf('Z'), Block.cobblestone});
 		var1.addRecipe(new ItemStack(Item.pickaxeWoodUpgraded, 1), new Object[]{"XYZ", Character.valueOf('X'), Item.pickaxeWood, Character.valueOf('Y'), Item.runeUpgrade, Character.valueOf('Z'), Block.cobblestone});
 		var1.addRecipe(new ItemStack(Item.axeWoodUpgraded, 1), new Object[]{"XYZ", Character.valueOf('X'), Item.axeWood, Character.valueOf('Y'), Item.runeUpgrade, Character.valueOf('Z'), Block.cobblestone});
