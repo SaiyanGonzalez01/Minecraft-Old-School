@@ -182,12 +182,12 @@ public class Item {
 	public static Item bowIron = (new ItemIronBow(180)).setIconCoord(5, 8).setItemName("bowIron").setFull3D();
 	public static Item bowGold = (new ItemGoldBow(181)).setIconCoord(5, 9).setItemName("bowGold").setFull3D();
 	public static Item bottleWater = (new ItemDrink(182, 1, true)).setIconCoord(10, 8).setItemName("bottleWater");
-	public static Item scytheWood = (new ItemScythe(183, EnumToolMaterial.WOOD)).setIconCoord(1, 14).setItemName("scytheWood");
-	public static Item scytheStone = (new ItemScythe(184, EnumToolMaterial.STONE)).setIconCoord(2, 14).setItemName("scytheStone");
-	public static Item scytheSteel = (new ItemScythe(185, EnumToolMaterial.IRON)).setIconCoord(3, 14).setItemName("scytheIron");
-	public static Item scytheGold = (new ItemScythe(186, EnumToolMaterial.GOLD)).setIconCoord(4, 14).setItemName("scytheGold");
-	public static Item scytheDiamond = (new ItemScythe(187, EnumToolMaterial.EMERALD)).setIconCoord(5, 14).setItemName("scytheDiamond");
-	public static Item scytheObsidian = (new ItemScythe(189, EnumToolMaterial.OBSIDIAN)).setIconCoord(1, 13).setItemName("scytheObsidian");
+	public static Item sickleWood = (new ItemSickle(183, EnumToolMaterial.WOOD)).setIconCoord(1, 14).setItemName("sickleWood");
+	public static Item sickleStone = (new ItemSickle(184, EnumToolMaterial.STONE)).setIconCoord(2, 14).setItemName("sickleStone");
+	public static Item sickleSteel = (new ItemSickle(185, EnumToolMaterial.IRON)).setIconCoord(3, 14).setItemName("sickleIron");
+	public static Item sickleGold = (new ItemSickle(186, EnumToolMaterial.GOLD)).setIconCoord(4, 14).setItemName("sickleGold");
+	public static Item sickleDiamond = (new ItemSickle(187, EnumToolMaterial.EMERALD)).setIconCoord(5, 14).setItemName("sickleDiamond");
+	public static Item sickleObsidian = (new ItemSickle(189, EnumToolMaterial.OBSIDIAN)).setIconCoord(1, 13).setItemName("sickleObsidian");
 	public static Item record13 = (new ItemRecord(2000, "13")).setIconCoord(0, 15).setItemName("record");
 	public static Item recordCat = (new ItemRecord(2001, "cat")).setIconCoord(1, 15).setItemName("record");
 	public final int shiftedIndex;
