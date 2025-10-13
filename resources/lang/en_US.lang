@@ -798,5 +798,19 @@ item.bowIron.name=Iron Bow
 item.bowIron.desc=
 item.bowGold.name=Gold Bow
 item.bowGold.desc=
+item.sickleWood.name=Wood Sickle
+item.SickleWood.desc=
+item.sickleStone.name=Stone Sickle
+item.SickleStone.desc=
+item.sickleIron.name=Iron Sickle
+item.SickleIron.desc=
+item.sickleGold.name=Gold Sickle
+item.SickleGold.desc=
+item.sickleDiamond.name=Diamond Sickle
+item.SickleDiamond.desc=
+item.sickleObsidian.name=Obsidian Sickle
+item.SickleObsidian.desc=
+
+
 
 
