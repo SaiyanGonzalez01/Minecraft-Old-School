@@ -19,7 +19,7 @@ public class RecipesTools {
 		var1.addRecipe(new ItemStack(Item.axeObsidian, 1), new Object[]{"YX#", Character.valueOf('#'), Item.obsidianPlate, Character.valueOf('X'), Item.runeUpgrade, Character.valueOf('Y'), Item.axeDiamond});
 		var1.addRecipe(new ItemStack(Item.shovelObsidian, 1), new Object[]{"YX#", Character.valueOf('#'), Item.obsidianPlate, Character.valueOf('X'), Item.runeUpgrade, Character.valueOf('Y'), Item.shovelDiamond});
 		var1.addRecipe(new ItemStack(Item.hoeObsidian, 1), new Object[]{"YX#", Character.valueOf('#'), Item.obsidianPlate, Character.valueOf('X'), Item.runeUpgrade, Character.valueOf('Y'), Item.hoeDiamond});
-		var1.addRecipe(new ItemStack(Item.scytheObsidian, 1), new Object[]{"YX#", Character.valueOf('#'), Item.obsidianPlate, Character.valueOf('X'), Item.runeUpgrade, Character.valueOf('Y'), Item.scytheDiamond});
+		var1.addRecipe(new ItemStack(Item.sickleObsidian, 1), new Object[]{"YX#", Character.valueOf('#'), Item.obsidianPlate, Character.valueOf('X'), Item.runeUpgrade, Character.valueOf('Y'), Item.sickleDiamond});
 		var1.addRecipe(new ItemStack(Item.swordWoodUpgraded, 1), new Object[]{"XYZ", Character.valueOf('X'), Item.swordWood, Character.valueOf('Y'), Item.runeUpgrade, Character.valueOf('Z'), Block.cobblestone});
 		var1.addRecipe(new ItemStack(Item.pickaxeWoodUpgraded, 1), new Object[]{"XYZ", Character.valueOf('X'), Item.pickaxeWood, Character.valueOf('Y'), Item.runeUpgrade, Character.valueOf('Z'), Block.cobblestone});
 		var1.addRecipe(new ItemStack(Item.axeWoodUpgraded, 1), new Object[]{"XYZ", Character.valueOf('X'), Item.axeWood, Character.valueOf('Y'), Item.runeUpgrade, Character.valueOf('Z'), Block.cobblestone});
