@@ -158,6 +158,10 @@ public class BlockLeaves extends BlockLeavesBase {
 		if(!var1.multiplayerWorld && var2.getCurrentEquippedItem() != null && var2.getCurrentEquippedItem().itemID == Item.shears.shiftedIndex) {
 			var2.addStat(StatList.mineBlockStatArray[this.blockID], 1);
 			this.dropBlockAsItem_do(var1, var3, var4, var5, new ItemStack(Block.leaves.blockID, 1, var6 & 3));
+		} else if (
+			
+		) {
+		
 		} else {
 			super.harvestBlock(var1, var2, var3, var4, var5, var6);
 		}
