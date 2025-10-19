@@ -173,6 +173,38 @@ public class BlockLeaves extends BlockLeavesBase {
 				if (var1.rand.nextInt(25) == 0) {
 					this.dropBlockAsItem_do(var1, var3, var4, var5, new ItemStack(Item.appleRed, 1, 0));
 				}
+
+			} else if (
+				!var1.multiplayerWorld && var2.getCurrentEquippedItem() != null && var2.getCurrentEquippedItem().itemID == Item.sickleIron.shiftedIndex
+			) {
+				var2.addStat(StatList.mineBlockStatArray[this.blockID], 1);
+				if (var1.rand.nextInt(20) == 0) {
+					this.dropBlockAsItem_do(var1, var3, var4, var5, new ItemStack(Item.appleRed, 1, 0));
+				}
+
+			} else if (
+				!var1.multiplayerWorld && var2.getCurrentEquippedItem() != null && var2.getCurrentEquippedItem().itemID == Item.sickleGold.shiftedIndex
+			) {
+				var2.addStat(StatList.mineBlockStatArray[this.blockID], 1);
+				if (var1.rand.nextInt(15) == 0) {
+					this.dropBlockAsItem_do(var1, var3, var4, var5, new ItemStack(Item.appleRed, 1, 0));
+				}
+
+			} else if (
+				!var1.multiplayerWorld && var2.getCurrentEquippedItem() != null && var2.getCurrentEquippedItem().itemID == Item.sickleDiamond.shiftedIndex
+			) {
+				var2.addStat(StatList.mineBlockStatArray[this.blockID], 1);
+				if (var1.rand.nextInt(10) == 0) {
+					this.dropBlockAsItem_do(var1, var3, var4, var5, new ItemStack(Item.appleRed, 1, 0));
+				}
+
+			} else if (
+				!var1.multiplayerWorld && var2.getCurrentEquippedItem() != null && var2.getCurrentEquippedItem().itemID == Item.sickleObsidian.shiftedIndex
+			) {
+				var2.addStat(StatList.mineBlockStatArray[this.blockID], 1);
+				if (var1.rand.nextInt(5) == 0) {
+					this.dropBlockAsItem_do(var1, var3, var4, var5, new ItemStack(Item.appleRed, 1, 0));
+				}
 			} else {
 				super.harvestBlock(var1, var2, var3, var4, var5, var6);
 			}
