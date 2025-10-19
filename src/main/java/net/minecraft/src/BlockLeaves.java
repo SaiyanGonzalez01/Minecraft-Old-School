@@ -162,7 +162,9 @@ public class BlockLeaves extends BlockLeavesBase {
 				!var1.multiplayerWorld && var2.getCurrentEquippedItem() != null && var2.getCurrentEquippedItem().itemID == Item.sickleWood.shiftedIndex
 			) {
 				var2.addStat(StatList.mineBlockStatArray[this.blockID], 1);
-				this.dropBlockAsItem_do(var1, var3, var4, var5, new ItemStack(Item.appleRed, 1, 0));
+				if (var1.rand.nextInt(20) == 0) {
+					this.dropBlockAsItem_do(var1, var3, var4, var5, new ItemStack(Item.appleRed, 1, 0));
+				}
 			} else {
 				super.harvestBlock(var1, var2, var3, var4, var5, var6);
 			}
