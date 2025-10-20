@@ -188,6 +188,7 @@ public class Item {
 	public static Item sickleGold = (new ItemSickle(186, EnumToolMaterial.GOLD)).setIconCoord(4, 14).setItemName("sickleGold");
 	public static Item sickleDiamond = (new ItemSickle(187, EnumToolMaterial.EMERALD)).setIconCoord(5, 14).setItemName("sickleDiamond");
 	public static Item sickleObsidian = (new ItemSickle(189, EnumToolMaterial.OBSIDIAN)).setIconCoord(1, 13).setItemName("sickleObsidian");
+	public static Item piepumpkin = (new ItemReed(190, Block.piePumpkin)).setMaxStackSize(1).setIconCoord(7, 12).setItemName("piePumpkin");
 	public static Item record13 = (new ItemRecord(2000, "13")).setIconCoord(0, 15).setItemName("record");
 	public static Item recordCat = (new ItemRecord(2001, "cat")).setIconCoord(1, 15).setItemName("record");
 	public final int shiftedIndex;
