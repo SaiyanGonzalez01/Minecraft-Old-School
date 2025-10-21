@@ -175,7 +175,7 @@ public class BlockLeaves extends BlockLeavesBase {
 				}
 
 			} else if (
-				!var1.multiplayerWorld && var2.getCurrentEquippedItem() != null && var2.getCurrentEquippedItem().itemID == Item.sickleIron.shiftedIndex
+				!var1.multiplayerWorld && var2.getCurrentEquippedItem() != null && var2.getCurrentEquippedItem().itemID == Item.sickleSteel.shiftedIndex
 			) {
 				var2.addStat(StatList.mineBlockStatArray[this.blockID], 1);
 				if (var1.rand.nextInt(20) == 0) {
