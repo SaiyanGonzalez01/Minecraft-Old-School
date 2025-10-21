@@ -141,7 +141,7 @@ public class Block {
 	public static final Block plankedGranite = (new BlockPlankedGranite(122, 174)).setHardness(2.5F).setResistance(9.0F).setStepSound(soundWoodFootstep).setBlockName("plankedGranite");
 	public static final Block plankedNetherrack = (new BlockPlankedNetherrack(123, 175)).setHardness(2.5F).setResistance(9.0F).setStepSound(soundWoodFootstep).setBlockName("plankedNetherrack");
 	public static final Block upgradeTable = (new BlockUpgradeTable(124)).setHardness(2.5F).setResistance(9.0F).setStepSound(soundWoodFootstep).setBlockName("upgradeTable");
-	public static final Block piePumpkin = (new BlockCake(125, 198)).setHardness(0.5F).setStepSound(soundClothFootstep).setBlockName("piePumpkin").disableStats().disableNeighborNotifyOnMetadataChange();
+	public static final Block piePumpkin = (new BlockCake(125, 188)).setHardness(0.5F).setStepSound(soundClothFootstep).setBlockName("piePumpkin").disableStats().disableNeighborNotifyOnMetadataChange();
 	public int blockIndexInTexture;
 	public final int blockID;
 	protected float blockHardness;
