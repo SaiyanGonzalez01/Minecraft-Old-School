@@ -409,6 +409,12 @@ tile.plankedGranite.name=Planked Cobbled Granite
 tile.plankedGranite.desc=
 tile.plankedNetherrack.name=Planked Netherrack
 tile.plankedNetherrack.desc=
+tile.piePumpkin.name=Pumpkin Pie
+tile.piePumpkin.desc=
+tile.pieBlueberry.name=Blueberry Pie
+tile.pieBlueberry.desc=
+tile.pieApple.name=Apple Pie
+tile.pieApple.desc=
 
 item.shovelIron.name=Iron Shovel
 item.shovelIron.desc=
@@ -808,9 +814,12 @@ item.sickleGold.name=Gold Sickle
 item.SickleGold.desc=
 item.sickleDiamond.name=Diamond Sickle
 item.SickleDiamond.desc=
-item.sickleObsidian.name=Obsidian Sickle
-item.SickleObsidian.desc=
-
-
-
+item.piePumpkin.name=Pumpkin Pie
+item.piePumpkin.desc=
+item.pieBlueberry.name=Blueberry Pie
+item.pieBlueberry.desc=
+item.pieApple.name=Apple Pie
+item.pieApple.desc=
+item.blueberry.name=Blueberry
+item.blueberry.desc=
 
