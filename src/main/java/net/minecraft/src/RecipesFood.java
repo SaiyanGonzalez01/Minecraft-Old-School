@@ -14,5 +14,11 @@ public class RecipesFood {
 		var1.addRecipe(new ItemStack(Item.fleshstuffer, 1), new Object[]{" # ", "#X#", " # ", Character.valueOf('#'), Item.wheat, Character.valueOf('X'), Item.flesh});
 		var1.addRecipe(new ItemStack(Item.cookiePlain, 8), new Object[]{"##", Character.valueOf('#'), Item.wheat});
 		var1.addRecipe(new ItemStack(Item.cookieSugar, 8), new Object[]{"#X#", Character.valueOf('#'), Item.wheat, Character.valueOf('X'), Item.sugar});
+		var1.addRecipe(new ItemStack(Item.cake, 1), new Object[]{"AAA", "BEB", "CCC", Character.valueOf('A'), Item.bucketMilk, Character.valueOf('B'), Item.sugar, Character.valueOf('C'), Item.wheat, Character.valueOf('E'), Item.egg});
+		var1.addRecipe(new ItemStack(Item.piePumpkin, 1), new Object[]{"ABA", "BEB", "CBC", Character.valueOf('A'), Item.bucketMilk, Character.valueOf('C'), Item.sugar, Character.valueOf('B'), Item.wheat, Character.valueOf('E'), Block.pumpkin});
+		var1.addRecipe(new ItemStack(Item.pieBlueberry, 1), new Object[]{"AEA", "BEB", "CBC", Character.valueOf('A'), Item.bucketMilk, Character.valueOf('C'), Item.blueberry, Character.valueOf('B'), Item.wheat, Character.valueOf('E'), Item.sugar});
+		var1.addRecipe(new ItemStack(Item.pieApple, 1), new Object[]{"AEA", "BEB", "CBC", Character.valueOf('A'), Item.bucketMilk, Character.valueOf('C'), Item.apple, Character.valueOf('B'), Item.wheat, Character.valueOf('E'), Item.sugar});
+		var1.addRecipe(new ItemStack(Item.bread, 1), new Object[]{"###", Character.valueOf('#'), Item.wheat});
+		var1.addRecipe(new ItemStack(Item.appleGold, 1), new Object[]{"###", "#X#", "###", Character.valueOf('#'), Block.blockGold, Character.valueOf('X'), Item.appleRed});
 	}
 }
