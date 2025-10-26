@@ -191,7 +191,7 @@ public class Item {
 	public static Item piepumpkin = (new ItemReed(190, Block.piePumpkin)).setMaxStackSize(1).setIconCoord(7, 12).setItemName("piePumpkin");
 	public static Item pieBlueberry = (new ItemReed(191, Block.pieBlueberry)).setMaxStackSize(1).setIconCoord(8, 12).setItemName("pieBlueberry");
 	public static Item pieApple = (new ItemReed(192, Block.pieApple)).setMaxStackSize(1).setIconCoord(9, 12).setItemName("pieApple");
-	public static Item blueberry = (new ItemFood(193, 2, false, 16)).setIconCoord(10, 12).setItemName("blueberry");
+	public static Item blueberry = (new ItemFood(193, 2, false)).setIconCoord(10, 12).setItemName("blueberry");
 	public static Item record13 = (new ItemRecord(2000, "13")).setIconCoord(0, 15).setItemName("record");
 	public static Item recordCat = (new ItemRecord(2001, "cat")).setIconCoord(1, 15).setItemName("record");
 	public final int shiftedIndex;
