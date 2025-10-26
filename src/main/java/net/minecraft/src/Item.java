@@ -188,7 +188,7 @@ public class Item {
 	public static Item sickleGold = (new ItemSickle(186, EnumToolMaterial.GOLD)).setIconCoord(4, 14).setItemName("sickleGold");
 	public static Item sickleDiamond = (new ItemSickle(187, EnumToolMaterial.EMERALD)).setIconCoord(5, 14).setItemName("sickleDiamond");
 	public static Item sickleObsidian = (new ItemSickle(189, EnumToolMaterial.OBSIDIAN)).setIconCoord(1, 13).setItemName("sickleObsidian");
-	public static Item piepumpkin = (new ItemReed(190, Block.piePumpkin)).setMaxStackSize(1).setIconCoord(7, 12).setItemName("piePumpkin");
+	public static Item piePumpkin = (new ItemReed(190, Block.piePumpkin)).setMaxStackSize(1).setIconCoord(7, 12).setItemName("piePumpkin");
 	public static Item pieBlueberry = (new ItemReed(191, Block.pieBlueberry)).setMaxStackSize(1).setIconCoord(8, 12).setItemName("pieBlueberry");
 	public static Item pieApple = (new ItemReed(192, Block.pieApple)).setMaxStackSize(1).setIconCoord(9, 12).setItemName("pieApple");
 	public static Item blueberry = (new ItemFood(193, 2, false)).setIconCoord(10, 12).setItemName("blueberry");
