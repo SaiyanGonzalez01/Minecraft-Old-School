@@ -144,6 +144,7 @@ public class Block {
 	public static final Block piePumpkin = (new BlockCake(125, 188)).setHardness(0.5F).setStepSound(soundClothFootstep).setBlockName("piePumpkin").disableStats().disableNeighborNotifyOnMetadataChange();
 	public static final Block pieBlueberry = (new BlockCake(126, 198)).setHardness(0.5F).setStepSound(soundClothFootstep).setBlockName("pieBlueberry").disableStats().disableNeighborNotifyOnMetadataChange();
 	public static final Block pieApple = (new BlockCake(127, 214)).setHardness(0.5F).setStepSound(soundClothFootstep).setBlockName("pieApple").disableStats().disableNeighborNotifyOnMetadataChange();
+	public static final BlockBlueberry bushBlueberry = (BlockBlueberry)(new BlockNetherRice(128, 184)).setHardness(3.0F).setStepSound(soundGrassFootstep).setBlockName("bushBlueberry");
 	public int blockIndexInTexture;
 	public final int blockID;
 	protected float blockHardness;
