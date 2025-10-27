@@ -1,6 +1,6 @@
 package net.minecraft.src;
 
-public class BlockBlueberry extends BlockFlower {
+public class BlockBlueberry extends BlockBerry {
 	protected BlockBlueberry(int var1, int var2) {
 		super(var1, var2);
 		float var3 = 0.4F;
