@@ -486,7 +486,7 @@ item.string.name=String
 item.string.desc=
 item.feather.name=Feather
 item.feather.desc=
-item.sulphur.name=Gunpowder
+item.sulphur.name=Sulphur
 item.sulphur.desc=
 item.hoeWood.name=Wooden Hoe
 item.hoeWood.desc=
@@ -822,4 +822,5 @@ item.pieApple.name=Apple Pie
 item.pieApple.desc=
 item.blueberry.name=Blueberry
 item.blueberry.desc=
+
 
