@@ -1,0 +1,17 @@
+{
+    "name": "Minecraft Old-School",
+    "short_name": "MC Old-School",
+    "theme_color": "#502312",
+    "background_color": "#3a170a",
+    "display": "standalone",
+    "scope": "/",
+    "start_url": "https://saiyangonzalez01.github.io/Minecraft-Old-School/mobile/",
+    "description": "Play Minecraft Old-School in your browser.",
+    "orientation": "any",
+    "icons": [
+        {
+            "src": "https://github.com/SaiyanGonzalez01/Minecraft-Old-School/blob/main/resources/pack.png",
+            "sizes": "132x132"
+        }
+    ]
+}
