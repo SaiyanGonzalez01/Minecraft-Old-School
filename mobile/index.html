@@ -17,5 +17,12 @@
     <script type="text/javascript" src="js/eaglermobile.user.js"></script>
   </head>
 <body style="margin:0px;width:100vw;height:100vh;" id="game">
+	<script>
+	 if (!navigator.serviceWorker.controller) {
+	     navigator.serviceWorker.register("/sw.js").then(function(reg) {
+	         console.log("Service worker has been registered for scope: " + reg.scope);
+	     });
+	 }
+	</script>
 </body>
 </html>
