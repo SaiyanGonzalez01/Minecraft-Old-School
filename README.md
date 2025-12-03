@@ -1,4 +1,4 @@
-# Minecraft Old-School
+# <img width="4027" height="988" alt="Minecraft Old-School Official Logo" src="https://github.com/user-attachments/assets/adce5945-7675-400b-bb72-26b26604e96f" />
 
 Welcome Back!
 
