@@ -1,0 +1,94 @@
+package net.minecraft.src;
+
+import java.util.ArrayList;
+
+import dev.colbster937.eaglercraft.utils.I18n;
+
+public class GuiOptions extends GuiScreen {
+	private GuiScreen parentScreen;
+	protected String screenTitle = "Options";
+	private GameSettings options;
+	private static EnumOptions[] field_22135_k = new EnumOptions[]{EnumOptions.MUSIC, EnumOptions.SOUND, EnumOptions.INVERT_MOUSE, EnumOptions.SENSITIVITY, EnumOptions.DIFFICULTY, EnumOptions.SHOW_FRAMERATE, EnumOptions.SHOW_COORDS};
+
+	public GuiOptions(GuiScreen var1, GameSettings var2) {
+		this.parentScreen = var1;
+		this.options = var2;
+	}
+
+	public void initGui() {
+		StringTranslate var1 = StringTranslate.getInstance();
+		this.screenTitle = var1.translateKey("options.title");
+		int var2 = 0;
+		EnumOptions[] var3 = field_22135_k;
+		int var4 = var3.length;
+
+		for(int var5 = 0; var5 < var4; ++var5) {
+			EnumOptions var6 = var3[var5];
+			GuiButton b;
+			if(!var6.getEnumFloat()) {
+				b = new GuiSmallButton(var6.returnEnumOrdinal(), this.width / 2 - 155 + var2 % 2 * 160, this.height / 6 + 24 * (var2 >> 1), var6, this.options.getKeyBinding(var6));
+			} else {
+				b = new GuiSlider(var6.returnEnumOrdinal(), this.width / 2 - 155 + var2 % 2 * 160, this.height / 6 + 24 * (var2 >> 1), var6, this.options.getKeyBinding(var6), this.options.getOptionFloatValue(var6));
+			}
+
+			this.controlList.add(b);
+
+			++var2;
+		}
+
+		ArrayList<GuiButton> extraOpts = new ArrayList<>();
+		extraOpts.add(new GuiButton(101, this.width / 2 - 100, this.height / 6 + 96 + 12, var1.translateKey("options.video")));
+		extraOpts.add(new GuiButton(100, this.width / 2 - 100, this.height / 6 + 120 + 12, var1.translateKey("options.controls")));
+
+		extraOpts.add(new GuiButton(102, 0, 0, var1.translateKey("menu.mods") + I18n.format("more")));
+
+		this.controlList.add(new GuiButton(200, this.width / 2 - 100, this.height / 6 + 168, var1.translateKey("gui.done")));
+
+		for (GuiButton extraOpt : extraOpts) {
+			GuiButton opt = new GuiSmallButton(extraOpt.id, this.width / 2 - 155 + var2 % 2 * 160, this.height / 6 + 24 * (var2 >> 1), extraOpt.displayString);
+			this.controlList.add(opt);
+			++var2;
+		}
+	}
+
+	protected void actionPerformed(GuiButton var1) {
+		if(var1.enabled) {
+			if(var1.id < 100 && var1 instanceof GuiSmallButton) {
+				this.options.setOptionValue(((GuiSmallButton)var1).returnEnumOptions(), 1);
+				var1.displayString = this.options.getKeyBinding(EnumOptions.func_20137_a(var1.id));
+			}
+
+			if(var1.id == 101) {
+				this.mc.gameSettings.saveOptions();
+				this.mc.displayGuiScreen(new GuiVideoSettings(this, this.options));
+			}
+
+			if(var1.id == 100) {
+				this.mc.gameSettings.saveOptions();
+				this.mc.displayGuiScreen(new GuiControls(this, this.options));
+			}
+
+			if(var1.id == 102) {
+				this.mc.gameSettings.saveOptions();
+				this.mc.displayGuiScreen(new GuiTexturePacks(this));
+			}
+
+			if(var1.id == 102) {
+				this.mc.gameSettings.saveOptions();
+				this.mc.displayGuiScreen(new GuiTexturePacks(this));
+			}
+
+			if(var1.id == 200) {
+				this.mc.gameSettings.saveOptions();
+				this.mc.displayGuiScreen(this.parentScreen);
+			}
+
+		}
+	}
+
+	public void drawScreen(int var1, int var2, float var3) {
+		this.drawDefaultBackground();
+		this.drawCenteredString(this.fontRenderer, this.screenTitle, this.width / 2, 20, 16777215);
+		super.drawScreen(var1, var2, var3);
+	}
+}

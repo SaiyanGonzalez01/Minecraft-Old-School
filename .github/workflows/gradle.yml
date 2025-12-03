@@ -1,0 +1,85 @@
+name: Build Client
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [ main ]
+  pull_request:
+
+permissions:
+  contents: write
+  actions: read
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          submodules: recursive
+
+      - name: Set up JDK 17
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: 17
+
+      - name: Set up Gradle
+        uses: gradle/actions/setup-gradle@v4
+        with:
+          cache-read-only: false
+
+      - name: Build Client
+        run: ./CompileClient.sh
+
+      - name: Get short commit hash
+        id: vars
+        run: echo "hash=$(git rev-parse --short HEAD)" >> $GITHUB_OUTPUT
+
+      - name: Package artifacts
+        run: |
+          mkdir -p dist
+          zip -r dist/dist.zip client
+          mkdir -p dist/rel
+          cp dist/dist.zip dist/rel/dist_${{ steps.vars.outputs.hash }}.zip
+          cp client/Eaglercraft_Offline_JS.html dist/rel/Eaglercraft_Offline_JS.html
+          cp client/Eaglercraft_Offline_WASM.html dist/rel/Eaglercraft_Offline_WASM.html
+          mkdir -p dist/web
+          cp client/index.html dist/web/index.html
+          cp client/classes.js dist/web/classes.js
+          cp client/assets.epk dist/web/assets.epk
+          cp client/bootstrap.js dist/web/bootstrap.js
+          cp client/assets.epw dist/web/assets.epw
+
+      - name: Upload build
+        uses: actions/upload-artifact@v4
+        with:
+          name: dist_${{ steps.vars.outputs.hash }}
+          path: dist/dist.zip
+
+      - name: Create Release
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ steps.vars.outputs.hash }}
+          name: Release ${{ steps.vars.outputs.hash }}
+          files: dist/rel/*
+          generate_release_notes: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Deploy GitHub Pages
+        if: github.event_name == 'push'
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: dist/web
+          publish_branch: gh-pages
+          keep_files: false
