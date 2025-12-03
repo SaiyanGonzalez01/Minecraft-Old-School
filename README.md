@@ -6,7 +6,6 @@ Minecraft Old-School was a mod of Eaglercraft Beta 1.3_01, which planned on addi
 
 ## Compiling
 
-> [Notice]
 > If you are using codespaces, make sure to download Java 17 or higher.
 
 Simply Run `CompileClient.sh` or `CompileClient.bat` to build an offline download. It will appear in the `client` folder!
