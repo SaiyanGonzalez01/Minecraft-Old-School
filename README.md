@@ -2,12 +2,23 @@
 
 Welcome Back!
 
-Minecraft Old-School was a mod of Eaglercraft Beta 1.3_01, which planned on adding new features to it. But due to my lack of coding skills at the time it was made (Late 2023 ~ Early 2024), it became a jumbled mess of code. But the classic is now back! With Colbster's Beta 1.3_01 port, a modernized and polished Eaglercraft Beta 1.3_01, we can finally explore the original Old-School! (The rework is currently in progress!)
+Minecraft Old-School was a mod of Eaglercraft Beta 1.3_01, which planned on adding new features to it. But due to my lack of coding skills at the time it was made (Late 2023 ~ Early 2024), it became a jumbled mess of code. But the classic is now back! With Colbster's Beta 1.3_01 port, a modernized and polished Eaglercraft Beta 1.3_01, we can finally explore the original Old-School!
+
+This rework will be a "lite" version of Minecraft Old-School DX, keeping inline what the original had but adding some small features and tweaks.
 
 ## Compiling
 
 > If you are using codespaces, make sure to download Java 17 or higher.
 
 Simply Run `CompileClient.sh` or `CompileClient.bat` to build an offline download. It will appear in the `client` folder!
+
+## Play
+
+For some reason, the web version of this crashes, but the offline download works just fine. Ill have to host this via offline download until I fix this crash. It isnt
+the best but whatever. Downloads are also found in the same folder downloads/.
+
+Play [Javascript](https://saiyangonzalez01.github.io/Minecraft-Old-School/downloads/index.html)
+
+Play [WASM-GC](https://saiyangonzalez01.github.io/Minecraft-Old-School/downloads/index2.html)
 
 
