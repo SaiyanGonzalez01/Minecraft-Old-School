@@ -169,7 +169,7 @@ public class GuiIngame extends Gui {
 
 		String var23;
 		if (this.mc.gameSettings.showDebugInfo) {
-			var8.drawStringWithShadow("Minecraft Beta 1.3_01 (" + this.mc.debug + ")", 2, 2, 16777215);
+			var8.drawStringWithShadow("Minecraft Old-School (" + this.mc.debug + ")", 2, 2, 16777215);
 			var8.drawStringWithShadow(this.mc.func_6241_m(), 2, 12, 16777215);
 			var8.drawStringWithShadow(this.mc.func_6262_n(), 2, 22, 16777215);
 			var8.drawStringWithShadow(this.mc.func_6245_o(), 2, 32, 16777215);
@@ -188,9 +188,9 @@ public class GuiIngame extends Gui {
 			this.drawString(var8, "z: " + this.mc.thePlayer.posZ, 2, 80, 14737632);
 		} else {
 			if (this.mc.gameSettings.showFramerate)
-				var8.drawStringWithShadow("Minecraft Beta 1.3_01 (" + this.mc.fps + " fps)", 2, 2, 16777215);
+				var8.drawStringWithShadow("Minecraft Old-School (" + this.mc.fps + " fps)", 2, 2, 16777215);
 			else
-				var8.drawStringWithShadow("Minecraft Beta 1.3_01", 2, 2, 16777215);
+				var8.drawStringWithShadow("Minecraft Old-School", 2, 2, 16777215);
 			if (this.mc.gameSettings.showCoords)
 				var8.drawStringWithShadow("x: " + (int) Math.floor(this.mc.thePlayer.posX) + ", y: "
 						+ (int) Math.floor(this.mc.thePlayer.posY) + ", z: " + (int) Math.floor(this.mc.thePlayer.posZ), 2, 12,

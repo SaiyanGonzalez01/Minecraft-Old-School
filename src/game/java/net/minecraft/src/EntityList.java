@@ -102,6 +102,7 @@ public class EntityList {
 		addMapping(EntitySlime.class, EntitySlime::new, "Slime", 55);
 		addMapping(EntityGhast.class, EntityGhast::new, "Ghast", 56);
 		addMapping(EntityPigZombie.class, EntityPigZombie::new, "PigZombie", 57);
+		addMapping(EntityWraith.class, EntityWraith::new, "Wraith", 58);
 		addMapping(EntityPig.class, EntityPig::new, "Pig", 90);
 		addMapping(EntitySheep.class, EntitySheep::new, "Sheep", 91);
 		addMapping(EntityCow.class, EntityCow::new, "Cow", 92);

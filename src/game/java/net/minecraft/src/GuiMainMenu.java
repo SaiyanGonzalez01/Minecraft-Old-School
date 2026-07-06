@@ -116,7 +116,6 @@ public class GuiMainMenu extends GuiScreen {
 
 		if (var1.id == 4) {
 			EagRuntime.openLink(EaglercraftVersion.PROJECT_GITHUB);
-			// this.mc.shutdown();
 		}
 
 	}
@@ -137,8 +136,8 @@ public class GuiMainMenu extends GuiScreen {
 		GL11.glScalef(var5, var5, var5);
 		this.drawCenteredString(this.fontRenderer, this.splashText, 0, -8, 16776960);
 		GL11.glPopMatrix();
-		this.drawString(this.fontRenderer, "Minecraft Beta 1.3_01", 2, 2, 5263440);
-		String var6 = "Copyright Mojang AB. Do not distribute.";
+		this.drawString(this.fontRenderer, "Minecraft Old-School", 2, 2, 5263440);
+		String var6 = "Made by Saiyan Gonzalez. Distribute!";
 		this.drawString(this.fontRenderer, var6, this.width - this.fontRenderer.getStringWidth(var6) - 2, this.height - 10,
 				16777215);
 		String[] ts = EaglercraftVersion.getTitleString();
