@@ -195,6 +195,10 @@ public class Block {
 			.setStepSound(soundWoodFootstep).setBlockName("diode");
 	public static final Block field_22020_bi = (new BlockRedstoneRepeater(94, true)).setHardness(0.0F)
 			.setLightValue(10.0F / 16.0F).setStepSound(soundWoodFootstep).setBlockName("diode");
+	public static final Block oreRuby = (new BlockOre(96, 84)).setHardness(3.0F).setResistance(5.0F)
+			.setStepSound(soundStoneFootstep).setBlockName("oreRuby");
+	public static final Block blockRuby = (new BlockOreBlock(97, 40)).setHardness(5.0F).setResistance(10.0F)
+			.setStepSound(soundMetalFootstep).setBlockName("blockRuby");
 	public int blockIndexInTexture;
 	public final int blockID;
 	protected float blockHardness;

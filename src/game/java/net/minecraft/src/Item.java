@@ -125,6 +125,7 @@ public class Item {
 	public static Item cake = (new ItemReed(98, Block.cake)).setMaxStackSize(1).setIconCoord(13, 1).setItemName("cake");
 	public static Item field_22019_aY = (new ItemBed(99)).setMaxStackSize(1).setIconCoord(13, 2).setItemName("bed");
 	public static Item field_22018_aZ = (new ItemReed(100, Block.field_22021_bh)).setIconCoord(6, 5).setItemName("diode");
+	public static Item ruby = (new Item(101)).setIconCoord(12, 3).setItemName("ruby");
 	public static Item record13 = (new ItemRecord(2000, "13")).setIconCoord(0, 15).setItemName("record");
 	public static Item recordCat = (new ItemRecord(2001, "cat")).setIconCoord(1, 15).setItemName("record");
 	public final int shiftedIndex;
