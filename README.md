@@ -14,11 +14,8 @@ Simply Run `CompileClient.sh` or `CompileClient.bat` to build an offline downloa
 
 ## Play
 
-For some reason, the web version of this crashes, but the offline download works just fine. Ill have to host this via offline download until I fix this crash. It isnt
-the best but whatever. Downloads are also found in the same folder downloads/.
+Play [Javascript](https://saiyangonzalez01.github.io/Minecraft-Old-School/target_teavm_javascript/javascript/)
 
-Play [Javascript](https://saiyangonzalez01.github.io/Minecraft-Old-School/downloads/index.html)
-
-Play [WASM-GC](https://saiyangonzalez01.github.io/Minecraft-Old-School/downloads/index2.html)
+Play [WASM-GC]() (Soon)
 
 
