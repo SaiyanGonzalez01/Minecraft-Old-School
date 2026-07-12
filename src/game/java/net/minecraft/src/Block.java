@@ -199,6 +199,8 @@ public class Block {
 			.setStepSound(soundStoneFootstep).setBlockName("oreRuby");
 	public static final Block blockRuby = (new BlockOreBlock(97, 40)).setHardness(5.0F).setResistance(10.0F)
 			.setStepSound(soundMetalFootstep).setBlockName("blockRuby");
+	public static final Block stoneBrick = (new Block(98, 39, Material.rock)).setHardness(2.0F).setResistance(10.0F)
+			.setStepSound(soundStoneFootstep).setBlockName("stoneBrick");
 	public int blockIndexInTexture;
 	public final int blockID;
 	protected float blockHardness;

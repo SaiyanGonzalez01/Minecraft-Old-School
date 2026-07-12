@@ -13,7 +13,7 @@ public class GuiInventory extends GuiContainer {
 	}
 
 	protected void drawGuiContainerForegroundLayer() {
-		this.fontRenderer.drawString("Crafting", 86, 16, 4210752);
+		this.fontRenderer.drawStringWithShadow("Inventory", 63, -10, 16777215);
 	}
 
 	public void drawScreen(int var1, int var2, float var3) {
@@ -32,7 +32,7 @@ public class GuiInventory extends GuiContainer {
 		GL11.glEnable(GL12.GL_RESCALE_NORMAL);
 		GL11.glEnable(GL11.GL_COLOR_MATERIAL);
 		GL11.glPushMatrix();
-		GL11.glTranslatef((float)(var3 + 51), (float)(var4 + 75), 50.0F);
+		GL11.glTranslatef((float)(var3 + 88), (float)(var4 + 75), 50.0F);
 		float var5 = 30.0F;
 		GL11.glScalef(-var5, var5, var5);
 		GL11.glRotatef(180.0F, 0.0F, 0.0F, 1.0F);

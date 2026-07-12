@@ -13,8 +13,8 @@ public class GuiCrafting extends GuiContainer {
 	}
 
 	protected void drawGuiContainerForegroundLayer() {
-		this.fontRenderer.drawString("Crafting", 28, 6, 4210752);
-		this.fontRenderer.drawString("Inventory", 8, this.ySize - 96 + 2, 4210752);
+		this.fontRenderer.drawStringWithShadow("Crafting", 67, 6, 16777215);
+		this.fontRenderer.drawStringWithShadow("Inventory", 63, this.ySize - 96 + 2, 16777215);
 	}
 
 	protected void drawGuiContainerBackgroundLayer(float var1) {

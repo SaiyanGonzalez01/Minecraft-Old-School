@@ -2,7 +2,7 @@ package net.minecraft.src;
 
 public class InventoryPlayer implements IInventory {
 	public ItemStack[] mainInventory = new ItemStack[36];
-	public ItemStack[] armorInventory = new ItemStack[4];
+	public ItemStack[] armorInventory = new ItemStack[12];
 	public int currentItem = 0;
 	private EntityPlayer player;
 	private ItemStack itemStack;
@@ -217,7 +217,7 @@ public class InventoryPlayer implements IInventory {
 
 	public void readFromNBT(NBTTagList var1) {
 		this.mainInventory = new ItemStack[36];
-		this.armorInventory = new ItemStack[4];
+		this.armorInventory = new ItemStack[12];
 
 		for(int var2 = 0; var2 < var1.tagCount(); ++var2) {
 			NBTTagCompound var3 = (NBTTagCompound)var1.tagAt(var2);
@@ -237,7 +237,7 @@ public class InventoryPlayer implements IInventory {
 	}
 
 	public int getSizeInventory() {
-		return this.mainInventory.length + 4;
+		return this.mainInventory.length + this.armorInventory.length;
 	}
 
 	public ItemStack getStackInSlot(int var1) {

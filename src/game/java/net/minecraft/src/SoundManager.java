@@ -23,7 +23,7 @@ public class SoundManager {
 	
 	private IAudioHandle musicHandle;
 	
-	private String[] newMusic = new String[]{"hal1.ogg", "hal2.ogg", "hal3.ogg", "hal4.ogg", "nuance1.ogg", "nuance2.ogg", "piano1.ogg", "piano2.ogg", "piano3.ogg"};
+	private String[] newMusic = new String[]{"calm1.ogg", "calm2.ogg", "calm3.ogg", "hal1.ogg", "hal2.ogg", "hal3.ogg", "hal4.ogg", "nuance1.ogg", "nuance2.ogg", "piano1.ogg", "piano2.ogg", "piano3.ogg"};
 
 	public void loadSoundSettings(GameSettings var1) {
 		this.options = var1;

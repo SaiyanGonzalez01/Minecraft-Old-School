@@ -14,19 +14,28 @@ public class CraftingInventoryPlayerCB extends CraftingInventoryCB {
 		this.craftResult = new InventoryCraftResult();
 		this.isSinglePlayer = false;
 		this.isSinglePlayer = var2;
-		this.func_20117_a(new SlotCrafting(this.craftMatrix, this.craftResult, 0, 144, 36));
+		this.func_20117_a(new SlotCrafting(this.craftMatrix, this.craftResult, 0, 136, 62));
 
 		int var3;
 		int var4;
 		for(var3 = 0; var3 < 2; ++var3) {
 			for(var4 = 0; var4 < 2; ++var4) {
-				this.func_20117_a(new Slot(this.craftMatrix, var4 + var3 * 2, 88 + var4 * 18, 26 + var3 * 18));
+				this.func_20117_a(new Slot(this.craftMatrix, var4 + var3 * 2, 127 + var4 * 18, 8 + var3 * 18));
 			}
 		}
 
 		for(var3 = 0; var3 < 4; ++var3) {
-			this.func_20117_a(new SlotArmor(this, var1, var1.getSizeInventory() - 1 - var3, 8, 8 + var3 * 18, var3));
+			this.func_20117_a(new SlotArmor(this, var1, var1.mainInventory.length + (3 - var3), 26, 8 + var3 * 18, var3));
 		}
+
+		this.func_20117_a(new SlotArmor(this, var1, var1.mainInventory.length + 4, 44, 26, 4));
+		this.func_20117_a(new SlotArmor(this, var1, var1.mainInventory.length + 5, 8, 26, 5));
+		this.func_20117_a(new SlotArmor(this, var1, var1.mainInventory.length + 6, 8, 44, 6));
+		this.func_20117_a(new SlotArmor(this, var1, var1.mainInventory.length + 7, 44, 44, 7));
+		this.func_20117_a(new SlotArmor(this, var1, var1.mainInventory.length + 8, 8, 62, 8));
+		this.func_20117_a(new SlotArmor(this, var1, var1.mainInventory.length + 9, 44, 62, 9));
+		this.func_20117_a(new SlotArmor(this, var1, var1.mainInventory.length + 10, 44, 8, 10));
+		this.func_20117_a(new SlotArmor(this, var1, var1.mainInventory.length + 11, 8, 8, 11));
 
 		for(var3 = 0; var3 < 3; ++var3) {
 			for(var4 = 0; var4 < 9; ++var4) {

@@ -32,6 +32,7 @@ public class RenderManager {
 		this.entityRenderMap.put(EntityCreeper.class, new RenderCreeper());
 		this.entityRenderMap.put(EntitySkeleton.class, new RenderBiped(new ModelSkeleton(), 0.5F));
 		this.entityRenderMap.put(EntityZombie.class, new RenderBiped(new ModelZombie(), 0.5F));
+		this.entityRenderMap.put(EntityWraith.class, new RenderBiped(new ModelZombie(), 0.5F));
 		this.entityRenderMap.put(EntitySlime.class, new RenderSlime(new ModelSlime(16), new ModelSlime(0), 0.25F));
 		this.entityRenderMap.put(EntityPlayer.class, new RenderPlayer());
 		this.entityRenderMap.put(EntityZombieSimple.class, new RenderZombieSimple(new ModelZombie(), 0.5F, 6.0F));

@@ -19,8 +19,8 @@ public class GuiChest extends GuiContainer {
 	}
 
 	protected void drawGuiContainerForegroundLayer() {
-		this.fontRenderer.drawString(this.lowerChestInventory.getInvName(), 8, 6, 4210752);
-		this.fontRenderer.drawString(this.upperChestInventory.getInvName(), 8, this.ySize - 96 + 2, 4210752);
+		this.fontRenderer.drawStringWithShadow(this.lowerChestInventory.getInvName(), 73, 6, 16777215);
+		this.fontRenderer.drawStringWithShadow(this.upperChestInventory.getInvName(), 63, this.ySize - 96 + 2, 16777215);
 	}
 
 	protected void drawGuiContainerBackgroundLayer(float var1) {

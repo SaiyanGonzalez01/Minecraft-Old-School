@@ -31,7 +31,7 @@ public class MobSpawnerBase {
 	public byte fillerBlock = (byte) Block.dirt.blockID;
 	public int field_6502_q = 5169201;
 	protected EntitySupplier[] biomeMonsters = new EntitySupplier[] { EntitySpider::new, EntityZombie::new,
-			EntitySkeleton::new, EntityCreeper::new, EntitySlime::new };
+			EntitySkeleton::new, EntityCreeper::new, EntitySlime::new, EntityWraith::new };
 	protected EntitySupplier[] biomeCreatures = new EntitySupplier[] { EntitySheep::new, EntityPig::new,
 			EntityChicken::new, EntityCow::new };
 	protected EntitySupplier[] biomeWaterCreatures = new EntitySupplier[] { EntitySquid::new };

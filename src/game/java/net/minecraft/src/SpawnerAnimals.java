@@ -9,7 +9,7 @@ import net.peyton.eagler.minecraft.suppliers.EntitySupplier;
 
 public final class SpawnerAnimals {
 	private static Set eligibleChunksForSpawning = new HashSet();
-	protected static final EntitySupplier[] field_22391_a = new EntitySupplier[]{EntitySpider::new, EntityZombie::new, EntityWraith::new,};
+	protected static final EntitySupplier[] field_22391_a = new EntitySupplier[]{EntitySpider::new, EntityZombie::new, EntitySkeleton::new, EntityWraith::new,};
 
 	protected static ChunkPosition getRandomSpawningPointInChunk(World var0, int var1, int var2) {
 		int var3 = var1 + var0.rand.nextInt(16);
