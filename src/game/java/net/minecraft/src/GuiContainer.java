@@ -68,7 +68,22 @@ public abstract class GuiContainer extends GuiScreen {
 				var9 = var1 - var4 + 12;
 				var10 = var2 - var5 - 12;
 				int var11 = this.fontRenderer.getStringWidth(var13);
-				this.drawGradientRect(var9 - 3, var10 - 3, var9 + var11 + 3, var10 + 8 + 3, -1073741824, -1073741824);
+				this.mc.renderEngine.bindTexture(this.mc.renderEngine.getTexture("%clamp%/gui/border.png"));
+				int totalW = var11 + 6;
+				int totalH = 14;
+				int xStart = var9 - 3;
+				int yStart = var10 - 3;
+				int middleW = totalW - 8;
+				int middleH = totalH - 8;
+				this.drawTexturedModalRectBorder(xStart, yStart, 0, 0, 4, 4, 4, 4, 16.0F, 16.0F);
+				this.drawTexturedModalRectBorder(xStart + 4, yStart, 4, 0, 8, 4, middleW, 4, 16.0F, 16.0F);
+				this.drawTexturedModalRectBorder(xStart + 4 + middleW, yStart, 12, 0, 4, 4, 4, 4, 16.0F, 16.0F);
+				this.drawTexturedModalRectBorder(xStart, yStart + 4, 0, 4, 4, 8, 4, middleH, 16.0F, 16.0F);
+				this.drawTexturedModalRectBorder(xStart + 4, yStart + 4, 4, 4, 8, 8, middleW, middleH, 16.0F, 16.0F);
+				this.drawTexturedModalRectBorder(xStart + 4 + middleW, yStart + 4, 12, 4, 4, 8, 4, middleH, 16.0F, 16.0F);
+				this.drawTexturedModalRectBorder(xStart, yStart + 4 + middleH, 0, 12, 4, 4, 4, 4, 16.0F, 16.0F);
+				this.drawTexturedModalRectBorder(xStart + 4, yStart + 4 + middleH, 4, 12, 8, 4, middleW, 4, 16.0F, 16.0F);
+				this.drawTexturedModalRectBorder(xStart + 4 + middleW, yStart + 4 + middleH, 12, 12, 4, 4, 4, 4, 16.0F, 16.0F);
 				this.fontRenderer.drawStringWithShadow(var13, var9, var10, -1);
 			}
 		}

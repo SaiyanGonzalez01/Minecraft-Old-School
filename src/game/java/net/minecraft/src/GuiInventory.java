@@ -49,6 +49,7 @@ public class GuiInventory extends GuiContainer {
 		this.mc.thePlayer.rotationYaw = (float)Math.atan((double)(var9 / 40.0F)) * 40.0F;
 		this.mc.thePlayer.rotationPitch = -((float)Math.atan((double)(var10 / 40.0F))) * 20.0F;
 		GL11.glTranslatef(0.0F, this.mc.thePlayer.yOffset, 0.0F);
+		System.out.println("[DEBUG] GuiInventory: about to render player preview via RenderManager");
 		RenderManager.instance.renderEntityWithPosYaw(this.mc.thePlayer, 0.0D, 0.0D, 0.0D, 0.0F, 1.0F);
 		this.mc.thePlayer.renderYawOffset = var6;
 		this.mc.thePlayer.rotationYaw = var7;

@@ -14,6 +14,7 @@ public class WorldInfo {
 	private int field_22312_i;
 	private String levelName;
 	private int saveVersion;
+	private int difficulty;
 
 	public WorldInfo(NBTTagCompound var1) {
 		this.randomSeed = var1.getLong("RandomSeed");
@@ -25,6 +26,7 @@ public class WorldInfo {
 		this.sizeOnDisk = var1.getLong("SizeOnDisk");
 		this.levelName = var1.getString("LevelName");
 		this.saveVersion = var1.getInteger("version");
+		this.difficulty = var1.hasKey("Difficulty") ? var1.getInteger("Difficulty") : 2;
 		if(var1.hasKey("Player")) {
 			this.field_22313_h = var1.getCompoundTag("Player");
 			this.field_22312_i = this.field_22313_h.getInteger("Dimension");
@@ -49,6 +51,7 @@ public class WorldInfo {
 		this.field_22312_i = var1.field_22312_i;
 		this.levelName = var1.levelName;
 		this.saveVersion = var1.saveVersion;
+		this.difficulty = var1.difficulty;
 	}
 
 	public NBTTagCompound func_22299_a() {
@@ -84,6 +87,7 @@ public class WorldInfo {
 		var1.setLong("LastPlayed", System.currentTimeMillis());
 		var1.setString("LevelName", this.levelName);
 		var1.setInteger("version", this.saveVersion);
+		var1.setInteger("Difficulty", this.difficulty);
 		if(var2 != null) {
 			var1.setCompoundTag("Player", var2);
 		}
@@ -166,6 +170,14 @@ public class WorldInfo {
 
 	public void func_22289_d(int var1) {
 		this.saveVersion = var1;
+	}
+
+	public int getDifficulty() {
+		return this.difficulty;
+	}
+
+	public void setDifficulty(int var1) {
+		this.difficulty = var1;
 	}
 
 	public long func_22301_l() {

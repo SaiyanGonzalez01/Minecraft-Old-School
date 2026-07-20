@@ -48,6 +48,10 @@ public class World implements IBlockAccess {
 		return this.worldProvider.worldChunkMgr;
 	}
 
+	public WorldInfo getWorldInfo() {
+		return this.worldinfo;
+	}
+
 	public World(ISaveHandler var1, String var2, WorldProvider var3, long var4) {
 		this.scheduledUpdatesAreImmediate = false;
 		this.field_1051_z = new ArrayList();
@@ -80,6 +84,7 @@ public class World implements IBlockAccess {
 		this.worldProvider = var3;
 		var3.registerWorld(this);
 		this.chunkProvider = this.getChunkProvider();
+		this.difficultySetting = this.worldinfo.getDifficulty();
 		this.calculateInitialSkylight();
 	}
 
@@ -116,6 +121,7 @@ public class World implements IBlockAccess {
 		this.worldProvider = var2;
 		var2.registerWorld(this);
 		this.chunkProvider = this.getChunkProvider();
+		this.difficultySetting = this.worldinfo.getDifficulty();
 		this.calculateInitialSkylight();
 	}
 
@@ -171,6 +177,7 @@ public class World implements IBlockAccess {
 
 		this.worldProvider.registerWorld(this);
 		this.chunkProvider = this.getChunkProvider();
+		this.difficultySetting = this.worldinfo.getDifficulty();
 		if (var6) {
 			this.field_9430_x = true;
 			int var7 = 0;

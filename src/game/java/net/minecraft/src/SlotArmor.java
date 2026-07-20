@@ -1,5 +1,7 @@
 package net.minecraft.src;
 
+import net.minecraft.src.Item;
+
 class SlotArmor extends Slot {
 	final int field_1124_c;
 	final CraftingInventoryPlayerCB field_1123_d;
@@ -46,10 +48,26 @@ class SlotArmor extends Slot {
 	}
 
 	public boolean isItemValid(ItemStack var1) {
+		if(var1 == null) {
+			return false;
+		}
+
 		if(this.field_1124_c < 4) {
 			return var1.getItem() instanceof ItemArmor ? ((ItemArmor)var1.getItem()).armorType == this.field_1124_c : (var1.getItem().shiftedIndex == Block.pumpkin.blockID ? this.field_1124_c == 0 : false);
 		}
 
-		return true;
+		if(this.field_1124_c == 10) {
+			return var1.getItem() == Item.quiver;
+		}
+
+		if(this.field_1124_c == 11) {
+			return var1.getItem() == Item.amulet || var1.getItem() == Item.amuletRuby;
+		}
+
+		if(this.field_1124_c == 6 || this.field_1124_c == 8) {
+			return var1.getItem() == Item.ring || var1.getItem() == Item.ringDiamond;
+		}
+
+		return false;
 	}
 }

@@ -623,7 +623,7 @@ public class RenderGlobal implements IWorldAccess {
 				int var16 = MathHelper.floor_double(var13 / 2048.0D);
 				var22 -= (double) (var15 * 2048);
 				var13 -= (double) (var16 * 2048);
-				float var17 = 120.0F - var2 + 0.33F;
+				float var17 = 160.0F + 0.33F;
 				float var18 = (float) (var22 * (double) var10);
 				float var19 = (float) (var13 * (double) var10);
 				var5.startDrawingQuads();
@@ -663,7 +663,7 @@ public class RenderGlobal implements IWorldAccess {
 		double var8 = (this.mc.field_22009_h.prevPosZ
 				+ (this.mc.field_22009_h.posZ - this.mc.field_22009_h.prevPosZ) * (double) var1) / (double) var4
 				+ (double) 0.33F;
-		float var10 = 108.0F - var2 + 0.33F;
+		float var10 = 160.0F + 0.33F;
 		int var11 = MathHelper.floor_double(var6 / 2048.0D);
 		int var12 = MathHelper.floor_double(var8 / 2048.0D);
 		var6 -= (double) (var11 * 2048);
@@ -1197,6 +1197,8 @@ public class RenderGlobal implements IWorldAccess {
 				this.mc.effectRenderer.addEffect(new EntityLavaFX(this.worldObj, var2, var4, var6));
 			} else if (var1 == "splash") {
 				this.mc.effectRenderer.addEffect(new EntitySplashFX(this.worldObj, var2, var4, var6, var8, var10, var12));
+			} else if (var1 == "blood") {
+				this.mc.effectRenderer.addEffect(new EntityBloodFX(this.worldObj, var2, var4, var6, var8, var10, var12));
 			} else if (var1 == "largesmoke") {
 				this.mc.effectRenderer.addEffect(new EntitySmokeFX(this.worldObj, var2, var4, var6, var8, var10, var12, 2.5F));
 			} else if (var1 == "reddust") {

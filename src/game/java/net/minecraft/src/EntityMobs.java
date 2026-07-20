@@ -37,6 +37,22 @@ public class EntityMobs extends EntityCreature implements IMobs {
 					this.playerToAttack = var1;
 				}
 
+				if (this instanceof EntityZombie) {
+					for (int i = 0; i < 8; ++i) {
+						double var4 = this.posX + (this.rand.nextDouble() - 0.5D) * (double)this.width;
+						double var6 = this.posY + this.rand.nextDouble() * (double)this.height;
+						double var8 = this.posZ + (this.rand.nextDouble() - 0.5D) * (double)this.width;
+						this.worldObj.spawnParticle("blood", var4, var6, var8, 0.0D, 0.0D, 0.0D);
+					}
+				} else if (this instanceof EntitySpider) {
+					for (int i = 0; i < 6; ++i) {
+						double var4 = this.posX + (this.rand.nextDouble() - 0.5D) * (double)this.width;
+						double var6 = this.posY + this.rand.nextDouble() * (double)this.height;
+						double var8 = this.posZ + (this.rand.nextDouble() - 0.5D) * (double)this.width;
+						this.worldObj.spawnParticle("blood", var4, var6, var8, 0.0D, 0.0D, 0.0D);
+					}
+				}
+
 				return true;
 			} else {
 				return true;
@@ -50,6 +66,14 @@ public class EntityMobs extends EntityCreature implements IMobs {
 		if((double)var2 < 1.5D && var1.boundingBox.maxY > this.boundingBox.minY && var1.boundingBox.minY < this.boundingBox.maxY) {
 			this.attackTime = 20;
 			var1.attackEntityFrom(this, this.attackStrength);
+			if (this instanceof EntityZombie) {
+				for (int i = 0; i < 3; ++i) {
+					double var4 = var1.posX + (this.rand.nextDouble() - 0.5D) * (double)var1.width;
+					double var6 = var1.posY + this.rand.nextDouble() * (double)var1.height;
+					double var8 = var1.posZ + (this.rand.nextDouble() - 0.5D) * (double)var1.width;
+					this.worldObj.spawnParticle("blood", var4, var6, var8, 0.0D, 0.0D, 0.0D);
+				}
+			}
 		}
 
 	}

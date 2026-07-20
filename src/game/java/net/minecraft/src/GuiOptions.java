@@ -8,7 +8,7 @@ public class GuiOptions extends GuiScreen {
 	private GuiScreen parentScreen;
 	protected String screenTitle = "Options";
 	private GameSettings options;
-	private static EnumOptions[] field_22135_k = new EnumOptions[]{EnumOptions.MUSIC, EnumOptions.SOUND, EnumOptions.INVERT_MOUSE, EnumOptions.SENSITIVITY, EnumOptions.DIFFICULTY, EnumOptions.SHOW_FRAMERATE, EnumOptions.SHOW_COORDS};
+	private static EnumOptions[] field_22135_k = new EnumOptions[]{EnumOptions.MUSIC, EnumOptions.SOUND, EnumOptions.INVERT_MOUSE, EnumOptions.SENSITIVITY, EnumOptions.SHOW_FRAMERATE, EnumOptions.SHOW_COORDS};
 
 	public GuiOptions(GuiScreen var1, GameSettings var2) {
 		this.parentScreen = var1;

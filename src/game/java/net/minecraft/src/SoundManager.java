@@ -22,6 +22,8 @@ public class SoundManager {
 	private Map<String, IAudioResource> music = new HashMap<String, IAudioResource>();
 	
 	private IAudioHandle musicHandle;
+	private String currentMusic = null;
+	private boolean currentMusicLoop = false;
 	
 	private String[] newMusic = new String[]{"calm1.ogg", "calm2.ogg", "calm3.ogg", "hal1.ogg", "hal2.ogg", "hal3.ogg", "hal4.ogg", "nuance1.ogg", "nuance2.ogg", "piano1.ogg", "piano2.ogg", "piano3.ogg"};
 
@@ -74,6 +76,60 @@ public class SoundManager {
 				}
 			}
 		}
+	}
+
+	public void playMusic(String var1, boolean loop) {
+		if (this.musicHandle != null && !this.musicHandle.shouldFree()) {
+			if (var1 == null) {
+				this.musicHandle.end();
+				this.currentMusic = null;
+				this.currentMusicLoop = false;
+				return;
+			}
+			String normalized = var1.startsWith("/") ? var1 : "/music/" + var1;
+			if (normalized.equals(this.currentMusic) && !this.musicHandle.shouldFree()) {
+				return;
+			}
+			this.musicHandle.end();
+		}
+
+		if (var1 == null) {
+			this.currentMusic = null;
+			this.currentMusicLoop = false;
+			return;
+		}
+
+		if (this.options.musicVolume == 0.0F) {
+			this.currentMusic = null;
+			this.currentMusicLoop = false;
+			return;
+		}
+
+		String name = var1.startsWith("/") ? var1 : "/music/" + var1;
+		IAudioResource trk = this.music.get(name);
+		if (trk == null) {
+			if (EagRuntime.getPlatformType() != EnumPlatformType.DESKTOP) {
+				trk = PlatformAudio.loadAudioDataNew(name, false, browserResourceLoader);
+			} else {
+				trk = PlatformAudio.loadAudioData(name, false);
+			}
+			if (trk != null) {
+				music.put(name, trk);
+			}
+		}
+
+		if (trk != null) {
+			musicHandle = PlatformAudio.beginPlaybackStatic(trk, this.options.musicVolume, 1.0f, loop);
+			this.currentMusic = name;
+			this.currentMusicLoop = loop;
+		} else {
+			this.currentMusic = null;
+			this.currentMusicLoop = false;
+		}
+	}
+
+	public void stopMusic() {
+		this.playMusic((String)null, false);
 	}
 
 	public void func_338_a(EntityLiving var1, float var2) {

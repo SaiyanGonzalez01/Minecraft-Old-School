@@ -27,4 +27,41 @@ public abstract class EntityAnimals extends EntityCreature {
 	public int func_421_b() {
 		return 120;
 	}
+
+	public boolean attackEntityFrom(Entity var1, int var2) {
+		if(super.attackEntityFrom(var1, var2)) {
+			if (this instanceof EntityPig) {
+				for (int i = 0; i < 4; ++i) {
+					double var4 = this.posX + (this.rand.nextDouble() - 0.5D) * (double)this.width;
+					double var6 = this.posY + this.rand.nextDouble() * (double)this.height;
+					double var8 = this.posZ + (this.rand.nextDouble() - 0.5D) * (double)this.width;
+					this.worldObj.spawnParticle("blood", var4, var6, var8, 0.0D, 0.0D, 0.0D);
+				}
+			} else if (this instanceof EntitySheep) {
+				for (int i = 0; i < 5; ++i) {
+					double var4 = this.posX + (this.rand.nextDouble() - 0.5D) * (double)this.width;
+					double var6 = this.posY + this.rand.nextDouble() * (double)this.height;
+					double var8 = this.posZ + (this.rand.nextDouble() - 0.5D) * (double)this.width;
+					this.worldObj.spawnParticle("blood", var4, var6, var8, 0.0D, 0.0D, 0.0D);
+				}
+			} else if (this instanceof EntityCow) {
+				for (int i = 0; i < 5; ++i) {
+					double var4 = this.posX + (this.rand.nextDouble() - 0.5D) * (double)this.width;
+					double var6 = this.posY + this.rand.nextDouble() * (double)this.height;
+					double var8 = this.posZ + (this.rand.nextDouble() - 0.5D) * (double)this.width;
+					this.worldObj.spawnParticle("blood", var4, var6, var8, 0.0D, 0.0D, 0.0D);
+				}
+			} else if (this instanceof EntityChicken) {
+				for (int i = 0; i < 2; ++i) {
+					double var4 = this.posX + (this.rand.nextDouble() - 0.5D) * (double)this.width;
+					double var6 = this.posY + this.rand.nextDouble() * (double)this.height;
+					double var8 = this.posZ + (this.rand.nextDouble() - 0.5D) * (double)this.width;
+					this.worldObj.spawnParticle("blood", var4, var6, var8, 0.0D, 0.0D, 0.0D);
+				}
+			}
+			return true;
+		} else {
+			return false;
+		}
+	}
 }

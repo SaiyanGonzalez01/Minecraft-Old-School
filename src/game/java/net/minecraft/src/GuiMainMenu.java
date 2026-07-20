@@ -67,6 +67,9 @@ public class GuiMainMenu extends GuiScreen {
 	public void initGui() {
 		Calendar var1 = Calendar.getInstance();
 		var1.setTime(new Date());
+		if (this.mc != null) {
+			this.mc.sndManager.playMusic("menu.ogg", true);
+		}
 		if (var1.get(2) + 1 == 11 && var1.get(5) == 9) {
 			this.splashText = "Happy birthday, ez!";
 		} else if (var1.get(2) + 1 == 6 && var1.get(5) == 1) {

@@ -126,6 +126,12 @@ public class Item {
 	public static Item field_22019_aY = (new ItemBed(99)).setMaxStackSize(1).setIconCoord(13, 2).setItemName("bed");
 	public static Item field_22018_aZ = (new ItemReed(100, Block.field_22021_bh)).setIconCoord(6, 5).setItemName("diode");
 	public static Item ruby = (new Item(101)).setIconCoord(12, 3).setItemName("ruby");
+	public static Item quiver = (new ItemQuiver(102)).setIconCoord(6, 2).setItemName("quiver");
+	public static Item amulet = (new Item(103)).setIconCoord(0, 10).setItemName("amulet");
+	public static Item ring = (new Item(104)).setIconCoord(0, 11).setItemName("ring");
+	public static Item amuletRuby = (new Item(105)).setIconCoord(1, 10).setItemName("amuletRuby");
+	public static Item ringDiamond = (new Item(106)).setIconCoord(1, 11).setItemName("ringDiamond");
+	public static Item fibers = (new Item(107)).setIconCoord(13, 3).setItemName("fibers");
 	public static Item record13 = (new ItemRecord(2000, "13")).setIconCoord(0, 15).setItemName("record");
 	public static Item recordCat = (new ItemRecord(2001, "cat")).setIconCoord(1, 15).setItemName("record");
 	public final int shiftedIndex;

@@ -14,5 +14,10 @@ public class RecipesArmor {
 			}
 		}
 
+		var1.addRecipe(new ItemStack(Item.amulet, 1), new Object[]{"X X", "X X", " # ", Character.valueOf('X'), Item.ingotIron, Character.valueOf('#'), Item.ingotGold});
+		var1.addRecipe(new ItemStack(Item.amuletRuby, 1), new Object[]{"X X", "X X", " # ", Character.valueOf('X'), Item.ingotIron, Character.valueOf('#'), Item.ruby});
+		var1.addRecipe(new ItemStack(Item.ring, 1), new Object[]{" # ", "X X", " X ", Character.valueOf('#'), Item.ingotGold, Character.valueOf('X'), Item.ingotIron});
+		var1.addRecipe(new ItemStack(Item.ringDiamond, 1), new Object[]{" # ", "X X", " X ", Character.valueOf('#'), Item.diamond, Character.valueOf('X'), Item.ingotIron});
+		var1.addRecipe(new ItemStack(Item.quiver, 1), new Object[]{" X#", "X #", " X#", Character.valueOf('#'), Item.leather, Character.valueOf('X'), Item.silk});
 	}
 }

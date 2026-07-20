@@ -923,7 +923,7 @@ public class Minecraft implements Runnable {
 				}
 			}
 
-			this.theWorld.difficultySetting = this.gameSettings.difficulty;
+			this.theWorld.difficultySetting = this.theWorld.getWorldInfo() != null ? this.theWorld.getWorldInfo().getDifficulty() : this.gameSettings.difficulty;
 			if(this.theWorld.multiplayerWorld) {
 				this.theWorld.difficultySetting = 3;
 			}
@@ -968,6 +968,10 @@ public class Minecraft implements Runnable {
 	}
 
 	public void startWorld(String var1, String var2, long var3) {
+		this.startWorld(var1, var2, var3, this.gameSettings != null ? this.gameSettings.difficulty : 2);
+	}
+
+	public void startWorld(String var1, String var2, long var3, int var4) {
 		this.changeWorld1((World)null);
 		System.gc();
 		if(this.field_22008_V.func_22175_a(var1)) {
@@ -975,6 +979,8 @@ public class Minecraft implements Runnable {
 		} else {
 			ISaveHandler var5 = this.field_22008_V.func_22174_a(var1, false);
 			World var6 = new World(var5, var2, var3);
+			var6.difficultySetting = var4;
+			var6.getWorldInfo().setDifficulty(var4);
 			if(var6.isNewWorld) {
 				this.changeWorld2(var6, "Generating level");
 			} else {
@@ -1031,6 +1037,7 @@ public class Minecraft implements Runnable {
 		this.field_22009_h = null;
 		this.loadingScreen.printText(var2);
 		this.loadingScreen.displayLoadingString("");
+		this.sndManager.playMusic((String)null, false);
 		this.sndManager.func_331_a((String)null, 0.0F, 0.0F, 0.0F, 0.0F, 0.0F);
 		if(this.theWorld != null) {
 			this.theWorld.func_651_a(this.loadingScreen);

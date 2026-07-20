@@ -7,8 +7,10 @@ public class GuiCreateWorld extends GuiScreen {
 	private GuiScreen field_22131_a;
 	private GuiDisableButton field_22134_h;
 	private GuiDisableButton field_22133_i;
+	private GuiButton field_22135_m;
 	private String field_22132_k;
 	private boolean field_22130_l;
+	private int selectedDifficulty = 2;
 
 	public GuiCreateWorld(GuiScreen var1) {
 		this.field_22131_a = var1;
@@ -24,15 +26,31 @@ public class GuiCreateWorld extends GuiScreen {
 		Keyboard.enableRepeatEvents(true);
 		this.controlList.clear();
 		this.controlList.add(
-				new GuiButton(0, this.width / 2 - 100, this.height / 4 + 96 + 12, var1.translateKey("selectWorld.create")));
+				new GuiButton(0, this.width / 2 - 100, this.height / 4 + 120 + 12, var1.translateKey("selectWorld.create")));
 		this.controlList
-				.add(new GuiButton(1, this.width / 2 - 100, this.height / 4 + 120 + 12, var1.translateKey("gui.cancel")));
+				.add(new GuiButton(1, this.width / 2 - 100, this.height / 4 + 144 + 12, var1.translateKey("gui.cancel")));
+		this.field_22135_m = new GuiButton(2, this.width / 2 - 100, this.height / 4 + 96 + 12, 200, 20,
+				this.func_22128_k());
+		this.controlList.add(this.field_22135_m);
 		this.field_22134_h = new GuiDisableButton(this.fontRenderer, this.width / 2 - 100, 60, 200, 20,
 				var1.translateKey("selectWorld.newWorld"));
 		this.field_22134_h.field_22082_a = true;
 		this.field_22134_h.func_22066_a(32);
 		this.field_22133_i = new GuiDisableButton(this.fontRenderer, this.width / 2 - 100, 116, 200, 20, "");
 		this.func_22129_j();
+	}
+
+	private String func_22128_k() {
+		StringTranslate var1 = StringTranslate.getInstance();
+		if(this.selectedDifficulty == 0) {
+			return var1.translateKey("options.difficulty.peaceful");
+		} else if(this.selectedDifficulty == 1) {
+			return var1.translateKey("options.difficulty.easy");
+		} else if(this.selectedDifficulty == 3) {
+			return var1.translateKey("options.difficulty.hard");
+		} else {
+			return var1.translateKey("options.difficulty.normal");
+		}
 	}
 
 	private void func_22129_j() {
@@ -63,6 +81,9 @@ public class GuiCreateWorld extends GuiScreen {
 		if (var1.enabled) {
 			if (var1.id == 1) {
 				this.mc.displayGuiScreen(this.field_22131_a);
+			} else if (var1.id == 2) {
+				this.selectedDifficulty = (this.selectedDifficulty + 1) & 3;
+				this.field_22135_m.displayString = this.func_22128_k();
 			} else if (var1.id == 0) {
 				this.mc.displayGuiScreen((GuiScreen) null);
 				if (this.field_22130_l) {
@@ -84,7 +105,7 @@ public class GuiCreateWorld extends GuiScreen {
 				}
 
 				this.mc.playerController = new PlayerControllerSP(this.mc);
-				this.mc.startWorld(this.field_22132_k, this.field_22134_h.func_22071_a(), var2);
+				this.mc.startWorld(this.field_22132_k, this.field_22134_h.func_22071_a(), var2, this.selectedDifficulty);
 				this.mc.displayGuiScreen((GuiScreen) null);
 			}
 
@@ -118,6 +139,7 @@ public class GuiCreateWorld extends GuiScreen {
 				this.width / 2 - 100, 85, 10526880);
 		this.drawString(this.fontRenderer, var4.translateKey("selectWorld.enterSeed"), this.width / 2 - 100, 104, 10526880);
 		this.drawString(this.fontRenderer, var4.translateKey("selectWorld.seedInfo"), this.width / 2 - 100, 140, 10526880);
+		//this.drawString(this.fontRenderer, var4.translateKey("options.difficulty") + ": " + this.func_22128_k(), this.width / 2 - 100, 168, 10526880);
 		this.field_22134_h.func_22067_c();
 		this.field_22133_i.func_22067_c();
 		super.drawScreen(var1, var2, var3);

@@ -73,4 +73,16 @@ public class Gui {
 		var9.addVertexWithUV((double)(var1 + 0), (double)(var2 + 0), (double)this.zLevel, (double)((float)(var3 + 0) * var7), (double)((float)(var4 + 0) * var8));
 		var9.draw();
 	}
+
+	public void drawTexturedModalRectBorder(int var1, int var2, int var3, int var4, int srcW, int srcH, int destW, int destH, float textureWidth, float textureHeight) {
+		float var7 = 1.0F / textureWidth;
+		float var8 = 1.0F / textureHeight;
+		Tessellator var9 = Tessellator.instance;
+		var9.startDrawingQuads();
+		var9.addVertexWithUV((double)(var1 + 0), (double)(var2 + destH), (double)this.zLevel, (double)((float)(var3 + 0) * var7), (double)((float)(var4 + srcH) * var8));
+		var9.addVertexWithUV((double)(var1 + destW), (double)(var2 + destH), (double)this.zLevel, (double)((float)(var3 + srcW) * var7), (double)((float)(var4 + srcH) * var8));
+		var9.addVertexWithUV((double)(var1 + destW), (double)(var2 + 0), (double)this.zLevel, (double)((float)(var3 + srcW) * var7), (double)((float)(var4 + 0) * var8));
+		var9.addVertexWithUV((double)(var1 + 0), (double)(var2 + 0), (double)this.zLevel, (double)((float)(var3 + 0) * var7), (double)((float)(var4 + 0) * var8));
+		var9.draw();
+	}
 }
