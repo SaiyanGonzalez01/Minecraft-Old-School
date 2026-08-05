@@ -89,6 +89,10 @@ public class PlayerController {
 		var1.attackTargetEntityWithCurrentItem(var2);
 	}
 
+	public boolean func_35640_h() {
+		return false;
+	}
+
 	public ItemStack func_20085_a(int var1, int var2, int var3, EntityPlayer var4) {
 		return var4.craftingInventory.func_20116_a(var2, var3, var4);
 	}

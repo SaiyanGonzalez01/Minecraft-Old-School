@@ -327,6 +327,10 @@ public abstract class EntityPlayer extends EntityLiving {
 				this.func_22056_a(true, true);
 			}
 
+			if(this.worldObj.getWorldInfo().getGameMode() == 1) {
+				return false;
+			}
+
 			if(var1 instanceof EntityMobs || var1 instanceof EntityArrow) {
 				if(this.worldObj.difficultySetting == 0) {
 					var2 = 0;

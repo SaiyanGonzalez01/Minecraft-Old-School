@@ -166,6 +166,10 @@ public final class ItemStack {
 		return this.itemID == var1.itemID && this.itemDamage == var1.itemDamage;
 	}
 
+	public boolean isStackable() {
+		return this.getMaxStackSize() > 1;
+	}
+
 	public String func_20109_f() {
 		return Item.itemsList[this.itemID].getItemNameIS(this);
 	}

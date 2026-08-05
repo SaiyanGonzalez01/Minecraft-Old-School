@@ -110,8 +110,25 @@ public class GuiSelectWorld extends GuiScreen {
 		this.mc.displayGuiScreen((GuiScreen)null);
 		if(!this.selected) {
 			this.selected = true;
-			this.mc.playerController = new PlayerControllerSP(this.mc);
 			String var2 = this.func_22091_c(var1);
+			int savedGameMode = 0;
+			ISaveFormat saveFormat = this.mc.func_22004_c();
+			try {
+				ISaveHandler handler = saveFormat.func_22174_a(var2, false);
+				if(handler != null) {
+					WorldInfo info = handler.func_22151_c();
+					if(info != null) {
+						savedGameMode = info.getGameMode();
+					}
+				}
+			} catch (Exception e) {
+			}
+			if(savedGameMode == 1) {
+				this.mc.playerController = new PlayerControllerTest(this.mc);
+			} else {
+				this.mc.playerController = new PlayerControllerSP(this.mc);
+			}
+
 			if(var2 == null) {
 				var2 = "World" + var1;
 			}

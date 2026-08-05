@@ -24,6 +24,7 @@ import net.minecraft.src.GuiConnecting;
 import net.minecraft.src.GuiGameOver;
 import net.minecraft.src.GuiIngame;
 import net.minecraft.src.GuiIngameMenu;
+import net.minecraft.src.GuiContainerCreative;
 import net.minecraft.src.GuiInventory;
 import net.minecraft.src.GuiMainMenu;
 import net.minecraft.src.GuiScreen;
@@ -841,7 +842,11 @@ public class Minecraft implements Runnable {
 												}
 
 												if(Keyboard.getEventKey() == this.gameSettings.keyBindInventory.keyCode) {
-													this.displayGuiScreen(new GuiInventory(this.thePlayer));
+													if(this.thePlayer != null && this.playerController.func_35640_h()) {
+														this.displayGuiScreen(new GuiContainerCreative(this.thePlayer));
+													} else {
+														this.displayGuiScreen(new GuiInventory(this.thePlayer));
+													}
 												}
 
 												if(Keyboard.getEventKey() == this.gameSettings.keyBindDrop.keyCode) {
@@ -1224,4 +1229,5 @@ public class Minecraft implements Runnable {
 
 		return false;
 	}
+	
 }

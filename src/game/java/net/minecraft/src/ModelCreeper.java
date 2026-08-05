@@ -5,9 +5,13 @@ public class ModelCreeper extends ModelBase {
 	public ModelRenderer field_1270_b;
 	public ModelRenderer body;
 	public ModelRenderer leg1;
+	public ModelRenderer leg1tuff;
 	public ModelRenderer leg2;
+	public ModelRenderer leg2tuff;
 	public ModelRenderer leg3;
+	public ModelRenderer leg3tuff;
 	public ModelRenderer leg4;
+	public ModelRenderer leg4tuff;
 
 	public ModelCreeper() {
 		float var1 = 0.0F;
@@ -24,15 +28,27 @@ public class ModelCreeper extends ModelBase {
 		this.leg1 = new ModelRenderer(0, 16);
 		this.leg1.addBox(-2.0F, 0.0F, -2.0F, 4, 6, 4, var1);
 		this.leg1.setPosition(-2.0F, (float)(12 + var2), 4.0F);
-		this.leg2 = new ModelRenderer(0, 16);
+		this.leg1tuff = new ModelRenderer(32, 0);
+		this.leg1tuff.addBox(-2.0F, 0.0F, -2.0F, 4, 6, 4, var1 + 0.2F);
+		this.leg1tuff.setPosition(-2.0F, (float)(12 + var2), 4.0F);
+		this.leg2 = new ModelRenderer(40, 16);
 		this.leg2.addBox(-2.0F, 0.0F, -2.0F, 4, 6, 4, var1);
 		this.leg2.setPosition(2.0F, (float)(12 + var2), 4.0F);
+		this.leg2tuff = new ModelRenderer(32, 0);
+		this.leg2tuff.addBox(-2.0F, 0.0F, -2.0F, 4, 6, 4, var1 + 0.2F);
+		this.leg2tuff.setPosition(2.0F, (float)(12 + var2), 4.0F);
 		this.leg3 = new ModelRenderer(0, 16);
 		this.leg3.addBox(-2.0F, 0.0F, -2.0F, 4, 6, 4, var1);
 		this.leg3.setPosition(-2.0F, (float)(12 + var2), -4.0F);
-		this.leg4 = new ModelRenderer(0, 16);
+		this.leg3tuff = new ModelRenderer(32, 0);
+		this.leg3tuff.addBox(-2.0F, 0.0F, -2.0F, 4, 6, 4, var1 + 0.2F);
+		this.leg3tuff.setPosition(-2.0F, (float)(12 + var2), -4.0F);
+		this.leg4 = new ModelRenderer(40, 16);
 		this.leg4.addBox(-2.0F, 0.0F, -2.0F, 4, 6, 4, var1);
 		this.leg4.setPosition(2.0F, (float)(12 + var2), -4.0F);
+		this.leg4tuff = new ModelRenderer(32, 0);
+		this.leg4tuff.addBox(-2.0F, 0.0F, -2.0F, 4, 6, 4, var1 + 0.2F);
+		this.leg4tuff.setPosition(2.0F, (float)(12 + var2), -4.0F);
 	}
 
 	public void render(float var1, float var2, float var3, float var4, float var5, float var6) {
@@ -40,17 +56,25 @@ public class ModelCreeper extends ModelBase {
 		this.head.render(var6);
 		this.body.render(var6);
 		this.leg1.render(var6);
+		this.leg1tuff.render(var6);
 		this.leg2.render(var6);
+		this.leg2tuff.render(var6);
 		this.leg3.render(var6);
+		this.leg3tuff.render(var6);
 		this.leg4.render(var6);
+		this.leg4tuff.render(var6);
 	}
 
 	public void setRotationAngles(float var1, float var2, float var3, float var4, float var5, float var6) {
 		this.head.rotateAngleY = var4 / (180.0F / (float)Math.PI);
 		this.head.rotateAngleX = var5 / (180.0F / (float)Math.PI);
 		this.leg1.rotateAngleX = MathHelper.cos(var1 * 0.6662F) * 1.4F * var2;
+		this.leg1tuff.rotateAngleX = this.leg1.rotateAngleX;
 		this.leg2.rotateAngleX = MathHelper.cos(var1 * 0.6662F + (float)Math.PI) * 1.4F * var2;
+		this.leg2tuff.rotateAngleX = this.leg2.rotateAngleX;
 		this.leg3.rotateAngleX = MathHelper.cos(var1 * 0.6662F + (float)Math.PI) * 1.4F * var2;
+		this.leg3tuff.rotateAngleX = this.leg3.rotateAngleX;
 		this.leg4.rotateAngleX = MathHelper.cos(var1 * 0.6662F) * 1.4F * var2;
+		this.leg4tuff.rotateAngleX = this.leg4.rotateAngleX;
 	}
 }

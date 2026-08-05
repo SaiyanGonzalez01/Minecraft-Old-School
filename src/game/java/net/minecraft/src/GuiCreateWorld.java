@@ -11,6 +11,7 @@ public class GuiCreateWorld extends GuiScreen {
 	private String field_22132_k;
 	private boolean field_22130_l;
 	private int selectedDifficulty = 2;
+	private int selectedGameMode = 0;
 
 	public GuiCreateWorld(GuiScreen var1) {
 		this.field_22131_a = var1;
@@ -30,7 +31,7 @@ public class GuiCreateWorld extends GuiScreen {
 		this.controlList
 				.add(new GuiButton(1, this.width / 2 - 100, this.height / 4 + 144 + 12, var1.translateKey("gui.cancel")));
 		this.field_22135_m = new GuiButton(2, this.width / 2 - 100, this.height / 4 + 96 + 12, 200, 20,
-				this.func_22128_k());
+				this.func_22129_k());
 		this.controlList.add(this.field_22135_m);
 		this.field_22134_h = new GuiDisableButton(this.fontRenderer, this.width / 2 - 100, 60, 200, 20,
 				var1.translateKey("selectWorld.newWorld"));
@@ -40,16 +41,29 @@ public class GuiCreateWorld extends GuiScreen {
 		this.func_22129_j();
 	}
 
-	private String func_22128_k() {
-		StringTranslate var1 = StringTranslate.getInstance();
-		if(this.selectedDifficulty == 0) {
-			return var1.translateKey("options.difficulty.peaceful");
-		} else if(this.selectedDifficulty == 1) {
-			return var1.translateKey("options.difficulty.easy");
-		} else if(this.selectedDifficulty == 3) {
-			return var1.translateKey("options.difficulty.hard");
-		} else {
-			return var1.translateKey("options.difficulty.normal");
+	private String func_22129_k() {
+		return "World Options...";
+	}
+
+	public int getSelectedDifficulty() {
+		return this.selectedDifficulty;
+	}
+
+	public void setSelectedDifficulty(int var1) {
+		this.selectedDifficulty = var1;
+		if(this.field_22135_m != null) {
+			this.field_22135_m.displayString = this.func_22129_k();
+		}
+	}
+
+	public int getSelectedGameMode() {
+		return this.selectedGameMode;
+	}
+
+	public void setSelectedGameMode(int var1) {
+		this.selectedGameMode = var1;
+		if(this.field_22135_m != null) {
+			this.field_22135_m.displayString = this.func_22129_k();
 		}
 	}
 
@@ -82,8 +96,7 @@ public class GuiCreateWorld extends GuiScreen {
 			if (var1.id == 1) {
 				this.mc.displayGuiScreen(this.field_22131_a);
 			} else if (var1.id == 2) {
-				this.selectedDifficulty = (this.selectedDifficulty + 1) & 3;
-				this.field_22135_m.displayString = this.func_22128_k();
+				this.mc.displayGuiScreen(new GuiWorldOptions(this));
 			} else if (var1.id == 0) {
 				this.mc.displayGuiScreen((GuiScreen) null);
 				if (this.field_22130_l) {
@@ -104,8 +117,15 @@ public class GuiCreateWorld extends GuiScreen {
 					}
 				}
 
-				this.mc.playerController = new PlayerControllerSP(this.mc);
+				if(this.selectedGameMode == 1) {
+					this.mc.playerController = new PlayerControllerTest(this.mc);
+				} else {
+					this.mc.playerController = new PlayerControllerSP(this.mc);
+				}
 				this.mc.startWorld(this.field_22132_k, this.field_22134_h.func_22071_a(), var2, this.selectedDifficulty);
+				if(this.mc.theWorld != null) {
+					this.mc.theWorld.getWorldInfo().setGameMode(this.selectedGameMode);
+				}
 				this.mc.displayGuiScreen((GuiScreen) null);
 			}
 
@@ -139,7 +159,6 @@ public class GuiCreateWorld extends GuiScreen {
 				this.width / 2 - 100, 85, 10526880);
 		this.drawString(this.fontRenderer, var4.translateKey("selectWorld.enterSeed"), this.width / 2 - 100, 104, 10526880);
 		this.drawString(this.fontRenderer, var4.translateKey("selectWorld.seedInfo"), this.width / 2 - 100, 140, 10526880);
-		//this.drawString(this.fontRenderer, var4.translateKey("options.difficulty") + ": " + this.func_22128_k(), this.width / 2 - 100, 168, 10526880);
 		this.field_22134_h.func_22067_c();
 		this.field_22133_i.func_22067_c();
 		super.drawScreen(var1, var2, var3);
