@@ -23,6 +23,9 @@ public class GuiIngame extends Gui {
 	private boolean field_22065_l = false;
 	public float field_6446_b;
 	float prevVignetteBrightness = 1.0F;
+	private String selectedItemName = "";
+	private int selectedItemDisplayTime = 0;
+	private int lastSelectedSlot = -1;
 
 	public GuiIngame(Minecraft var1) {
 		this.mc = var1;
@@ -149,6 +152,8 @@ public class GuiIngame extends Gui {
 			var17 = var7 - 16 - 3;
 			this.renderInventorySlot(var15, var16, var17, var1);
 		}
+
+		this.renderSelectedItemName(var6, var7, var8);
 
 		RenderHelper.disableStandardItemLighting();
 		GL11.glDisable(GL12.GL_RESCALE_NORMAL);
@@ -366,9 +371,45 @@ public class GuiIngame extends Gui {
 		}
 	}
 
+	private void renderSelectedItemName(int screenWidth, int screenHeight, FontRenderer fontRenderer) {
+		int currentSlot = this.mc.thePlayer.inventory.currentItem;
+		
+		if (currentSlot != this.lastSelectedSlot) {
+			this.lastSelectedSlot = currentSlot;
+			ItemStack selectedItem = this.mc.thePlayer.inventory.mainInventory[currentSlot];
+			if (selectedItem != null) {
+				this.selectedItemName = StringTranslate.getInstance().translateNamedKey(selectedItem.func_20109_f());
+				this.selectedItemDisplayTime = 40;
+			}
+		}
+		
+		if (this.selectedItemDisplayTime > 0) {
+			float displayProgress = (float) this.selectedItemDisplayTime / 40.0F;
+			int alpha = (int) (255.0F * displayProgress);
+			if (alpha > 255) {
+				alpha = 255;
+			}
+			
+			if (alpha > 0) {
+				GL11.glPushMatrix();
+				GL11.glTranslatef((float) (screenWidth / 2), (float) (screenHeight - 48), 0.0F);
+				GL11.glEnable(GL11.GL_BLEND);
+				GL11.glBlendFunc(GL11.GL_SRC_ALPHA, GL11.GL_ONE_MINUS_SRC_ALPHA);
+				int textColor = 16777215 + (alpha << 24);
+				fontRenderer.drawStringWithShadow(this.selectedItemName, -fontRenderer.getStringWidth(this.selectedItemName) / 2, -4, textColor);
+				GL11.glDisable(GL11.GL_BLEND);
+				GL11.glPopMatrix();
+			}
+		}
+	}
+
 	public void updateTick() {
 		if (this.recordPlayingUpFor > 0) {
 			--this.recordPlayingUpFor;
+		}
+
+		if (this.selectedItemDisplayTime > 0) {
+			--this.selectedItemDisplayTime;
 		}
 
 		++this.updateCounter;

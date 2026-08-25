@@ -201,6 +201,8 @@ public class Block {
 			.setStepSound(soundMetalFootstep).setBlockName("blockRuby");
 	public static final Block stoneBrick = (new Block(98, 39, Material.rock)).setHardness(2.0F).setResistance(10.0F)
 			.setStepSound(soundStoneFootstep).setBlockName("stoneBrick");
+	public static final BlockTallGrass tallGrass = (BlockTallGrass) (new BlockTallGrass(99, 30)).setHardness(0.0F)
+			.setStepSound(soundGrassFootstep).setBlockName("tallgrass");
 	public int blockIndexInTexture;
 	public final int blockID;
 	protected float blockHardness;

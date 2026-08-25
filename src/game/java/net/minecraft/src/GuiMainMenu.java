@@ -92,6 +92,7 @@ public class GuiMainMenu extends GuiScreen {
 			this.controlList
 					.add(b = new GuiButton(0, this.width / 2 - 100, var4 + 72, 98, 20, var2.translateKey("menu.options")));
 			this.controlList.add(b = new GuiButton(4, this.width / 2 + 2, var4 + 72, 98, 20, I18n.format("menu.github")));
+			this.controlList.add(b = new GuiButton(5, this.width / 2 + 102, var4 + 72, 20, 20, var2.translateKey("menu.skins")));
 		}
 
 		if (this.mc.session == null) {
@@ -119,6 +120,10 @@ public class GuiMainMenu extends GuiScreen {
 
 		if (var1.id == 4) {
 			EagRuntime.openLink(EaglercraftVersion.PROJECT_GITHUB);
+		}
+
+		if (var1.id == 5) {
+			this.mc.displayGuiScreen(new GuiScreenEditProfile(null));
 		}
 
 	}

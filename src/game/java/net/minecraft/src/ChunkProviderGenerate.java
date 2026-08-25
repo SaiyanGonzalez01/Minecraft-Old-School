@@ -18,6 +18,7 @@ public class ChunkProviderGenerate implements IChunkProvider {
 	private double[] gravelNoise = new double[256];
 	private double[] stoneNoise = new double[256];
 	private MapGenBase field_902_u = new MapGenCaves();
+	private MapGenBase field_901_v = new MapGenRavine();
 	private MobSpawnerBase[] biomesForGeneration;
 	double[] field_4185_d;
 	double[] field_4184_e;
@@ -199,6 +200,7 @@ public class ChunkProviderGenerate implements IChunkProvider {
 		this.generateTerrain(var1, var2, var3, this.biomesForGeneration, var5);
 		this.replaceBlocksForBiome(var1, var2, var3, this.biomesForGeneration);
 		this.field_902_u.func_867_a(this, this.worldObj, var1, var2, var3);
+		this.field_901_v.func_867_a(this, this.worldObj, var1, var2, var3);
 		var4.func_1024_c();
 		return var4;
 	}
@@ -503,6 +505,13 @@ public class ChunkProviderGenerate implements IChunkProvider {
 			var16 = this.rand.nextInt(128);
 			var17 = var5 + this.rand.nextInt(16) + 8;
 			(new WorldGenPumpkin()).generate(this.worldObj, this.rand, var15, var16, var17);
+		}
+
+		for (var15 = 0; var15 < 2; ++var15) {
+			var16 = var4 + this.rand.nextInt(8) + 8;
+			var17 = this.rand.nextInt(128);
+			var23 = var5 + this.rand.nextInt(8) + 8;
+			(new WorldGenTallGrass(Block.tallGrass.blockID, 0)).generate(this.worldObj, this.rand, var16, var17, var23);
 		}
 
 		var15 = 0;

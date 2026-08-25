@@ -367,6 +367,9 @@ public abstract class EntityPlayer extends EntityLiving {
 	public void displayGUIEditSign(TileEntitySign var1) {
 	}
 
+	public void displayGUIHandBook(ItemStack var1) {
+	}
+
 	public void useCurrentItemOnEntity(Entity var1) {
 		if(!var1.interact(this)) {
 			ItemStack var2 = this.getCurrentEquippedItem();

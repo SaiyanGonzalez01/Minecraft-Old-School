@@ -11,6 +11,7 @@ menu.singleplayer=Singleplayer
 menu.multiplayer=Multiplayer
 menu.mods=Texture Packs
 menu.options=Options...
+menu.skins=:)
 menu.quit=Quit Game
 
 selectWorld.title=Select World
@@ -296,6 +297,8 @@ tile.blockRuby.name=Ruby Block
 tile.blockRuby.desc=
 tile.stoneBrick.name=Stone Bricks
 tile.stoneBrick.desc=
+tile.tallgrass.name=Tall Grass
+tile.tallgrass.desc=
 tile.bed.occupied=This bed is occupied!
 tile.bed.noSleep=You can only sleep at night!
 
@@ -549,6 +552,8 @@ item.ringDiamond.name=Diamond Ring
 item.ringDiamond.desc=
 item.fibers.name=Plant Fibers
 item.fibers.desc=
+item.handbook.name=Survival Handbook
+item.handbook.desc=
 
 eaglercraft.key.zoom=Zoom
 eaglercraft.key.command=Command

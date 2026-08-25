@@ -10,7 +10,7 @@ import net.lax1dude.eaglercraft.profile.EaglerProfile;
 public class GuiMultiplayer extends GuiScreen {
 	private GuiScreen parentScreen;
 	private GuiDisableButton field_22111_h;
-	private GuiDisableButton usernameField;
+	public GuiDisableButton usernameField;
 	private String serverAddress = "";
 	private boolean locked = false;
 

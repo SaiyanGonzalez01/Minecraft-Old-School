@@ -132,6 +132,7 @@ public class Item {
 	public static Item amuletRuby = (new Item(105)).setIconCoord(1, 10).setItemName("amuletRuby");
 	public static Item ringDiamond = (new Item(106)).setIconCoord(1, 11).setItemName("ringDiamond");
 	public static Item fibers = (new Item(107)).setIconCoord(13, 3).setItemName("fibers");
+	public static Item handbook = (new ItemHandBook(108)).setIconCoord(11, 5).setItemName("handbook");
 	public static Item record13 = (new ItemRecord(2000, "13")).setIconCoord(0, 15).setItemName("record");
 	public static Item recordCat = (new ItemRecord(2001, "cat")).setIconCoord(1, 15).setItemName("record");
 	public final int shiftedIndex;

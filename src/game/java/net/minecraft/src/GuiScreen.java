@@ -152,6 +152,13 @@ public class GuiScreen extends Gui {
 		return true;
 	}
 
+	public void selectNextField() {
+	}
+	
+	public static boolean isCtrlKeyDown() {
+		return Keyboard.isKeyDown(29) || Keyboard.isKeyDown(157);
+	}
+
 	public void deleteWorld(boolean var1, int var2) {
 	}
 }

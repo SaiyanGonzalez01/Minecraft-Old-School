@@ -1,6 +1,7 @@
 package net.minecraft.src;
 
 import net.minecraft.client.Minecraft;
+import net.lax1dude.eaglercraft.profile.Profile;
 import org.lwjgl.opengl.GL11;
 import org.lwjgl.opengl.GL12;
 
@@ -43,8 +44,17 @@ public class RenderLiving extends Render {
 			if(var15 > 1.0F) {
 				var15 = 1.0F;
 			}
-
-			this.loadDownloadableImageTexture(var1.skinUrl, var1.getEntityTexture());
+			//custom skin stuff
+			if(var1 instanceof EntityPlayerSP) {
+				int var18 = Profile.getSelectedSkinTexture();
+				if(var18 >= 0) {
+					GL11.glBindTexture(GL11.GL_TEXTURE_2D, var18);
+				} else {
+					this.loadDownloadableImageTexture(var1.skinUrl, var1.getEntityTexture());
+				}
+			} else {
+				this.loadDownloadableImageTexture(var1.skinUrl, var1.getEntityTexture());
+			}
 			GL11.glEnable(GL11.GL_ALPHA_TEST);
 			this.mainModel.render(var16, var15, var13, var11 - var10, var12, var14);
 

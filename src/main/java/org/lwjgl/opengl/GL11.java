@@ -1,5 +1,9 @@
 package org.lwjgl.opengl;
 
+import java.io.InputStream;
+import java.nio.charset.StandardCharsets;
+
+import net.lax1dude.eaglercraft.EagRuntime;
 import net.lax1dude.eaglercraft.internal.buffer.ByteBuffer;
 import net.lax1dude.eaglercraft.internal.buffer.FloatBuffer;
 import net.lax1dude.eaglercraft.internal.buffer.IntBuffer;
@@ -64,6 +68,17 @@ import static net.lax1dude.eaglercraft.opengl.GlStateManager.tryBlendFuncSeparat
 import static net.lax1dude.eaglercraft.opengl.GlStateManager.viewport;
 
 public class GL11 extends RealOpenGLEnums {
+
+	/** only took necessary code for GuiScreenEditProfile */
+	public static class EaglerAdapterImpl2 {
+		public static byte[] loadLocalStorage(String key) {
+			return EagRuntime.getStorage(key);
+		}
+
+		public static void saveLocalStorage(String key, byte[] data) {
+			EagRuntime.setStorage(key, data);
+		}
+	}
 
 	public static void glEnable(int p1) {
 		switch (p1) {
