@@ -76,9 +76,35 @@ public class RenderBlocks {
 	}
 
 	public boolean renderBlockByRenderType(Block var1, int var2, int var3, int var4) {
+		Hammerable hammerable = Hammerable.getInstance();
+		if (hammerable.isHammerable(var1)) {
+			int model = hammerable.getModel(var1, this.blockAccess.getBlockMetadata(var2, var3, var4));
+			if (model == Hammerable.MODEL_STAIRS) {
+				return this.renderBlockStairs(var1, var2, var3, var4);
+			}
+			if (model == Hammerable.MODEL_SLAB) {
+				BlockStep.setBounds(var1, model);
+				boolean rendered = this.renderStandardBlock(var1, var2, var3, var4);
+				var1.setBlockBounds(0.0F, 0.0F, 0.0F, 1.0F, 1.0F, 1.0F);
+				return rendered;
+			}
+		}
+
 		int var5 = var1.getRenderType();
 		var1.setBlockBoundsBasedOnState(this.blockAccess, var2, var3, var4);
-		return var5 == 0 ? this.renderStandardBlock(var1, var2, var3, var4) : (var5 == 4 ? this.renderBlockFluids(var1, var2, var3, var4) : (var5 == 13 ? this.renderBlockCactus(var1, var2, var3, var4) : (var5 == 1 ? (var1 == Block.tallGrass ? this.renderBlockTallGrass(var1, var2, var3, var4) : this.renderBlockReed(var1, var2, var3, var4)) : (var5 == 6 ? this.renderBlockCrops(var1, var2, var3, var4) : (var5 == 2 ? this.renderBlockTorch(var1, var2, var3, var4) : (var5 == 3 ? this.renderBlockFire(var1, var2, var3, var4) : (var5 == 5 ? this.renderBlockRedstoneWire(var1, var2, var3, var4) : (var5 == 8 ? this.renderBlockLadder(var1, var2, var3, var4) : (var5 == 7 ? this.renderBlockDoor(var1, var2, var3, var4) : (var5 == 9 ? this.renderBlockMinecartTrack(var1, var2, var3, var4) : (var5 == 10 ? this.renderBlockStairs(var1, var2, var3, var4) : (var5 == 11 ? this.renderBlockFence(var1, var2, var3, var4) : (var5 == 12 ? this.renderBlockLever(var1, var2, var3, var4) : (var5 == 14 ? this.renderBlockBed(var1, var2, var3, var4) : (var5 == 15 ? this.renderBlockRepeater(var1, var2, var3, var4) : false)))))))))))))));
+		return var5 == 0 ? this.renderStandardBlock(var1, var2, var3, var4) : (var5 == 4 ? this.renderBlockFluids(var1, var2, var3, var4) : (var5 == 13 ? this.renderBlockCactus(var1, var2, var3, var4) : (var5 == 1 ? (var1 == Block.tallGrass ? this.renderBlockTallGrass(var1, var2, var3, var4) : this.renderBlockReed(var1, var2, var3, var4)) : (var5 == 6 ? this.renderBlockCrops(var1, var2, var3, var4) : (var5 == 2 ? this.renderBlockTorch(var1, var2, var3, var4) : (var5 == 3 ? this.renderBlockFire(var1, var2, var3, var4) : (var5 == 5 ? this.renderBlockRedstoneWire(var1, var2, var3, var4) : (var5 == 8 ? this.renderBlockLadder(var1, var2, var3, var4) : (var5 == 7 ? this.renderBlockDoor(var1, var2, var3, var4) : (var5 == 9 ? this.renderBlockMinecartTrack(var1, var2, var3, var4) : (var5 == 10 ? this.renderBlockStairs(var1, var2, var3, var4) : (var5 == 11 ? this.renderBlockFence(var1, var2, var3, var4) : (var5 == 12 ? this.renderBlockLever(var1, var2, var3, var4) : (var5 == 14 ? this.renderBlockBed(var1, var2, var3, var4) : (var5 == 15 ? this.renderBlockRepeater(var1, var2, var3, var4) : (var5 == 16 ? this.renderBlockAnvil(var1, var2, var3, var4) : false))))))))))))))));
+	}
+
+	private boolean renderBlockAnvil(Block var1, int var2, int var3, int var4) {
+		boolean var5 = false;
+		var1.setBlockBounds(0.0F, 0.0F, 3.0F / 16.0F, 1.0F, 2.0F / 16.0F, 13.0F / 16.0F);
+		var5 |= this.renderStandardBlock(var1, var2, var3, var4);
+		var1.setBlockBounds(5.0F / 16.0F, 2.0F / 16.0F, 5.0F / 16.0F, 11.0F / 16.0F, 10.0F / 16.0F, 11.0F / 16.0F);
+		var5 |= this.renderStandardBlock(var1, var2, var3, var4);
+		var1.setBlockBounds(0.0F, 10.0F / 16.0F, 3.0F / 16.0F, 1.0F, 1.0F, 13.0F / 16.0F);
+		var5 |= this.renderStandardBlock(var1, var2, var3, var4);
+		var1.setBlockBounds(0.0F, 0.0F, 0.0F, 1.0F, 1.0F, 1.0F);
+		return var5;
 	}
 
 	private boolean renderBlockBed(Block var1, int var2, int var3, int var4) {
@@ -2063,27 +2089,27 @@ public class RenderBlocks {
 
 	public boolean renderBlockStairs(Block var1, int var2, int var3, int var4) {
 		boolean var5 = false;
-		int var6 = this.blockAccess.getBlockMetadata(var2, var3, var4);
+		int var6 = BlockStairs.getOrientation(this.blockAccess.getBlockMetadata(var2, var3, var4));
 		if(var6 == 0) {
 			var1.setBlockBounds(0.0F, 0.0F, 0.0F, 0.5F, 0.5F, 1.0F);
-			this.renderStandardBlock(var1, var2, var3, var4);
+			var5 |= this.renderStandardBlock(var1, var2, var3, var4);
 			var1.setBlockBounds(0.5F, 0.0F, 0.0F, 1.0F, 1.0F, 1.0F);
-			this.renderStandardBlock(var1, var2, var3, var4);
+			var5 |= this.renderStandardBlock(var1, var2, var3, var4);
 		} else if(var6 == 1) {
 			var1.setBlockBounds(0.0F, 0.0F, 0.0F, 0.5F, 1.0F, 1.0F);
-			this.renderStandardBlock(var1, var2, var3, var4);
+			var5 |= this.renderStandardBlock(var1, var2, var3, var4);
 			var1.setBlockBounds(0.5F, 0.0F, 0.0F, 1.0F, 0.5F, 1.0F);
-			this.renderStandardBlock(var1, var2, var3, var4);
+			var5 |= this.renderStandardBlock(var1, var2, var3, var4);
 		} else if(var6 == 2) {
 			var1.setBlockBounds(0.0F, 0.0F, 0.0F, 1.0F, 0.5F, 0.5F);
-			this.renderStandardBlock(var1, var2, var3, var4);
+			var5 |= this.renderStandardBlock(var1, var2, var3, var4);
 			var1.setBlockBounds(0.0F, 0.0F, 0.5F, 1.0F, 1.0F, 1.0F);
-			this.renderStandardBlock(var1, var2, var3, var4);
+			var5 |= this.renderStandardBlock(var1, var2, var3, var4);
 		} else if(var6 == 3) {
 			var1.setBlockBounds(0.0F, 0.0F, 0.0F, 1.0F, 1.0F, 0.5F);
-			this.renderStandardBlock(var1, var2, var3, var4);
+			var5 |= this.renderStandardBlock(var1, var2, var3, var4);
 			var1.setBlockBounds(0.0F, 0.0F, 0.5F, 1.0F, 0.5F, 1.0F);
-			this.renderStandardBlock(var1, var2, var3, var4);
+			var5 |= this.renderStandardBlock(var1, var2, var3, var4);
 		}
 
 		var1.setBlockBounds(0.0F, 0.0F, 0.0F, 1.0F, 1.0F, 1.0F);
@@ -2527,6 +2553,24 @@ public class RenderBlocks {
 
 	}
 
+	private void renderAnvil(Block block) {
+		Tessellator tessellator = Tessellator.instance;
+		tessellator.startDrawingQuads();
+		tessellator.setNormal(0.0F, -1.0F, 0.0F);
+		this.renderBottomFace(block, 0.0D, 0.0D, 0.0D, block.getBlockTextureFromSide(0));
+		tessellator.setNormal(0.0F, 1.0F, 0.0F);
+		this.renderTopFace(block, 0.0D, 0.0D, 0.0D, block.getBlockTextureFromSide(1));
+		tessellator.setNormal(0.0F, 0.0F, -1.0F);
+		this.renderEastFace(block, 0.0D, 0.0D, 0.0D, block.getBlockTextureFromSide(2));
+		tessellator.setNormal(0.0F, 0.0F, 1.0F);
+		this.renderWestFace(block, 0.0D, 0.0D, 0.0D, block.getBlockTextureFromSide(3));
+		tessellator.setNormal(-1.0F, 0.0F, 0.0F);
+		this.renderNorthFace(block, 0.0D, 0.0D, 0.0D, block.getBlockTextureFromSide(4));
+		tessellator.setNormal(1.0F, 0.0F, 0.0F);
+		this.renderSouthFace(block, 0.0D, 0.0D, 0.0D, block.getBlockTextureFromSide(5));
+		tessellator.draw();
+	}
+
 	public void func_1227_a(Block var1, int var2) {
 		Tessellator var3 = Tessellator.instance;
 		int var4 = var1.getRenderType();
@@ -2610,6 +2654,16 @@ public class RenderBlocks {
 			var3.setNormal(0.0F, -1.0F, 0.0F);
 			this.renderTorchAtAngle(var1, -0.5D, -0.5D, -0.5D, 0.0D, 0.0D);
 			var3.draw();
+		} else if(var4 == 16) {
+			GL11.glTranslatef(-0.5F, -0.5F, -0.5F);
+			var1.setBlockBounds(0.0F, 0.0F, 3.0F / 16.0F, 1.0F, 2.0F / 16.0F, 13.0F / 16.0F);
+			this.renderAnvil(var1);
+			var1.setBlockBounds(5.0F / 16.0F, 2.0F / 16.0F, 5.0F / 16.0F, 11.0F / 16.0F, 10.0F / 16.0F, 11.0F / 16.0F);
+			this.renderAnvil(var1);
+			var1.setBlockBounds(0.0F, 10.0F / 16.0F, 3.0F / 16.0F, 1.0F, 1.0F, 13.0F / 16.0F);
+			this.renderAnvil(var1);
+			var1.setBlockBounds(0.0F, 0.0F, 0.0F, 1.0F, 1.0F, 1.0F);
+			GL11.glTranslatef(0.5F, 0.5F, 0.5F);
 		} else {
 			int var7;
 			if(var4 == 10) {
@@ -2704,6 +2758,6 @@ public class RenderBlocks {
 	}
 
 	public static boolean func_1219_a(int var0) {
-		return var0 == 0 ? true : (var0 == 13 ? true : (var0 == 10 ? true : var0 == 11));
+		return var0 == 0 ? true : (var0 == 13 ? true : (var0 == 10 ? true : (var0 == 11 ? true : var0 == 16)));
 	}
 }

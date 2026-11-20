@@ -8,7 +8,8 @@ public class ItemSlab extends ItemBlock {
 	}
 
 	public int getIconIndex(ItemStack var1) {
-		return Block.stairSingle.getBlockTextureFromSideAndMetadata(2, var1.getItemDamage());
+		//return Block.stairSingle.getBlockTextureFromSideAndMetadata(2, var1.getItemDamage());
+		return 0;
 	}
 
 	public int func_21012_a(int var1) {
@@ -16,6 +17,6 @@ public class ItemSlab extends ItemBlock {
 	}
 
 	public String getItemNameIS(ItemStack var1) {
-		return super.getItemName() + "." + BlockStep.field_22037_a[var1.getItemDamage()];
+		return super.getItemName();
 	}
 }

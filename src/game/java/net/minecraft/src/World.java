@@ -501,7 +501,7 @@ public class World implements IBlockAccess {
 			int var5;
 			if (var4) {
 				var5 = this.getBlockId(var1, var2, var3);
-				if (var5 == Block.stairSingle.blockID || var5 == Block.tilledField.blockID) {
+				if (Hammerable.getInstance().isNonFullShape(Block.blocksList[var5], this.getBlockMetadata(var1, var2, var3)) || var5 == Block.tilledField.blockID) {
 					int var6 = this.getBlockLightValue_do(var1, var2 + 1, var3, false);
 					int var7 = this.getBlockLightValue_do(var1 + 1, var2, var3, false);
 					int var8 = this.getBlockLightValue_do(var1 - 1, var2, var3, false);
@@ -1442,8 +1442,9 @@ public class World implements IBlockAccess {
 	}
 
 	public boolean isBlockOpaqueCube(int var1, int var2, int var3) {
-		Block var4 = Block.blocksList[this.getBlockId(var1, var2, var3)];
-		return var4 == null ? false : var4.isOpaqueCube();
+		int blockId = this.getBlockId(var1, var2, var3);
+		Block block = Block.blocksList[blockId];
+		return Hammerable.getInstance().isOpaque(block, this.getBlockMetadata(var1, var2, var3));
 	}
 
 	public void func_651_a(IProgressUpdate var1) {

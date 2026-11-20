@@ -59,7 +59,7 @@ public class ChunkCache implements IBlockAccess {
 			int var6;
 			if(var4) {
 				var5 = this.getBlockId(var1, var2, var3);
-				if(var5 == Block.stairSingle.blockID || var5 == Block.tilledField.blockID) {
+				if(Hammerable.getInstance().isNonFullShape(Block.blocksList[var5], this.getBlockMetadata(var1, var2, var3)) || var5 == Block.tilledField.blockID) {
 					var6 = this.func_716_a(var1, var2 + 1, var3, false);
 					int var7 = this.func_716_a(var1 + 1, var2, var3, false);
 					int var8 = this.func_716_a(var1 - 1, var2, var3, false);
@@ -123,7 +123,7 @@ public class ChunkCache implements IBlockAccess {
 
 	public boolean isBlockOpaqueCube(int var1, int var2, int var3) {
 		Block var4 = Block.blocksList[this.getBlockId(var1, var2, var3)];
-		return var4 == null ? false : var4.isOpaqueCube();
+		return Hammerable.getInstance().isOpaque(var4, this.getBlockMetadata(var1, var2, var3));
 	}
 
 	public WorldChunkManager getWorldChunkManager() {

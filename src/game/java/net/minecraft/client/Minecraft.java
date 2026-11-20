@@ -1,6 +1,7 @@
 package net.minecraft.client;
 
 import net.lax1dude.eaglercraft.EagRuntime;
+import net.lax1dude.eaglercraft.EagUtils;
 import net.lax1dude.eaglercraft.internal.PlatformRuntime;
 import net.lax1dude.eaglercraft.internal.buffer.ByteBuffer;
 import net.lax1dude.eaglercraft.internal.vfs2.VFile2;
@@ -183,6 +184,7 @@ public class Minecraft implements Runnable {
 		TexturePack.init(this);
 		SaveUtils.init(this);
 		this.fontRenderer = new FontRenderer(this.gameSettings, "/font/default.png", this.renderEngine);
+		this.sndManager.loadSoundSettings(this.gameSettings);
 		this.loadScreen();
 		this.mouseHelper = new MouseHelper();
 
@@ -199,7 +201,6 @@ public class Minecraft implements Runnable {
 		GL11.glLoadIdentity();
 		GL11.glMatrixMode(GL11.GL_MODELVIEW);
 		this.checkGLError("Startup");
-		this.sndManager.loadSoundSettings(this.gameSettings);
 		this.renderEngine.registerTextureFX(this.textureLavaFX);
 		this.renderEngine.registerTextureFX(this.textureWaterFX);
 		this.renderEngine.registerTextureFX(new TexturePortalFX());
@@ -243,16 +244,25 @@ public class Minecraft implements Runnable {
 		GL11.glBindTexture(GL11.GL_TEXTURE_2D, this.renderEngine.getTexture("/title/mojang.png"));
 		var4.startDrawingQuads();
 		var4.setColorOpaque_I(16777215);
-		var4.addVertexWithUV(0.0D, (double)this.displayHeight, 0.0D, 0.0D, 0.0D);
-		var4.addVertexWithUV((double)this.displayWidth, (double)this.displayHeight, 0.0D, 0.0D, 0.0D);
-		var4.addVertexWithUV((double)this.displayWidth, 0.0D, 0.0D, 0.0D, 0.0D);
+		var4.addVertexWithUV(0.0D, (double)var3, 0.0D, 0.0D, 0.0D);
+		var4.addVertexWithUV((double)var2, (double)var3, 0.0D, 0.0D, 0.0D);
+		var4.addVertexWithUV((double)var2, 0.0D, 0.0D, 0.0D, 0.0D);
 		var4.addVertexWithUV(0.0D, 0.0D, 0.0D, 0.0D, 0.0D);
 		var4.draw();
-		short var5 = 256;
-		short var6 = 256;
+		int logoSize = Math.min(256, Math.min(var2, var3));
+		int logoX = (var2 - logoSize) / 2;
+		int logoY = (var3 - logoSize) / 2;
 		GL11.glColor4f(1.0F, 1.0F, 1.0F, 1.0F);
 		var4.setColorOpaque_I(16777215);
-		this.func_6274_a((this.displayWidth / 2 - var5) / 2, (this.displayHeight / 2 - var6) / 2, 0, 0, var5, var6);
+		var4.startDrawingQuads();
+		var4.addVertexWithUV((double)logoX, (double)(logoY + logoSize), 0.0D, 0.0D, 1.0D);
+		var4.addVertexWithUV((double)(logoX + logoSize), (double)(logoY + logoSize), 0.0D, 1.0D, 1.0D);
+		var4.addVertexWithUV((double)(logoX + logoSize), (double)logoY, 0.0D, 1.0D, 0.0D);
+		var4.addVertexWithUV((double)logoX, (double)logoY, 0.0D, 0.0D, 0.0D);
+		var4.draw();
+		this.updateDisplay();
+		this.sndManager.playSound("random.mojang", 0.0F, 0.0F, 0.0F, 1.0F, 1.0F);
+		EagUtils.sleep(3000L);
 		GL11.glDisable(GL11.GL_LIGHTING);
 		GL11.glDisable(GL11.GL_FOG);
 		GL11.glEnable(GL11.GL_ALPHA_TEST);
@@ -703,10 +713,6 @@ public class Minecraft implements Runnable {
 			int var1 = this.theWorld.getBlockId(this.objectMouseOver.blockX, this.objectMouseOver.blockY, this.objectMouseOver.blockZ);
 			if(var1 == Block.grass.blockID) {
 				var1 = Block.dirt.blockID;
-			}
-
-			if(var1 == Block.stairDouble.blockID) {
-				var1 = Block.stairSingle.blockID;
 			}
 
 			if(var1 == Block.bedrock.blockID) {

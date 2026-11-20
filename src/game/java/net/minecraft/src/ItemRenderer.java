@@ -1,6 +1,7 @@
 package net.minecraft.src;
 
 import net.minecraft.client.Minecraft;
+import net.lax1dude.eaglercraft.profile.Profile;
 import org.lwjgl.opengl.GL11;
 import org.lwjgl.opengl.GL12;
 
@@ -182,7 +183,12 @@ public class ItemRenderer {
 			var9 = MathHelper.sin(MathHelper.sqrt_float(var7) * (float)Math.PI);
 			GL11.glRotatef(var9 * 70.0F, 0.0F, 1.0F, 0.0F);
 			GL11.glRotatef(-var8 * 20.0F, 0.0F, 0.0F, 1.0F);
-			GL11.glBindTexture(GL11.GL_TEXTURE_2D, this.mc.renderEngine.getTextureForDownloadableImage(this.mc.thePlayer.skinUrl, this.mc.thePlayer.getEntityTexture()));
+			int skinTexture = Profile.getSelectedSkinTexture();
+			if (skinTexture >= 0) {
+				GL11.glBindTexture(GL11.GL_TEXTURE_2D, skinTexture);
+			} else {
+				GL11.glBindTexture(GL11.GL_TEXTURE_2D, this.mc.renderEngine.getTextureForDownloadableImage(this.mc.thePlayer.skinUrl, this.mc.thePlayer.getEntityTexture()));
+			}
 			GL11.glTranslatef(-1.0F, 3.6F, 3.5F);
 			GL11.glRotatef(120.0F, 0.0F, 0.0F, 1.0F);
 			GL11.glRotatef(200.0F, 1.0F, 0.0F, 0.0F);

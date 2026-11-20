@@ -93,10 +93,6 @@ public class Block {
 			.setStepSound(soundMetalFootstep).setBlockName("blockGold");
 	public static final Block blockSteel = (new BlockOreBlock(42, 22)).setHardness(5.0F).setResistance(10.0F)
 			.setStepSound(soundMetalFootstep).setBlockName("blockIron");
-	public static final Block stairDouble = (new BlockStep(43, true)).setHardness(2.0F).setResistance(10.0F)
-			.setStepSound(soundStoneFootstep).setBlockName("stoneSlab");
-	public static final Block stairSingle = (new BlockStep(44, false)).setHardness(2.0F).setResistance(10.0F)
-			.setStepSound(soundStoneFootstep).setBlockName("stoneSlab");
 	public static final Block brick = (new Block(45, 7, Material.rock)).setHardness(2.0F).setResistance(10.0F)
 			.setStepSound(soundStoneFootstep).setBlockName("brick");
 	public static final Block tnt = (new BlockTNT(46, 8)).setHardness(0.0F).setStepSound(soundGrassFootstep)
@@ -113,7 +109,6 @@ public class Block {
 			.setStepSound(soundWoodFootstep).setBlockName("fire");
 	public static final Block mobSpawner = (new BlockMobSpawner(52, 65)).setHardness(5.0F)
 			.setStepSound(soundMetalFootstep).setBlockName("mobSpawner");
-	public static final Block stairCompactPlanks = (new BlockStairs(53, planks)).setBlockName("stairsWood");
 	public static final Block crate = (new BlockChest(54)).setHardness(2.5F).setStepSound(soundWoodFootstep)
 			.setBlockName("chest");
 	public static final Block redstoneWire = (new BlockRedstoneWire(55, 164)).setHardness(0.0F)
@@ -140,7 +135,6 @@ public class Block {
 			.setBlockName("ladder");
 	public static final Block minecartTrack = (new BlockMinecartTrack(66, 128)).setHardness(0.7F)
 			.setStepSound(soundMetalFootstep).setBlockName("rail");
-	public static final Block stairCompactCobblestone = (new BlockStairs(67, cobblestone)).setBlockName("stairsStone");
 	public static final Block signWall = (new BlockSign(68, TileEntitySign.class, false)).setHardness(1.0F)
 			.setStepSound(soundWoodFootstep).setBlockName("sign");
 	public static final Block lever = (new BlockLever(69, 96)).setHardness(0.5F).setStepSound(soundWoodFootstep)
@@ -203,6 +197,17 @@ public class Block {
 			.setStepSound(soundStoneFootstep).setBlockName("stoneBrick");
 	public static final BlockTallGrass tallGrass = (BlockTallGrass) (new BlockTallGrass(99, 30)).setHardness(0.0F)
 			.setStepSound(soundGrassFootstep).setBlockName("tallgrass");
+	public static final Block copperFurnaceIdle = (new BlockBlastFurnace(100, false)).setHardness(3.5F)
+			.setStepSound(soundStoneFootstep).setBlockName("copperFurnace");
+	public static final Block copperFurnaceActive = (new BlockBlastFurnace(101, true)).setHardness(3.5F)
+			.setStepSound(soundStoneFootstep).setLightValue(14.0F / 16.0F).setBlockName("copperFurnace");
+	public static final Block oreCopper = (new BlockOre(102, 85)).setHardness(3.0F).setResistance(5.0F)
+			.setStepSound(soundStoneFootstep).setBlockName("oreCopper");
+	public static final Block blockCopper = (new BlockOreBlock(103, 56)).setHardness(5.0F).setResistance(10.0F)
+			.setStepSound(soundMetalFootstep).setBlockName("blockCopper");
+	public static final Block anvil = (new BlockAnvil(104, 63)).setHardness(5.0F).setResistance(2000.0F).setStepSound(soundMetalFootstep).setBlockName("anvil");
+	public static final Block stonePolished = (new Block(105, 6, Material.rock)).setHardness(2.0F).setResistance(10.0F)
+			.setStepSound(soundStoneFootstep).setBlockName("stonePolished");
 	public int blockIndexInTexture;
 	public final int blockID;
 	protected float blockHardness;
@@ -307,7 +312,9 @@ public class Block {
 	}
 
 	public int getBlockTexture(IBlockAccess var1, int var2, int var3, int var4, int var5) {
-		return this.getBlockTextureFromSideAndMetadata(var5, var1.getBlockMetadata(var2, var3, var4));
+		int metadata = var1.getBlockMetadata(var2, var3, var4);
+		int model = Hammerable.getInstance().getModel(this, metadata);
+		return model == Hammerable.MODEL_BLOCK ? this.getBlockTextureFromSideAndMetadata(var5, metadata) : BlockStep.getTexture(this, var5, model);
 	}
 
 	public int getBlockTextureFromSideAndMetadata(int var1, int var2) {
@@ -324,6 +331,23 @@ public class Block {
 	}
 
 	public void getCollidingBoundingBoxes(World var1, int var2, int var3, int var4, AxisAlignedBB var5, ArrayList var6) {
+		int metadata = var1.getBlockMetadata(var2, var3, var4);
+		Hammerable hammerable = Hammerable.getInstance();
+		if (!hammerable.isHammerable(this)) {
+			AxisAlignedBB collisionBox = this.getCollisionBoundingBoxFromPool(var1, var2, var3, var4);
+			if (collisionBox != null && var5.intersectsWith(collisionBox)) {
+				var6.add(collisionBox);
+			}
+			return;
+		}
+
+		int model = hammerable.getModel(this, metadata);
+		if (model == Hammerable.MODEL_STAIRS) {
+			BlockStairs.addCollisionBoxes(var2, var3, var4, metadata, var5, var6);
+			return;
+		}
+
+		BlockStep.setBounds(this, model);
 		AxisAlignedBB var7 = this.getCollisionBoundingBoxFromPool(var1, var2, var3, var4);
 		if (var7 != null && var5.intersectsWith(var7)) {
 			var6.add(var7);
@@ -390,18 +414,19 @@ public class Block {
 
 	public void dropBlockAsItemWithChance(World var1, int var2, int var3, int var4, int var5, float var6) {
 		if (!var1.multiplayerWorld) {
-			int var7 = this.quantityDropped(var1.rand);
+			int model = Hammerable.getInstance().getModel(this, var5);
+			boolean shaped = model != Hammerable.MODEL_BLOCK;
+			int var7 = shaped ? 1 : this.quantityDropped(var1.rand);
 
 			for (int var8 = 0; var8 < var7; ++var8) {
 				if (var1.rand.nextFloat() <= var6) {
-					int var9 = this.idDropped(var5, var1.rand);
+					int var9 = shaped ? this.blockID : this.idDropped(var5, var1.rand);
 					if (var9 > 0) {
 						float var10 = 0.7F;
 						double var11 = (double) (var1.rand.nextFloat() * var10) + (double) (1.0F - var10) * 0.5D;
 						double var13 = (double) (var1.rand.nextFloat() * var10) + (double) (1.0F - var10) * 0.5D;
 						double var15 = (double) (var1.rand.nextFloat() * var10) + (double) (1.0F - var10) * 0.5D;
-						EntityItem var17 = new EntityItem(var1, (double) var2 + var11, (double) var3 + var13, (double) var4 + var15,
-								new ItemStack(var9, 1, this.damageDropped(var5)));
+						EntityItem var17 = new EntityItem(var1, (double) var2 + var11, (double) var3 + var13, (double) var4 + var15, new ItemStack(var9, 1, shaped ? 0 : this.damageDropped(var5)));
 						var17.delayBeforeCanPickup = 10;
 						var1.entityJoinedWorld(var17);
 					}
@@ -555,6 +580,18 @@ public class Block {
 	}
 
 	public void setBlockBoundsBasedOnState(IBlockAccess var1, int var2, int var3, int var4) {
+		Hammerable hammerable = Hammerable.getInstance();
+		if (!hammerable.isHammerable(this)) {
+			return;
+		}
+
+		int metadata = var1.getBlockMetadata(var2, var3, var4);
+		int model = hammerable.getModel(this, metadata);
+		if (model == Hammerable.MODEL_STAIRS) {
+			BlockStairs.setBounds(this);
+		} else {
+			BlockStep.setBounds(this, model);
+		}
 	}
 
 	public int colorMultiplier(IBlockAccess var1, int var2, int var3, int var4) {
@@ -605,8 +642,6 @@ public class Block {
 	static {
 		Item.itemsList[cloth.blockID] = (new ItemCloth(cloth.blockID - 256)).setItemName("cloth");
 		Item.itemsList[wood.blockID] = (new ItemLog(wood.blockID - 256)).setItemName("log");
-		Item.itemsList[stairSingle.blockID] = (new ItemSlab(stairSingle.blockID - 256)).setItemName("stoneSlab");
-
 		for (int var0 = 0; var0 < 256; ++var0) {
 			if (blocksList[var0] != null && Item.itemsList[var0] == null) {
 				Item.itemsList[var0] = new ItemBlock(var0 - 256);

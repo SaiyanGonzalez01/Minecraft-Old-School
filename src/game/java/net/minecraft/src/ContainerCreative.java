@@ -7,10 +7,9 @@ class ContainerCreative extends CraftingInventoryCB {
 	public List<ItemStack> field_35375_a = new ArrayList<>();
 
 	public ContainerCreative(EntityPlayer var1) {
-		Block[] var2 = new Block[] { Block.cobblestone, Block.stone, Block.oreDiamond, Block.oreGold, Block.oreIron,
+		Block[] var2 = new Block[] { Block.cobblestone, Block.stone, Block.stonePolished, Block.oreDiamond, Block.oreGold, Block.oreIron,
 				Block.oreCoal, Block.oreLapis, Block.oreRedstone, Block.blockClay, Block.blockDiamond, Block.blockGold, Block.blockSteel, Block.bedrock,
-				Block.blockLapis, Block.brick, Block.cobblestoneMossy, Block.stairSingle, Block.stairSingle, Block.stairSingle,
-				Block.stairSingle, Block.stairSingle, Block.stairSingle, Block.obsidian, Block.bloodStone, Block.slowSand,
+				Block.blockLapis, Block.brick, Block.cobblestoneMossy, Block.obsidian, Block.bloodStone, Block.slowSand,
 				Block.lightStone, Block.wood, Block.wood, Block.wood, Block.leaves, Block.dirt, Block.grass, Block.sand,
 				Block.sandStone, Block.gravel, Block.planks, Block.sapling, Block.sapling, Block.sapling,
 				Block.sponge, Block.ice, Block.blockSnow, Block.plantYellow, Block.plantRed,
@@ -20,11 +19,9 @@ class ContainerCreative extends CraftingInventoryCB {
 				Block.cloth, Block.cloth, Block.cloth, Block.cloth, Block.cloth, Block.cloth, Block.cloth, Block.cloth,
 				Block.cloth, Block.cloth, Block.cloth, Block.cloth, Block.dispenser, Block.stoneOvenIdle, Block.jukebox,
 			    Block.musicBlock, Block.fence, Block.ladder,
-				Block.minecartTrack, Block.torchWood, Block.stairCompactPlanks,
-				Block.stairCompactCobblestone, Block.lever,
+				Block.minecartTrack, Block.torchWood, Block.lever,
 				Block.pressurePlateStone, Block.pressurePlatePlanks, Block.torchRedstoneActive, Block.button, Block.cake };
 		int var3 = 0;
-		int var4 = 0;
 		int var5 = 0;
 		int var6 = 0;
 		//int var7 = 0;
@@ -35,8 +32,6 @@ class ContainerCreative extends CraftingInventoryCB {
 			var9 = 0;
 			if (var2[var8] == Block.cloth) {
 				var9 = var3++;
-			} else if (var2[var8] == Block.stairSingle) {
-				var9 = var4++;
 			} else if (var2[var8] == Block.wood) {
 				var9 = var5++;
 			} else if (var2[var8] == Block.sapling) {

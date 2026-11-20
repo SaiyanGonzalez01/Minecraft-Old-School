@@ -277,27 +277,15 @@ public class InventoryPlayer implements IInventory {
 	}
 
 	public int getTotalArmorValue() {
-		int var1 = 0;
-		int var2 = 0;
-		int var3 = 0;
+		int totalArmor = 0;
 
-		for(int var4 = 0; var4 < this.armorInventory.length; ++var4) {
-			if(this.armorInventory[var4] != null && this.armorInventory[var4].getItem() instanceof ItemArmor) {
-				int var5 = this.armorInventory[var4].getMaxDamage();
-				int var6 = this.armorInventory[var4].getItemDamageForDisplay();
-				int var7 = var5 - var6;
-				var2 += var7;
-				var3 += var5;
-				int var8 = ((ItemArmor)this.armorInventory[var4].getItem()).damageReduceAmount;
-				var1 += var8;
+		for (int armorSlot = 0; armorSlot < this.armorInventory.length; ++armorSlot) {
+			if (this.armorInventory[armorSlot] != null && this.armorInventory[armorSlot].getItem() instanceof ItemArmor) {
+				totalArmor += ((ItemArmor) this.armorInventory[armorSlot].getItem()).damageReduceAmount;
 			}
 		}
 
-		if(var3 == 0) {
-			return 0;
-		} else {
-			return (var1 - 1) * var2 / var3 + 1;
-		}
+		return totalArmor;
 	}
 
 	public void damageArmor(int var1) {

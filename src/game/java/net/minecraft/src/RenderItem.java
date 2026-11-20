@@ -41,7 +41,7 @@ public class RenderItem extends Render {
 			GL11.glRotatef(var12, 0.0F, 1.0F, 0.0F);
 			this.loadTexture("/terrain.png");
 			float var27 = 0.25F;
-			if (!Block.blocksList[var10.itemID].renderAsNormalBlock() && var10.itemID != Block.stairSingle.blockID) {
+			if (!Block.blocksList[var10.itemID].renderAsNormalBlock()) {
 				var27 = 0.5F;
 			}
 

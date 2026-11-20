@@ -23,7 +23,7 @@ public class Session {
 		registeredBlocksList.add(Block.wood);
 		registeredBlocksList.add(Block.leaves);
 		registeredBlocksList.add(Block.torchWood);
-		registeredBlocksList.add(Block.stairSingle);
+		registeredBlocksList.add(Block.stonePolished);
 		registeredBlocksList.add(Block.glass);
 		registeredBlocksList.add(Block.cobblestoneMossy);
 		registeredBlocksList.add(Block.sapling);

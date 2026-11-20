@@ -109,8 +109,16 @@ public class EntityPlayerSP extends EntityPlayer {
 		this.mc.displayGuiScreen(new GuiCrafting(this.inventory, this.worldObj, var1, var2, var3));
 	}
 
+	public void displayAnvilGUI(int var1, int var2, int var3) {
+		this.mc.displayGuiScreen(new GuiAnvil(this.inventory, this.worldObj, var1, var2, var3));
+	}
+
 	public void displayGUIFurnace(TileEntityFurnace var1) {
 		this.mc.displayGuiScreen(new GuiFurnace(this.inventory, var1));
+	}
+
+	public void displayGUIBlastFurnace(TileEntityBlastFurnace var1) {
+		this.mc.displayGuiScreen(new GuiBlastFurnace(this.inventory, var1));
 	}
 
 	public void displayGUIDispenser(TileEntityDispenser var1) {

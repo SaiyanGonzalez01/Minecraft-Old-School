@@ -307,6 +307,9 @@ public abstract class EntityPlayer extends EntityLiving {
 	public void displayWorkbenchGUI(int var1, int var2, int var3) {
 	}
 
+	public void displayAnvilGUI(int var1, int var2, int var3) {
+	}
+
 	public void onItemPickup(Entity var1, int var2) {
 	}
 
@@ -359,6 +362,9 @@ public abstract class EntityPlayer extends EntityLiving {
 	}
 
 	public void displayGUIFurnace(TileEntityFurnace var1) {
+	}
+
+	public void displayGUIBlastFurnace(TileEntityBlastFurnace var1) {
 	}
 
 	public void displayGUIDispenser(TileEntityDispenser var1) {

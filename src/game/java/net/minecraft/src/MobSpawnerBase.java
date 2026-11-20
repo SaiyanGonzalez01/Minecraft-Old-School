@@ -49,7 +49,7 @@ public class MobSpawnerBase {
 	}
 
 	public WorldGenerator getRandomWorldGenForTrees(Random var1) {
-		return (WorldGenerator) (var1.nextInt(10) == 0 ? new WorldGenBigTree() : new WorldGenTrees());
+		return (WorldGenerator) (var1.nextInt(10) == 0 ? new WorldGenBigTree() : new WorldGenBigTree());
 	}
 
 	protected MobSpawnerBase doesNothingForMobSpawnerBase() {

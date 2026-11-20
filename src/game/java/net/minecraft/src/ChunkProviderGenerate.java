@@ -349,7 +349,7 @@ public class ChunkProviderGenerate implements IChunkProvider {
 			(new WorldGenDungeons()).generate(this.worldObj, this.rand, var14, var15, var16);
 		}
 
-		for (var13 = 0; var13 < 10; ++var13) {
+		for (var13 = 0; var13 < 20; ++var13) {
 			var14 = var4 + this.rand.nextInt(16);
 			var15 = this.rand.nextInt(128);
 			var16 = var5 + this.rand.nextInt(16);
@@ -381,14 +381,22 @@ public class ChunkProviderGenerate implements IChunkProvider {
 			var14 = var4 + this.rand.nextInt(16);
 			var15 = this.rand.nextInt(64);
 			var16 = var5 + this.rand.nextInt(16);
-			(new WorldGenMinable(Block.oreIron.blockID, 8)).generate(this.worldObj, this.rand, var14, var15, var16);
+			(new WorldGenMinable(Block.oreCopper.blockID, 8)).generate(this.worldObj, this.rand, var14, var15, var16);
 		}
+
+		for (var13 = 0; var13 < 20; ++var13) {
+			var14 = var4 + this.rand.nextInt(16);
+			var15 = this.rand.nextInt(48);
+			var16 = var5 + this.rand.nextInt(16);
+			(new WorldGenMinable(Block.oreIron.blockID, 6)).generate(this.worldObj, this.rand, var14, var15, var16);
+		}
+
 
 		for (var13 = 0; var13 < 2; ++var13) {
 			var14 = var4 + this.rand.nextInt(16);
 			var15 = this.rand.nextInt(32);
 			var16 = var5 + this.rand.nextInt(16);
-			(new WorldGenMinable(Block.oreGold.blockID, 8)).generate(this.worldObj, this.rand, var14, var15, var16);
+			(new WorldGenMinable(Block.oreGold.blockID, 4)).generate(this.worldObj, this.rand, var14, var15, var16);
 		}
 
 		for (var13 = 0; var13 < 8; ++var13) {
@@ -402,7 +410,7 @@ public class ChunkProviderGenerate implements IChunkProvider {
 			var14 = var4 + this.rand.nextInt(16);
 			var15 = this.rand.nextInt(16);
 			var16 = var5 + this.rand.nextInt(16);
-			(new WorldGenMinable(Block.oreDiamond.blockID, 7)).generate(this.worldObj, this.rand, var14, var15, var16);
+			(new WorldGenMinable(Block.oreDiamond.blockID, 2)).generate(this.worldObj, this.rand, var14, var15, var16);
 		}
 
 		for (var13 = 0; var13 < 1; ++var13) {
@@ -416,7 +424,7 @@ public class ChunkProviderGenerate implements IChunkProvider {
 			var14 = var4 + this.rand.nextInt(16);
 			var15 = this.rand.nextInt(16);
 			var16 = var5 + this.rand.nextInt(16);
-			(new WorldGenMinable(Block.oreRuby.blockID, 4)).generate(this.worldObj, this.rand, var14, var15, var16);
+			(new WorldGenMinable(Block.oreRuby.blockID, 2)).generate(this.worldObj, this.rand, var14, var15, var16);
 		}
 
 		var11 = 0.5D;
@@ -543,6 +551,10 @@ public class ChunkProviderGenerate implements IChunkProvider {
 
 		this.generatedTemperatures = this.worldObj.getWorldChunkManager().getTemperatures(this.generatedTemperatures,
 				var4 + 8, var5 + 8, 16, 16);
+
+		if (this.rand.nextInt(384) == 0) {
+			(new WorldGenVillage()).generate(this.worldObj, this.rand, var4 + 8, 0, var5 + 8);
+		}
 
 		for (var16 = var4 + 8; var16 < var4 + 8 + 16; ++var16) {
 			for (var17 = var5 + 8; var17 < var5 + 8 + 16; ++var17) {

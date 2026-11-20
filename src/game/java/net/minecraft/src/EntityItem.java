@@ -32,6 +32,11 @@ public class EntityItem extends Entity {
 
 	public void onUpdate() {
 		super.onUpdate();
+		if (this.inWater && this.item != null && this.item.getItem() instanceof ItemMolten) {
+			this.item.itemID = ((ItemMolten) this.item.getItem()).getIngot().shiftedIndex;
+			this.worldObj.playSoundEffect((double) ((float) this.posX + 0.5F), (double) ((float) this.posY + 0.5F), (double) ((float) this.posZ + 0.5F), "random.fizz", 0.5F, 2.6F + (this.worldObj.rand.nextFloat() - this.worldObj.rand.nextFloat()) * 0.8F);
+		}
+
 		if(this.delayBeforeCanPickup > 0) {
 			--this.delayBeforeCanPickup;
 		}
@@ -84,13 +89,13 @@ public class EntityItem extends Entity {
 		double var10 = var1 - (double)var7;
 		double var12 = var3 - (double)var8;
 		double var14 = var5 - (double)var9;
-		if(Block.opaqueCubeLookup[this.worldObj.getBlockId(var7, var8, var9)]) {
-			boolean var16 = !Block.opaqueCubeLookup[this.worldObj.getBlockId(var7 - 1, var8, var9)];
-			boolean var17 = !Block.opaqueCubeLookup[this.worldObj.getBlockId(var7 + 1, var8, var9)];
-			boolean var18 = !Block.opaqueCubeLookup[this.worldObj.getBlockId(var7, var8 - 1, var9)];
-			boolean var19 = !Block.opaqueCubeLookup[this.worldObj.getBlockId(var7, var8 + 1, var9)];
-			boolean var20 = !Block.opaqueCubeLookup[this.worldObj.getBlockId(var7, var8, var9 - 1)];
-			boolean var21 = !Block.opaqueCubeLookup[this.worldObj.getBlockId(var7, var8, var9 + 1)];
+		if(this.worldObj.isBlockOpaqueCube(var7, var8, var9)) {
+			boolean var16 = !this.worldObj.isBlockOpaqueCube(var7 - 1, var8, var9);
+			boolean var17 = !this.worldObj.isBlockOpaqueCube(var7 + 1, var8, var9);
+			boolean var18 = !this.worldObj.isBlockOpaqueCube(var7, var8 - 1, var9);
+			boolean var19 = !this.worldObj.isBlockOpaqueCube(var7, var8 + 1, var9);
+			boolean var20 = !this.worldObj.isBlockOpaqueCube(var7, var8, var9 - 1);
+			boolean var21 = !this.worldObj.isBlockOpaqueCube(var7, var8, var9 + 1);
 			byte var22 = -1;
 			double var23 = 9999.0D;
 			if(var16 && var10 < var23) {
