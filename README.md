@@ -14,7 +14,7 @@ Simply Run `CompileClient.sh` or `CompileClient.bat` to build an offline downloa
 
 ## Play
 
-Play [Javascript](https://saiyangonzalez01.github.io/Minecraft-Old-School/target_teavm_javascript/javascript/)
+Play [Javascript](https://saiyangonzalez01.github.io/Minecraft-Old-School/target_teavm_javascript/javascript/) (currently bugged textures wont update idk bruh)
 
 Play [WASM-GC](https://saiyangonzalez01.github.io/Minecraft-Old-School/target_teavm_wasm_gc/javascript/)
 
