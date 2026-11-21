@@ -3,7 +3,7 @@ name: Build Client
 on:
   workflow_dispatch:
   push:
-    branches: [ main ]
+    branches: [ Original ]
   pull_request:
 
 permissions:
@@ -65,7 +65,7 @@ jobs:
           path: dist/dist.zip
 
       - name: Create Release
-        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+        if: github.event_name == 'push' && github.ref == 'refs/heads/Original'
         uses: softprops/action-gh-release@v2
         with:
           tag_name: ${{ steps.vars.outputs.hash }}
